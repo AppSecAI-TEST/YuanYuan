@@ -1,0 +1,137 @@
+package xyz.zimuju.common.entity;
+
+/**
+ * GridPickerView初始化配置model
+ */
+public class PickerConfig {
+
+    //	private List<GridPickerItemBean> list;//list一般都会变 ,GridPickerView只允许一个list
+
+    private String tabSuffix;
+
+    private String selectedItemName;//可变
+    private int selectedItemPosition;//可变
+
+    private int numColumns;//第一次设置后就固定不变
+    private int maxShowRows;//第一次设置后就固定不变
+
+//	private int enableTextColor;
+//	private int unableTextColor;
+//
+//	private int enableBackgroundColor;
+//	private int unableBackgroundColor;
+
+    public PickerConfig(String tabSuffix, String selectedItemName, int selectedItemPosition) {
+        this(tabSuffix, selectedItemName, selectedItemPosition, 3, 5);
+    }
+
+    public PickerConfig(String tabSuffix, String selectedItemName, int selectedItemPosition, int numColumns, int maxShowRows) {
+        this.tabSuffix = tabSuffix;
+        this.selectedItemName = selectedItemName;
+        this.selectedItemPosition = selectedItemPosition;
+
+        this.numColumns = numColumns;
+        this.maxShowRows = maxShowRows;
+    }
+
+    /**
+     * 只允许通过这个方法修改数据
+     *
+     * @param selectedItemName
+     * @param selectedItemPostion
+     * @return
+     */
+    public final PickerConfig set(String selectedItemName, int selectedItemPostion) {
+        return set(tabSuffix, selectedItemName, selectedItemPostion);
+    }
+
+    /**
+     * 只允许通过这个方法修改数据
+     *
+     * @param tabSuffix
+     * @param selectedItemName
+     * @param selectedItemPostion
+     * @return
+     */
+    public final PickerConfig set(String tabSuffix, String selectedItemName, int selectedItemPostion) {
+        this.tabSuffix = tabSuffix;
+        this.selectedItemName = selectedItemName;
+        this.selectedItemPosition = selectedItemPostion;
+        return this;
+    }
+
+    /**
+     * 带后缀
+     *
+     * @return
+     */
+    public String getTabName() {
+        return getSelectedItemName() + getTabSuffix();
+    }
+
+    public String getTabSuffix() {
+        return tabSuffix == null ? "" : tabSuffix;
+    }
+
+    public String getSelectedItemName() {
+        return selectedItemName == null ? "" : selectedItemName;
+    }
+
+    public int getSelectedItemPosition() {
+        return selectedItemPosition;
+    }
+
+    public int getNumColumns() {
+        return numColumns;
+    }
+
+    public int getMaxShowRows() {
+        return maxShowRows;
+    }
+
+
+//	/**设置颜色
+//	 * @param enableTextColor
+//	 * @param unableTextColor
+//	 * @param enableBackgroundColor
+//	 * @param unableBackgroundColor
+//	 * @return
+//	 */
+//	public final GridPickerConfig setColor(int enableTextColor, int unableTextColor, int enableBackgroundColor, int unableBackgroundColor) {
+//		this.enableTextColor = enableTextColor;
+//		this.unableTextColor = unableTextColor;
+//		this.enableBackgroundColor = enableBackgroundColor;
+//		this.unableBackgroundColor = unableBackgroundColor;
+//		return this;
+//	}
+//	
+//	public int getEnableTextColor() {
+//		return enableTextColor;
+//	}
+//	public GridPickerConfig setEnableTextColor(int enableTextColor) {
+//		this.enableTextColor = enableTextColor;
+//		return this;
+//	}
+//	public int getUnableTextColor() {
+//		return unableTextColor;
+//	}
+//	public GridPickerConfig setUnableTextColor(int unableTextColor) {
+//		this.unableTextColor = unableTextColor;
+//		return this;
+//	}
+//	public int getEnableBackgroundColor() {
+//		return enableBackgroundColor;
+//	}
+//	public GridPickerConfig setEnableBackgroundColor(int enableBackgroundColor) {
+//		this.enableBackgroundColor = enableBackgroundColor;
+//		return this;
+//	}
+//	public int getUnableBackgroundColor() {
+//		return unableBackgroundColor;
+//	}
+//	public GridPickerConfig setUnableBackgroundColor(int unableBackgroundColor) {
+//		this.unableBackgroundColor = unableBackgroundColor;
+//		return this;
+//	}
+
+}

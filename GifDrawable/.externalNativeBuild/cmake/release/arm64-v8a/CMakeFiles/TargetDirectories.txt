@@ -1,0 +1,3 @@
+E:/Workspace/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/arm64-v8a/CMakeFiles/pl_droidsonroids_gif.dir
+E:/Workspace/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/arm64-v8a/CMakeFiles/edit_cache.dir
+E:/Workspace/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/arm64-v8a/CMakeFiles/rebuild_cache.dir

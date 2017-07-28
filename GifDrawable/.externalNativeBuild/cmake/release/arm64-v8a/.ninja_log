@@ -1,0 +1,18 @@
+# ninja log v5
+4	1217	0	CMakeFiles/pl_droidsonroids_gif.dir/decoding.c.o	666357a51d16721e
+9	1234	0	CMakeFiles/pl_droidsonroids_gif.dir/bitmap.c.o	717e30f076e6299e
+12	1304	0	CMakeFiles/pl_droidsonroids_gif.dir/exception.c.o	4f458e8c5f744fb1
+5	1344	0	CMakeFiles/pl_droidsonroids_gif.dir/control.c.o	1b57ecd2af5bf24d
+0	1380	0	CMakeFiles/pl_droidsonroids_gif.dir/drawing.c.o	a7d01830c1798eb2
+1234	1754	0	CMakeFiles/pl_droidsonroids_gif.dir/giflib/gifalloc.c.o	324223c4331f6c06
+2	1827	0	CMakeFiles/pl_droidsonroids_gif.dir/giflib/dgif_lib.c.o	bf79796bc4373ddd
+1344	1978	0	CMakeFiles/pl_droidsonroids_gif.dir/init.c.o	dd39d66dcc1eb6cf
+1304	1988	0	CMakeFiles/pl_droidsonroids_gif.dir/dispose.c.o	f3bbf315b84c3a3c
+1220	2427	0	CMakeFiles/pl_droidsonroids_gif.dir/gif.c.o	1ed4258073a438bb
+1382	2471	0	CMakeFiles/pl_droidsonroids_gif.dir/opengl.c.o	d37f71792179bd29
+1990	2800	0	CMakeFiles/pl_droidsonroids_gif.dir/time.c.o	41637b4e09de317
+1755	2861	0	CMakeFiles/pl_droidsonroids_gif.dir/metadata.c.o	b33f1d372db22345
+1978	2933	0	CMakeFiles/pl_droidsonroids_gif.dir/jni.c.o	de6784fd01757a20
+1878	2950	0	CMakeFiles/pl_droidsonroids_gif.dir/surface.c.o	e98d8e7f6b8bacd5
+2427	3031	0	CMakeFiles/pl_droidsonroids_gif.dir/giflib/openbsd-reallocarray.c.o	ad5d08bae6e30b5e
+3031	3530	0	E:/Workspace/CommonUtil/GifDrawable/build/intermediates/cmake/release/obj/arm64-v8a/libpl_droidsonroids_gif.so	34ee5d2f897f3ec7

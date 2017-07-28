@@ -1,0 +1,55 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'
+
+def configurations = rootProject.ext.configurations
+def libraries = rootProject.ext.dependencies
+
+android {
+    compileSdkVersion configurations.compileSdkVersion
+    buildToolsVersion configurations.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion configurations.minSdkVersion
+        targetSdkVersion configurations.targetSdkVersion
+        versionCode configurations.versionCode
+        versionName configurations.versionName
+    }
+
+}
+
+dependencies {
+    //butterknife
+    compile libraries.butterKnife
+    annotationProcessor libraries.butterKnifeCompiler
+
+    //rx
+    compile libraries.retrofit
+    compile libraries.retrofitConverterGson
+    compile libraries.rxjava2Adapter
+    compile libraries.okhttp
+    compile libraries.okhttpLoggingInterceptor
+    compile libraries.rxjava
+    compile libraries.rxandroid
+    compile libraries.rxpermissions
+
+    compile libraries.zip4j
+
+    // image
+    compile libraries.picasso
+    compile libraries.glide
+
+    compile libraries.v7recyclerView
+    compile libraries.v7appcompat
+
+    compile libraries.nohttp
+
+    compile libraries.fastJson
+    compile libraries.fastJsonAndroid
+
+    compile libraries.okio
+
+    compile libraries.universalImageLoader
+
+    compile libraries.design
+    compile libraries.v4support
+}

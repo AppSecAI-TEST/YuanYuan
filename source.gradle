@@ -1,0 +1,22 @@
+// 资源文件
+sources {
+    main {
+        manifest.srcFile 'AndroidManifest.xml'
+        java.srcDirs = ['src']
+        resources.srcDirs = ['src']
+        aidl.srcDirs = ['aidl']
+        renderscript.srcDirs = ['src']
+        assets.srcDirs = ['assets']
+
+        // 注意：layouts 和 res 一定在最后
+        res.srcDirs = [
+                'src/main/res/layouts/guide',
+                'src/main/res/layouts/activity',
+                'src/main/res/layouts/fragment',
+                'src/main/res/layouts/content',
+                'src/main/res/layouts',
+                'src/main/res'
+        ]
+    }
+    androidTest.setRoot('tests')
+}

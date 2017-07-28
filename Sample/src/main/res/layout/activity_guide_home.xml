@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:divider="@drawable/common_shape_vertical_divider"
+              android:orientation="vertical"
+              android:showDividers="middle">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#CCCCCC"
+        android:gravity="center"
+        android:text="引导页面展示"
+        android:textSize="16sp"
+        android:textStyle="bold|italic"/>
+
+    <TextView
+        android:id="@+id/guide_activity_tv"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="遮罩整个activity"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/guide_activity_view_tv"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="遮罩某个view"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/guide_list_tv"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="遮罩listview"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/guide_fragment_tv"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="遮罩整个fragment"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/guide_fragmnet_view_tv"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="遮罩fragment中的某个view"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/guide_more_tv"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:gravity="center"
+        android:text="单个页面多个遮罩"
+        android:textSize="16sp"/>
+</LinearLayout>

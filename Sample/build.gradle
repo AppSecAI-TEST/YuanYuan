@@ -1,0 +1,122 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.jakewharton.butterknife'
+
+def configurations = rootProject.ext.configurations
+def signatures = rootProject.ext.signatures
+def libraries = rootProject.ext.dependencies
+def resources = rootProject.ext.resDirs
+
+android {
+    compileSdkVersion configurations.compileSdkVersion
+    buildToolsVersion configurations.buildToolsVersion
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId configurations.applicationId
+        minSdkVersion configurations.minSdkVersion
+        targetSdkVersion configurations.targetSdkVersion
+        versionCode configurations.versionCode
+        versionName configurations.versionName
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    aaptOptions {
+        cruncherEnabled false
+    }
+
+    dexOptions {
+        preDexLibraries false
+        javaMaxHeapSize "4GIB"
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/dependencies.txt'
+    }
+
+    signingConfigs {
+        release {
+            storeFile file(signatures.storeFile)
+            keyAlias signatures.keyAlias
+            keyPassword signatures.keyPassword
+            storePassword signatures.storePassword
+            v2SigningEnabled false
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            zipAlignEnabled true
+            shrinkResources true
+            debuggable false
+            // signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+
+        debug {
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
+            debuggable true
+            // signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    afterEvaluate {
+        tasks.matching {
+            it.name.startsWith('dex')
+        }.each { dx ->
+            if (dx.additionalParameters == null) {
+                dx.additionalParameters = ['--multi-dex']
+            } else {
+                dx.additionalParameters += '--multi-dex'
+            }
+        }
+    }
+
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile libraries.v7appcompat
+    compile libraries.constraintLayout
+    compile libraries.multidex
+
+    testCompile libraries.junit
+
+    compile files('libs/alipaySingle-20170510.jar')
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+
+    compile project(':Common')
+    compile project(':QRCode')
+    compile project(':GuideView')
+    compile project(':GifDrawable')
+
+    //butterknife
+    compile libraries.butterKnife
+    annotationProcessor libraries.butterKnifeCompiler
+}

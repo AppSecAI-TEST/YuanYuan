@@ -1,0 +1,6 @@
+# 要忽略的文件或者目录
+.gradle/
+.idea/
+build/
+*.iml
+local.properties

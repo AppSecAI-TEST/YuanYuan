@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/flash_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <TextView
+        android:id="@+id/flash_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="6dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/shape_flash_indicator"
+        android:gravity="center"
+        android:paddingBottom="2dp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:paddingTop="2dp"
+        android:text="1/5"
+        android:textColor="#aeadb6"
+        android:textSize="12sp"/>
+</RelativeLayout>

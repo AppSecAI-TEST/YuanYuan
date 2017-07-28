@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <Button
+                android:id="@+id/btn_text"
+                style="@style/btn_style"
+                android:text="简单文字Toast"/>
+
+            <Button
+                android:id="@+id/btn_text_true"
+                style="@style/btn_style"
+
+                android:text="正确图标Toast"/>
+
+            <Button
+                android:id="@+id/btn_text_false"
+                style="@style/btn_style"
+                android:text="错误图标Toast"/>
+
+            <Button
+                android:id="@+id/btn_text_long"
+                style="@style/btn_style"
+                android:text="简单文字 长~ Toast"/>
+
+            <Button
+                android:id="@+id/btn_text_true_long"
+                style="@style/btn_style"
+                android:text="正确图标 长~ Toast"/>
+
+            <Button
+                android:id="@+id/btn_text_false_long"
+                style="@style/btn_style"
+                android:text="错误图标 长~ Toast"/>
+
+            <TextView
+                style="@style/btn_style"
+                android:text="没啥可说的，哈哈哈哈"/>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

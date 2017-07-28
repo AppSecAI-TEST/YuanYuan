@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- RoundRelativeLayout -->
+    <declare-styleable name="RoundRelativeLayout">
+        <attr name="CustomBackground" format="reference"/>
+        <attr name="CornerRadius" format="dimension"/>
+    </declare-styleable>
+
+
+    <!-- Custom swipe refresh layout -->
+    <declare-styleable name="CustomSwipeRefreshLayout">
+        <attr name="srl_direction">
+            <enum name="top" value="0"/>
+            <enum name="bottom" value="1"/>
+            <enum name="both" value="2"/>
+        </attr>
+    </declare-styleable>
+
+    <!-- Round Image View -->
+    <declare-styleable name="RoundImageView">
+        <!--<attr name="borderWidth" format="reference|dimension"/>-->
+        <attr name="border_width" format="reference|dimension"/>
+        <attr name="borderRadius" format="reference|dimension"/>
+        <attr name="borderColor" format="reference|color"/>
+        <attr name="hoverColor" format="reference|color"/>
+    </declare-styleable>
+
+    <declare-styleable name="SwipeBackLayout">
+        <attr name="edge_size" format="dimension"/>
+        <attr name="edge_flag">
+            <enum name="left" value="0" />
+            <enum name="right" value="1" />
+            <enum name="bottom" value="2" />
+            <enum name="all" value="3" />
+        </attr>
+        <attr name="shadow_left" format="reference"/>
+        <attr name="shadow_right" format="reference"/>
+        <attr name="shadow_bottom" format="reference"/>
+    </declare-styleable>
+
+    <attr name="SwipeBackLayoutStyle" format="reference"/>
+</resources>
