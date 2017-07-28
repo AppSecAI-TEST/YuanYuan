@@ -42,7 +42,7 @@ import xyz.zimuju.common.widget.EditTextInfoActivity;
 import xyz.zimuju.common.widget.TextClearSuit;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.entity.User;
-import xyz.zimuju.sample.util.MenuUtil;
+import xyz.zimuju.sample.util.MenuUtils;
 import xyz.zimuju.sample.widget.UserView;
 
 
@@ -180,7 +180,7 @@ public class UserActivity extends BaseActivity implements OnClickListener, OnBot
     @Override
     public void initData() {//必须调用
 
-        bottomMenuView.bindView(MenuUtil.getMenuList(MenuUtil.USER));
+        bottomMenuView.bindView(MenuUtils.getMenuList(MenuUtils.USER));
 
         runThread(TAG + "initData", new Runnable() {
             @Override
@@ -234,10 +234,10 @@ public class UserActivity extends BaseActivity implements OnClickListener, OnBot
             return;
         }
         switch (intentCode) {
-            case MenuUtil.INTENT_CODE_SEND:
+            case MenuUtils.INTENT_CODE_SEND:
                 CommonUtils.shareInfo(context, JSON.toJSONString(user));
                 break;
-            case MenuUtil.INTENT_CODE_QRCODE:
+            case MenuUtils.INTENT_CODE_QRCODE:
                 toActivity(QRCodeActivity.createIntent(context, userId));
                 break;
             default:
@@ -246,13 +246,13 @@ public class UserActivity extends BaseActivity implements OnClickListener, OnBot
                     return;
                 }
                 switch (intentCode) {
-                    case MenuUtil.INTENT_CODE_SEND_MESSAGE:
+                    case MenuUtils.INTENT_CODE_SEND_MESSAGE:
                         CommonUtils.toMessageChat(context, user.getPhone());
                         break;
-                    case MenuUtil.INTENT_CODE_CALL:
+                    case MenuUtils.INTENT_CODE_CALL:
                         CommonUtils.call(context, phone);
                         break;
-                    case MenuUtil.INTENT_CODE_SEND_EMAIL:
+                    case MenuUtils.INTENT_CODE_SEND_EMAIL:
                         CommonUtils.sendEmail(context, phone + "@qq.com");
                         break;
                     default:

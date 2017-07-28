@@ -18,7 +18,7 @@ import xyz.zimuju.common.defination.OnBottomDragListener;
 import xyz.zimuju.common.entity.Entry;
 import xyz.zimuju.common.widget.GridAdapter;
 import xyz.zimuju.sample.R;
-import xyz.zimuju.sample.util.TestUtil;
+import xyz.zimuju.sample.util.DataUtils;
 
 public class DemoListActivity extends BaseListActivity<Entry<String, String>, GridView, GridAdapter> implements OnBottomDragListener {
     public static final String INTENT_RANGE = "INTENT_RANGE";
@@ -88,7 +88,7 @@ public class DemoListActivity extends BaseListActivity<Entry<String, String>, Gr
 
 
     private String getPictureUrl(int userId) {
-        return TestUtil.getPicture(userId % 6);
+        return DataUtils.getPicture(userId % 6);
     }
 
     @Override

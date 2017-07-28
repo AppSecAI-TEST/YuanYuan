@@ -30,7 +30,7 @@ import xyz.zimuju.common.util.JSON;
 import xyz.zimuju.sample.adapter.UserAdapter;
 import xyz.zimuju.sample.entity.User;
 import xyz.zimuju.sample.util.HttpRequest;
-import xyz.zimuju.sample.util.TestUtil;
+import xyz.zimuju.sample.util.DataUtils;
 
 /**用户列表界面fragment
  * @author Lemon
@@ -139,7 +139,7 @@ public class UserListFragment extends BaseHttpListFragment<User, UserAdapter> im
 
 			@Override
 			public void run() {
-				onHttpResponse(-page, JSON.toJSONString(TestUtil.getUserList(page, getCacheCount())), null);
+				onHttpResponse(-page, JSON.toJSONString(DataUtils.getUserList(page, getCacheCount())), null);
 			}
 		}, 1000);
 		//仅测试用>>>>>>>>>>>>

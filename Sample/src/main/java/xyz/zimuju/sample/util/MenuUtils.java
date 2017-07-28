@@ -7,7 +7,7 @@ import java.util.List;
 import xyz.zimuju.common.entity.Option;
 import xyz.zimuju.sample.R;
 
-public class MenuUtil {
+public class MenuUtils {
 
     public static final String NAME_SEND_MESSAGE = "发信息";//信息记录显示在通话记录左边
     public static final String NAME_CALL = "呼叫";//信息记录显示在通话记录左边

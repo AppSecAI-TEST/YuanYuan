@@ -5,7 +5,7 @@ import java.util.List;
 
 import xyz.zimuju.sample.entity.User;
 
-public class TestUtil {
+public class DataUtils {
 
     private static final String[] URLS = {
             "http://static.oschina.net/uploads/user/1218/2437072_100.jpg?t=1461076033000",
