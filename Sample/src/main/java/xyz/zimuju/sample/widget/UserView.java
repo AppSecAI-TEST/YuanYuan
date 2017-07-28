@@ -16,6 +16,7 @@ import xyz.zimuju.common.util.ImageLoaderUtil;
 import xyz.zimuju.common.util.StringUtils;
 import xyz.zimuju.common.widget.WebViewActivity;
 import xyz.zimuju.sample.R;
+import xyz.zimuju.sample.constant.UserConstants;
 import xyz.zimuju.sample.entity.User;
 
 public class UserView extends BaseView<User> implements View.OnClickListener {
@@ -59,10 +60,10 @@ public class UserView extends BaseView<User> implements View.OnClickListener {
         ImageLoaderUtil.loadImage(ivUserViewHead, data.getHead(), ImageLoaderUtil.TYPE_OVAL);
         ivUserViewStar.setImageResource(data.getStarred() ? R.mipmap.star_light : R.mipmap.star);
 
-        tvUserViewSex.setBackgroundResource(data.getSex() == User.SEX_FEMALE
+        tvUserViewSex.setBackgroundResource(data.getSex() == UserConstants.SEX_FEMALE
                 ? R.drawable.circle_pink : R.drawable.circle_blue);
-        tvUserViewSex.setText(data.getSex() == User.SEX_FEMALE ? "女" : "男");
-        tvUserViewSex.setTextColor(getColor(data.getSex() == User.SEX_FEMALE ? R.color.pink : R.color.blue));
+        tvUserViewSex.setText(data.getSex() == UserConstants.SEX_FEMALE ? "女" : "男");
+        tvUserViewSex.setTextColor(getColor(data.getSex() == UserConstants.SEX_FEMALE ? R.color.pink : R.color.blue));
 
         tvUserViewName.setText(StringUtils.getTrimedString(data.getName()));
         tvUserViewId.setText("ID:" + data.getId());
@@ -84,7 +85,7 @@ public class UserView extends BaseView<User> implements View.OnClickListener {
                         data.setStarred(!data.getStarred());
                         break;
                     case R.id.tvUserViewSex:
-                        data.setSex(data.getSex() == User.SEX_FEMALE ? User.SEX_MAIL : User.SEX_FEMALE);
+                        data.setSex(data.getSex() == UserConstants.SEX_FEMALE ? UserConstants.SEX_MALE : UserConstants.SEX_FEMALE);
                         break;
                 }
                 bindView(data);
