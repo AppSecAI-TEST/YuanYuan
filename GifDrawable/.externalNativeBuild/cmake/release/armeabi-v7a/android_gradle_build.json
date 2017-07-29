@@ -1,10 +1,10 @@
 
 {
-	"buildFiles" : [ "E:/Workspace/CommonUtil/GifDrawable/src/main/c/CMakeLists.txt" ],
+	"buildFiles" : [ "E:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/CMakeLists.txt" ],
 	"cFileExtensions" : [ "c" ],
 	"cleanCommands" : 
 	[
-		"E:\\AndroidSDK\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\Workspace\\CommonUtil\\GifDrawable\\.externalNativeBuild\\cmake\\release\\armeabi-v7a --target clean"
+		"F:\\AndroidSDK\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\AndroidStudio\\CommonUtil\\GifDrawable\\.externalNativeBuild\\cmake\\release\\armeabi-v7a --target clean"
 	],
 	"libraries" : 
 	{
@@ -12,117 +12,117 @@
 		{
 			"abi" : "armeabi-v7a",
 			"artifactName" : "pl_droidsonroids_gif",
-			"buildCommand" : "E:\\AndroidSDK\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\Workspace\\CommonUtil\\GifDrawable\\.externalNativeBuild\\cmake\\release\\armeabi-v7a --target pl_droidsonroids_gif",
+			"buildCommand" : "F:\\AndroidSDK\\cmake\\3.6.4111459\\bin\\cmake.exe --build E:\\AndroidStudio\\CommonUtil\\GifDrawable\\.externalNativeBuild\\cmake\\release\\armeabi-v7a --target pl_droidsonroids_gif",
 			"buildType" : "release",
 			"files" : 
 			[
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
-					"src" : "E:/Workspace/CommonUtil/GifDrawable/src/main/c/bitmap.c",
-					"workingDirectory" : "E:/Workspace/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=F:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=F:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
+					"src" : "E:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/bitmap.c",
+					"workingDirectory" : "E:/AndroidStudio/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
-					"src" : "E:/Workspace/CommonUtil/GifDrawable/src/main/c/control.c",
-					"workingDirectory" : "E:/Workspace/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=F:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=F:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
+					"src" : "E:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/control.c",
+					"workingDirectory" : "E:/AndroidStudio/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
-					"src" : "E:/Workspace/CommonUtil/GifDrawable/src/main/c/decoding.c",
-					"workingDirectory" : "E:/Workspace/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=F:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=F:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
+					"src" : "E:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/decoding.c",
+					"workingDirectory" : "E:/AndroidStudio/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
-					"src" : "E:/Workspace/CommonUtil/GifDrawable/src/main/c/dispose.c",
-					"workingDirectory" : "E:/Workspace/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=F:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=F:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
+					"src" : "E:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/dispose.c",
+					"workingDirectory" : "E:/AndroidStudio/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
-					"src" : "E:/Workspace/CommonUtil/GifDrawable/src/main/c/drawing.c",
-					"workingDirectory" : "E:/Workspace/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=F:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=F:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
+					"src" : "E:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/drawing.c",
+					"workingDirectory" : "E:/AndroidStudio/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
-					"src" : "E:/Workspace/CommonUtil/GifDrawable/src/main/c/exception.c",
-					"workingDirectory" : "E:/Workspace/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=F:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=F:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
+					"src" : "E:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/exception.c",
+					"workingDirectory" : "E:/AndroidStudio/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
-					"src" : "E:/Workspace/CommonUtil/GifDrawable/src/main/c/gif.c",
-					"workingDirectory" : "E:/Workspace/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=F:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=F:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
+					"src" : "E:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/gif.c",
+					"workingDirectory" : "E:/AndroidStudio/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
-					"src" : "E:/Workspace/CommonUtil/GifDrawable/src/main/c/giflib/dgif_lib.c",
-					"workingDirectory" : "E:/Workspace/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=F:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=F:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
+					"src" : "E:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/giflib/dgif_lib.c",
+					"workingDirectory" : "E:/AndroidStudio/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
-					"src" : "E:/Workspace/CommonUtil/GifDrawable/src/main/c/giflib/gifalloc.c",
-					"workingDirectory" : "E:/Workspace/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=F:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=F:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
+					"src" : "E:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/giflib/gifalloc.c",
+					"workingDirectory" : "E:/AndroidStudio/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
-					"src" : "E:/Workspace/CommonUtil/GifDrawable/src/main/c/giflib/openbsd-reallocarray.c",
-					"workingDirectory" : "E:/Workspace/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=F:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=F:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
+					"src" : "E:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/giflib/openbsd-reallocarray.c",
+					"workingDirectory" : "E:/AndroidStudio/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
-					"src" : "E:/Workspace/CommonUtil/GifDrawable/src/main/c/init.c",
-					"workingDirectory" : "E:/Workspace/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=F:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=F:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
+					"src" : "E:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/init.c",
+					"workingDirectory" : "E:/AndroidStudio/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
-					"src" : "E:/Workspace/CommonUtil/GifDrawable/src/main/c/jni.c",
-					"workingDirectory" : "E:/Workspace/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=F:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=F:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
+					"src" : "E:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/jni.c",
+					"workingDirectory" : "E:/AndroidStudio/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
-					"src" : "E:/Workspace/CommonUtil/GifDrawable/src/main/c/metadata.c",
-					"workingDirectory" : "E:/Workspace/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=F:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=F:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
+					"src" : "E:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/metadata.c",
+					"workingDirectory" : "E:/AndroidStudio/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
-					"src" : "E:/Workspace/CommonUtil/GifDrawable/src/main/c/opengl.c",
-					"workingDirectory" : "E:/Workspace/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=F:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=F:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
+					"src" : "E:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/opengl.c",
+					"workingDirectory" : "E:/AndroidStudio/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
-					"src" : "E:/Workspace/CommonUtil/GifDrawable/src/main/c/surface.c",
-					"workingDirectory" : "E:/Workspace/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=F:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=F:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
+					"src" : "E:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/surface.c",
+					"workingDirectory" : "E:/AndroidStudio/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
 				},
 				
 				{
-					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=E:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=E:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
-					"src" : "E:/Workspace/CommonUtil/GifDrawable/src/main/c/time.c",
-					"workingDirectory" : "E:/Workspace/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
+					"flags" : "  --target=armv7-none-linux-androideabi --gcc-toolchain=F:/AndroidSDK/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/windows-x86_64 --sysroot=F:/AndroidSDK/ndk-bundle/sysroot -Dpl_droidsonroids_gif_EXPORTS  -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/arm-linux-androideabi -D__ANDROID_API__=15 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -march=armv7-a -mfloat-abi=softfp -mfpu=vfpv3-d16 -fno-integrated-as -mthumb -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -Os -DNDEBUG  -fPIC      -c ",
+					"src" : "E:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/time.c",
+					"workingDirectory" : "E:/AndroidStudio/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/armeabi-v7a"
 				}
 			],
-			"output" : "E:/Workspace/CommonUtil/GifDrawable/build/intermediates/cmake/release/obj/armeabi-v7a/libpl_droidsonroids_gif.so",
-			"toolchain" : "2188260979"
+			"output" : "E:/AndroidStudio/CommonUtil/GifDrawable/build/intermediates/cmake/release/obj/armeabi-v7a/libpl_droidsonroids_gif.so",
+			"toolchain" : "3528943773"
 		}
 	},
 	"toolchains" : 
 	{
-		"2188260979" : 
+		"3528943773" : 
 		{
-			"cCompilerExecutable" : "E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe",
-			"cppCompilerExecutable" : "E:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe"
+			"cCompilerExecutable" : "F:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe",
+			"cppCompilerExecutable" : "F:/AndroidSDK/ndk-bundle/toolchains/llvm/prebuilt/windows-x86_64/bin/clang++.exe"
 		}
 	}
 }

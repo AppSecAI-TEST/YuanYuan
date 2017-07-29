@@ -32,116 +32,116 @@ include rules.ninja
 # =============================================================================
 # Object build statements for SHARED_LIBRARY target pl_droidsonroids_gif
 
-build CMakeFiles/pl_droidsonroids_gif.dir/bitmap.c.o: C_COMPILER__pl_droidsonroids_gif E$:/Workspace/CommonUtil/GifDrawable/src/main/c/bitmap.c
+build CMakeFiles/pl_droidsonroids_gif.dir/bitmap.c.o: C_COMPILER__pl_droidsonroids_gif E$:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/bitmap.c
   DEFINES = -Dpl_droidsonroids_gif_EXPORTS
   DEP_FILE = CMakeFiles\pl_droidsonroids_gif.dir\bitmap.c.o.d
-  FLAGS = -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
-  IN_ABS = E:\Workspace\CommonUtil\GifDrawable\src\main\c\bitmap.c
+  FLAGS = -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
+  IN_ABS = E:\AndroidStudio\CommonUtil\GifDrawable\src\main\c\bitmap.c
   OBJECT_DIR = CMakeFiles\pl_droidsonroids_gif.dir
   OBJECT_FILE_DIR = CMakeFiles\pl_droidsonroids_gif.dir
-build CMakeFiles/pl_droidsonroids_gif.dir/control.c.o: C_COMPILER__pl_droidsonroids_gif E$:/Workspace/CommonUtil/GifDrawable/src/main/c/control.c
+build CMakeFiles/pl_droidsonroids_gif.dir/control.c.o: C_COMPILER__pl_droidsonroids_gif E$:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/control.c
   DEFINES = -Dpl_droidsonroids_gif_EXPORTS
   DEP_FILE = CMakeFiles\pl_droidsonroids_gif.dir\control.c.o.d
-  FLAGS = -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
-  IN_ABS = E:\Workspace\CommonUtil\GifDrawable\src\main\c\control.c
+  FLAGS = -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
+  IN_ABS = E:\AndroidStudio\CommonUtil\GifDrawable\src\main\c\control.c
   OBJECT_DIR = CMakeFiles\pl_droidsonroids_gif.dir
   OBJECT_FILE_DIR = CMakeFiles\pl_droidsonroids_gif.dir
-build CMakeFiles/pl_droidsonroids_gif.dir/decoding.c.o: C_COMPILER__pl_droidsonroids_gif E$:/Workspace/CommonUtil/GifDrawable/src/main/c/decoding.c
+build CMakeFiles/pl_droidsonroids_gif.dir/decoding.c.o: C_COMPILER__pl_droidsonroids_gif E$:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/decoding.c
   DEFINES = -Dpl_droidsonroids_gif_EXPORTS
   DEP_FILE = CMakeFiles\pl_droidsonroids_gif.dir\decoding.c.o.d
-  FLAGS = -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
-  IN_ABS = E:\Workspace\CommonUtil\GifDrawable\src\main\c\decoding.c
+  FLAGS = -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
+  IN_ABS = E:\AndroidStudio\CommonUtil\GifDrawable\src\main\c\decoding.c
   OBJECT_DIR = CMakeFiles\pl_droidsonroids_gif.dir
   OBJECT_FILE_DIR = CMakeFiles\pl_droidsonroids_gif.dir
-build CMakeFiles/pl_droidsonroids_gif.dir/dispose.c.o: C_COMPILER__pl_droidsonroids_gif E$:/Workspace/CommonUtil/GifDrawable/src/main/c/dispose.c
+build CMakeFiles/pl_droidsonroids_gif.dir/dispose.c.o: C_COMPILER__pl_droidsonroids_gif E$:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/dispose.c
   DEFINES = -Dpl_droidsonroids_gif_EXPORTS
   DEP_FILE = CMakeFiles\pl_droidsonroids_gif.dir\dispose.c.o.d
-  FLAGS = -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
-  IN_ABS = E:\Workspace\CommonUtil\GifDrawable\src\main\c\dispose.c
+  FLAGS = -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
+  IN_ABS = E:\AndroidStudio\CommonUtil\GifDrawable\src\main\c\dispose.c
   OBJECT_DIR = CMakeFiles\pl_droidsonroids_gif.dir
   OBJECT_FILE_DIR = CMakeFiles\pl_droidsonroids_gif.dir
-build CMakeFiles/pl_droidsonroids_gif.dir/drawing.c.o: C_COMPILER__pl_droidsonroids_gif E$:/Workspace/CommonUtil/GifDrawable/src/main/c/drawing.c
+build CMakeFiles/pl_droidsonroids_gif.dir/drawing.c.o: C_COMPILER__pl_droidsonroids_gif E$:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/drawing.c
   DEFINES = -Dpl_droidsonroids_gif_EXPORTS
   DEP_FILE = CMakeFiles\pl_droidsonroids_gif.dir\drawing.c.o.d
-  FLAGS = -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
-  IN_ABS = E:\Workspace\CommonUtil\GifDrawable\src\main\c\drawing.c
+  FLAGS = -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
+  IN_ABS = E:\AndroidStudio\CommonUtil\GifDrawable\src\main\c\drawing.c
   OBJECT_DIR = CMakeFiles\pl_droidsonroids_gif.dir
   OBJECT_FILE_DIR = CMakeFiles\pl_droidsonroids_gif.dir
-build CMakeFiles/pl_droidsonroids_gif.dir/exception.c.o: C_COMPILER__pl_droidsonroids_gif E$:/Workspace/CommonUtil/GifDrawable/src/main/c/exception.c
+build CMakeFiles/pl_droidsonroids_gif.dir/exception.c.o: C_COMPILER__pl_droidsonroids_gif E$:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/exception.c
   DEFINES = -Dpl_droidsonroids_gif_EXPORTS
   DEP_FILE = CMakeFiles\pl_droidsonroids_gif.dir\exception.c.o.d
-  FLAGS = -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
-  IN_ABS = E:\Workspace\CommonUtil\GifDrawable\src\main\c\exception.c
+  FLAGS = -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
+  IN_ABS = E:\AndroidStudio\CommonUtil\GifDrawable\src\main\c\exception.c
   OBJECT_DIR = CMakeFiles\pl_droidsonroids_gif.dir
   OBJECT_FILE_DIR = CMakeFiles\pl_droidsonroids_gif.dir
-build CMakeFiles/pl_droidsonroids_gif.dir/gif.c.o: C_COMPILER__pl_droidsonroids_gif E$:/Workspace/CommonUtil/GifDrawable/src/main/c/gif.c
+build CMakeFiles/pl_droidsonroids_gif.dir/gif.c.o: C_COMPILER__pl_droidsonroids_gif E$:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/gif.c
   DEFINES = -Dpl_droidsonroids_gif_EXPORTS
   DEP_FILE = CMakeFiles\pl_droidsonroids_gif.dir\gif.c.o.d
-  FLAGS = -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
-  IN_ABS = E:\Workspace\CommonUtil\GifDrawable\src\main\c\gif.c
+  FLAGS = -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
+  IN_ABS = E:\AndroidStudio\CommonUtil\GifDrawable\src\main\c\gif.c
   OBJECT_DIR = CMakeFiles\pl_droidsonroids_gif.dir
   OBJECT_FILE_DIR = CMakeFiles\pl_droidsonroids_gif.dir
-build CMakeFiles/pl_droidsonroids_gif.dir/giflib/dgif_lib.c.o: C_COMPILER__pl_droidsonroids_gif E$:/Workspace/CommonUtil/GifDrawable/src/main/c/giflib/dgif_lib.c
+build CMakeFiles/pl_droidsonroids_gif.dir/giflib/dgif_lib.c.o: C_COMPILER__pl_droidsonroids_gif E$:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/giflib/dgif_lib.c
   DEFINES = -Dpl_droidsonroids_gif_EXPORTS
   DEP_FILE = CMakeFiles\pl_droidsonroids_gif.dir\giflib\dgif_lib.c.o.d
-  FLAGS = -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
-  IN_ABS = E:\Workspace\CommonUtil\GifDrawable\src\main\c\giflib\dgif_lib.c
+  FLAGS = -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
+  IN_ABS = E:\AndroidStudio\CommonUtil\GifDrawable\src\main\c\giflib\dgif_lib.c
   OBJECT_DIR = CMakeFiles\pl_droidsonroids_gif.dir
   OBJECT_FILE_DIR = CMakeFiles\pl_droidsonroids_gif.dir\giflib
-build CMakeFiles/pl_droidsonroids_gif.dir/giflib/gifalloc.c.o: C_COMPILER__pl_droidsonroids_gif E$:/Workspace/CommonUtil/GifDrawable/src/main/c/giflib/gifalloc.c
+build CMakeFiles/pl_droidsonroids_gif.dir/giflib/gifalloc.c.o: C_COMPILER__pl_droidsonroids_gif E$:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/giflib/gifalloc.c
   DEFINES = -Dpl_droidsonroids_gif_EXPORTS
   DEP_FILE = CMakeFiles\pl_droidsonroids_gif.dir\giflib\gifalloc.c.o.d
-  FLAGS = -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
-  IN_ABS = E:\Workspace\CommonUtil\GifDrawable\src\main\c\giflib\gifalloc.c
+  FLAGS = -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
+  IN_ABS = E:\AndroidStudio\CommonUtil\GifDrawable\src\main\c\giflib\gifalloc.c
   OBJECT_DIR = CMakeFiles\pl_droidsonroids_gif.dir
   OBJECT_FILE_DIR = CMakeFiles\pl_droidsonroids_gif.dir\giflib
-build CMakeFiles/pl_droidsonroids_gif.dir/giflib/openbsd-reallocarray.c.o: C_COMPILER__pl_droidsonroids_gif E$:/Workspace/CommonUtil/GifDrawable/src/main/c/giflib/openbsd-reallocarray.c
+build CMakeFiles/pl_droidsonroids_gif.dir/giflib/openbsd-reallocarray.c.o: C_COMPILER__pl_droidsonroids_gif E$:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/giflib/openbsd-reallocarray.c
   DEFINES = -Dpl_droidsonroids_gif_EXPORTS
   DEP_FILE = CMakeFiles\pl_droidsonroids_gif.dir\giflib\openbsd-reallocarray.c.o.d
-  FLAGS = -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
-  IN_ABS = E:\Workspace\CommonUtil\GifDrawable\src\main\c\giflib\openbsd-reallocarray.c
+  FLAGS = -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
+  IN_ABS = E:\AndroidStudio\CommonUtil\GifDrawable\src\main\c\giflib\openbsd-reallocarray.c
   OBJECT_DIR = CMakeFiles\pl_droidsonroids_gif.dir
   OBJECT_FILE_DIR = CMakeFiles\pl_droidsonroids_gif.dir\giflib
-build CMakeFiles/pl_droidsonroids_gif.dir/init.c.o: C_COMPILER__pl_droidsonroids_gif E$:/Workspace/CommonUtil/GifDrawable/src/main/c/init.c
+build CMakeFiles/pl_droidsonroids_gif.dir/init.c.o: C_COMPILER__pl_droidsonroids_gif E$:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/init.c
   DEFINES = -Dpl_droidsonroids_gif_EXPORTS
   DEP_FILE = CMakeFiles\pl_droidsonroids_gif.dir\init.c.o.d
-  FLAGS = -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
-  IN_ABS = E:\Workspace\CommonUtil\GifDrawable\src\main\c\init.c
+  FLAGS = -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
+  IN_ABS = E:\AndroidStudio\CommonUtil\GifDrawable\src\main\c\init.c
   OBJECT_DIR = CMakeFiles\pl_droidsonroids_gif.dir
   OBJECT_FILE_DIR = CMakeFiles\pl_droidsonroids_gif.dir
-build CMakeFiles/pl_droidsonroids_gif.dir/jni.c.o: C_COMPILER__pl_droidsonroids_gif E$:/Workspace/CommonUtil/GifDrawable/src/main/c/jni.c
+build CMakeFiles/pl_droidsonroids_gif.dir/jni.c.o: C_COMPILER__pl_droidsonroids_gif E$:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/jni.c
   DEFINES = -Dpl_droidsonroids_gif_EXPORTS
   DEP_FILE = CMakeFiles\pl_droidsonroids_gif.dir\jni.c.o.d
-  FLAGS = -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
-  IN_ABS = E:\Workspace\CommonUtil\GifDrawable\src\main\c\jni.c
+  FLAGS = -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
+  IN_ABS = E:\AndroidStudio\CommonUtil\GifDrawable\src\main\c\jni.c
   OBJECT_DIR = CMakeFiles\pl_droidsonroids_gif.dir
   OBJECT_FILE_DIR = CMakeFiles\pl_droidsonroids_gif.dir
-build CMakeFiles/pl_droidsonroids_gif.dir/metadata.c.o: C_COMPILER__pl_droidsonroids_gif E$:/Workspace/CommonUtil/GifDrawable/src/main/c/metadata.c
+build CMakeFiles/pl_droidsonroids_gif.dir/metadata.c.o: C_COMPILER__pl_droidsonroids_gif E$:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/metadata.c
   DEFINES = -Dpl_droidsonroids_gif_EXPORTS
   DEP_FILE = CMakeFiles\pl_droidsonroids_gif.dir\metadata.c.o.d
-  FLAGS = -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
-  IN_ABS = E:\Workspace\CommonUtil\GifDrawable\src\main\c\metadata.c
+  FLAGS = -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
+  IN_ABS = E:\AndroidStudio\CommonUtil\GifDrawable\src\main\c\metadata.c
   OBJECT_DIR = CMakeFiles\pl_droidsonroids_gif.dir
   OBJECT_FILE_DIR = CMakeFiles\pl_droidsonroids_gif.dir
-build CMakeFiles/pl_droidsonroids_gif.dir/opengl.c.o: C_COMPILER__pl_droidsonroids_gif E$:/Workspace/CommonUtil/GifDrawable/src/main/c/opengl.c
+build CMakeFiles/pl_droidsonroids_gif.dir/opengl.c.o: C_COMPILER__pl_droidsonroids_gif E$:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/opengl.c
   DEFINES = -Dpl_droidsonroids_gif_EXPORTS
   DEP_FILE = CMakeFiles\pl_droidsonroids_gif.dir\opengl.c.o.d
-  FLAGS = -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
-  IN_ABS = E:\Workspace\CommonUtil\GifDrawable\src\main\c\opengl.c
+  FLAGS = -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
+  IN_ABS = E:\AndroidStudio\CommonUtil\GifDrawable\src\main\c\opengl.c
   OBJECT_DIR = CMakeFiles\pl_droidsonroids_gif.dir
   OBJECT_FILE_DIR = CMakeFiles\pl_droidsonroids_gif.dir
-build CMakeFiles/pl_droidsonroids_gif.dir/surface.c.o: C_COMPILER__pl_droidsonroids_gif E$:/Workspace/CommonUtil/GifDrawable/src/main/c/surface.c
+build CMakeFiles/pl_droidsonroids_gif.dir/surface.c.o: C_COMPILER__pl_droidsonroids_gif E$:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/surface.c
   DEFINES = -Dpl_droidsonroids_gif_EXPORTS
   DEP_FILE = CMakeFiles\pl_droidsonroids_gif.dir\surface.c.o.d
-  FLAGS = -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
-  IN_ABS = E:\Workspace\CommonUtil\GifDrawable\src\main\c\surface.c
+  FLAGS = -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
+  IN_ABS = E:\AndroidStudio\CommonUtil\GifDrawable\src\main\c\surface.c
   OBJECT_DIR = CMakeFiles\pl_droidsonroids_gif.dir
   OBJECT_FILE_DIR = CMakeFiles\pl_droidsonroids_gif.dir
-build CMakeFiles/pl_droidsonroids_gif.dir/time.c.o: C_COMPILER__pl_droidsonroids_gif E$:/Workspace/CommonUtil/GifDrawable/src/main/c/time.c
+build CMakeFiles/pl_droidsonroids_gif.dir/time.c.o: C_COMPILER__pl_droidsonroids_gif E$:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/time.c
   DEFINES = -Dpl_droidsonroids_gif_EXPORTS
   DEP_FILE = CMakeFiles\pl_droidsonroids_gif.dir\time.c.o.d
-  FLAGS = -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
-  IN_ABS = E:\Workspace\CommonUtil\GifDrawable\src\main\c\time.c
+  FLAGS = -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info  -fPIC
+  IN_ABS = E:\AndroidStudio\CommonUtil\GifDrawable\src\main\c\time.c
   OBJECT_DIR = CMakeFiles\pl_droidsonroids_gif.dir
   OBJECT_FILE_DIR = CMakeFiles\pl_droidsonroids_gif.dir
 
@@ -150,25 +150,25 @@ build CMakeFiles/pl_droidsonroids_gif.dir/time.c.o: C_COMPILER__pl_droidsonroids
 
 
 #############################################
-# Link the shared library E:\Workspace\CommonUtil\GifDrawable\build\intermediates\cmake\debug\obj\x86_64\libpl_droidsonroids_gif.so
+# Link the shared library E:\AndroidStudio\CommonUtil\GifDrawable\build\intermediates\cmake\debug\obj\x86_64\libpl_droidsonroids_gif.so
 
-build E$:/Workspace/CommonUtil/GifDrawable/build/intermediates/cmake/debug/obj/x86_64/libpl_droidsonroids_gif.so: C_SHARED_LIBRARY_LINKER__pl_droidsonroids_gif CMakeFiles/pl_droidsonroids_gif.dir/bitmap.c.o CMakeFiles/pl_droidsonroids_gif.dir/control.c.o CMakeFiles/pl_droidsonroids_gif.dir/decoding.c.o CMakeFiles/pl_droidsonroids_gif.dir/dispose.c.o CMakeFiles/pl_droidsonroids_gif.dir/drawing.c.o CMakeFiles/pl_droidsonroids_gif.dir/exception.c.o CMakeFiles/pl_droidsonroids_gif.dir/gif.c.o CMakeFiles/pl_droidsonroids_gif.dir/giflib/dgif_lib.c.o CMakeFiles/pl_droidsonroids_gif.dir/giflib/gifalloc.c.o CMakeFiles/pl_droidsonroids_gif.dir/giflib/openbsd-reallocarray.c.o CMakeFiles/pl_droidsonroids_gif.dir/init.c.o CMakeFiles/pl_droidsonroids_gif.dir/jni.c.o CMakeFiles/pl_droidsonroids_gif.dir/metadata.c.o CMakeFiles/pl_droidsonroids_gif.dir/opengl.c.o CMakeFiles/pl_droidsonroids_gif.dir/surface.c.o CMakeFiles/pl_droidsonroids_gif.dir/time.c.o
-  LANGUAGE_COMPILE_FLAGS = -isystem E:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info
-  LINK_FLAGS = -Wl,--exclude-libs,libgcc.a --sysroot E:/AndroidSDK/ndk-bundle/platforms/android-21/arch-x86_64 -Wl,--build-id -Wl,--warn-shared-textrel -Wl,--fatal-warnings -Wl,--no-undefined -Wl,-z,noexecstack -Qunused-arguments -Wl,-z,relro -Wl,-z,now
+build E$:/AndroidStudio/CommonUtil/GifDrawable/build/intermediates/cmake/debug/obj/x86_64/libpl_droidsonroids_gif.so: C_SHARED_LIBRARY_LINKER__pl_droidsonroids_gif CMakeFiles/pl_droidsonroids_gif.dir/bitmap.c.o CMakeFiles/pl_droidsonroids_gif.dir/control.c.o CMakeFiles/pl_droidsonroids_gif.dir/decoding.c.o CMakeFiles/pl_droidsonroids_gif.dir/dispose.c.o CMakeFiles/pl_droidsonroids_gif.dir/drawing.c.o CMakeFiles/pl_droidsonroids_gif.dir/exception.c.o CMakeFiles/pl_droidsonroids_gif.dir/gif.c.o CMakeFiles/pl_droidsonroids_gif.dir/giflib/dgif_lib.c.o CMakeFiles/pl_droidsonroids_gif.dir/giflib/gifalloc.c.o CMakeFiles/pl_droidsonroids_gif.dir/giflib/openbsd-reallocarray.c.o CMakeFiles/pl_droidsonroids_gif.dir/init.c.o CMakeFiles/pl_droidsonroids_gif.dir/jni.c.o CMakeFiles/pl_droidsonroids_gif.dir/metadata.c.o CMakeFiles/pl_droidsonroids_gif.dir/opengl.c.o CMakeFiles/pl_droidsonroids_gif.dir/surface.c.o CMakeFiles/pl_droidsonroids_gif.dir/time.c.o
+  LANGUAGE_COMPILE_FLAGS = -isystem F:/AndroidSDK/ndk-bundle/sysroot/usr/include/x86_64-linux-android -D__ANDROID_API__=21 -g -DANDROID -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -Wa,--noexecstack -Wformat -Werror=format-security -std=c11 -Weverything -Wall -DDEBUG -g -O0 -fno-limit-debug-info
+  LINK_FLAGS = -Wl,--exclude-libs,libgcc.a --sysroot F:/AndroidSDK/ndk-bundle/platforms/android-21/arch-x86_64 -Wl,--build-id -Wl,--warn-shared-textrel -Wl,--fatal-warnings -Wl,--no-undefined -Wl,-z,noexecstack -Qunused-arguments -Wl,-z,relro -Wl,-z,now
   LINK_LIBRARIES = -ljnigraphics -landroid -lGLESv2 -llog -lm
   OBJECT_DIR = CMakeFiles\pl_droidsonroids_gif.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
   SONAME = libpl_droidsonroids_gif.so
   SONAME_FLAG = -Wl,-soname,
-  TARGET_FILE = E:\Workspace\CommonUtil\GifDrawable\build\intermediates\cmake\debug\obj\x86_64\libpl_droidsonroids_gif.so
+  TARGET_FILE = E:\AndroidStudio\CommonUtil\GifDrawable\build\intermediates\cmake\debug\obj\x86_64\libpl_droidsonroids_gif.so
   TARGET_PDB = pl_droidsonroids_gif.so.dbg
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D E:\Workspace\CommonUtil\GifDrawable\.externalNativeBuild\cmake\debug\x86_64 && E:\AndroidSDK\cmake\3.6.4111459\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D E:\AndroidStudio\CommonUtil\GifDrawable\.externalNativeBuild\cmake\debug\x86_64 && F:\AndroidSDK\cmake\3.6.4111459\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 build edit_cache: phony CMakeFiles/edit_cache.util
@@ -177,7 +177,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D E:\Workspace\CommonUtil\GifDrawable\.externalNativeBuild\cmake\debug\x86_64 && E:\AndroidSDK\cmake\3.6.4111459\bin\cmake.exe -HE:\Workspace\CommonUtil\GifDrawable\src\main\c -BE:\Workspace\CommonUtil\GifDrawable\.externalNativeBuild\cmake\debug\x86_64"
+  COMMAND = cmd.exe /C "cd /D E:\AndroidStudio\CommonUtil\GifDrawable\.externalNativeBuild\cmake\debug\x86_64 && F:\AndroidSDK\cmake\3.6.4111459\bin\cmake.exe -HE:\AndroidStudio\CommonUtil\GifDrawable\src\main\c -BE:\AndroidStudio\CommonUtil\GifDrawable\.externalNativeBuild\cmake\debug\x86_64"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -185,8 +185,8 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # =============================================================================
 # Target aliases.
 
-build libpl_droidsonroids_gif.so: phony E$:/Workspace/CommonUtil/GifDrawable/build/intermediates/cmake/debug/obj/x86_64/libpl_droidsonroids_gif.so
-build pl_droidsonroids_gif: phony E$:/Workspace/CommonUtil/GifDrawable/build/intermediates/cmake/debug/obj/x86_64/libpl_droidsonroids_gif.so
+build libpl_droidsonroids_gif.so: phony E$:/AndroidStudio/CommonUtil/GifDrawable/build/intermediates/cmake/debug/obj/x86_64/libpl_droidsonroids_gif.so
+build pl_droidsonroids_gif: phony E$:/AndroidStudio/CommonUtil/GifDrawable/build/intermediates/cmake/debug/obj/x86_64/libpl_droidsonroids_gif.so
 # =============================================================================
 # Folder targets.
 
@@ -198,7 +198,7 @@ build pl_droidsonroids_gif: phony E$:/Workspace/CommonUtil/GifDrawable/build/int
 #############################################
 # The main all target.
 
-build all: phony E$:/Workspace/CommonUtil/GifDrawable/build/intermediates/cmake/debug/obj/x86_64/libpl_droidsonroids_gif.so
+build all: phony E$:/AndroidStudio/CommonUtil/GifDrawable/build/intermediates/cmake/debug/obj/x86_64/libpl_droidsonroids_gif.so
 
 #############################################
 # Make the all target the default.
@@ -208,13 +208,13 @@ default all
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | CMakeCache.txt CMakeFiles/3.6.0-rc2/CMakeASMCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeSystem.cmake CMakeFiles/feature_tests.c CMakeFiles/feature_tests.cxx E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeASMCompiler.cmake.in E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeASMInformation.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCCompiler.cmake.in E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCCompilerABI.c E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCInformation.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXCompiler.cmake.in E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXCompilerABI.cpp E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXInformation.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCommonLanguageInclude.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineASMCompiler.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCCompiler.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCXXCompiler.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCompileFeatures.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCompiler.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCompilerABI.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineSystem.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeFindBinUtils.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeGenericSystem.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeLanguageInformation.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeParseImplicitLinkInfo.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystem.cmake.in E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInformation.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInitialize.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeTestASMCompiler.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeTestCCompiler.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeTestCXXCompiler.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeTestCompilerCommon.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-ASM.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-C-FeatureTests.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-C.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX-FeatureTests.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX-TestableFeatures.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/GNU.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Internal/FeatureTesting.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Android.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Linux.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/UnixPaths.cmake E$:/AndroidSDK/ndk-bundle/build/cmake/android.toolchain.cmake E$:/Workspace/CommonUtil/GifDrawable/src/main/c/CMakeLists.txt
+build build.ninja: RERUN_CMAKE | CMakeCache.txt CMakeFiles/3.6.0-rc2/CMakeASMCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeSystem.cmake CMakeFiles/feature_tests.c CMakeFiles/feature_tests.cxx E$:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/CMakeLists.txt F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeASMCompiler.cmake.in F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeASMInformation.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCCompiler.cmake.in F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCCompilerABI.c F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCInformation.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXCompiler.cmake.in F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXCompilerABI.cpp F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXInformation.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCommonLanguageInclude.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineASMCompiler.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCCompiler.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCXXCompiler.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCompileFeatures.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCompiler.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCompilerABI.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineSystem.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeFindBinUtils.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeGenericSystem.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeLanguageInformation.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeParseImplicitLinkInfo.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystem.cmake.in F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInformation.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInitialize.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeTestASMCompiler.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeTestCCompiler.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeTestCXXCompiler.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeTestCompilerCommon.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-ASM.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-C-FeatureTests.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-C.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX-FeatureTests.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX-TestableFeatures.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/GNU.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Internal/FeatureTesting.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Android.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Linux.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/UnixPaths.cmake F$:/AndroidSDK/ndk-bundle/build/cmake/android.toolchain.cmake
   pool = console
 
 #############################################
 # A missing CMake input file is not an error.
 
-build CMakeCache.txt CMakeFiles/3.6.0-rc2/CMakeASMCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeSystem.cmake CMakeFiles/feature_tests.c CMakeFiles/feature_tests.cxx E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeASMCompiler.cmake.in E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeASMInformation.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCCompiler.cmake.in E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCCompilerABI.c E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCInformation.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXCompiler.cmake.in E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXCompilerABI.cpp E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXInformation.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCommonLanguageInclude.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineASMCompiler.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCCompiler.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCXXCompiler.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCompileFeatures.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCompiler.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCompilerABI.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineSystem.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeFindBinUtils.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeGenericSystem.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeLanguageInformation.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeParseImplicitLinkInfo.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystem.cmake.in E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInformation.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInitialize.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeTestASMCompiler.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeTestCCompiler.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeTestCXXCompiler.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeTestCompilerCommon.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-ASM.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-C-FeatureTests.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-C.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX-FeatureTests.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX-TestableFeatures.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/GNU.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Internal/FeatureTesting.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Android.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Linux.cmake E$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/UnixPaths.cmake E$:/AndroidSDK/ndk-bundle/build/cmake/android.toolchain.cmake E$:/Workspace/CommonUtil/GifDrawable/src/main/c/CMakeLists.txt: phony
+build CMakeCache.txt CMakeFiles/3.6.0-rc2/CMakeASMCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeCCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeCXXCompiler.cmake CMakeFiles/3.6.0-rc2/CMakeSystem.cmake CMakeFiles/feature_tests.c CMakeFiles/feature_tests.cxx E$:/AndroidStudio/CommonUtil/GifDrawable/src/main/c/CMakeLists.txt F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeASMCompiler.cmake.in F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeASMInformation.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCCompiler.cmake.in F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCCompilerABI.c F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCInformation.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXCompiler.cmake.in F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXCompilerABI.cpp F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCXXInformation.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeCommonLanguageInclude.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineASMCompiler.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCCompiler.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCXXCompiler.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCompileFeatures.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCompiler.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineCompilerABI.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeDetermineSystem.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeFindBinUtils.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeGenericSystem.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeLanguageInformation.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeParseImplicitLinkInfo.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystem.cmake.in F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInformation.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeSystemSpecificInitialize.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeTestASMCompiler.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeTestCCompiler.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeTestCXXCompiler.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/CMakeTestCompilerCommon.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-ASM.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-C-FeatureTests.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-C.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX-FeatureTests.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX-TestableFeatures.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang-CXX.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/Clang.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Compiler/GNU.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Internal/FeatureTesting.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Android.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/Linux.cmake F$:/AndroidSDK/cmake/3.6.4111459/share/cmake-3.6/Modules/Platform/UnixPaths.cmake F$:/AndroidSDK/ndk-bundle/build/cmake/android.toolchain.cmake: phony
 
 #############################################
 # Clean all the built files.
