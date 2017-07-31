@@ -14,28 +14,28 @@ ext {
     ]
 
     dependencies = [
-            junit                   : "junit:junit:4.12",
+            junit                      : "junit:junit:4.12",
 
-            multidex                : "com.android.support:multidex:1.0.1",
+            multidex                   : "com.android.support:multidex:1.0.1",
 
             // support
-            v7appcompat             : "com.android.support:appcompat-v7:$configurations.supportLibVersion",
-            v4support               : "com.android.support:support-v4:$configurations.supportLibVersion",
-            v13support              : "com.android.support:support-v13:$configurations.supportLibVersion",
-            design                  : "com.android.support:design:$configurations.supportLibVersion",
-            percent                 : "com.android.support:percent:$configurations.supportLibVersion",
-            v7recyclerView          : "com.android.support:recyclerview-v7:$configurations.supportLibVersion",
+            v7appcompat                : "com.android.support:appcompat-v7:$configurations.supportLibVersion",
+            v4support                  : "com.android.support:support-v4:$configurations.supportLibVersion",
+            v13support                 : "com.android.support:support-v13:$configurations.supportLibVersion",
+            design                     : "com.android.support:design:$configurations.supportLibVersion",
+            percent                    : "com.android.support:percent:$configurations.supportLibVersion",
+            v7recyclerView             : "com.android.support:recyclerview-v7:$configurations.supportLibVersion",
 
-            constraintLayout        : "com.android.support.constraint:constraint-layout:1.0.2",
+            constraintLayout           : "com.android.support.constraint:constraint-layout:1.0.2",
 
             // image
-            picasso                 : "com.squareup.picasso:picasso:2.5.2",
-            glide                   : "com.github.bumptech.glide:glide:3.7.0",
-            circleImageView         : "de.hdodenhof:circleimageview:1.2.1",
+            picasso                    : "com.squareup.picasso:picasso:2.5.2",
+            glide                      : "com.github.bumptech.glide:glide:3.7.0",
+            circleImageView            : "de.hdodenhof:circleimageview:1.2.1",
 
             // util
-            zip4j                   : "net.lingala.zip4j:zip4j:1.3.2",
-            gson                    : "com.google.code.gson:gson:2.3.1",
+            zip4j                      : "net.lingala.zip4j:zip4j:1.3.2",
+            gson                       : "com.google.code.gson:gson:2.3.1",
 
             eventBus                   : "de.greenrobot:eventbus:2.4.0",
             //弹出提示信息                代码地址-----> https://github.com/johnkil/Android-AppMsg
@@ -55,17 +55,19 @@ ext {
             okhttp                     : "com.squareup.okhttp3:okhttp:3.4.1",
             okhttpLoggingInterceptor   : "com.squareup.okhttp3:logging-interceptor:3.4.0",
             rxjava                     : "io.reactivex.rxjava2:rxjava:2.0.1",
-            rxandroid               : "io.reactivex.rxjava2:rxandroid:2.0.1",
-            rxpermissions           : "com.tbruyelle.rxpermissions2:rxpermissions:0.9.3@aar",
+            rxandroid                  : "io.reactivex.rxjava2:rxandroid:2.0.1",
+            rxpermissions              : "com.tbruyelle.rxpermissions2:rxpermissions:0.9.3@aar",
 
-            okhttpUrlConnection     : "com.squareup.okhttp:okhttp-urlconnection:2.2.0",
+            okhttpUrlConnection        : "com.squareup.okhttp:okhttp-urlconnection:2.2.0",
 
-            nohttp                  : "com.yanzhenjie.nohttp:okhttp:1.1.2",
+            nohttp                     : "com.yanzhenjie.nohttp:okhttp:1.1.2",
 
-            fastJson                : "com.alibaba:fastjson:1.2.33",
-            fastJsonAndroid         : "com.alibaba:fastjson:1.1.58.android",
-            okio                    : "com.squareup.okio:okio:1.13.0",
-            universalImageLoader    : "com.nostra13.universalimageloader:universal-image-loader:1.9.3",
+            fastJson                   : "com.alibaba:fastjson:1.2.33",
+            fastJsonAndroid            : "com.alibaba:fastjson:1.1.58.android",
+            okio                       : "com.squareup.okio:okio:1.13.0",
+            universalImageLoader       : "com.nostra13.universalimageloader:universal-image-loader:1.9.3",
+
+            gif                        : "pl.droidsonroids.gif:android-gif-drawable:1.2.7"
 
     ]
 

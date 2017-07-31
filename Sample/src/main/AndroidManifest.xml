@@ -68,7 +68,7 @@
             android:screenOrientation="portrait"/>
 
         <activity
-            android:name=".surface.guide.ViewActivity"
+            android:name=".surface.guide.GuideViewActivity"
             android:screenOrientation="portrait"/>
 
         <activity
@@ -76,8 +76,8 @@
             android:screenOrientation="portrait"/>
 
         <activity
-            android:name=".gif.MainActivity"
-            android:label="@string/app_name"/>
+            android:name=".surface.navigation.activity.NavigationActivity"
+            android:screenOrientation="portrait"/>
 
     </application>
 

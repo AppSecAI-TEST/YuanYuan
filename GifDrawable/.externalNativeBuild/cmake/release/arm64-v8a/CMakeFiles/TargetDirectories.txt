@@ -1,3 +1,0 @@
-E:/AndroidStudio/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/arm64-v8a/CMakeFiles/pl_droidsonroids_gif.dir
-E:/AndroidStudio/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/arm64-v8a/CMakeFiles/edit_cache.dir
-E:/AndroidStudio/CommonUtil/GifDrawable/.externalNativeBuild/cmake/release/arm64-v8a/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,118 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/rl_main"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dip"
+        android:background="@color/common_header_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="标题"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/text_size_middle"/>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/navigation_container_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#CCCCCC"
+        android:orientation="vertical"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCCCCC"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:baselineAligned="true"
+        android:orientation="horizontal"
+        android:paddingTop="3dp">
+
+        <RelativeLayout
+            android:id="@+id/navigation_news_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0">
+
+            <ImageView
+                android:id="@+id/navigation_news_image_iv"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/selector_navigation_news"/>
+
+            <TextView
+                android:id="@+id/navigation_news_text_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@id/navigation_news_image_iv"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/bottom_tab_know"
+                android:textColor="@color/navigation_text_normal"
+                android:textSize="@dimen/text_size_normal"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/navigation_discovery_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0">
+
+            <ImageView
+                android:id="@+id/navigation_discovery_image_iv"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/selector_navigation_discovery"/>
+
+            <TextView
+                android:id="@+id/navigation_discovery_text_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@+id/navigation_discovery_image_iv"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/bottom_tab_wantknow"
+                android:textColor="@color/navigation_text_normal"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/navigation_mine_layout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0">
+
+            <ImageView
+                android:id="@+id/navigation_mine_image_iv"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/selector_navigation_mine"/>
+
+
+            <TextView
+                android:id="@+id/navigation_mine_text_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_below="@+id/navigation_mine_image_iv"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="@string/bottom_tab_my"
+                android:textColor="@color/navigation_text_normal"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -35,4 +35,9 @@
     <string name="animated_selector_description">Press button to change drawable state</string>
     <string name="java_selector">java selector</string>
     <string name="xml_selector">XML selector</string>
+
+
+    <string name="bottom_tab_know">资讯</string>
+    <string name="bottom_tab_wantknow">发现</string>
+    <string name="bottom_tab_my">我的</string>
 </resources>

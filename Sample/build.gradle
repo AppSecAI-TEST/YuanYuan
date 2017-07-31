@@ -46,15 +46,15 @@ android {
         exclude 'META-INF/dependencies.txt'
     }
 
-    signingConfigs {
-        release {
-            storeFile file(signatures.storeFile)
-            keyAlias signatures.keyAlias
-            keyPassword signatures.keyPassword
-            storePassword signatures.storePassword
-            v2SigningEnabled false
-        }
-    }
+//    signingConfigs {
+//        release {
+//            storeFile file(signatures.storeFile)
+//            keyAlias signatures.keyAlias
+//            keyPassword signatures.keyPassword
+//            storePassword signatures.storePassword
+//            v2SigningEnabled false
+//        }
+//    }
 
     buildTypes {
         release {
@@ -114,7 +114,6 @@ dependencies {
     compile project(':Common')
     compile project(':QRCode')
     compile project(':GuideView')
-    compile project(':GifDrawable')
 
     //butterknife
     compile libraries.butterKnife

@@ -18,14 +18,14 @@ import xyz.zimuju.sample.surface.component.MultiComponent;
 
 public class SecondGuideFragment extends Fragment {
     Guide guide;
-    private LinearLayout ll_view_group, ll_nearby;
+    LinearLayout containerLayout, nearbyLayout;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_simple_guide_view, container, false);
-        ll_view_group = (LinearLayout) view.findViewById(R.id.ll_view_group);
-        ll_nearby = (LinearLayout) view.findViewById(R.id.guide_nearby_layout);
+        containerLayout = (LinearLayout) view.findViewById(R.id.guide_container_layout);
+        nearbyLayout = (LinearLayout) view.findViewById(R.id.guide_nearby_layout);
         return view;
     }
 
@@ -57,8 +57,8 @@ public class SecondGuideFragment extends Fragment {
 
     public void showGuideView() {
         GuideBuilder builder = new GuideBuilder();
-        builder.setTargetView(ll_nearby)
-                .setFullingViewId(R.id.ll_view_group)
+        builder.setTargetView(nearbyLayout)
+                .setFullingViewId(R.id.guide_container_layout)
                 .setAlpha(150)
                 .setHighTargetCorner(20)
                 .setHighTargetPadding(10)

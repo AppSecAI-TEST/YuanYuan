@@ -65,7 +65,7 @@ public class GuideHomeActivity extends BasalActivity implements View.OnClickList
                 break;
 
             case R.id.guide_activity_view_tv:
-                startActivity(new Intent(getContext(), ViewActivity.class));
+                startActivity(new Intent(getContext(), GuideViewActivity.class));
                 break;
         }
     }

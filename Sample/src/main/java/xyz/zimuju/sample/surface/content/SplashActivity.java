@@ -7,7 +7,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
 import xyz.zimuju.sample.R;
-import xyz.zimuju.sample.surface.guide.GuideHomeActivity;
+import xyz.zimuju.sample.surface.navigation.activity.NavigationActivity;
 
 /*
  * @description SplashActivity : 启动页面
@@ -29,7 +29,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 Intent splashIntent = new Intent();
-                splashIntent.setClass(SplashActivity.this, GuideHomeActivity.class);
+                splashIntent.setClass(SplashActivity.this, NavigationActivity.class);
                 startActivity(splashIntent);
                 finish();
             }

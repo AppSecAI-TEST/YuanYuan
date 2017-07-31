@@ -69,7 +69,7 @@ public class GuideAdapter extends BaseAdapter {
         showTimes++;
         GuideBuilder builder = new GuideBuilder();
         builder.setTargetView(targetView)
-                .setFullingViewId(R.id.ll_view_group)
+                .setFullingViewId(R.id.guide_container_layout)
                 .setAlpha(150)
                 .setHighTargetCorner(20)
                 .setHighTargetPadding(10)

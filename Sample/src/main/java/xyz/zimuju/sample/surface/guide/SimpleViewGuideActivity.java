@@ -18,22 +18,22 @@ import xyz.zimuju.sample.surface.component.SimpleComponent;
 public class SimpleViewGuideActivity extends Activity {
 
     Guide guide;
-    private TextView header_imgbtn;
-    private LinearLayout ll_nearby;
+    private TextView headerMenu;
+    private LinearLayout nearbyLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_simple_guide_view);
-        header_imgbtn = (TextView) findViewById(R.id.header_menu_tv);
-        header_imgbtn.setOnClickListener(new View.OnClickListener() {
+        headerMenu = (TextView) findViewById(R.id.header_menu_tv);
+        headerMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(SimpleViewGuideActivity.this, "show", Toast.LENGTH_SHORT).show();
             }
         });
-        ll_nearby = (LinearLayout) findViewById(R.id.guide_nearby_layout);
-        header_imgbtn.post(new Runnable() {
+        nearbyLayout = (LinearLayout) findViewById(R.id.guide_nearby_layout);
+        headerMenu.post(new Runnable() {
             @Override
             public void run() {
                 showGuideView();
@@ -43,7 +43,7 @@ public class SimpleViewGuideActivity extends Activity {
 
     public void showGuideView() {
         GuideBuilder builder = new GuideBuilder();
-        builder.setTargetView(header_imgbtn)
+        builder.setTargetView(headerMenu)
                 .setAlpha(150)
                 .setHighTargetCorner(20)
                 .setHighTargetPadding(10)
@@ -68,7 +68,7 @@ public class SimpleViewGuideActivity extends Activity {
 
     public void showGuideView2() {
         final GuideBuilder builder = new GuideBuilder();
-        builder.setTargetView(ll_nearby)
+        builder.setTargetView(nearbyLayout)
                 .setAlpha(150)
                 .setHighTargetGraphStyle(Component.CIRCLE)
                 .setOverlayTarget(false)
