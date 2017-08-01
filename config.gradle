@@ -71,13 +71,6 @@ ext {
 
     ]
 
-    signatures = [
-            storeFile    : "./keyStore.jks",
-            storePassword: "Nathan@126.com",
-            keyAlias     : "Nathaniel",
-            keyPassword  : "Nathan@126.com"
-    ]
-
     sources = [
             manifestFile: "AndroidManifest.xml",
             srcDir      : "src",

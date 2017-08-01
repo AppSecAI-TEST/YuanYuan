@@ -2,9 +2,7 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.jakewharton.butterknife'
 
 def configurations = rootProject.ext.configurations
-def signatures = rootProject.ext.signatures
 def libraries = rootProject.ext.dependencies
-def resources = rootProject.ext.resDirs
 
 android {
     compileSdkVersion configurations.compileSdkVersion
@@ -46,23 +44,12 @@ android {
         exclude 'META-INF/dependencies.txt'
     }
 
-//    signingConfigs {
-//        release {
-//            storeFile file(signatures.storeFile)
-//            keyAlias signatures.keyAlias
-//            keyPassword signatures.keyPassword
-//            storePassword signatures.storePassword
-//            v2SigningEnabled false
-//        }
-//    }
-
     buildTypes {
         release {
             minifyEnabled true
             zipAlignEnabled true
             shrinkResources true
             debuggable false
-            // signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
 
@@ -71,7 +58,6 @@ android {
             zipAlignEnabled false
             shrinkResources false
             debuggable true
-            // signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
         }
     }

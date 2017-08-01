@@ -49,8 +49,7 @@ public abstract class BasalRecyclerViewAdapter<T, VH extends RecyclerView.ViewHo
 
     @Override
     public int getItemCount() {
-        int count = dataList.size() <= 0 ? 0 : dataList.size();
-        return count;
+        return  dataList.size() <= 0 ? 0 : dataList.size();
     }
 
     public void setOnRVItemClickListener(OnRVItemClickListener onRVItemClickListener) {
