@@ -1,5 +1,4 @@
 include ':Common'
 include ':GuideView'
-include ':GifDrawable'
 include ':QRCode'
 include ':Sample'
