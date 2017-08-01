@@ -23,10 +23,10 @@ android {
         cruncherEnabled false
     }
 
-    dexOptions {
-        preDexLibraries false
-        javaMaxHeapSize "4GIB"
-    }
+//    dexOptions {
+//        incremental true
+//        preDexLibraries false
+//    }
 
     lintOptions {
         abortOnError false
@@ -44,23 +44,23 @@ android {
         exclude 'META-INF/dependencies.txt'
     }
 
-    buildTypes {
-        release {
-            minifyEnabled true
-            zipAlignEnabled true
-            shrinkResources true
-            debuggable false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
-        }
-
-        debug {
-            minifyEnabled false
-            zipAlignEnabled false
-            shrinkResources false
-            debuggable true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
-        }
-    }
+//    buildTypes {
+//        release {
+//            minifyEnabled true
+//            zipAlignEnabled true
+//            shrinkResources true
+//            debuggable false
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+//        }
+//
+//        debug {
+//            minifyEnabled false
+//            zipAlignEnabled false
+//            shrinkResources false
+//            debuggable true
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+//        }
+//    }
 
     lintOptions {
         abortOnError false

@@ -30,11 +30,7 @@ public abstract class BasalFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        if (rootView == null) {
-            rootView = inflater.inflate(getLayoutId(), container, false);
-        } else {
-            initView(savedInstanceState);
-        }
+        rootView = inflater.inflate(getLayoutId(), container, false);
         ButterKnife.bind(this, rootView);
         initData();
         // initView();

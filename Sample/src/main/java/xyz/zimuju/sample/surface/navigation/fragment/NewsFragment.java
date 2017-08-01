@@ -3,9 +3,9 @@ package xyz.zimuju.sample.surface.navigation.fragment;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 
 import butterknife.BindView;
 import xyz.zimuju.common.basal.BasalFragment;
@@ -21,6 +21,7 @@ public class NewsFragment extends BasalFragment implements MRecyclerViewAdapter.
 
     @BindView(R.id.news_container_recyclerview)
     RecyclerView containerRecyclerView;
+    private GankCategoryAdapter gankCategoryAdapter;
 
     @Override
     protected int getLayoutId() {
@@ -29,15 +30,16 @@ public class NewsFragment extends BasalFragment implements MRecyclerViewAdapter.
 
     @Override
     protected void initData() {
-
+        gankCategoryAdapter = new GankCategoryAdapter();
+        gankCategoryAdapter.setDataList(GankCategoryUtils.getCategoryList());
+        categoryRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
+        categoryRecyclerView.setHasFixedSize(true);
+        categoryRecyclerView.setNestedScrollingEnabled(false);
+        categoryRecyclerView.setAdapter(gankCategoryAdapter);
     }
 
     @Override
     protected void viewOption() {
-        categoryRecyclerView.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
-        GankCategoryAdapter gankCategoryAdapter = new GankCategoryAdapter();
-        gankCategoryAdapter.setDataList(GankCategoryUtils.getCategoryList());
-        categoryRecyclerView.setAdapter(gankCategoryAdapter);
         gankCategoryAdapter.setOnItemClickListener(this);
     }
 
