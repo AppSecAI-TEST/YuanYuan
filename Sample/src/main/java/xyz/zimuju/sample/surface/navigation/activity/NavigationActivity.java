@@ -1,102 +1,70 @@
 package xyz.zimuju.sample.surface.navigation.activity;
 
 import android.os.Bundle;
+import android.support.annotation.IdRes;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentTransaction;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
-import android.widget.TextView;
+import android.support.v4.view.ViewPager;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import xyz.zimuju.common.util.ToastUtils;
+import xyz.zimuju.common.widget.NoneScrollViewPager;
 import xyz.zimuju.sample.R;
+import xyz.zimuju.sample.surface.navigation.adapter.NavigationFragmentPagerAdapter;
 import xyz.zimuju.sample.surface.navigation.fragment.DiscoveryFragment;
 import xyz.zimuju.sample.surface.navigation.fragment.MineFragment;
 import xyz.zimuju.sample.surface.navigation.fragment.NewsFragment;
 
-
-public class NavigationActivity extends FragmentActivity {
-    private RelativeLayout newsLayout, discoveryLayout, mineLayout, currentLayout;
-    private ImageView newsImage, discoveryImage, mineImage;
-    private TextView newsText, discoveryText, mineText;
-    private Fragment newsFragment, discoveryFragment, mineFragment, currentFragment;
+/*
+ * @description NavigationActivity
+ * @author Nathaniel
+ * @time 2017/8/1 - 10:32
+ * @version 1.0.0
+ */
+public class NavigationActivity extends FragmentActivity implements RadioGroup.OnCheckedChangeListener, ViewPager.OnPageChangeListener {
+    private RadioGroup navigationGroup;
+    private Fragment newsFragment, discoveryFragment, mineFragment;
+    private List<Fragment> fragmentList;
+    private NoneScrollViewPager navigationContainer;
     private long exitTime = 0L;
-    private List<ImageView> imageViewList;
-    private List<TextView> textViewList;
-    private List<RelativeLayout> relativeLayoutList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_main);
 
-        initUI();
-        initTab();
+        initView();
+        bindView();
     }
 
 
-    private void initUI() {
+    private void initView() {
+        fragmentList = new ArrayList<>();
         newsFragment = new NewsFragment();
+        fragmentList.add(newsFragment);
         discoveryFragment = new DiscoveryFragment();
+        fragmentList.add(discoveryFragment);
         mineFragment = new MineFragment();
+        fragmentList.add(mineFragment);
 
-        relativeLayoutList = new ArrayList<>();
-        newsLayout = (RelativeLayout) findViewById(R.id.navigation_news_layout);
-        relativeLayoutList.add(newsLayout);
-        discoveryLayout = (RelativeLayout) findViewById(R.id.navigation_discovery_layout);
-        relativeLayoutList.add(discoveryLayout);
-        mineLayout = (RelativeLayout) findViewById(R.id.navigation_mine_layout);
-        relativeLayoutList.add(mineLayout);
-
-        imageViewList = new ArrayList<>();
-        newsImage = (ImageView) findViewById(R.id.navigation_news_image_iv);
-        imageViewList.add(newsImage);
-        discoveryImage = (ImageView) findViewById(R.id.navigation_discovery_image_iv);
-        imageViewList.add(discoveryImage);
-        mineImage = (ImageView) findViewById(R.id.navigation_mine_image_iv);
-        imageViewList.add(mineImage);
-
-        textViewList = new ArrayList<>();
-        newsText = (TextView) findViewById(R.id.navigation_news_text_tv);
-        textViewList.add(newsText);
-        discoveryText = (TextView) findViewById(R.id.navigation_discovery_text_tv);
-        textViewList.add(discoveryText);
-        mineText = (TextView) findViewById(R.id.navigation_mine_text_tv);
-        textViewList.add(mineText);
-
-        currentFragment = newsFragment;
+        navigationContainer = (NoneScrollViewPager) findViewById(R.id.navigation_container_layout);
+        navigationGroup = (RadioGroup) findViewById(R.id.navigation_group_layout);
     }
 
-    private void initTab() {
-        getSupportFragmentManager().beginTransaction().add(R.id.navigation_container_layout, currentFragment).commit();
-        newsLayout.setOnClickListener(new NavigationClickListener(newsFragment));
-        discoveryLayout.setOnClickListener(new NavigationClickListener(discoveryFragment));
-        mineLayout.setOnClickListener(new NavigationClickListener(mineFragment));
-        newsLayout.performClick();
+    private void bindView() {
+        NavigationFragmentPagerAdapter navigationFragmentPagerAdapter = new NavigationFragmentPagerAdapter(getSupportFragmentManager(), fragmentList);
+        navigationContainer.setOffscreenPageLimit(3);
+        navigationContainer.setScrollEnable(true);
+        navigationContainer.setAdapter(navigationFragmentPagerAdapter);
+        navigationGroup.setOnCheckedChangeListener(this);
+        navigationContainer.addOnPageChangeListener(this);
+        navigationContainer.setCurrentItem(0, false);
     }
 
-    private void switchLayout(View view) {
-        if (currentLayout == null) {
-            imageViewList.get(0).setEnabled(true);
-            textViewList.get(0).setTextColor(getResources().getColor(R.color.navigation_text_pressed));
-        } else {
-            for (int i = 0; i < relativeLayoutList.size(); i++) {
-                if (currentLayout.getId() != view.getId()) {
-                    imageViewList.get(i).setEnabled(false);
-                    textViewList.get(i).setTextColor(getResources().getColor(R.color.navigation_text_normal));
-                } else {
-                    imageViewList.get(i).setEnabled(true);
-                    textViewList.get(i).setTextColor(getResources().getColor(R.color.navigation_text_pressed));
-                }
-            }
-        }
-        currentLayout = (RelativeLayout) view;
-    }
 
     @Override
     public void onBackPressed() {
@@ -104,35 +72,52 @@ public class NavigationActivity extends FragmentActivity {
             ToastUtils.showToast(this, "再按一次退出程序");
             exitTime = System.currentTimeMillis();
         } else {
-            System.exit(0); // 正常退出App
+            System.exit(0);
             android.os.Process.killProcess(android.os.Process.myPid());
         }
     }
 
-    private class NavigationClickListener implements View.OnClickListener {
-        private Fragment toFragment;
+    @Override
+    public void onCheckedChanged(RadioGroup group, @IdRes int checkedId) {
+        switch (checkedId) {
+            case R.id.navigation_news_rb:
+                navigationContainer.setCurrentItem(0, false);
+                break;
 
-        public NavigationClickListener(Fragment toFragment) {
-            this.toFragment = toFragment;
+            case R.id.navigation_discovery_rb:
+                navigationContainer.setCurrentItem(1, false);
+                break;
+
+            case R.id.navigation_mine_rb:
+                navigationContainer.setCurrentItem(2, false);
+                break;
         }
+    }
 
-        @Override
-        public void onClick(View view) {
-            if (currentFragment == toFragment) {
-                switchLayout(view);
-                return;
-            }
+    @Override
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            // FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction().setCustomAnimations(R.anim.slide_left_in, R.anim.slide_left_out);
-            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-            if (!toFragment.isAdded()) {
-                fragmentTransaction.hide(currentFragment).add(R.id.navigation_container_layout, toFragment).commit();
-            } else {
-                fragmentTransaction.hide(currentFragment).show(toFragment).commit();
-            }
-            switchLayout(view);
-            currentFragment = toFragment;
+    }
+
+    @Override
+    public void onPageSelected(int position) {
+        switch (position) {
+            case 0:
+                navigationGroup.check(R.id.navigation_news_rb);
+                break;
+
+            case 1:
+                navigationGroup.check(R.id.navigation_discovery_rb);
+                break;
+
+            case 2:
+                navigationGroup.check(R.id.navigation_mine_rb);
+                break;
         }
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int state) {
+
     }
 }

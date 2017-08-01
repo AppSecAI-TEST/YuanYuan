@@ -2,24 +2,11 @@
               android:id="@+id/rl_main"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
+              android:divider="@drawable/common_shape_vertical_divider"
+              android:showDividers="middle"
               android:orientation="vertical">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="48dip"
-        android:background="@color/common_header_bg">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_centerInParent="true"
-            android:gravity="center"
-            android:text="标题"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/text_size_middle"/>
-    </RelativeLayout>
-
-    <FrameLayout
+    <xyz.zimuju.common.widget.NoneScrollViewPager
         android:id="@+id/navigation_container_layout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -27,92 +14,53 @@
         android:background="#CCCCCC"
         android:orientation="vertical"/>
 
-    <View
+    <RadioGroup
+        android:id="@+id/navigation_group_layout"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#CCCCCC"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:baselineAligned="true"
+        android:layout_height="50dp"
         android:orientation="horizontal"
-        android:paddingTop="3dp">
+        android:paddingTop="5dp">
 
-        <RelativeLayout
-            android:id="@+id/navigation_news_layout"
+        <RadioButton
+            android:id="@+id/navigation_news_rb"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1.0">
+            android:layout_weight="1.0"
+            android:background="@android:color/white"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/selector_navigation_news"
+            android:gravity="center"
+            android:text="@string/bottom_tab_know"
+            android:textColor="@drawable/seletor_navigation_text"
+            android:textSize="@dimen/text_size_normal"/>
 
-            <ImageView
-                android:id="@+id/navigation_news_image_iv"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_centerHorizontal="true"
-                android:background="@drawable/selector_navigation_news"/>
-
-            <TextView
-                android:id="@+id/navigation_news_text_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_below="@id/navigation_news_image_iv"
-                android:layout_centerHorizontal="true"
-                android:gravity="center"
-                android:text="@string/bottom_tab_know"
-                android:textColor="@color/navigation_text_normal"
-                android:textSize="@dimen/text_size_normal"/>
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/navigation_discovery_layout"
+        <RadioButton
+            android:id="@+id/navigation_discovery_rb"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1.0">
+            android:layout_weight="1.0"
+            android:background="@android:color/white"
+            android:button="@null"
+            android:checked="false"
+            android:drawableTop="@drawable/selector_navigation_discovery"
+            android:gravity="center"
+            android:text="@string/bottom_tab_wantknow"
+            android:textColor="@drawable/seletor_navigation_text"
+            android:textSize="12sp"/>
 
-            <ImageView
-                android:id="@+id/navigation_discovery_image_iv"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_centerHorizontal="true"
-                android:background="@drawable/selector_navigation_discovery"/>
-
-            <TextView
-                android:id="@+id/navigation_discovery_text_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_below="@+id/navigation_discovery_image_iv"
-                android:layout_centerHorizontal="true"
-                android:gravity="center"
-                android:text="@string/bottom_tab_wantknow"
-                android:textColor="@color/navigation_text_normal"
-                android:textSize="12sp"/>
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:id="@+id/navigation_mine_layout"
+        <RadioButton
+            android:id="@+id/navigation_mine_rb"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1.0">
-
-            <ImageView
-                android:id="@+id/navigation_mine_image_iv"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_centerHorizontal="true"
-                android:background="@drawable/selector_navigation_mine"/>
-
-
-            <TextView
-                android:id="@+id/navigation_mine_text_tv"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_below="@+id/navigation_mine_image_iv"
-                android:layout_centerHorizontal="true"
-                android:gravity="center"
-                android:text="@string/bottom_tab_my"
-                android:textColor="@color/navigation_text_normal"
-                android:textSize="12sp"/>
-        </RelativeLayout>
-    </LinearLayout>
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@android:color/white"
+            android:button="@null"
+            android:checked="false"
+            android:drawableTop="@drawable/selector_navigation_mine"
+            android:gravity="center"
+            android:text="@string/bottom_tab_my"
+            android:textColor="@drawable/seletor_navigation_text"
+            android:textSize="12sp"/>
+    </RadioGroup>
 </LinearLayout>

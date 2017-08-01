@@ -32,14 +32,14 @@ import xyz.zimuju.common.util.CommonUtils;
  * @author Lemon
  * @use MyURLSpan.getText(...);
  */
-public class MyURLSpan extends ClickableSpan {
+public class MURLSpan extends ClickableSpan {
     private static final String TAG = "MyURLSpan";
 
     private Activity context;
     private String url;
     private String title;
 
-    public MyURLSpan(Activity context, String url, String title) {
+    public MURLSpan(Activity context, String url, String title) {
         this.context = context;
         this.url = url;
         this.title = title;
@@ -82,7 +82,7 @@ public class MyURLSpan extends ClickableSpan {
         if (urls != null) {
             for (URLSpan urlSpan : urls) {
                 if (urlSpan != null) {
-                    MyURLSpan myURLSpan = new MyURLSpan(context, urlSpan.getURL(), title);
+                    MURLSpan myURLSpan = new MURLSpan(context, urlSpan.getURL(), title);
                     builder.setSpan(myURLSpan, spannable.getSpanStart(urlSpan), spannable
                             .getSpanEnd(urlSpan), Spannable.SPAN_EXCLUSIVE_INCLUSIVE);
                 }
