@@ -41,5 +41,4 @@ public class SplashActivity extends AppCompatActivity {
         super.finish();
         overridePendingTransition(R.anim.fade, R.anim.hold);
     }
-
 }

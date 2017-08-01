@@ -23,8 +23,7 @@
             android:background="@drawable/iv_back_selector"
             android:clickable="true"
             android:scaleType="center"
-            android:src="@mipmap/back"
-            />
+            android:src="@mipmap/back"/>
 
         <View
             android:id="@+id/view_line"
@@ -53,7 +52,5 @@
             android:textColor="@android:color/white"
             android:textSize="14sp"/>
     </RelativeLayout>
-
-
 </android.support.v7.widget.Toolbar>
 

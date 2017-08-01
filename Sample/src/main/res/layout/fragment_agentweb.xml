@@ -8,6 +8,6 @@
 
     <include
         android:id="@+id/toolbar"
-        layout="@layout/toorbar_main"/>
+        layout="@layout/include_toorbar"/>
 
 </LinearLayout>

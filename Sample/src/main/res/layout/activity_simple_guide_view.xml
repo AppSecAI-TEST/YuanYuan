@@ -5,7 +5,7 @@
               android:background="#CCCCCC"
               android:orientation="vertical">
 
-    <include layout="@layout/include_guide_header_layout"/>
+    <include layout="@layout/include_header_layout"/>
 
     <include layout="@layout/include_search_layout"/>
 

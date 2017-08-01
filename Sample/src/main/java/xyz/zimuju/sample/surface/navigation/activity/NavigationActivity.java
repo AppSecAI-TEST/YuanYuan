@@ -36,7 +36,6 @@ public class NavigationActivity extends FragmentActivity implements RadioGroup.O
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_navigation_main);
-
         initView();
         bindView();
     }

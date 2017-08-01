@@ -3,13 +3,15 @@
               android:id="@+id/ll_today"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:gravity="center"
               android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="发现页面"
-        android:textSize="18sp"/>
+    <xyz.zimuju.common.widget.custom.CustomRecyclerView
+        android:id="@+id/news_category_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"/>
+
+    <xyz.zimuju.common.widget.custom.CustomRecyclerView
+        android:id="@+id/news_container_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </LinearLayout>
