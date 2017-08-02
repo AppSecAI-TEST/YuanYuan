@@ -51,9 +51,9 @@ public class HoverImageView extends AppCompatImageView {
     private void setup(AttributeSet attrs) {
         if (attrs != null) {
             TypedArray typedArray = getContext().obtainStyledAttributes(attrs, R.styleable.RoundImageView);
-            borderColor = typedArray.getColor(R.styleable.RoundImageView_borderColor, borderColor);
-            hoverColor = typedArray.getColor(R.styleable.RoundImageView_hoverColor, hoverColor);
-            borderWidth = typedArray.getDimension(R.styleable.RoundImageView_border_width, borderWidth);
+            borderColor = typedArray.getColor(R.styleable.RoundImageView_rivBorderColor, borderColor);
+            hoverColor = typedArray.getColor(R.styleable.RoundImageView_rivHoverColor, hoverColor);
+            borderWidth = typedArray.getDimension(R.styleable.RoundImageView_rivBorderWidth, borderWidth);
             typedArray.recycle();
         }
 

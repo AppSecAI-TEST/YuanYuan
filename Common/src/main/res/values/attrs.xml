@@ -18,11 +18,10 @@
 
     <!-- Round Image View -->
     <declare-styleable name="RoundImageView">
-        <!--<attr name="borderWidth" format="reference|dimension"/>-->
-        <attr name="border_width" format="reference|dimension"/>
-        <attr name="borderRadius" format="reference|dimension"/>
-        <attr name="borderColor" format="reference|color"/>
-        <attr name="hoverColor" format="reference|color"/>
+        <attr name="rivBorderWidth" format="reference|dimension"/>
+        <attr name="rivBorderRadius" format="reference|dimension"/>
+        <attr name="rivBorderColor" format="reference|color"/>
+        <attr name="rivHoverColor" format="reference|color"/>
     </declare-styleable>
 
     <declare-styleable name="SwipeBackLayout">

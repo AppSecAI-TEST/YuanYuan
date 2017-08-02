@@ -28,7 +28,7 @@ public class RoundImageView extends HoverImageView {
 
     protected void setup(AttributeSet attrs) {
         TypedArray typedArray = getContext().obtainStyledAttributes(attrs, R.styleable.RoundImageView);
-        radius = typedArray.getDimension(R.styleable.RoundImageView_borderRadius, radius);
+        radius = typedArray.getDimension(R.styleable.RoundImageView_rivBorderRadius, radius);
         typedArray.recycle();
     }
 
