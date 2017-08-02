@@ -32,6 +32,6 @@ public abstract class MRecyclerViewAdapter<T> extends RecyclerView.Adapter<Recyc
     }
 
     public interface OnItemClickListener {
-        void onItemClick(ViewGroup parent, View view, int position);
+        void onItemClick(View view, int position);
     }
 }

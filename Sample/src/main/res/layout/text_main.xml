@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zb="http://edu.bit.zb"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/black"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <xyz.zimuju.sample.temp.MyTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                zb:paddingLeft="15"
+                zb:paddingRight="5"
+                android:text="本报讯（记者刘新宇）在昨日晚间发布的2011年《财富》世界500强排行榜（全榜单）中，沃尔玛再次成为《财富》世界500强排行榜的榜首，而中国石油化工集团公司则在所有中国公司中排名最前，居第五名。同时在今年的榜单中，中国公司也格外抢眼，去年上榜的所有中国公司今年仍然悉数上榜，无一下榜。中国大陆（不包括台湾）共有61家公司进入《财富》世界500强排行榜，比上一年增加了15家公司，这是中国上榜公司数量连续第8年上升。"
+                zb:textColor="#FFFFFF"
+                zb:textSize="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="本报讯（记者刘新宇）在昨日晚间发布的2011年《财富》世界500强排行榜（全榜单）中，沃尔玛再次成为《财富》世界500强排行榜的榜首，而中国石油化工集团公司则在所有中国公司中排名最前，居第五名。同时在今年的榜单中，中国公司也格外抢眼，去年上榜的所有中国公司今年仍然悉数上榜，无一下榜。中国大陆（不包括台湾）共有61家公司进入《财富》世界500强排行榜，比上一年增加了15家公司，这是中国上榜公司数量连续第8年上升。"
+                android:textColor="@android:color/white"
+                android:textSize="16dp" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

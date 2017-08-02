@@ -3,9 +3,7 @@ package xyz.zimuju.sample.surface.navigation.fragment;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
-import android.view.ViewGroup;
 
 import butterknife.BindView;
 import xyz.zimuju.common.basal.BasalFragment;
@@ -44,12 +42,7 @@ public class NewsFragment extends BasalFragment implements MRecyclerViewAdapter.
     }
 
     @Override
-    protected void initView(Bundle savedInstanceState) {
-
-    }
-
-    @Override
-    public void onItemClick(ViewGroup parent, View view, int position) {
+    public void onItemClick(View view, int position) {
 
     }
 }

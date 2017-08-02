@@ -7,19 +7,23 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import xyz.zimuju.common.basal.BasalFragment;
 import xyz.zimuju.sample.R;
 
-public class DiscoveryFragment extends Fragment {
+public class DiscoveryFragment extends BasalFragment {
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected int getLayoutId() {
+        return R.layout.fragment_discovery;
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_discovery, container, false);
-        return view;
+    protected void initData() {
+
     }
 
+    @Override
+    protected void viewOption() {
+
+    }
 }

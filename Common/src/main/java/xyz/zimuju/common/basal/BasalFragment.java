@@ -26,8 +26,6 @@ public abstract class BasalFragment extends Fragment {
 
     protected abstract void viewOption(); // 绑定使徒控件操作
 
-    protected abstract void initView(Bundle savedInstanceState);
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(getLayoutId(), container, false);

@@ -2,6 +2,23 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="xyz.zimuju.sample">
 
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+
     <uses-feature
         android:glEsVersion="0x00020000"
         android:required="false"/>
@@ -78,6 +95,80 @@
         <activity
             android:name=".surface.navigation.activity.NavigationActivity"
             android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="xyz.zimuju.common.widget.SelectPictureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/WindowCompleteAlpha"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <activity
+            android:name="xyz.zimuju.common.widget.CutPictureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Window"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <activity
+            android:name="xyz.zimuju.common.widget.WebViewActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize|adjustUnspecified"/>
+
+        <activity
+            android:name="xyz.zimuju.common.widget.EditTextInfoActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize|adjustUnspecified"/>
+
+        <activity
+            android:name="xyz.zimuju.common.widget.ServerSettingActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+
+        <activity
+            android:name="xyz.zimuju.common.widget.TopMenuWindow"
+            android:screenOrientation="portrait"
+            android:theme="@style/Window"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <activity
+            android:name="xyz.zimuju.common.widget.BottomMenuWindow"
+            android:screenOrientation="portrait"
+            android:theme="@style/Window"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <activity
+            android:name="xyz.zimuju.common.widget.EditTextInfoWindow"
+            android:screenOrientation="portrait"
+            android:theme="@style/Window"
+            android:windowSoftInputMode="stateVisible|adjustResize|adjustUnspecified"/>
+
+        <activity
+            android:name="xyz.zimuju.common.widget.PlacePickerWindow"
+            android:screenOrientation="portrait"
+            android:theme="@style/Window"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <activity
+            android:name="xyz.zimuju.common.widget.DatePickerWindow"
+            android:screenOrientation="portrait"
+            android:theme="@style/Window"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <activity
+            android:name="xyz.zimuju.common.widget.TimePickerWindow"
+            android:screenOrientation="portrait"
+            android:theme="@style/Window"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+
+        <provider
+            android:name="xyz.zimuju.common.webview.AgentWebFileProvider"
+            android:authorities="${applicationId}.AgentWebFileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/web_download_paths"/>
+        </provider>
 
     </application>
 

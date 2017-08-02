@@ -9,22 +9,12 @@ import xyz.zimuju.common.basal.MRecyclerViewAdapter;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.entity.gank.Category;
 
-
-/*
- * @description 
- * @author Nathaniel
- * @time 2017/8/1 - 16:49
- * @version 1.0.0
- */
-
 public class GankCategoryAdapter extends MRecyclerViewAdapter<Category> {
 
     private int index = 0;
-    private ViewGroup viewGroup;
 
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        viewGroup = parent;
         View convertView = getView(R.layout.item_category_list, parent);
         return new CategoryViewHolder(convertView);
     }
@@ -71,7 +61,7 @@ public class GankCategoryAdapter extends MRecyclerViewAdapter<Category> {
         @Override
         public void onClick(View view) {
             if (onItemClickListener != null) {
-                onItemClickListener.onItemClick(viewGroup, view, getAdapterPosition());
+                onItemClickListener.onItemClick(view, getAdapterPosition());
             }
         }
     }

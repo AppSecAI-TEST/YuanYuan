@@ -40,4 +40,6 @@
     <string name="bottom_tab_know">资讯</string>
     <string name="bottom_tab_wantknow">发现</string>
     <string name="bottom_tab_my">我的</string>
+
+    <string name="app_name">猿媛</string>
 </resources>

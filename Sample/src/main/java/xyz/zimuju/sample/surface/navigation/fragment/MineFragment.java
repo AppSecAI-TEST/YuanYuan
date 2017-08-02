@@ -6,19 +6,25 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import xyz.zimuju.common.basal.BasalFragment;
 import xyz.zimuju.sample.R;
 
 
-public class MineFragment extends Fragment {
+public class MineFragment extends BasalFragment {
+
+
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected int getLayoutId() {
+        return R.layout.fragment_mine;
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_mine, container, false);
-        return view;
+    protected void initData() {
+
     }
 
+    @Override
+    protected void viewOption() {
+
+    }
 }

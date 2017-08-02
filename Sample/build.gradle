@@ -23,10 +23,11 @@ android {
         cruncherEnabled false
     }
 
-//    dexOptions {
-//        incremental true
-//        preDexLibraries false
-//    }
+    dexOptions {
+        // incremental true
+        preDexLibraries false
+        javaMaxHeapSize "4g"
+    }
 
     lintOptions {
         abortOnError false
