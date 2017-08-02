@@ -26,7 +26,7 @@ import io.reactivex.annotations.NonNull;
 import io.reactivex.functions.Consumer;
 import xyz.zimuju.sample.application.SolidApplication;
 import xyz.zimuju.sample.provider.ObservableProvider;
-import xyz.zimuju.sample.http.subscriber.DownLoadSubscribe;
+import xyz.zimuju.sample.http.subscriber.DownLoadSubscriber;
 import xyz.zimuju.sample.loader.ImageLoader;
 import xyz.zimuju.sample.util.FileUtils;
 import xyz.zimuju.sample.util.SLog;
@@ -146,7 +146,7 @@ public class ViewPicActivity extends BaseActivity {
         SLog.i(this, mSavePath);
         ObservableProvider.getDefault()
                 .download(mUrlList.get(0)
-                        , new DownLoadSubscribe(
+                        , new DownLoadSubscriber(
                                 FileUtils.getSaveImagePath(getApplication()),
                                 FileUtils.getFileName(mUrlList.get(0))) {
                             @Override

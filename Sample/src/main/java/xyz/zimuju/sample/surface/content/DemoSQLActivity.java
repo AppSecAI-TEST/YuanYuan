@@ -16,7 +16,7 @@ import xyz.zimuju.common.base.BaseActivity;
 import xyz.zimuju.common.defination.OnBottomDragListener;
 import xyz.zimuju.common.util.StringUtils;
 import xyz.zimuju.sample.R;
-import xyz.zimuju.sample.manager.SQLHelper;
+import xyz.zimuju.sample.helper.SQLHelper;
 
 public class DemoSQLActivity extends BaseActivity implements View.OnClickListener, OnBottomDragListener {
     private static final String TAG = "DemoSQLActivity";

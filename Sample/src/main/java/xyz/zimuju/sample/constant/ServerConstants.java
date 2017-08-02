@@ -6,7 +6,7 @@ package xyz.zimuju.sample.constant;
  * @time 2017/8/1 - 15:43
  * @version 1.0.0
  */
-public class ServerConstant {
+public class ServerConstants {
     public static final String GANK_BASE = "http://gank.io/api/data/Android/10/1";
     /*
      * category 后面可接受参数 all | Android | iOS | 休息视频 | 福利 | 拓展资源 | 前端 | 瞎推荐 | App

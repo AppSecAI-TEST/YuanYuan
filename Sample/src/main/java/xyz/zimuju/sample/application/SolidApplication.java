@@ -13,16 +13,16 @@ import xyz.zimuju.sample.util.ToastUtils;
  * Time:20:59
  */
 public class SolidApplication extends Application {
-    private static SolidApplication mInstance;
+    private static SolidApplication solidApplication;
 
     public static SolidApplication getInstance() {
-        return mInstance;
+        return solidApplication;
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
-        mInstance = this;
+        solidApplication = this;
         ToastUtils.init(this);
     }
 

@@ -1,28 +1,18 @@
-
 package xyz.zimuju.sample.provider;
 
 import io.reactivex.Single;
 import okhttp3.ResponseBody;
 import xyz.zimuju.sample.engine.service.CommonService;
-import xyz.zimuju.sample.http.HttpResult;
+import xyz.zimuju.sample.entity.HttpResult;
 import xyz.zimuju.sample.factory.ServiceFactory;
 import xyz.zimuju.sample.http.function.ResultFunction;
 import xyz.zimuju.sample.http.function.StringFunction;
-import xyz.zimuju.sample.http.subscriber.DownLoadSubscribe;
+import xyz.zimuju.sample.http.subscriber.DownLoadSubscriber;
 import xyz.zimuju.sample.rx.RxUtils;
 
-/**
- * Created by _SOLID
- * Date:2016/7/28
- * Time:9:22
- */
 public class ObservableProvider {
 
     private CommonService mCommonService;
-
-    private static class DefaultHolder {
-        private static ObservableProvider INSTANCE = new ObservableProvider();
-    }
 
     private ObservableProvider() {
         mCommonService = ServiceFactory.getInstance().createService(CommonService.class);
@@ -43,12 +33,16 @@ public class ObservableProvider {
         return loadString(url).map(new ResultFunction<T>());
     }
 
-    public void download(String url, final DownLoadSubscribe subscribe) {
+    public void download(String url, final DownLoadSubscriber subscribe) {
         mCommonService
                 .download(url)
                 .compose(RxUtils.<ResponseBody>all_io_single())
                 .subscribe(subscribe);
 
+    }
+
+    private static class DefaultHolder {
+        private static ObservableProvider INSTANCE = new ObservableProvider();
     }
 
 

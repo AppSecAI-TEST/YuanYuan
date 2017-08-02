@@ -1,4 +1,4 @@
-package xyz.zimuju.sample.manager;
+package xyz.zimuju.sample.implement;
 
 import org.json.JSONObject;
 

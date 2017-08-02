@@ -8,12 +8,7 @@ import java.util.Map;
 
 import xyz.zimuju.sample.entity.content.CategoryList;
 
-/**
- * Created by _SOLID
- * Date:2016/5/16
- * Time:16:13
- */
-public class Category {
+public class CategoryConstants {
 
     static Map<String, String> cateMaps = new ArrayMap<>();
     static String[] ganHuoCateGory = new String[]{

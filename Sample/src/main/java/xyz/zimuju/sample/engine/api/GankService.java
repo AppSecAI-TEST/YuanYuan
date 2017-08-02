@@ -7,7 +7,7 @@ import xyz.zimuju.sample.entity.content.Daily;
 import xyz.zimuju.sample.entity.content.DailyList;
 import xyz.zimuju.sample.entity.content.GanHuoData;
 import xyz.zimuju.sample.entity.content.SearchResult;
-import xyz.zimuju.sample.http.HttpResult;
+import xyz.zimuju.sample.entity.HttpResult;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 

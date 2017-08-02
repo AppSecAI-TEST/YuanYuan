@@ -5,7 +5,7 @@ package xyz.zimuju.sample.constant;
  * Date:2016/5/19
  * Time:17:40
  */
-public class Constants {
+public class ConfigConstants {
 
 
     // 新浪微博信息

@@ -25,7 +25,7 @@ import io.reactivex.annotations.NonNull;
 import io.reactivex.functions.Consumer;
 import xyz.zimuju.sample.engine.api.SinaApiService;
 import xyz.zimuju.sample.entity.content.Weibo;
-import xyz.zimuju.sample.constant.Constants;
+import xyz.zimuju.sample.constant.ConfigConstants;
 import xyz.zimuju.sample.event.LoginEvent;
 import xyz.zimuju.sample.util.AuthorityUtils;
 import xyz.zimuju.sample.factory.ServiceFactory;
@@ -93,7 +93,7 @@ public class LoginActivity extends AppCompatActivity {
 
 
     private void login() {
-        mAuthInfo = new AuthInfo(this, Constants.SINA_APP_KEY, Constants.SINA_REDIRECT_URL, Constants.SINA_SCOPE);
+        mAuthInfo = new AuthInfo(this, ConfigConstants.SINA_APP_KEY, ConfigConstants.SINA_REDIRECT_URL, ConfigConstants.SINA_SCOPE);
         mSsoHandler = new SsoHandler(this, mAuthInfo);
         mSsoHandler.authorize(new AuthListener());
     }

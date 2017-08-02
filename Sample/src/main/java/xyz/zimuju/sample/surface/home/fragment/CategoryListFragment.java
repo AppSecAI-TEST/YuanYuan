@@ -14,7 +14,7 @@ import me.drakeet.multitype.MultiTypeAdapter;
 import xyz.zimuju.sample.engine.api.GankService;
 import xyz.zimuju.sample.entity.content.GanHuoData;
 import xyz.zimuju.sample.surface.gank.fragment.AbsListFragment;
-import xyz.zimuju.sample.http.HttpResult;
+import xyz.zimuju.sample.entity.HttpResult;
 import xyz.zimuju.sample.factory.ServiceFactory;
 import xyz.zimuju.sample.http.subscriber.HttpResultSubscriber;
 import xyz.zimuju.sample.rx.RxUtils;

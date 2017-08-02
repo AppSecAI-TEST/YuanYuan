@@ -21,19 +21,19 @@ import xyz.zimuju.sample.util.FileUtils;
  * Date:2016/8/1
  * Time:16:40
  */
-public abstract class DownLoadSubscribe implements SingleObserver<ResponseBody> {
+public abstract class DownLoadSubscriber implements SingleObserver<ResponseBody> {
     private String mSaveFilePath;
     private File mFile;
     private Handler handler = new Handler(Looper.getMainLooper());
     private long fileSizeDownloaded = 0;
     private long fileSize = 0;
 
-    public DownLoadSubscribe(@NonNull String fileName) {
+    public DownLoadSubscriber(@NonNull String fileName) {
         mSaveFilePath = FileUtils.getCacheDir(SolidApplication.getInstance()).getAbsolutePath();
         mFile = new File(mSaveFilePath + File.separator + fileName);
     }
 
-    public DownLoadSubscribe(@NonNull String filePath, @NonNull String fileName) {
+    public DownLoadSubscriber(@NonNull String filePath, @NonNull String fileName) {
         mSaveFilePath = filePath;
         mFile = new File(mSaveFilePath + File.separator + fileName);
     }

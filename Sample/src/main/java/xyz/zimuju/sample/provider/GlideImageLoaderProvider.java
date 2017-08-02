@@ -1,4 +1,4 @@
-package xyz.zimuju.sample.loader;
+package xyz.zimuju.sample.provider;
 
 import android.content.Context;
 
@@ -12,6 +12,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import xyz.zimuju.sample.SettingCenter;
+import xyz.zimuju.sample.loader.ImageRequest;
 import xyz.zimuju.sample.util.NetworkUtil;
 import xyz.zimuju.sample.R;
 
@@ -21,7 +22,7 @@ import xyz.zimuju.sample.R;
  * Date:2016/5/13
  * Time:10:27
  */
-public class GlideImageLoaderProvider implements IImageLoaderProvider {
+public class GlideImageLoaderProvider implements ImageLoaderProvider {
     @Override
     public void loadImage(ImageRequest request) {
         Context context = request.getImageView().getContext();

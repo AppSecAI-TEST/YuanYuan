@@ -20,12 +20,6 @@ import xyz.zimuju.sample.application.SolidApplication;
 import xyz.zimuju.sample.util.NetworkUtil;
 import xyz.zimuju.sample.util.SLog;
 
-/**
- * Created by _SOLID
- * Date:2016/12/3
- * Time:13:44
- */
-
 public class OkHttpProvider {
 
     private final static long DEFAULT_CONNECT_TIMEOUT = 5;
@@ -50,7 +44,7 @@ public class OkHttpProvider {
         //设置缓存
         //File httpCacheDirectory = new File(SolidApplication.getInstance().getCacheDir(), "OkHttpCache");
         File httpCacheDirectory = new File(Environment.getExternalStorageDirectory(), "/YuanYuan/Cache/OkHttp/");
-        if (!httpCacheDirectory.exists()){
+        if (!httpCacheDirectory.exists()) {
             httpCacheDirectory.mkdirs();
         }
         httpClientBuilder.cache(new Cache(httpCacheDirectory, 100 * 1024 * 1024));

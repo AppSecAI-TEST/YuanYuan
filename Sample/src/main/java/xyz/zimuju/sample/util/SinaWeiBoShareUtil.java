@@ -19,7 +19,7 @@ import com.sina.weibo.sdk.auth.WeiboAuthListener;
 import com.sina.weibo.sdk.exception.WeiboException;
 import com.sina.weibo.sdk.utils.Utility;
 
-import xyz.zimuju.sample.constant.Constants;
+import xyz.zimuju.sample.constant.ConfigConstants;
 import xyz.zimuju.sample.R;
 
 /**
@@ -49,7 +49,7 @@ public class SinaWeiBoShareUtil {
     public void sendMultiMessage() {
 
         // 创建微博分享接口实例
-        IWeiboShareAPI mWeiboShareAPI = WeiboShareSDK.createWeiboAPI(mContext, Constants.SINA_APP_KEY);
+        IWeiboShareAPI mWeiboShareAPI = WeiboShareSDK.createWeiboAPI(mContext, ConfigConstants.SINA_APP_KEY);
         // 注册第三方应用到微博客户端中，注册成功后该应用将显示在微博的应用列表中。
         // 但该附件栏集成分享权限需要合作申请，详情请查看 Demo 提示
         // NOTE：请务必提前注册，即界面初始化的时候或是应用程序初始化时，进行注册
@@ -85,7 +85,7 @@ public class SinaWeiBoShareUtil {
         request.transaction = String.valueOf(System.currentTimeMillis());
         request.multiMessage = weiboMessage;
 
-        AuthInfo authInfo = new AuthInfo(mContext, Constants.SINA_APP_KEY, Constants.SINA_REDIRECT_URL, Constants.SINA_SCOPE);
+        AuthInfo authInfo = new AuthInfo(mContext, ConfigConstants.SINA_APP_KEY, ConfigConstants.SINA_REDIRECT_URL, ConfigConstants.SINA_SCOPE);
         Oauth2AccessToken accessToken = AuthorityUtils.readOauth2AccessToken();
         String token = "";
         if (accessToken != null) {

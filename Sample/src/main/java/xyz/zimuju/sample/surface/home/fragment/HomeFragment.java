@@ -10,9 +10,9 @@ import java.util.List;
 import xyz.zimuju.sample.engine.api.GankService;
 import xyz.zimuju.sample.entity.content.CategoryList;
 import xyz.zimuju.sample.entity.content.Daily;
-import xyz.zimuju.sample.constant.Category;
+import xyz.zimuju.sample.constant.CategoryConstants;
 import xyz.zimuju.sample.surface.gank.fragment.AbsListFragment;
-import xyz.zimuju.sample.http.HttpResult;
+import xyz.zimuju.sample.entity.HttpResult;
 import xyz.zimuju.sample.factory.ServiceFactory;
 import xyz.zimuju.sample.http.subscriber.HttpResultSubscriber;
 import xyz.zimuju.sample.rx.RxUtils;
@@ -38,7 +38,7 @@ public class HomeFragment extends AbsListFragment {
         final List data = new ArrayList();
         if (pageIndex == getInitPageIndex()) {
             CategoryList categoryList = new CategoryList();
-            categoryList.setData(Category.getGanHuoCateGory());
+            categoryList.setData(CategoryConstants.getGanHuoCateGory());
             data.add(categoryList);
         }
 
