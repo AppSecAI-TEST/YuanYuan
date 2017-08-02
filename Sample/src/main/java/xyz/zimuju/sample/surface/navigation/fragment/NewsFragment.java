@@ -1,10 +1,10 @@
 package xyz.zimuju.sample.surface.navigation.fragment;
 
 import android.support.v7.widget.LinearLayoutManager;
-import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
+import butterknife.BindView;
 import xyz.zimuju.common.basal.BasalFragment;
 import xyz.zimuju.common.basal.MRecyclerViewAdapter;
 import xyz.zimuju.common.widget.custom.CustomRecyclerView;
@@ -14,8 +14,12 @@ import xyz.zimuju.sample.util.GankCategoryUtils;
 
 
 public class NewsFragment extends BasalFragment implements MRecyclerViewAdapter.OnItemClickListener {
+    @BindView(R.id.news_category_recyclerview)
     CustomRecyclerView categoryRecyclerView;
+
+    @BindView(R.id.news_container_recyclerview)
     CustomRecyclerView containerRecyclerView;
+
     private GankCategoryAdapter gankCategoryAdapter;
 
     @Override
@@ -28,13 +32,6 @@ public class NewsFragment extends BasalFragment implements MRecyclerViewAdapter.
         gankCategoryAdapter = new GankCategoryAdapter();
         gankCategoryAdapter.setDataList(GankCategoryUtils.getCategoryList());
     }
-
-    @Override
-    protected void initView() {
-        categoryRecyclerView = (CustomRecyclerView) rootView.findViewById(R.id.news_category_recyclerview);
-        containerRecyclerView = (CustomRecyclerView) rootView.findViewById(R.id.news_container_recyclerview);
-    }
-
 
     @Override
     protected void viewOption() {

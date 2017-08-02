@@ -6,11 +6,6 @@ import io.reactivex.annotations.NonNull;
 import io.reactivex.functions.Function;
 import okhttp3.ResponseBody;
 
-/**
- * Created by _SOLID
- * Date:2016/7/27
- * Time:20:54
- */
 public class StringFunction implements Function<ResponseBody, String> {
    
     @Override

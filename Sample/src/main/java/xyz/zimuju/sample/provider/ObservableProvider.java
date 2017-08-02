@@ -7,7 +7,7 @@ import xyz.zimuju.sample.entity.HttpResult;
 import xyz.zimuju.sample.factory.ServiceFactory;
 import xyz.zimuju.sample.http.function.ResultFunction;
 import xyz.zimuju.sample.http.function.StringFunction;
-import xyz.zimuju.sample.http.subscriber.DownLoadSubscriber;
+import xyz.zimuju.sample.http.subscriber.DownloadSubscriber;
 import xyz.zimuju.sample.rx.RxUtils;
 
 public class ObservableProvider {
@@ -33,7 +33,7 @@ public class ObservableProvider {
         return loadString(url).map(new ResultFunction<T>());
     }
 
-    public void download(String url, final DownLoadSubscriber subscribe) {
+    public void download(String url, final DownloadSubscriber subscribe) {
         mCommonService
                 .download(url)
                 .compose(RxUtils.<ResponseBody>all_io_single())
