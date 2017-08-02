@@ -11,19 +11,6 @@ import java.util.List;
  */
 public class GanHuoData implements Serializable {
 
-    public abstract static class Image {
-    }
-
-    public abstract static class Text {
-    }
-
-    public abstract static class Meizhi {
-    }
-
-    public abstract static class DailyItem {
-    }
-
-
     private String _id;
     private String createdAt;
     private String desc;
@@ -113,5 +100,17 @@ public class GanHuoData implements Serializable {
 
     public void setImages(List<String> images) {
         this.images = images;
+    }
+
+    public abstract static class Image {
+    }
+
+    public abstract static class Text {
+    }
+
+    public abstract static class Meizhi {
+    }
+
+    public abstract static class DailyItem {
     }
 }

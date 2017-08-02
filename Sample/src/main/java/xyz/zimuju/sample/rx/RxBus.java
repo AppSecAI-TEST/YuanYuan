@@ -14,10 +14,6 @@ public class RxBus {
 
     private final Subject<Object> _bus;
 
-    private static class RxBusHolder {
-        private static final RxBus instance = new RxBus();
-    }
-
     private RxBus() {
         _bus = PublishSubject.create();
     }
@@ -32,5 +28,9 @@ public class RxBus {
 
     public <T> Observable<T> toObservable(Class<T> eventType) {
         return _bus.ofType(eventType);
+    }
+
+    private static class RxBusHolder {
+        private static final RxBus instance = new RxBus();
     }
 }

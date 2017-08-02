@@ -39,8 +39,8 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 import xyz.zimuju.common.basal.BaseApplication;
-import xyz.zimuju.common.manager.OnHttpResponseListener;
 import xyz.zimuju.common.entity.Parameter;
+import xyz.zimuju.common.manager.OnHttpResponseListener;
 import xyz.zimuju.common.util.SSLUtil;
 import xyz.zimuju.common.util.StringUtils;
 

@@ -31,9 +31,9 @@
 
             <TextView
                 android:id="@+id/tv_title"
+                style="@style/ListItem.Title"
                 android:layout_alignParentTop="true"
                 android:layout_marginBottom="10dp"
-                style="@style/ListItem.Title"
                 android:textColor="@color/white"
                 tools:text="基于material design support的开源学习项目(Github)" />
 

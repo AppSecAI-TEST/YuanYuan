@@ -12,9 +12,9 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 
+import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.surface.gank.activity.BaseActivity;
 import xyz.zimuju.sample.util.SnackBarUtils;
-import xyz.zimuju.sample.R;
 
 /**
  * Created by _SOLID

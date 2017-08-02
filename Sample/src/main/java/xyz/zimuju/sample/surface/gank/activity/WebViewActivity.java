@@ -18,11 +18,11 @@ import android.widget.ViewSwitcher;
 
 import java.lang.reflect.Method;
 
+import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.application.SolidApplication;
 import xyz.zimuju.sample.surface.gank.fragment.WebViewFragment;
 import xyz.zimuju.sample.util.ClipboardUtils;
 import xyz.zimuju.sample.util.SystemShareUtils;
-import xyz.zimuju.sample.R;
 
 
 /**

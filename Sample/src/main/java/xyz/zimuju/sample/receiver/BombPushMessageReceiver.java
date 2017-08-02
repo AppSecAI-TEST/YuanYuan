@@ -14,9 +14,9 @@ import com.google.gson.Gson;
 import java.util.Calendar;
 
 import cn.bmob.push.PushConstants;
+import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.application.GankIOApplication;
 import xyz.zimuju.sample.surface.gank.activity.WebViewActivity;
-import xyz.zimuju.sample.R;
 
 /**
  * Created by _SOLID

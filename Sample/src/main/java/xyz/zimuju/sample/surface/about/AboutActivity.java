@@ -5,10 +5,10 @@ import android.text.SpannableStringBuilder;
 import android.view.View;
 import android.widget.TextView;
 
+import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.surface.gank.activity.BaseActivity;
 import xyz.zimuju.sample.util.SpannableStringUtils;
 import xyz.zimuju.sample.util.SystemUtils;
-import xyz.zimuju.sample.R;
 
 /**
  * Created by _SOLID

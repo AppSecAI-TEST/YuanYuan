@@ -23,12 +23,12 @@ import xyz.zimuju.sample.R;
  */
 public class LinearDecoration extends RecyclerView.ItemDecoration {
 
+    private static final int[] ATTRS = new int[] {android.R.attr.listDivider};
     private Paint mPaint;
     private Drawable mDivider;
     private int mDividerHeight;
     private int mDividerColor;
     private int mOrientation;//列表的方向
-    private static final int[] ATTRS = new int[]{android.R.attr.listDivider};
 
 
     /**

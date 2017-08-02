@@ -36,14 +36,14 @@
             
             <Button
                 android:id="@+id/bmob_update_id_close"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_alignParentRight="true"
-				android:layout_centerVertical="true"
-				android:layout_marginRight="10dp"
-				android:focusable="true"
-				android:visibility="gone"
-				android:background="@drawable/bmob_update_button_close_bg_selector"/>
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/bmob_update_button_close_bg_selector"
+                android:focusable="true"
+                android:visibility="gone"/>
             
         </RelativeLayout>
 
@@ -83,13 +83,13 @@
         <!-- Ignore CheckBox -->
 
 		<CheckBox
-		    android:id="@+id/bmob_update_id_check"
-	        android:layout_width="fill_parent"
-	        android:layout_height="32dp"
-	        android:visibility="gone"
-	        android:text="@string/BMIgnore"
-	        android:button="@drawable/bmob_update_button_check_selector"
-	        android:textColor="#AAABAF" />
+            android:id="@+id/bmob_update_id_check"
+            android:layout_width="fill_parent"
+            android:layout_height="32dp"
+            android:button="@drawable/bmob_update_button_check_selector"
+            android:text="@string/BMIgnore"
+            android:textColor="#AAABAF"
+            android:visibility="gone"/>
 
         <!-- OK&Cancel Button -->
 
@@ -104,10 +104,10 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/bmob_update_button_ok_bg_selector"
+                android:focusable="true"
                 android:gravity="center"
                 android:padding="12dp"
                 android:text="@string/BMUpdateNow"
-				android:focusable="true"
                 android:textColor="#FFFFFF" />
 
             <Button
@@ -117,25 +117,25 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/bmob_update_button_cancel_bg_selector"
+                android:focusable="true"
                 android:gravity="center"
                 android:padding="12dp"
                 android:text="@string/BMNotNow"
-				android:focusable="true"
                 android:textColor="#AAABAF" />
 
             <Button
                 android:id="@+id/bmob_update_id_ignore"
-				android:visibility="gone"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:background="@drawable/bmob_update_button_cancel_bg_selector"
+                android:focusable="true"
                 android:gravity="center"
                 android:padding="12dp"
                 android:text="@string/BMIgnore"
-				android:focusable="true"
-                android:textColor="#AAABAF" />
+                android:textColor="#AAABAF"
+                android:visibility="gone"/>
         </LinearLayout>
     </LinearLayout>
 

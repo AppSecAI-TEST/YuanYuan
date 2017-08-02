@@ -4,8 +4,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 
-import xyz.zimuju.sample.surface.home.fragment.CategoryListFragment;
 import xyz.zimuju.sample.surface.gank.activity.ToolbarActivity;
+import xyz.zimuju.sample.surface.home.fragment.CategoryListFragment;
 
 /**
  * Created by _SOLID

@@ -14,13 +14,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.application.GankIOApplication;
 import xyz.zimuju.sample.event.SortChangeEvent;
 import xyz.zimuju.sample.rx.RxBus;
 import xyz.zimuju.sample.util.CommonUtils;
 import xyz.zimuju.sample.util.PrefUtils;
 import xyz.zimuju.sample.util.SnackBarUtils;
-import xyz.zimuju.sample.R;
 
 /**
  * Created by _SOLID
@@ -80,6 +80,28 @@ public class SortFragment extends BaseFragment {
         }, 100);
     }
 
+    public String saveCategoryString() {
+        StringBuilder builder = new StringBuilder();
+        List<String> list = mAdapter.getDatas();
+        for (int i = 0; i < list.size(); i++) {
+            if (i != list.size() - 1) {
+                builder.append(list.get(i));
+                builder.append("|");
+            } else {
+                builder.append(list.get(i));
+            }
+        }
+        String str = builder.toString();
+        PrefUtils.putString(getMContext(), "HomeCategory", str);
+        return str;
+    }
+
+
+    public interface ItemTouchHelperAdapter {
+        void onItemMove(int fromPosition, int toPosition);
+
+        void onItemDismiss(int position);
+    }
 
     public class SortAdapter extends RecyclerView.Adapter<SortAdapter.ViewHolder> implements ItemTouchHelperAdapter {
 
@@ -156,23 +178,6 @@ public class SortFragment extends BaseFragment {
 
     }
 
-
-    public String saveCategoryString() {
-        StringBuilder builder = new StringBuilder();
-        List<String> list = mAdapter.getDatas();
-        for (int i = 0; i < list.size(); i++) {
-            if (i != list.size() - 1) {
-                builder.append(list.get(i));
-                builder.append("|");
-            } else {
-                builder.append(list.get(i));
-            }
-        }
-        String str = builder.toString();
-        PrefUtils.putString(getMContext(), "HomeCategory", str);
-        return str;
-    }
-
     public class SortCallBack extends ItemTouchHelper.Callback {
         private ItemTouchHelperAdapter adapter = null;
 
@@ -207,12 +212,6 @@ public class SortFragment extends BaseFragment {
         public boolean isItemViewSwipeEnabled() {
             return false;
         }
-    }
-
-    public interface ItemTouchHelperAdapter {
-        void onItemMove(int fromPosition, int toPosition);
-
-        void onItemDismiss(int position);
     }
 
 }

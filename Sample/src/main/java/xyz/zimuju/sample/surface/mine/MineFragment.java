@@ -10,18 +10,18 @@ import android.widget.TextView;
 
 import io.reactivex.annotations.NonNull;
 import io.reactivex.functions.Consumer;
-import xyz.zimuju.sample.surface.gank.activity.SubActivity;
-import xyz.zimuju.sample.event.LoginEvent;
-import xyz.zimuju.sample.surface.about.AboutActivity;
-import xyz.zimuju.sample.util.AppUtils;
-import xyz.zimuju.sample.util.AuthorityUtils;
+import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.SettingCenter;
-import xyz.zimuju.sample.surface.gank.fragment.BaseFragment;
+import xyz.zimuju.sample.event.LoginEvent;
 import xyz.zimuju.sample.loader.ImageLoader;
 import xyz.zimuju.sample.rx.RxBus;
+import xyz.zimuju.sample.surface.about.AboutActivity;
+import xyz.zimuju.sample.surface.gank.activity.SubActivity;
+import xyz.zimuju.sample.surface.gank.fragment.BaseFragment;
+import xyz.zimuju.sample.util.AppUtils;
+import xyz.zimuju.sample.util.AuthorityUtils;
 import xyz.zimuju.sample.util.SpannableStringUtils;
 import xyz.zimuju.sample.util.ToastUtils;
-import xyz.zimuju.sample.R;
 
 /**
  * Created by _SOLID

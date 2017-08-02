@@ -4,8 +4,8 @@ package xyz.zimuju.sample.util;
 import java.util.ArrayList;
 import java.util.List;
 
-import xyz.zimuju.common.manager.OnHttpResponseListener;
 import xyz.zimuju.common.entity.Parameter;
+import xyz.zimuju.common.manager.OnHttpResponseListener;
 import xyz.zimuju.common.util.MD5Util;
 import xyz.zimuju.common.util.SettingUtil;
 import xyz.zimuju.common.util.StringUtils;

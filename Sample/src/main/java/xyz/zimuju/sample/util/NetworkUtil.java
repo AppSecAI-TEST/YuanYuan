@@ -24,25 +24,23 @@ import java.util.concurrent.Future;
  */
 public class NetworkUtil {
 
-    private NetworkUtil() {
-        throw new UnsupportedOperationException("u can't instantiate me...");
-    }
-
     public static final int NETWORK_WIFI = 1;    // wifi network
     public static final int NETWORK_4G = 4;    // "4G" networks
     public static final int NETWORK_3G = 3;    // "3G" networks
     public static final int NETWORK_2G = 2;    // "2G" networks
     public static final int NETWORK_UNKNOWN = 5;    // unknown network
     public static final int NETWORK_NO = -1;   // no network
-
     private static final int NETWORK_TYPE_GSM = 16;
     private static final int NETWORK_TYPE_TD_SCDMA = 17;
     private static final int NETWORK_TYPE_IWLAN = 18;
-
     private static final String CMCC_ISP = "46000"; //中国移动
     private static final String CMCC2_ISP = "46002";//中国移动
     private static final String CU_ISP = "46001";   //中国联通
     private static final String CT_ISP = "46003";   //中国电信
+
+    private NetworkUtil() {
+        throw new UnsupportedOperationException("u can't instantiate me...");
+    }
 
     /**
      * 打开网络设置界面

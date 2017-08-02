@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import me.drakeet.multitype.ItemViewProvider;
-import xyz.zimuju.sample.entity.content.DailyTitle;
 import xyz.zimuju.sample.R;
+import xyz.zimuju.sample.entity.content.DailyTitle;
 
 /**
  * Created by _SOLID

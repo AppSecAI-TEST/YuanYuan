@@ -8,8 +8,8 @@ import xyz.zimuju.sample.util.ToastUtils;
  * Time:16:58
  */
 public abstract class BaseMainActivity extends BaseActivity {
-    private long lastBackKeyDownTick = 0;
     private static final long MAX_DOUBLE_BACK_DURATION = 1500;
+    private long lastBackKeyDownTick = 0;
 
     @Override
     public void onBackPressed() {

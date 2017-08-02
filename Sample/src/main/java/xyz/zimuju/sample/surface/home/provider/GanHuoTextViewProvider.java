@@ -8,12 +8,12 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import me.drakeet.multitype.ItemViewProvider;
-import xyz.zimuju.sample.entity.content.GanHuoData;
+import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.entity.bomb.CollectTable;
-import xyz.zimuju.sample.util.DialogUtils;
+import xyz.zimuju.sample.entity.content.GanHuoData;
 import xyz.zimuju.sample.surface.gank.activity.WebViewActivity;
 import xyz.zimuju.sample.util.DateUtils;
-import xyz.zimuju.sample.R;
+import xyz.zimuju.sample.util.DialogUtils;
 
 /**
  * Created by _SOLID

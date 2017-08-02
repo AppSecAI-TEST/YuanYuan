@@ -11,10 +11,10 @@ import com.bumptech.glide.load.model.stream.StreamModelLoader;
 import java.io.IOException;
 import java.io.InputStream;
 
+import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.SettingCenter;
 import xyz.zimuju.sample.loader.ImageRequest;
 import xyz.zimuju.sample.util.NetworkUtil;
-import xyz.zimuju.sample.R;
 
 
 /**

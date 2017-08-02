@@ -6,9 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import xyz.zimuju.sample.surface.gank.activity.ViewPicActivity;
-import xyz.zimuju.sample.loader.ImageLoader;
 import xyz.zimuju.sample.R;
+import xyz.zimuju.sample.loader.ImageLoader;
+import xyz.zimuju.sample.surface.gank.activity.ViewPicActivity;
 
 /**
  * Created by _SOLID

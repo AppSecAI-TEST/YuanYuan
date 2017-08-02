@@ -7,6 +7,9 @@ package xyz.zimuju.sample.entity.content;
  */
 public class DailyHeader {
 
+    private String title;
+    private String imgUrl;
+
     public String getTitle() {
         return title;
     }
@@ -22,7 +25,4 @@ public class DailyHeader {
     public void setImgUrl(String imgUrl) {
         this.imgUrl = imgUrl;
     }
-
-    private String title;
-    private String imgUrl;
 }
