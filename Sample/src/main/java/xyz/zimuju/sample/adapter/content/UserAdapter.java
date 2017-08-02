@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 
 import xyz.zimuju.common.base.BaseViewAdapter;
 import xyz.zimuju.sample.entity.User;
-import xyz.zimuju.sample.widget.UserView;
+import xyz.zimuju.sample.widget.custom.UserView;
 
 
 public class UserAdapter extends BaseViewAdapter<User, UserView> {

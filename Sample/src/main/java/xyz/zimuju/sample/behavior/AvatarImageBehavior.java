@@ -13,10 +13,7 @@ import xyz.zimuju.sample.R;
 
 /**
  * 图片控件位置动画
- *
- * @author wangchenlong
  */
-@SuppressWarnings("unused")
 public class AvatarImageBehavior extends CoordinatorLayout.Behavior<ImageView> {
 
     private final static float MIN_AVATAR_PERCENTAGE_SIZE = 0.3f;
@@ -67,12 +64,10 @@ public class AvatarImageBehavior extends CoordinatorLayout.Behavior<ImageView> {
         float expandedPercentageFactor = dependency.getY() / maxScrollDistance;
         Log.i(TAG, "dependency.getY():" + dependency.getY());
         // Y轴距离
-        float distanceYToSubtract = ((mStartYPosition - mFinalYPosition)
-                * (1f - expandedPercentageFactor)) + (child.getHeight() / 2);
+        float distanceYToSubtract = ((mStartYPosition - mFinalYPosition) * (1f - expandedPercentageFactor)) + (child.getHeight() / 2);
 
         // X轴距离
-        float distanceXToSubtract = ((mStartXPosition - mFinalXPosition)
-                * (1f - expandedPercentageFactor)) + (child.getWidth() / 2);
+        float distanceXToSubtract = ((mStartXPosition - mFinalXPosition) * (1f - expandedPercentageFactor)) + (child.getWidth() / 2);
 
         // 高度减小
         float heightToSubtract = ((mStartHeight - mFinalHeight) * (1f - expandedPercentageFactor));

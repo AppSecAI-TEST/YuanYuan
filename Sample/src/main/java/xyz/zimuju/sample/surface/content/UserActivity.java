@@ -43,7 +43,7 @@ import xyz.zimuju.common.widget.TextClearSuit;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.entity.User;
 import xyz.zimuju.sample.util.MenuUtils;
-import xyz.zimuju.sample.widget.UserView;
+import xyz.zimuju.sample.widget.custom.UserView;
 
 
 /**

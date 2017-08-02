@@ -38,7 +38,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <!--<activity android:name=".surface.content.SplashActivity">-->
-        <activity android:name=".common.activity.SplashActivity"
+        <activity android:name=".surface.gank.activity.SplashActivity"
                   android:screenOrientation="portrait"
                   android:theme="@style/SplashTheme">
             <intent-filter>
@@ -188,35 +188,35 @@
             android:value="Tencent"/>
 
         <activity
-            android:name=".common.activity.MainActivity"
+            android:name=".surface.gank.activity.MainActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".common.activity.SortActivity"
+            android:name=".surface.gank.activity.SortActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".module.about.AboutActivity"
+            android:name=".surface.about.AboutActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".module.mine.LoginActivity"
+            android:name=".surface.mine.LoginActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".activity.ViewPicActivity"
+            android:name=".surface.gank.activity.ViewPicActivity"
             android:screenOrientation="portrait"
             android:theme="@style/ViewPicTheme"/>
         <activity
-            android:name=".activity.WebViewActivity"
+            android:name=".surface.gank.activity.WebViewActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".module.search.SearchActivity"
+            android:name=".surface.search.SearchActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".module.home.activity.CategoryActivity"
+            android:name=".surface.home.activity.CategoryActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".module.home.activity.DailyActivity"
+            android:name=".surface.home.activity.DailyActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".common.activity.SubActivity"
+            android:name=".surface.gank.activity.SubActivity"
             android:screenOrientation="portrait"/>
         <!-- 新浪微博账号登录页面 -->
         <activity
@@ -267,7 +267,7 @@
             </intent-filter>
         </receiver>
 
-        <receiver android:name=".common.recevier.BombPushMessageReceiver">
+        <receiver android:name=".receiver.BombPushMessageReceiver">
             <intent-filter>
                 <action android:name="cn.bmob.push.action.MESSAGE"/>
             </intent-filter>

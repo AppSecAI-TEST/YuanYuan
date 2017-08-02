@@ -19,7 +19,7 @@ import com.sina.weibo.sdk.auth.WeiboAuthListener;
 import com.sina.weibo.sdk.exception.WeiboException;
 import com.sina.weibo.sdk.utils.Utility;
 
-import xyz.zimuju.sample.common.constant.Constants;
+import xyz.zimuju.sample.constant.Constants;
 import xyz.zimuju.sample.R;
 
 /**

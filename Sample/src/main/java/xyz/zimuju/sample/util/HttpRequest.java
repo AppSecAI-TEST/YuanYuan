@@ -9,7 +9,7 @@ import xyz.zimuju.common.entity.Parameter;
 import xyz.zimuju.common.util.MD5Util;
 import xyz.zimuju.common.util.SettingUtil;
 import xyz.zimuju.common.util.StringUtils;
-import xyz.zimuju.sample.application.DemoApplication;
+import xyz.zimuju.sample.application.UserApplication;
 import xyz.zimuju.sample.manager.HttpManager;
 
 public class HttpRequest {
@@ -109,7 +109,7 @@ public class HttpRequest {
      */
     public static void getUser(long userId, final int requestCode, final OnHttpResponseListener listener) {
         List<Parameter> paramList = new ArrayList<Parameter>();
-        addExistParameter(paramList, CURRENT_USER_ID, DemoApplication.getInstance().getCurrentUserId());
+        addExistParameter(paramList, CURRENT_USER_ID, UserApplication.getInstance().getCurrentUserId());
         addExistParameter(paramList, USER_ID, userId);
 
         HttpManager.getInstance().get(paramList, URL_BASE + "user/information", requestCode, listener);
@@ -125,7 +125,7 @@ public class HttpRequest {
      */
     public static void getUserList(int range, int pageNum, final int requestCode, final OnHttpResponseListener listener) {
         List<Parameter> paramList = new ArrayList<Parameter>();
-        addExistParameter(paramList, CURRENT_USER_ID, DemoApplication.getInstance().getCurrentUserId());
+        addExistParameter(paramList, CURRENT_USER_ID, UserApplication.getInstance().getCurrentUserId());
         addExistParameter(paramList, RANGE, range);
         addExistParameter(paramList, PAGE_NUM, pageNum);
 

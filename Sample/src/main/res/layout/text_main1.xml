@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="200dp">
 
-        <xyz.zimuju.sample.temp.MyTextView2
+        <xyz.zimuju.sample.widget.text.MTextView2
             android:id="@+id/textview"
             android:layout_width="fill_parent"
             android:layout_height="200dp"

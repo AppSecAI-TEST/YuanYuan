@@ -7,7 +7,7 @@ import android.util.Log;
 import com.alibaba.fastjson.JSON;
 
 import xyz.zimuju.common.util.StringUtils;
-import xyz.zimuju.sample.application.DemoApplication;
+import xyz.zimuju.sample.application.UserApplication;
 import xyz.zimuju.sample.entity.User;
 
 public class DataManager {
@@ -31,7 +31,7 @@ public class DataManager {
         if (instance == null) {
             synchronized (DataManager.class) {
                 if (instance == null) {
-                    instance = new DataManager(DemoApplication.getInstance());
+                    instance = new DataManager(UserApplication.getInstance());
                 }
             }
         }
