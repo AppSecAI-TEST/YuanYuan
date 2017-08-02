@@ -24,7 +24,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
                 android:contentDescription="@string/BMGprsCondition"
-                android:src="@drawable/bmob_update_wifi_disable" />
+                android:src="@mipmap/bmob_update_wifi_disable" />
 
             <TextView
                 android:layout_width="wrap_content"
