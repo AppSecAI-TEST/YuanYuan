@@ -28,10 +28,11 @@ public class SolidApplication extends Application {
 
     @Override
     public File getCacheDir() {
-        if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
-            return Environment.getDownloadCacheDirectory();
-        } else {
-            return super.getCacheDir();
+        File file = new File(Environment.getExternalStorageDirectory(), "/YuanYuan/Cache/");
+        if (!file.exists()){
+            file.mkdirs();
         }
+
+        return file;
     }
 }

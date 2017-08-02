@@ -1,5 +1,6 @@
 package xyz.zimuju.gankio.http;
 
+import android.os.Environment;
 import android.text.TextUtils;
 
 import com.trello.rxlifecycle2.internal.Preconditions;
@@ -47,7 +48,11 @@ public class OkHttpProvider {
         httpClientBuilder.writeTimeout(DEFAULT_WRITE_TIMEOUT, TimeUnit.SECONDS);
         httpClientBuilder.readTimeout(DEFAULT_READ_TIMEOUT, TimeUnit.SECONDS);
         //设置缓存
-        File httpCacheDirectory = new File(SolidApplication.getInstance().getCacheDir(), "OkHttpCache");
+        //File httpCacheDirectory = new File(SolidApplication.getInstance().getCacheDir(), "OkHttpCache");
+        File httpCacheDirectory = new File(Environment.getExternalStorageDirectory(), "/YuanYuan/Cache/OkHttp/");
+        if (!httpCacheDirectory.exists()){
+            httpCacheDirectory.mkdirs();
+        }
         httpClientBuilder.cache(new Cache(httpCacheDirectory, 100 * 1024 * 1024));
         //设置拦截器
         httpClientBuilder.addInterceptor(new UserAgentInterceptor("Android Device"));
