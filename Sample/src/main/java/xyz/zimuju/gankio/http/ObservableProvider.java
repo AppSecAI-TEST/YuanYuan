@@ -3,8 +3,8 @@ package xyz.zimuju.gankio.http;
 
 import io.reactivex.Single;
 import okhttp3.ResponseBody;
-import xyz.zimuju.gankio.http.func.ResultFunc;
-import xyz.zimuju.gankio.http.func.StringFunc;
+import xyz.zimuju.gankio.http.function.ResultFunction;
+import xyz.zimuju.gankio.http.function.StringFunction;
 import xyz.zimuju.gankio.http.subscriber.DownLoadSubscribe;
 import xyz.zimuju.gankio.rx.RxUtils;
 
@@ -33,11 +33,11 @@ public class ObservableProvider {
     public Single<String> loadString(String url) {
         return mCommonService
                 .loadString(url)
-                .map(new StringFunc());
+                .map(new StringFunction());
     }
 
     public <T> Single<HttpResult<T>> loadResult(String url) {
-        return loadString(url).map(new ResultFunc<T>());
+        return loadString(url).map(new ResultFunction<T>());
     }
 
     public void download(String url, final DownLoadSubscribe subscribe) {

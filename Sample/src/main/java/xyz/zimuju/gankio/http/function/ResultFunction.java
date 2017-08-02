@@ -1,16 +1,11 @@
-package xyz.zimuju.gankio.http.func;
+package xyz.zimuju.gankio.http.function;
 
 import io.reactivex.annotations.NonNull;
 import io.reactivex.functions.Function;
 import xyz.zimuju.gankio.http.HttpResult;
 import xyz.zimuju.gankio.utils.json.JsonConvert;
 
-/**
- * Created by _SOLID
- * Date:2016/7/28
- * Time:11:04
- */
-public class ResultFunc<T> implements Function<String, HttpResult<T>> {
+public class ResultFunction<T> implements Function<String, HttpResult<T>> {
 
 
     @Override

@@ -2,7 +2,8 @@ package xyz.zimuju.gankio.imageloader;
 
 import android.widget.ImageView;
 
-import xyz.zimuju.library.R;
+import xyz.zimuju.sample.R;
+
 
 /**
  * Created by _SOLID

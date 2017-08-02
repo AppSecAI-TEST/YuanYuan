@@ -2,7 +2,7 @@ package xyz.zimuju.gankio.imageloader;
 
 import android.widget.ImageView;
 
-import xyz.zimuju.library.R;
+import xyz.zimuju.sample.R;
 
 
 /**
@@ -66,7 +66,7 @@ public class ImageRequest {
 
         public Builder() {
             this.url = "";
-            this.placeHolder = R.drawable.default_load_img;
+            this.placeHolder = R.mipmap.default_load_img;
             this.imageView = null;
         }
 

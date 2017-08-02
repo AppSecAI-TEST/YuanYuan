@@ -11,9 +11,9 @@ import com.bumptech.glide.load.model.stream.StreamModelLoader;
 import java.io.IOException;
 import java.io.InputStream;
 
-import xyz.zimuju.library.R;
 import xyz.zimuju.gankio.SettingCenter;
 import xyz.zimuju.gankio.utils.NetworkUtil;
+import xyz.zimuju.sample.R;
 
 
 /**

@@ -6,9 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import xyz.zimuju.gankio.R;
 import xyz.zimuju.gankio.activity.ViewPicActivity;
 import xyz.zimuju.gankio.imageloader.ImageLoader;
+import xyz.zimuju.sample.R;
 
 /**
  * Created by _SOLID
@@ -34,7 +34,7 @@ public class PictureDialog extends Dialog {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.dialog_picture);
+        setContentView(R.layout.gank_dialog_picture);
         setCanceledOnTouchOutside(true);
         mImageView = (ImageView) findViewById(R.id.iv_picture);
     }

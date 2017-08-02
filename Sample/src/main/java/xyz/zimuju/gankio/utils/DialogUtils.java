@@ -8,11 +8,11 @@ import com.afollestad.materialdialogs.MaterialDialog;
 
 import cn.bmob.v3.listener.DeleteListener;
 import cn.bmob.v3.listener.SaveListener;
-import xyz.zimuju.gankio.R;
 import xyz.zimuju.gankio.bean.bomb.CollectTable;
 import xyz.zimuju.gankio.common.event.CollectChangeEvent;
 import xyz.zimuju.gankio.module.mine.LoginActivity;
 import xyz.zimuju.gankio.rx.RxBus;
+import xyz.zimuju.sample.R;
 
 /**
  * Created by _SOLID

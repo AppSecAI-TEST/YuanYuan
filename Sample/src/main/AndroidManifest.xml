@@ -15,7 +15,6 @@
     <uses-permission android:name="android.permission.SEND_SMS"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.FLASHLIGHT"/>
-    <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.WAKE_LOCK"/>
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
 
@@ -38,7 +37,10 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".surface.content.SplashActivity">
+        <!--<activity android:name=".surface.content.SplashActivity">-->
+        <activity android:name="xyz.zimuju.gankio.common.activity.SplashActivity"
+                  android:screenOrientation="portrait"
+                  android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -186,10 +188,6 @@
             android:value="Tencent"/>
 
         <activity
-            android:name="xyz.zimuju.gankio.common.activity.SplashActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/SplashTheme"/>
-        <activity
             android:name="xyz.zimuju.gankio.common.activity.MainActivity"
             android:screenOrientation="portrait"/>
         <activity
@@ -268,6 +266,7 @@
                 <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
             </intent-filter>
         </receiver>
+
         <receiver android:name="xyz.zimuju.gankio.common.recevier.BombPushMessageReceiver">
             <intent-filter>
                 <action android:name="cn.bmob.push.action.MESSAGE"/>

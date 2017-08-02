@@ -1,4 +1,4 @@
-package xyz.zimuju.gankio.http.func;
+package xyz.zimuju.gankio.http.function;
 
 import java.io.IOException;
 
@@ -11,7 +11,7 @@ import okhttp3.ResponseBody;
  * Date:2016/7/27
  * Time:20:54
  */
-public class StringFunc implements Function<ResponseBody, String> {
+public class StringFunction implements Function<ResponseBody, String> {
    
     @Override
     public String apply(@NonNull ResponseBody responseBody) throws Exception {

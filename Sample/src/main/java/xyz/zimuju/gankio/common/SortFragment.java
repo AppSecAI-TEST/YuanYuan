@@ -15,13 +15,13 @@ import java.util.Collections;
 import java.util.List;
 
 import xyz.zimuju.gankio.GanHuoIOApplication;
-import xyz.zimuju.gankio.R;
 import xyz.zimuju.gankio.common.event.SortChangeEvent;
 import xyz.zimuju.gankio.fragment.base.BaseFragment;
 import xyz.zimuju.gankio.rx.RxBus;
 import xyz.zimuju.gankio.utils.CommonUtils;
 import xyz.zimuju.gankio.utils.PrefUtils;
 import xyz.zimuju.gankio.utils.SnackBarUtils;
+import xyz.zimuju.sample.R;
 
 /**
  * Created by _SOLID
@@ -39,7 +39,7 @@ public class SortFragment extends BaseFragment {
 
     @Override
     protected int setLayoutResourceID() {
-        return R.layout.fragment_sort;
+        return R.layout.gank_fragment_sort;
     }
 
 
@@ -102,9 +102,9 @@ public class SortFragment extends BaseFragment {
         @Override
         public void onBindViewHolder(ViewHolder holder, int position) {
             if (position != 0) {
-                holder.iv_icon.setImageResource(R.drawable.icon_sort_item);
+                holder.iv_icon.setImageResource(R.mipmap.icon_sort_item);
             } else {
-                holder.iv_icon.setImageResource(R.drawable.icon_fix);
+                holder.iv_icon.setImageResource(R.mipmap.icon_fix);
             }
             holder.tv_name.setText(beans.get(position));
             holder.itemView.setOnClickListener(new View.OnClickListener() {

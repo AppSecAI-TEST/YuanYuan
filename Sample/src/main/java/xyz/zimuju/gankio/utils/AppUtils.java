@@ -10,10 +10,10 @@ import com.afollestad.materialdialogs.MaterialDialog;
 
 import cn.bmob.v3.listener.SaveListener;
 import xyz.zimuju.gankio.GanHuoIOApplication;
-import xyz.zimuju.gankio.R;
 import xyz.zimuju.gankio.bean.bomb.FeedBack;
 import xyz.zimuju.gankio.SettingCenter;
 import xyz.zimuju.gankio.SolidApplication;
+import xyz.zimuju.sample.R;
 
 /**
  * Created by _SOLID

@@ -10,11 +10,6 @@ import android.os.Bundle;
 import xyz.zimuju.gankio.activity.base.BaseActivity;
 import xyz.zimuju.sample.R;
 
-/**
- * Created by _SOLID
- * Date:2016/5/20
- * Time:7:58
- */
 public class SplashActivity extends BaseActivity {
 
     @Override
@@ -25,7 +20,7 @@ public class SplashActivity extends BaseActivity {
 
     @Override
     protected int setLayoutResourceID() {
-        return R.layout.activity_splash;
+        return R.layout.gank_activity_splash;
     }
 
     @Override

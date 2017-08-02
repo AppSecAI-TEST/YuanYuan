@@ -13,7 +13,8 @@ import android.os.Environment;
 import android.os.Vibrator;
 import android.view.inputmethod.InputMethodManager;
 
-import xyz.zimuju.library.R;
+import xyz.zimuju.sample.R;
+
 
 /**
  * Created by _SOLID

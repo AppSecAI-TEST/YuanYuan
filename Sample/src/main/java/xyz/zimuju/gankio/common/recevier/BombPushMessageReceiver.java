@@ -15,8 +15,8 @@ import java.util.Calendar;
 
 import cn.bmob.push.PushConstants;
 import xyz.zimuju.gankio.GanHuoIOApplication;
-import xyz.zimuju.gankio.R;
 import xyz.zimuju.gankio.activity.WebViewActivity;
+import xyz.zimuju.sample.R;
 
 /**
  * Created by _SOLID
