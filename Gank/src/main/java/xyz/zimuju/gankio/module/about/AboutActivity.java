@@ -6,9 +6,9 @@ import android.view.View;
 import android.widget.TextView;
 
 import xyz.zimuju.gankio.R;
-import xyz.zimuju.library.activity.base.BaseActivity;
-import xyz.zimuju.library.utils.SpannableStringUtils;
-import xyz.zimuju.library.utils.SystemUtils;
+import xyz.zimuju.gankio.activity.base.BaseActivity;
+import xyz.zimuju.gankio.utils.SpannableStringUtils;
+import xyz.zimuju.gankio.utils.SystemUtils;
 
 /**
  * Created by _SOLID

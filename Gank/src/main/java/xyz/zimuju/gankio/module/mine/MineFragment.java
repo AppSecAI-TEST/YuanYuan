@@ -16,12 +16,12 @@ import xyz.zimuju.gankio.common.event.LoginEvent;
 import xyz.zimuju.gankio.module.about.AboutActivity;
 import xyz.zimuju.gankio.utils.AppUtils;
 import xyz.zimuju.gankio.utils.AuthorityUtils;
-import xyz.zimuju.library.SettingCenter;
-import xyz.zimuju.library.fragment.base.BaseFragment;
-import xyz.zimuju.library.imageloader.ImageLoader;
-import xyz.zimuju.library.rx.RxBus;
-import xyz.zimuju.library.utils.SpannableStringUtils;
-import xyz.zimuju.library.utils.ToastUtils;
+import xyz.zimuju.gankio.SettingCenter;
+import xyz.zimuju.gankio.fragment.base.BaseFragment;
+import xyz.zimuju.gankio.imageloader.ImageLoader;
+import xyz.zimuju.gankio.rx.RxBus;
+import xyz.zimuju.gankio.utils.SpannableStringUtils;
+import xyz.zimuju.gankio.utils.ToastUtils;
 
 /**
  * Created by _SOLID

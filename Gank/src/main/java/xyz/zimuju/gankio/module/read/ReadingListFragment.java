@@ -14,8 +14,8 @@ import io.reactivex.disposables.Disposable;
 import xyz.zimuju.gankio.R;
 import xyz.zimuju.gankio.api.XianDuService;
 import xyz.zimuju.gankio.bean.XianDuItem;
-import xyz.zimuju.library.fragment.base.AbsListFragment;
-import xyz.zimuju.library.rx.RxUtils;
+import xyz.zimuju.gankio.fragment.base.AbsListFragment;
+import xyz.zimuju.gankio.rx.RxUtils;
 
 /**
  * Created by _SOLID

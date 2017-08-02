@@ -16,9 +16,9 @@ import java.lang.reflect.Field;
 
 import xyz.zimuju.gankio.R;
 import xyz.zimuju.gankio.module.home.fragment.RecentlyListFragment;
-import xyz.zimuju.library.activity.ViewPicActivity;
-import xyz.zimuju.library.activity.base.BaseActivity;
-import xyz.zimuju.library.imageloader.ImageLoader;
+import xyz.zimuju.gankio.activity.ViewPicActivity;
+import xyz.zimuju.gankio.activity.base.BaseActivity;
+import xyz.zimuju.gankio.imageloader.ImageLoader;
 
 
 /**

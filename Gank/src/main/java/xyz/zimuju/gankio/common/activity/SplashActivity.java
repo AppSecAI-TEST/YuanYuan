@@ -8,7 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import xyz.zimuju.gankio.R;
-import xyz.zimuju.library.activity.base.BaseActivity;
+import xyz.zimuju.gankio.activity.base.BaseActivity;
 
 /**
  * Created by _SOLID

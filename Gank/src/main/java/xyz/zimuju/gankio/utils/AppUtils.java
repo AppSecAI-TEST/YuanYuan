@@ -12,11 +12,8 @@ import cn.bmob.v3.listener.SaveListener;
 import xyz.zimuju.gankio.GanHuoIOApplication;
 import xyz.zimuju.gankio.R;
 import xyz.zimuju.gankio.bean.bomb.FeedBack;
-import xyz.zimuju.library.SettingCenter;
-import xyz.zimuju.library.SolidApplication;
-import xyz.zimuju.library.utils.PrefUtils;
-import xyz.zimuju.library.utils.SnackBarUtils;
-import xyz.zimuju.library.utils.SystemUtils;
+import xyz.zimuju.gankio.SettingCenter;
+import xyz.zimuju.gankio.SolidApplication;
 
 /**
  * Created by _SOLID

@@ -98,7 +98,7 @@ dependencies {
 
     compile project(':Common')
     compile project(':QRCode')
-    compile project(':GuideView')
+    compile project(':Guide')
 
     //butterknife
     compile libraries.butterKnife

@@ -15,8 +15,8 @@ import io.reactivex.functions.Function;
 import okhttp3.ResponseBody;
 import xyz.zimuju.gankio.bean.XianDuCategory;
 import xyz.zimuju.gankio.bean.XianDuItem;
-import xyz.zimuju.library.http.CommonService;
-import xyz.zimuju.library.http.ServiceFactory;
+import xyz.zimuju.gankio.http.CommonService;
+import xyz.zimuju.gankio.http.ServiceFactory;
 
 /**
  * Created by _SOLID

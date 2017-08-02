@@ -15,9 +15,9 @@ import me.solidev.statusviewlayout.StatusViewLayout;
 import xyz.zimuju.gankio.R;
 import xyz.zimuju.gankio.api.XianDuService;
 import xyz.zimuju.gankio.bean.XianDuCategory;
-import xyz.zimuju.library.fragment.base.BaseFragment;
-import xyz.zimuju.library.rx.RxUtils;
-import xyz.zimuju.library.utils.ViewUtils;
+import xyz.zimuju.gankio.fragment.base.BaseFragment;
+import xyz.zimuju.gankio.rx.RxUtils;
+import xyz.zimuju.gankio.utils.ViewUtils;
 
 /**
  * Created by _SOLID

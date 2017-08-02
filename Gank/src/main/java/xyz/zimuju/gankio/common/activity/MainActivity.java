@@ -18,10 +18,10 @@ import xyz.zimuju.gankio.module.home.fragment.HomeFragment;
 import xyz.zimuju.gankio.module.mine.MineFragment;
 import xyz.zimuju.gankio.module.read.ReadingTabFragment;
 import xyz.zimuju.gankio.module.search.SearchActivity;
-import xyz.zimuju.library.activity.base.BaseMainActivity;
-import xyz.zimuju.library.fragment.base.AbsListFragment;
-import xyz.zimuju.library.fragment.base.BaseFragment;
-import xyz.zimuju.library.utils.ViewUtils;
+import xyz.zimuju.gankio.activity.base.BaseMainActivity;
+import xyz.zimuju.gankio.fragment.base.AbsListFragment;
+import xyz.zimuju.gankio.fragment.base.BaseFragment;
+import xyz.zimuju.gankio.utils.ViewUtils;
 
 public class MainActivity extends BaseMainActivity {
 

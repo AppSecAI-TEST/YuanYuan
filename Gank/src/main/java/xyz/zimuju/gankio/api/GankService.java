@@ -7,7 +7,7 @@ import xyz.zimuju.gankio.bean.Daily;
 import xyz.zimuju.gankio.bean.DailyList;
 import xyz.zimuju.gankio.bean.GanHuoData;
 import xyz.zimuju.gankio.bean.SearchResult;
-import xyz.zimuju.library.http.HttpResult;
+import xyz.zimuju.gankio.http.HttpResult;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 

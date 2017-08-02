@@ -10,7 +10,7 @@ import android.widget.TextView;
 import me.drakeet.multitype.ItemViewProvider;
 import xyz.zimuju.gankio.R;
 import xyz.zimuju.gankio.bean.SearchResult;
-import xyz.zimuju.library.activity.WebViewActivity;
+import xyz.zimuju.gankio.activity.WebViewActivity;
 
 /**
  * Created by _SOLID

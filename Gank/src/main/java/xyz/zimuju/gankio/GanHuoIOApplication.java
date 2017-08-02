@@ -5,7 +5,6 @@ import com.squareup.leakcanary.LeakCanary;
 import cn.bmob.push.BmobPush;
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobInstallation;
-import xyz.zimuju.library.SolidApplication;
 
 /**
  * Created by _SOLID

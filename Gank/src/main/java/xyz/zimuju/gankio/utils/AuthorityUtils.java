@@ -6,7 +6,6 @@ import com.sina.weibo.sdk.auth.Oauth2AccessToken;
 
 import xyz.zimuju.gankio.GanHuoIOApplication;
 import xyz.zimuju.gankio.bean.Weibo;
-import xyz.zimuju.library.utils.PrefUtils;
 
 /**
  * Created by _SOLID

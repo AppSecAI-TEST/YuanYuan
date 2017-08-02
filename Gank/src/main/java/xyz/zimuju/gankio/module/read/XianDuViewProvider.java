@@ -13,9 +13,9 @@ import xyz.zimuju.gankio.R;
 import xyz.zimuju.gankio.bean.XianDuItem;
 import xyz.zimuju.gankio.bean.bomb.CollectTable;
 import xyz.zimuju.gankio.utils.DialogUtils;
-import xyz.zimuju.library.activity.WebViewActivity;
-import xyz.zimuju.library.imageloader.ImageLoader;
-import xyz.zimuju.library.utils.ToastUtils;
+import xyz.zimuju.gankio.activity.WebViewActivity;
+import xyz.zimuju.gankio.imageloader.ImageLoader;
+import xyz.zimuju.gankio.utils.ToastUtils;
 
 /**
  * Created by _SOLID

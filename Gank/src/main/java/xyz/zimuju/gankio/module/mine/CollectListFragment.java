@@ -15,7 +15,7 @@ import xyz.zimuju.gankio.GanHuoIOApplication;
 import xyz.zimuju.gankio.R;
 import xyz.zimuju.gankio.bean.bomb.CollectTable;
 import xyz.zimuju.gankio.utils.AuthorityUtils;
-import xyz.zimuju.library.fragment.base.AbsListFragment;
+import xyz.zimuju.gankio.fragment.base.AbsListFragment;
 
 /**
  * Created by _SOLID

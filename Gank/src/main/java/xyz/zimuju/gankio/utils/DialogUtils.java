@@ -12,8 +12,7 @@ import xyz.zimuju.gankio.R;
 import xyz.zimuju.gankio.bean.bomb.CollectTable;
 import xyz.zimuju.gankio.common.event.CollectChangeEvent;
 import xyz.zimuju.gankio.module.mine.LoginActivity;
-import xyz.zimuju.library.rx.RxBus;
-import xyz.zimuju.library.utils.SnackBarUtils;
+import xyz.zimuju.gankio.rx.RxBus;
 
 /**
  * Created by _SOLID

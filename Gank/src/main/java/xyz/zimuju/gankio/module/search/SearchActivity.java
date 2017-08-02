@@ -13,8 +13,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import xyz.zimuju.gankio.R;
-import xyz.zimuju.library.activity.base.BaseActivity;
-import xyz.zimuju.library.utils.SnackBarUtils;
+import xyz.zimuju.gankio.activity.base.BaseActivity;
+import xyz.zimuju.gankio.utils.SnackBarUtils;
 
 /**
  * Created by _SOLID

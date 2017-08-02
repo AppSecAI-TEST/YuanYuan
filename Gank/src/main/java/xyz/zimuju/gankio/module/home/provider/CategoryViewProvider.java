@@ -14,7 +14,7 @@ import xyz.zimuju.gankio.R;
 import xyz.zimuju.gankio.common.activity.SubActivity;
 import xyz.zimuju.gankio.bean.CategoryList;
 import xyz.zimuju.gankio.module.home.activity.CategoryActivity;
-import xyz.zimuju.library.imageloader.ImageLoader;
+import xyz.zimuju.gankio.imageloader.ImageLoader;
 
 /**
  * Created by _SOLID

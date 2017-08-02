@@ -17,11 +17,11 @@ import java.util.List;
 import xyz.zimuju.gankio.GanHuoIOApplication;
 import xyz.zimuju.gankio.R;
 import xyz.zimuju.gankio.common.event.SortChangeEvent;
-import xyz.zimuju.library.fragment.base.BaseFragment;
-import xyz.zimuju.library.rx.RxBus;
-import xyz.zimuju.library.utils.CommonUtils;
-import xyz.zimuju.library.utils.PrefUtils;
-import xyz.zimuju.library.utils.SnackBarUtils;
+import xyz.zimuju.gankio.fragment.base.BaseFragment;
+import xyz.zimuju.gankio.rx.RxBus;
+import xyz.zimuju.gankio.utils.CommonUtils;
+import xyz.zimuju.gankio.utils.PrefUtils;
+import xyz.zimuju.gankio.utils.SnackBarUtils;
 
 /**
  * Created by _SOLID

@@ -13,9 +13,9 @@ import me.drakeet.multitype.MultiTypeAdapter;
 import xyz.zimuju.gankio.R;
 import xyz.zimuju.gankio.bean.bomb.CollectTable;
 import xyz.zimuju.gankio.utils.DialogUtils;
-import xyz.zimuju.library.activity.WebViewActivity;
-import xyz.zimuju.library.utils.DateUtils;
-import xyz.zimuju.library.utils.SnackBarUtils;
+import xyz.zimuju.gankio.activity.WebViewActivity;
+import xyz.zimuju.gankio.utils.DateUtils;
+import xyz.zimuju.gankio.utils.SnackBarUtils;
 
 /**
  * Created by _SOLID

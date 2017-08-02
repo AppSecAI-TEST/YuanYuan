@@ -40,11 +40,11 @@
             android:name="xyz.zimuju.gankio.module.mine.LoginActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name="xyz.zimuju.library.activity.ViewPicActivity"
+            android:name=".activity.ViewPicActivity"
             android:screenOrientation="portrait"
             android:theme="@style/ViewPicTheme"/>
         <activity
-            android:name="xyz.zimuju.library.activity.WebViewActivity"
+            android:name=".activity.WebViewActivity"
             android:screenOrientation="portrait"/>
         <activity
             android:name="xyz.zimuju.gankio.module.search.SearchActivity"

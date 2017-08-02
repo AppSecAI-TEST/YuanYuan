@@ -7,8 +7,8 @@ import android.view.View;
 import android.widget.ImageView;
 
 import xyz.zimuju.gankio.R;
-import xyz.zimuju.library.activity.ViewPicActivity;
-import xyz.zimuju.library.imageloader.ImageLoader;
+import xyz.zimuju.gankio.activity.ViewPicActivity;
+import xyz.zimuju.gankio.imageloader.ImageLoader;
 
 /**
  * Created by _SOLID

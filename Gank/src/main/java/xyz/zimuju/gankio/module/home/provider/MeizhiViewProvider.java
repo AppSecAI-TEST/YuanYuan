@@ -12,9 +12,9 @@ import me.drakeet.multitype.ItemViewProvider;
 import xyz.zimuju.gankio.GanHuoIOApplication;
 import xyz.zimuju.gankio.R;
 import xyz.zimuju.gankio.bean.GanHuoData;
-import xyz.zimuju.library.activity.ViewPicActivity;
-import xyz.zimuju.library.imageloader.ImageLoader;
-import xyz.zimuju.library.utils.ViewUtils;
+import xyz.zimuju.gankio.activity.ViewPicActivity;
+import xyz.zimuju.gankio.imageloader.ImageLoader;
+import xyz.zimuju.gankio.utils.ViewUtils;
 
 /**
  * Created by _SOLID

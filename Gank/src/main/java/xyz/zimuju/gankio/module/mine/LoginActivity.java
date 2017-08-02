@@ -29,10 +29,10 @@ import xyz.zimuju.gankio.bean.Weibo;
 import xyz.zimuju.gankio.common.constant.Constants;
 import xyz.zimuju.gankio.common.event.LoginEvent;
 import xyz.zimuju.gankio.utils.AuthorityUtils;
-import xyz.zimuju.library.http.ServiceFactory;
-import xyz.zimuju.library.rx.RxBus;
-import xyz.zimuju.library.rx.RxUtils;
-import xyz.zimuju.library.utils.ToastUtils;
+import xyz.zimuju.gankio.http.ServiceFactory;
+import xyz.zimuju.gankio.rx.RxBus;
+import xyz.zimuju.gankio.rx.RxUtils;
+import xyz.zimuju.gankio.utils.ToastUtils;
 
 public class LoginActivity extends AppCompatActivity {
 

@@ -6,12 +6,12 @@ import java.util.List;
 
 import xyz.zimuju.gankio.api.GankService;
 import xyz.zimuju.gankio.bean.SearchResult;
-import xyz.zimuju.library.fragment.base.AbsListFragment;
-import xyz.zimuju.library.http.HttpResult;
-import xyz.zimuju.library.http.ServiceFactory;
-import xyz.zimuju.library.http.subscriber.HttpResultSubscriber;
-import xyz.zimuju.library.rx.RxUtils;
-import xyz.zimuju.library.widget.LinearDecoration;
+import xyz.zimuju.gankio.fragment.base.AbsListFragment;
+import xyz.zimuju.gankio.http.HttpResult;
+import xyz.zimuju.gankio.http.ServiceFactory;
+import xyz.zimuju.gankio.http.subscriber.HttpResultSubscriber;
+import xyz.zimuju.gankio.rx.RxUtils;
+import xyz.zimuju.gankio.widget.LinearDecoration;
 
 /**
  * Created by _SOLID

@@ -3,7 +3,7 @@ package xyz.zimuju.gankio.common.activity;
 import android.support.v4.app.Fragment;
 
 import xyz.zimuju.gankio.common.SortFragment;
-import xyz.zimuju.library.activity.ToolbarActivity;
+import xyz.zimuju.gankio.activity.ToolbarActivity;
 
 /**
  * Created by _SOLID

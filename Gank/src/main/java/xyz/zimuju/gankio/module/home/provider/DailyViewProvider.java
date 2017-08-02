@@ -16,8 +16,8 @@ import me.drakeet.multitype.ItemViewProvider;
 import xyz.zimuju.gankio.R;
 import xyz.zimuju.gankio.bean.Daily;
 import xyz.zimuju.gankio.module.home.activity.DailyActivity;
-import xyz.zimuju.library.imageloader.ImageLoader;
-import xyz.zimuju.library.utils.DateUtils;
+import xyz.zimuju.gankio.imageloader.ImageLoader;
+import xyz.zimuju.gankio.utils.DateUtils;
 
 /**
  * Created by _SOLID
