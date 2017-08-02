@@ -5,12 +5,12 @@ import android.support.design.widget.CoordinatorLayout;
 import android.util.AttributeSet;
 import android.view.View;
 
-/**
- * Bye Bye Burger Navigation Bar Behavior
- * <p>
- * Created by wing on 11/5/16.
+/*
+ * @description ByeBurgerBottomBehavior ：Bye Bye Burger Navigation Bar Behavior
+ * @author Nathaniel
+ * @time 2017/8/2 - 18:54
+ * @version 1.0.0
  */
-
 public class ByeBurgerBottomBehavior extends ByeBurgerBehavior {
 
     private TranslateAnimateHelper mAnimateHelper;

@@ -18,7 +18,7 @@ import xyz.zimuju.common.defination.OnBottomDragListener;
 import xyz.zimuju.common.entity.Entry;
 import xyz.zimuju.common.widget.PageScroller;
 import xyz.zimuju.sample.R;
-import xyz.zimuju.sample.adapter.content.DemoAdapter2;
+import xyz.zimuju.sample.adapter.content.SampleAdapter;
 
 public class DemoActivity extends BaseActivity implements OnBottomDragListener {
     public static final String INTENT_USER_ID = "INTENT_USER_ID";
@@ -26,7 +26,7 @@ public class DemoActivity extends BaseActivity implements OnBottomDragListener {
     private static final String TAG = "DemoActivity";
     private long userId = 0;
     private ListView lvDemo;
-    private DemoAdapter2 adapter;
+    private SampleAdapter adapter;
     private List<Entry<String, String>> list;
 
     public static Intent createIntent(Context context, long userId) {
@@ -64,7 +64,7 @@ public class DemoActivity extends BaseActivity implements OnBottomDragListener {
 
     private void setList(List<Entry<String, String>> list) {
         if (adapter == null) {
-            adapter = new DemoAdapter2(context);
+            adapter = new SampleAdapter(context);
             lvDemo.setAdapter(adapter);
         }
         adapter.refresh(list);

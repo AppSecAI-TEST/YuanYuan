@@ -46,10 +46,10 @@ public class DemoAdapter extends BaseAdapter<Entry<String, String>> {
     }
 
 
-    static class ViewHolder {
-        public ImageView ivDemoItemHead;
-        public TextView tvDemoItemName;
-        public TextView tvDemoItemNumber;
+    class ViewHolder {
+        ImageView ivDemoItemHead;
+        TextView tvDemoItemName;
+        TextView tvDemoItemNumber;
     }
 
 

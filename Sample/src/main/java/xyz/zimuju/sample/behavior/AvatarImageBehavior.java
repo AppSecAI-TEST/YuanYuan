@@ -10,9 +10,11 @@ import android.widget.ImageView;
 
 import xyz.zimuju.sample.R;
 
-
-/**
- * 图片控件位置动画
+/*
+ * @description AvatarImageBehavior ：图片控件位置动画
+ * @author Nathaniel
+ * @time 2017/8/2 - 18:54
+ * @version 1.0.0
  */
 public class AvatarImageBehavior extends CoordinatorLayout.Behavior<ImageView> {
 

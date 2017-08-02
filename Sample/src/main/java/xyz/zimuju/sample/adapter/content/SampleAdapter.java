@@ -16,9 +16,9 @@ import xyz.zimuju.common.util.StringUtils;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.surface.content.DemoFragmentActivity;
 
-public class DemoAdapter2 extends BaseViewAdapter<Entry<String, String>, DemoAdapter2.ItemView> {
+public class SampleAdapter extends BaseViewAdapter<Entry<String, String>, SampleAdapter.ItemView> {
 
-    public DemoAdapter2(Activity context) {
+    public SampleAdapter(Activity context) {
         super(context);
     }
 
@@ -33,13 +33,13 @@ public class DemoAdapter2 extends BaseViewAdapter<Entry<String, String>, DemoAda
     }
 
 
-    static class ItemView extends BaseView<Entry<String, String>> implements View.OnClickListener {
+    class ItemView extends BaseView<Entry<String, String>> implements View.OnClickListener {
 
-        public ImageView ivDemoViewHead;
-        public TextView tvDemoViewName;
-        public TextView tvDemoViewNumber;
+        ImageView ivDemoViewHead;
+        TextView tvDemoViewName;
+        TextView tvDemoViewNumber;
 
-        public ItemView(Activity context, Resources resources) {
+        ItemView(Activity context, Resources resources) {
             super(context, resources);
         }
 
