@@ -14,7 +14,7 @@ import xyz.zimuju.sample.entity.gank.Category;
 public class GankCategoryUtils {
     public static List<Category> getCategoryList() {
         List<Category> categoryList = new ArrayList<>();
-        categoryList.add(new Category("all"));
+        categoryList.add(new Category("所有"));
         categoryList.add(new Category("福利"));
         categoryList.add(new Category("Android"));
         categoryList.add(new Category("iOS"));

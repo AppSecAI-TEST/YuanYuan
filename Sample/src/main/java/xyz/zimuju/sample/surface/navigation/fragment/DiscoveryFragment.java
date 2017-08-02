@@ -18,6 +18,11 @@ public class DiscoveryFragment extends BasalFragment {
     }
 
     @Override
+    protected void initView() {
+
+    }
+
+    @Override
     protected void initData() {
 
     }

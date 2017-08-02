@@ -2,6 +2,7 @@ package xyz.zimuju.common.basal;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,6 +33,6 @@ public abstract class MRecyclerViewAdapter<T> extends RecyclerView.Adapter<Recyc
     }
 
     public interface OnItemClickListener {
-        void onItemClick(View view, int position);
+        void onItemClick(ViewGroup parent, View view, int position);
     }
 }

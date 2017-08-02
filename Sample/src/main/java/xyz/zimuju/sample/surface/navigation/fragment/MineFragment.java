@@ -19,6 +19,11 @@ public class MineFragment extends BasalFragment {
     }
 
     @Override
+    protected void initView() {
+
+    }
+
+    @Override
     protected void initData() {
 
     }

@@ -20,7 +20,7 @@ public abstract class BasalFragment extends Fragment {
 
     protected abstract int getLayoutId();// 获得布局文件的id
 
-    // protected abstract void initView(); // 初始化使徒控件
+    protected abstract void initView(); // 初始化使徒控件
 
     protected abstract void initData(); // 初始化数据
 
@@ -29,9 +29,9 @@ public abstract class BasalFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(getLayoutId(), container, false);
-        ButterKnife.bind(this, rootView);
+        // ButterKnife.bind(this, rootView);
         initData();
-        // initView();
+        initView();
         viewOption();
         return rootView;
     }
