@@ -2,12 +2,12 @@ ext {
 
     configurations = [
             compileSdkVersion: 25,
-            buildToolsVersion: "25.0.2",
+            buildToolsVersion: "25.0.3",
             minSdkVersion    : 15,
             targetSdkVersion : 25,
             versionCode      : 1,
             versionName      : "1.0.0",
-            supportLibVersion: "25.2.0",
+            supportLibVersion: "25.3.1",
             testRunnerVersion: "0.5",
             espressoVersion  : "2.2.2",
             applicationId    : "xyz.zimuju.sample"
@@ -25,6 +25,7 @@ ext {
             design                     : "com.android.support:design:$configurations.supportLibVersion",
             percent                    : "com.android.support:percent:$configurations.supportLibVersion",
             v7recyclerView             : "com.android.support:recyclerview-v7:$configurations.supportLibVersion",
+            v7cardview                 : "com.android.support:cardview-v7:$configurations.supportLibVersion",
 
             constraintLayout           : "com.android.support.constraint:constraint-layout:1.0.2",
 

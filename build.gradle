@@ -12,6 +12,7 @@ buildscript {
         classpath 'com.jakewharton:butterknife-gradle-plugin:8.7.0'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
         classpath 'com.dicedmelon.gradle:jacoco-android:0.1.1'
+        classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:0.5.2'
     }
 }
 
@@ -19,6 +20,7 @@ allprojects {
     repositories {
         mavenCentral()
         jcenter()
+        maven { url "https://jitpack.io" }
     }
 }
 

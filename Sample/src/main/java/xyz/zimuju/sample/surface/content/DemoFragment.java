@@ -14,7 +14,7 @@ import java.util.List;
 import xyz.zimuju.common.base.BaseFragment;
 import xyz.zimuju.common.entity.Entry;
 import xyz.zimuju.sample.R;
-import xyz.zimuju.sample.adapter.DemoAdapter;
+import xyz.zimuju.sample.adapter.content.DemoAdapter;
 
 
 public class DemoFragment extends BaseFragment {

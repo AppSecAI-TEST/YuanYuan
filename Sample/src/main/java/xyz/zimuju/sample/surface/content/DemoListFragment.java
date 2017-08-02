@@ -19,7 +19,7 @@ import xyz.zimuju.common.base.BaseListFragment;
 import xyz.zimuju.common.defination.AdapterCallBack;
 import xyz.zimuju.common.entity.Entry;
 import xyz.zimuju.sample.R;
-import xyz.zimuju.sample.adapter.DemoAdapter;
+import xyz.zimuju.sample.adapter.content.DemoAdapter;
 
 public class DemoListFragment extends BaseListFragment<Entry<String, String>, ListView, DemoAdapter> {
     public static DemoListFragment createInstance() {

@@ -18,7 +18,7 @@ import xyz.zimuju.common.defination.OnBottomDragListener;
 import xyz.zimuju.common.entity.Entry;
 import xyz.zimuju.common.widget.PageScroller;
 import xyz.zimuju.sample.R;
-import xyz.zimuju.sample.adapter.DemoAdapter2;
+import xyz.zimuju.sample.adapter.content.DemoAdapter2;
 
 public class DemoActivity extends BaseActivity implements OnBottomDragListener {
     public static final String INTENT_USER_ID = "INTENT_USER_ID";
