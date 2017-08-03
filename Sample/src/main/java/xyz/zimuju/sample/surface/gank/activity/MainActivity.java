@@ -30,7 +30,7 @@ public class MainActivity extends BaseMainActivity {
     private AppBarLayout mAppBarLayout;
 
     @Override
-    protected int setLayoutResourceID() {
+    protected int getLayoutId() {
         return R.layout.gank_activity_main;
     }
 
@@ -42,7 +42,7 @@ public class MainActivity extends BaseMainActivity {
     }
 
     @Override
-    protected void setUpView() {
+    protected void initView() {
         mAppBarLayout = $(R.id.appbar_layout);
         mBottomNavigationView = $(R.id.bottom_navigation);
         mBottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -92,7 +92,7 @@ public class MainActivity extends BaseMainActivity {
     }
 
     @Override
-    protected void setUpData() {
+    protected void initData() {
     }
 
     private void switchFragment(int index) {

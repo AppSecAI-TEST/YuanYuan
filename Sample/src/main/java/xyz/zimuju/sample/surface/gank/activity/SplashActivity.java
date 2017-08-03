@@ -18,12 +18,12 @@ public class SplashActivity extends BaseActivity {
     }
 
     @Override
-    protected int setLayoutResourceID() {
+    protected int getLayoutId() {
         return R.layout.gank_activity_splash;
     }
 
     @Override
-    protected void setUpView() {
+    protected void initView() {
         ObjectAnimator rotate = ObjectAnimator.ofFloat($(R.id.iv_logo), "rotationY", 180, 360);
         AnimatorSet animatorSet = new AnimatorSet();
         animatorSet.playSequentially(rotate);

@@ -52,7 +52,7 @@ public class WebViewActivity extends BaseActivity {
 
 
     @Override
-    protected int setLayoutResourceID() {
+    protected int getLayoutId() {
         return R.layout.gank_activity_webview;
     }
 
@@ -64,7 +64,7 @@ public class WebViewActivity extends BaseActivity {
     }
 
     @Override
-    protected void setUpView() {
+    protected void initView() {
         //设置Toolbar
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
@@ -146,7 +146,7 @@ public class WebViewActivity extends BaseActivity {
     }
 
     @Override
-    protected void setUpData() {
+    protected void initData() {
         mWebViewFragment = WebViewFragment.newInstance(mUrl);
         mFragmentManager.beginTransaction().replace(R.id.fl_content, mWebViewFragment).commit();
     }

@@ -22,7 +22,7 @@ public abstract class BasalActivity extends AppCompatActivity {
 
     // protected abstract void initView();
 
-    // protected abstract void viewOption();
+    protected abstract void viewOption();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +32,7 @@ public abstract class BasalActivity extends AppCompatActivity {
         ButterKnife.bind(this);
         initData();
         // initView();
-        // viewOption();
+        viewOption();
     }
 
     protected Context getContext() {

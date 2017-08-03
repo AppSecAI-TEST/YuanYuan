@@ -37,6 +37,11 @@ public class FullGuideActivity extends BasalActivity implements View.OnClickList
     }
 
     @Override
+    protected void viewOption() {
+
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }

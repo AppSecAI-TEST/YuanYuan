@@ -39,6 +39,11 @@ public class GuideHomeActivity extends BasalActivity implements View.OnClickList
 
     }
 
+    @Override
+    protected void viewOption() {
+        
+    }
+
 
     @OnClick({R.id.guide_activity_tv, R.id.guide_activity_view_tv, R.id.guide_fragment_tv, R.id.guide_fragmnet_view_tv, R.id.guide_list_tv, R.id.guide_more_tv})
     @Override

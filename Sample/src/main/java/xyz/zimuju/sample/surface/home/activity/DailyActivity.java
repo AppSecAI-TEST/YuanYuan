@@ -83,12 +83,12 @@ public class DailyActivity extends BaseActivity {
     }
 
     @Override
-    protected int setLayoutResourceID() {
+    protected int getLayoutId() {
         return R.layout.gank_activity_daily;
     }
 
     @Override
-    protected void setUpView() {
+    protected void initView() {
         setUpToolbar();
         ImageView iv_image = $(R.id.iv_image);
         ImageLoader.displayImage(iv_image, getImageUrl());

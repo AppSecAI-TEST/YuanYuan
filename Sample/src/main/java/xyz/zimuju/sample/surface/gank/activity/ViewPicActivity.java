@@ -77,12 +77,12 @@ public class ViewPicActivity extends BaseActivity {
     }
 
     @Override
-    protected int setLayoutResourceID() {
+    protected int getLayoutId() {
         return R.layout.gank_activity_view_pic;
     }
 
     @Override
-    protected void setUpView() {
+    protected void initView() {
 
         mViewPager = $(R.id.viewpager);
         mTvIndex = $(R.id.tv_index);
@@ -130,7 +130,7 @@ public class ViewPicActivity extends BaseActivity {
     }
 
     @Override
-    protected void setUpData() {
+    protected void initData() {
         mViewPager.setAdapter(new MyViewPager(this));
         mViewPager.setCurrentItem(mCurrentIndex);
 

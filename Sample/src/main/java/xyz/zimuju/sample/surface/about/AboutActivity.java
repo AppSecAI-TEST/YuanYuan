@@ -21,7 +21,7 @@ public class AboutActivity extends BaseActivity {
     private TextView tv_msg;
 
     @Override
-    protected void setUpView() {
+    protected void initView() {
 
         Toolbar toolbar = $(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -66,7 +66,7 @@ public class AboutActivity extends BaseActivity {
     }
 
     @Override
-    protected int setLayoutResourceID() {
+    protected int getLayoutId() {
         return R.layout.gank_activity_about;
     }
 

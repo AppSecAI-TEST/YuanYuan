@@ -2,10 +2,11 @@ package xyz.zimuju.sample.surface.gank.activity;
 
 import xyz.zimuju.sample.util.ToastUtils;
 
-/**
- * Created by _SOLID
- * Date:2016/6/2
- * Time:16:58
+/*
+ * @description BaseMainActivity ：主界面的基类
+ * @author Nathaniel
+ * @time 2017/8/3 - 10:49
+ * @version 1.0.0
  */
 public abstract class BaseMainActivity extends BaseActivity {
     private static final long MAX_DOUBLE_BACK_DURATION = 1500;

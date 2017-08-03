@@ -34,7 +34,7 @@ public abstract class ToolbarActivity extends BaseActivity {
     }
 
     @Override
-    protected void setUpView() {
+    protected void initView() {
         mAppBarLayout = $(R.id.appbar_layout);
         setUpToolBar();
         if (!isHaveTitle()) {
@@ -83,14 +83,14 @@ public abstract class ToolbarActivity extends BaseActivity {
     protected abstract String getToolbarTitle();
 
     @Override
-    protected void setUpData() {
+    protected void initData() {
         Fragment fragment = getFragment();
         if (fragment != null)
             mFragmentManager.beginTransaction().replace(R.id.fl_content, fragment).commit();
     }
 
     @Override
-    protected int setLayoutResourceID() {
+    protected int getLayoutId() {
         return R.layout.gank_activity_toolbar;
     }
 

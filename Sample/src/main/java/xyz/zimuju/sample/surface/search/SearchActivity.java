@@ -37,7 +37,7 @@ public class SearchActivity extends BaseActivity {
     }
 
     @Override
-    protected int setLayoutResourceID() {
+    protected int getLayoutId() {
         return R.layout.gank_activity_search;
     }
 
@@ -47,7 +47,7 @@ public class SearchActivity extends BaseActivity {
     }
 
     @Override
-    protected void setUpView() {
+    protected void initView() {
         mIvSelectCate = $(R.id.iv_select_cate);
         mKeywordText = $(R.id.et_keyword);
         mToolbar = $(R.id.toolbar);
@@ -80,7 +80,7 @@ public class SearchActivity extends BaseActivity {
     }
 
     @Override
-    protected void setUpData() {
+    protected void initData() {
         mSearchResultListFragment = SearchResultListFragment.newInstance(mKeywordText.getHint().toString(), "android");
         mSearchResultListFragment.setUserVisibleHint(true);
         getSupportFragmentManager().beginTransaction().replace(R.id.fl_result, mSearchResultListFragment).commit();
