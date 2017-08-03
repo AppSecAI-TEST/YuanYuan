@@ -34,22 +34,8 @@ public class ReadingTabFragment extends BaseFragment {
     private XianDuTabAdapter mAdapter;
 
     @Override
-    protected int setLayoutResourceID() {
+    protected int getLayoutId() {
         return R.layout.gank_fragment_reading_tab;
-    }
-
-    @Override
-    protected void initView() {
-        status_view_layout = findView(R.id.status_view_layout);
-        tab_layout = findView(R.id.tab_layout);
-        view_pager = findView(R.id.view_pager);
-        ViewCompat.setElevation(tab_layout, ViewUtils.dp2px(getContext(), 4));
-        status_view_layout.setOnRetryListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                initData();
-            }
-        });
     }
 
     @Override
@@ -76,6 +62,20 @@ public class ReadingTabFragment extends BaseFragment {
                         status_view_layout.showError(e.getMessage());
                     }
                 });
+    }
+
+    @Override
+    public void refreshData() {
+        status_view_layout = (StatusViewLayout) getRootView().findViewById(R.id.status_view_layout);
+        tab_layout = (TabLayout) getRootView().findViewById(R.id.tab_layout);
+        view_pager = (ViewPager) getRootView().findViewById(R.id.view_pager);
+        ViewCompat.setElevation(tab_layout, ViewUtils.dp2px(getContext(), 4));
+        status_view_layout.setOnRetryListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                initData();
+            }
+        });
     }
 
     //TODO: 点击返回时现将列表滚动到顶部

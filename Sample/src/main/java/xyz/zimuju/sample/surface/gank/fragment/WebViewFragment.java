@@ -23,7 +23,7 @@ public class WebViewFragment extends BaseFragment {
     }
 
     @Override
-    protected int setLayoutResourceID() {
+    protected int getLayoutId() {
         return R.layout.gank_fragment_webview;
     }
 
@@ -39,21 +39,21 @@ public class WebViewFragment extends BaseFragment {
         return mUrl;
     }
 
+
     @Override
-    protected void initView() {
-        mProgressBar = (ProgressBar) getContentView().findViewById(R.id.progressbar);
-        mWebView = (WebView) getContentView().findViewById(R.id.webView);
+    protected void initData() {
+        mProgressBar = (ProgressBar) getRootView().findViewById(R.id.progressbar);
+        mWebView = (WebView) getRootView().findViewById(R.id.webView);
         WebViewUtil.setWebViewOptions(mWebView);
         mWebView.setWebViewClient(new MyWebViewClient());
         mWebView.setWebChromeClient(new MyWebChromeClient());
 
         mProgressBar.setMax(100);
         mWebView.loadUrl(getLoadUrl());
-
     }
 
     @Override
-    protected void initData() {
+    public void refreshData() {
 
     }
 

@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import butterknife.BindView;
+import butterknife.OnClick;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.functions.Consumer;
 import xyz.zimuju.sample.R;
@@ -23,99 +25,41 @@ import xyz.zimuju.sample.util.AuthorityUtils;
 import xyz.zimuju.sample.util.SpannableStringUtils;
 import xyz.zimuju.sample.util.ToastUtils;
 
-public class MineFragment extends BaseFragment {
+public class MineFragment extends BaseFragment implements View.OnClickListener {
+    @BindView(R.id.mine_username_tv)
+    TextView username;
 
-    private TextView tv_username;
-    private ImageView iv_avatar;
-    private TextView tv_clear_cache;
+    @BindView(R.id.mine_portrait_iv)
+    ImageView portrait;
+
+    @BindView(R.id.mine_clear_cache_tv)
+    TextView clearCache;
+
+    @BindView(R.id.mine_feedback_tv)
+    TextView feedback;
+
+    @BindView(R.id.mine_about_tv)
+    TextView aboutUs;
+
+    @BindView(R.id.mine_logout_tv)
+    TextView logout;
 
     @Override
-    protected void initialize() {
+    protected int getLayoutId() {
+        return R.layout.fragment_mine;
+    }
+
+    @Override
+    protected void initData() {
         RxBus.getInstance()
                 .toObservable(LoginEvent.class)
                 .compose(this.<LoginEvent>bindToLifecycle())
                 .subscribe(new Consumer<LoginEvent>() {
                     @Override
                     public void accept(@NonNull LoginEvent loginEvent) throws Exception {
-                        setUserInfo();
+                        refreshUserInfo();
                     }
                 });
-    }
-
-    @Override
-    protected int setLayoutResourceID() {
-        return R.layout.fragment_mine;
-    }
-
-    @Override
-    protected void initView() {
-
-        iv_avatar = findView(R.id.iv_avatar);
-        tv_username = findView(R.id.tv_username);
-        tv_clear_cache = findView(R.id.tv_clear_cache);
-        findView(R.id.tv_my_collect).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (!AuthorityUtils.isLogin()) {
-                    startActivity(new Intent(getContext(), LoginActivity.class));
-                } else {
-                    SubActivity.start(getContext(), getString(R.string.mine_collect), SubActivity.TYPE_COLLECT);
-                }
-            }
-        });
-        tv_username.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (!AuthorityUtils.isLogin()) {
-                    startActivity(new Intent(getContext(), LoginActivity.class));
-                }
-            }
-        });
-        findView(R.id.tv_feedback).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AppUtils.feedBack(getContext(), v);
-            }
-        });
-        findView(R.id.tv_about).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getContext(), AboutActivity.class));
-            }
-        });
-        findView(R.id.tv_logout).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AppUtils.logOut(getContext(), new AppUtils.OnSuccessListener() {
-                    @Override
-                    public void onSuccess() {
-                        setUserInfo();
-                    }
-                });
-            }
-        });
-        tv_clear_cache.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AppUtils.clearCache(getContext(), new SettingCenter.ClearCacheListener() {
-                    @Override
-                    public void onResult() {
-                        ToastUtils.getInstance().showToast(getString(R.string.cache_clear_success));
-                        tv_clear_cache.setText(getString(R.string.mine_cache_clear));
-                    }
-                });
-            }
-        });
-    }
-
-    @Override
-    protected void initData() {
-        setUserInfo();
-        refresh();
-    }
-
-    @Override
-    public void refresh() {
         SettingCenter.countDirSizeTask(new SettingCenter.CountDirSizeListener() {
             @Override
             public void onResult(long result) {
@@ -123,18 +67,70 @@ public class MineFragment extends BaseFragment {
                 builder.append(getString(R.string.mine_cache_clear));
                 builder.append("\n");
                 builder.append(SpannableStringUtils.format(getContext(), "(" + SettingCenter.formatFileSize(result) + ")", R.style.ByTextAppearance));
-                tv_clear_cache.setText(builder);
+                clearCache.setText(builder);
             }
         });
     }
 
-    private void setUserInfo() {
+    @Override
+    public void refreshData() {
+        refreshUserInfo();
+    }
+
+    @OnClick({R.id.mine_collect_tv, R.id.mine_username_tv, R.id.mine_feedback_tv, R.id.mine_about_tv, R.id.mine_logout_tv, R.id.mine_clear_cache_tv})
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.mine_collect_tv:
+                if (!AuthorityUtils.isLogin()) {
+                    startActivity(new Intent(getContext(), LoginActivity.class));
+                } else {
+                    SubActivity.start(getContext(), getString(R.string.mine_collect), SubActivity.TYPE_COLLECT);
+                }
+                break;
+
+            case R.id.mine_username_tv:
+                if (!AuthorityUtils.isLogin()) {
+                    startActivity(new Intent(getContext(), LoginActivity.class));
+                }
+                break;
+
+            case R.id.mine_feedback_tv:
+                AppUtils.feedBack(getContext(), view);
+                break;
+
+            case R.id.mine_about_tv:
+                startActivity(new Intent(getContext(), AboutActivity.class));
+                break;
+
+            case R.id.mine_logout_tv:
+                AppUtils.logOut(getContext(), new AppUtils.OnSuccessListener() {
+                    @Override
+                    public void onSuccess() {
+                        refreshUserInfo();
+                    }
+                });
+                break;
+
+            case R.id.mine_clear_cache_tv:
+                AppUtils.clearCache(getContext(), new SettingCenter.ClearCacheListener() {
+                    @Override
+                    public void onResult() {
+                        ToastUtils.getInstance().showToast(getString(R.string.cache_clear_success));
+                        clearCache.setText(getString(R.string.mine_cache_clear));
+                    }
+                });
+                break;
+        }
+    }
+
+    private void refreshUserInfo() {
         if (AuthorityUtils.isLogin()) {
-            tv_username.setText(AuthorityUtils.getUserName());
-            ImageLoader.displayImage(iv_avatar, AuthorityUtils.getAvatar());
+            username.setText(AuthorityUtils.getUserName());
+            ImageLoader.displayImage(portrait, AuthorityUtils.getAvatar());
         } else {
-            tv_username.setText(getString(R.string.mine_click_login));
-            iv_avatar.setImageDrawable(new ColorDrawable(ContextCompat.getColor(getContext(), R.color.colorPrimaryDark)));
+            username.setText(getString(R.string.mine_click_login));
+            portrait.setImageDrawable(new ColorDrawable(ContextCompat.getColor(getContext(), R.color.colorPrimaryDark)));
         }
     }
 }

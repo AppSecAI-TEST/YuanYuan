@@ -32,25 +32,10 @@ public class SortFragment extends BaseFragment {
     private ItemTouchHelper mItemTouchHelper;
 
     @Override
-    protected int setLayoutResourceID() {
+    protected int getLayoutId() {
         return R.layout.gank_fragment_sort;
     }
 
-
-    @Override
-    protected void initView() {
-        mRecyclerView = findView(R.id.recyclerview);
-
-        //  mList = Category.getGanHuoCateGory();
-        mAdapter = new SortAdapter(getContext(), mList);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        mRecyclerView.setAdapter(mAdapter);
-
-        ItemTouchHelper.Callback callback = new SortCallBack(mAdapter);
-        mItemTouchHelper = new ItemTouchHelper(callback);
-        mItemTouchHelper.attachToRecyclerView(mRecyclerView);
-
-    }
 
     private void showTips() {
         boolean isHaveTips = PrefUtils.getBoolean(GankIOApplication.getInstance(), "isHaveTips", true);
@@ -73,6 +58,20 @@ public class SortFragment extends BaseFragment {
                 showTips();
             }
         }, 100);
+    }
+
+    @Override
+    public void refreshData() {
+        mRecyclerView = (RecyclerView) getRootView().findViewById(R.id.recyclerview);
+
+        //  mList = Category.getGanHuoCateGory();
+        mAdapter = new SortAdapter(getContext(), mList);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        mRecyclerView.setAdapter(mAdapter);
+
+        ItemTouchHelper.Callback callback = new SortCallBack(mAdapter);
+        mItemTouchHelper = new ItemTouchHelper(callback);
+        mItemTouchHelper.attachToRecyclerView(mRecyclerView);
     }
 
     public String saveCategoryString() {

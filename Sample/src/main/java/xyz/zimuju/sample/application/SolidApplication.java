@@ -16,13 +16,15 @@ public class SolidApplication extends Application {
     private static SolidApplication solidApplication;
 
     public static SolidApplication getInstance() {
+        if (solidApplication == null) {
+            solidApplication = new SolidApplication();
+        }
         return solidApplication;
     }
 
     @Override
     public void onCreate() {
         super.onCreate();
-        solidApplication = this;
         ToastUtils.init(this);
     }
 
@@ -32,7 +34,6 @@ public class SolidApplication extends Application {
         if (!file.exists()){
             file.mkdirs();
         }
-
         return file;
     }
 }

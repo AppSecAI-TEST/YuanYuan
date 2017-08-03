@@ -7,6 +7,7 @@ import android.view.View;
 import java.util.ArrayList;
 import java.util.List;
 
+import me.drakeet.multitype.MultiTypeAdapter;
 import xyz.zimuju.sample.constant.CategoryConstants;
 import xyz.zimuju.sample.engine.api.GankService;
 import xyz.zimuju.sample.entity.HttpResult;
@@ -31,6 +32,11 @@ public class HomeFragment extends AbsListFragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         setUserVisibleHint(true);
+    }
+
+    @Override
+    protected void registerItemProvider(MultiTypeAdapter adapter) {
+
     }
 
     @Override
@@ -59,6 +65,11 @@ public class HomeFragment extends AbsListFragment {
                         showError(new Exception(e));
                     }
                 });
+    }
+
+    @Override
+    protected void customConfig() {
+
     }
 
     @Override

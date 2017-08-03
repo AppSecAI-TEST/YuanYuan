@@ -18,16 +18,11 @@ public class StringFragment extends BaseFragment {
     }
 
     @Override
-    protected int setLayoutResourceID() {
+    protected int getLayoutId() {
         return R.layout.gank_fragment_string;
     }
 
-    @Override
-    protected void initView() {
-        mText = getArguments().getString("text");
-        mTvText = findView(R.id.tv_text);
 
-    }
 
     @Override
     protected void initData() {
@@ -36,5 +31,11 @@ public class StringFragment extends BaseFragment {
         } else {
             mTvText.setText("暂无信息");
         }
+    }
+
+    @Override
+    public void refreshData() {
+        mText = getArguments().getString("text");
+        mTvText = (TextView) getRootView().findViewById(R.id.tv_text);
     }
 }

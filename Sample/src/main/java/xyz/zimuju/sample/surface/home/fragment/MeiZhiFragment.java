@@ -43,6 +43,11 @@ public class MeiZhiFragment extends AbsListFragment {
     }
 
     @Override
+    protected void registerItemProvider(MultiTypeAdapter adapter) {
+
+    }
+
+    @Override
     public void loadData(final int pageIndex) {
         ServiceFactory.getInstance()
                 .createService(GankService.class)

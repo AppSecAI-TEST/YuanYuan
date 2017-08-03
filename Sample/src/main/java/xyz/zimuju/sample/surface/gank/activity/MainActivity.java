@@ -108,7 +108,7 @@ public class MainActivity extends BaseMainActivity {
                 to = ViewUtils.createFragment(HomeFragment.class);
         }
         if (to == mCurrentFragment && mCurrentFragment instanceof BaseFragment) {
-            ((BaseFragment) mCurrentFragment).refresh();
+            ((BaseFragment) mCurrentFragment).refreshData();
         } else if (to.isAdded()) {
             mFragmentManager.beginTransaction().hide(mCurrentFragment).show(to).commit();
         } else {

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
               xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:divider="@drawable/common_shape_vertical_divider"
@@ -9,7 +10,7 @@
               android:showDividers="middle">
 
     <com.makeramen.roundedimageview.RoundedImageView
-        android:id="@+id/iv_avatar"
+        android:id="@+id/mine_portrait_iv"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_marginBottom="20dp"
@@ -20,32 +21,34 @@
         app:riv_oval="true"/>
 
     <TextView
-        android:id="@+id/tv_username"
+        android:id="@+id/mine_username_tv"
         style="@style/MineItem"
         android:text="@string/mine_click_login"/>
 
     <TextView
-        android:id="@+id/tv_my_collect"
+        android:id="@+id/mine_collect_tv"
         style="@style/MineItem"
         android:text="@string/mine_collect"/>
 
     <TextView
-        android:id="@+id/tv_clear_cache"
+        android:id="@+id/mine_clear_cache_tv"
         style="@style/MineItem"
         android:text="@string/mine_cache_clear"/>
 
     <TextView
-        android:id="@+id/tv_feedback"
+        android:id="@+id/mine_feedback_tv"
         style="@style/MineItem"
         android:text="@string/mine_feedback"/>
 
     <TextView
-        android:id="@+id/tv_about"
+        android:id="@+id/mine_about_tv"
         style="@style/MineItem"
         android:text="@string/mine_about"/>
 
     <TextView
-        android:id="@+id/tv_logout"
+        android:id="@+id/mine_logout_tv"
         style="@style/MineItem"
-        android:text="@string/mine_exit"/>
+        android:text="@string/mine_exit"
+        android:visibility="gone"
+        tools:visibility="gone"/>
 </LinearLayout>

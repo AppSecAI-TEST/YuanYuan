@@ -11,6 +11,7 @@ import java.util.List;
 import io.reactivex.SingleObserver;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
+import me.drakeet.multitype.MultiTypeAdapter;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.engine.service.XianDuService;
 import xyz.zimuju.sample.entity.content.XianDuItem;
@@ -50,6 +51,11 @@ public class ReadingListFragment extends AbsListFragment {
                 .color(ContextCompat.getColor(getContext(), R.color.list_divider_color))
                 .sizeResId(R.dimen.list_divider_height)
                 .build());
+    }
+
+    @Override
+    protected void registerItemProvider(MultiTypeAdapter adapter) {
+
     }
 
     @Override

@@ -20,11 +20,6 @@ import xyz.zimuju.sample.http.subscriber.HttpResultSubscriber;
 import xyz.zimuju.sample.rx.RxUtils;
 import xyz.zimuju.sample.surface.gank.fragment.AbsListFragment;
 
-/**
- * Created by _SOLID
- * Date:2016/4/19
- * Time:10:57
- */
 public class CategoryListFragment extends AbsListFragment {
 
     private String mType;
@@ -49,6 +44,11 @@ public class CategoryListFragment extends AbsListFragment {
                 .color(ContextCompat.getColor(getContext(), R.color.list_divider_color))
                 .sizeResId(R.dimen.list_divider_height)
                 .build());
+    }
+
+    @Override
+    protected void registerItemProvider(MultiTypeAdapter adapter) {
+
     }
 
     @Override

@@ -4,6 +4,7 @@ import android.support.v7.widget.RecyclerView;
 
 import java.util.List;
 
+import me.drakeet.multitype.MultiTypeAdapter;
 import xyz.zimuju.sample.engine.api.GankService;
 import xyz.zimuju.sample.entity.HttpResult;
 import xyz.zimuju.sample.entity.content.SearchResult;
@@ -42,6 +43,11 @@ public class SearchResultListFragment extends AbsListFragment {
     @Override
     protected void customConfig() {
         addItemDecoration(new LinearDecoration(getContext(), RecyclerView.VERTICAL));
+    }
+
+    @Override
+    protected void registerItemProvider(MultiTypeAdapter adapter) {
+
     }
 
     @Override

@@ -15,13 +15,12 @@ import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.util.ToastUtils;
 import xyz.zimuju.sample.widget.loadmore.LoadMoreWrapper;
 
-/**
- * Created by _SOLID
- * Date:2016/9/28
- * Time:15:02
- * Desc:列表基类，默认线性布局
+/*
+ * @description AbsListFragment ：列表基类，默认线性布局
+ * @author Nathaniel
+ * @time 2017/8/3 - 17:12
+ * @version 1.0.0
  */
-
 public abstract class AbsListFragment extends LazyLoadFragment implements IList {
 
     protected StatusViewLayout mStatusViewLayout;
@@ -46,12 +45,16 @@ public abstract class AbsListFragment extends LazyLoadFragment implements IList 
     }
 
     @Override
-    protected final int setLayoutResourceID() {
+    protected final int getLayoutId() {
         return R.layout.gank_fragment_base_recyclerview;
     }
 
+
+    protected abstract void registerItemProvider(MultiTypeAdapter adapter);
+
+
     @Override
-    protected final void initialize() {
+    protected void initData() {
         mCurrentPageIndex = getInitPageIndex();
         mItems = new ArrayList<>();
         mMultiTypeAdapter = getAdapter();
@@ -69,17 +72,10 @@ public abstract class AbsListFragment extends LazyLoadFragment implements IList 
                     AbsListFragment.this.loadMore();
             }
         });
-    }
 
-    protected void registerItemProvider(MultiTypeAdapter adapter) {
-
-    }
-
-    @Override
-    protected void initView() {
-        mStatusViewLayout = findView(R.id.status_view_layout);
-        mSwipeRefreshLayout = findView(R.id.swipe_refresh_layout);
-        mRecyclerView = findView(R.id.recyclerview);
+        mStatusViewLayout = (StatusViewLayout) getRootView().findViewById(R.id.status_view_layout);
+        mSwipeRefreshLayout = (SwipeRefreshLayout) getRootView().findViewById(R.id.swipe_refresh_layout);
+        mRecyclerView = (RecyclerView) getRootView().findViewById(R.id.recyclerview);
         mRecyclerView.setLayoutManager(getLayoutManager());
         mRecyclerView.setAdapter(mLoadMoreWrapper);
         customConfig();
@@ -99,13 +95,6 @@ public abstract class AbsListFragment extends LazyLoadFragment implements IList 
         });
 
         registerItemProvider(mMultiTypeAdapter);
-
-
-    }
-
-
-    @Override
-    protected final void initData() {
     }
 
     @Override
@@ -180,14 +169,8 @@ public abstract class AbsListFragment extends LazyLoadFragment implements IList 
             mRecyclerView.addItemDecoration(itemDecoration);
     }
 
-
-    //endregion
-
     //region 根据具体的情况可选择性实现下面方法
-
-    protected void customConfig() {
-
-    }
+    protected abstract void customConfig();
 
     protected int getInitPageIndex() {
         return 1;
@@ -207,7 +190,6 @@ public abstract class AbsListFragment extends LazyLoadFragment implements IList 
         return "无数据";
     }
 
-    //endregion
 
     //region 数据加载状态的处理
     @Override
@@ -237,7 +219,6 @@ public abstract class AbsListFragment extends LazyLoadFragment implements IList 
         mStatusViewLayout.showContent();
         mSwipeRefreshLayout.setRefreshing(false);
     }
-    //endregion
 
     public boolean isTop() {
         if (mRecyclerView != null && mRecyclerView.getLayoutManager() instanceof LinearLayoutManager) {

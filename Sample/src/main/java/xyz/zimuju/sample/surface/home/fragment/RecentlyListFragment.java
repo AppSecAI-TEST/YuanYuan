@@ -68,6 +68,11 @@ public class RecentlyListFragment extends AbsListFragment {
     }
 
     @Override
+    protected void registerItemProvider(MultiTypeAdapter adapter) {
+
+    }
+
+    @Override
     @SuppressWarnings("unchecked")
     public void loadData(final int pageIndex) {
         if (TextUtils.isEmpty(date)) {
