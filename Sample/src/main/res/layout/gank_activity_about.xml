@@ -17,16 +17,22 @@
             android:id="@+id/about_container_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
             android:orientation="vertical">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:layout_width="@dimen/image_width"
-                android:layout_height="@dimen/image_width"
+            <!--<de.hdodenhof.circleimageview.CircleImageView-->
+            <!--android:layout_width="@dimen/image_width"-->
+            <!--android:layout_height="@dimen/image_width"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:src="@mipmap/ic_launcher"-->
+            <!--app:borderWidth="2dp"-->
+            <!--app:border_color="@color/navigation_text_pressed"/>-->
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_gravity="center"
-                android:src="@mipmap/ic_launcher"
-                app:borderWidth="2dp"
-                app:border_color="@color/navigation_text_pressed"/>
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@mipmap/ic_launcher"/>
 
             <TextView
                 android:id="@+id/about_version_tv"

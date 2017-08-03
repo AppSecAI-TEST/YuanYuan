@@ -11,6 +11,7 @@ import cn.bmob.push.BmobPush;
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobInstallation;
 import xyz.zimuju.sample.MultiTypeInstaller;
+import xyz.zimuju.sample.util.PrefUtils;
 
 public class GankIOApplication extends Application {
     private static GankIOApplication gankIOApplication;
@@ -38,6 +39,8 @@ public class GankIOApplication extends Application {
         LeakCanary.install(this);
 
         MultiTypeInstaller.install();
+
+        PrefUtils.initialize(this);
     }
 
     @Override

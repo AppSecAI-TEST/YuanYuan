@@ -2,7 +2,6 @@ package xyz.zimuju.sample.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
-import android.preference.PreferenceManager;
 
 /**
  * apply与commit异同：
@@ -14,48 +13,50 @@ import android.preference.PreferenceManager;
 
 
 public class PrefUtils {
-    public static int getInt(Context context, String key, int defaultValue) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        return prefs.getInt(key, defaultValue);
+    private static final String SHARED_PREFRENCES_NAME = "YuanYuan.sdf";
+    private static SharedPreferences sharedPreferences;
+    private static SharedPreferences.Editor editor;
+
+
+    public static synchronized void initialize(Context context) {
+        // = PreferenceManager.getDefaultSharedPreferences(GankIOApplication.getInstance());
+        sharedPreferences = context.getSharedPreferences(SHARED_PREFRENCES_NAME, Context.MODE_PRIVATE);
+        editor = sharedPreferences.edit();
     }
 
-    public static void putInt(Context context, String key, int value) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        prefs.edit().putInt(key, value).apply();
+    public static int getInt(String key, int defaultValue) {
+        return sharedPreferences.getInt(key, defaultValue);
     }
 
-    public static long getLong(Context context, String key, long defaultValue) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        return prefs.getLong(key, defaultValue);
+    public static void putInt(String key, int value) {
+        editor.putInt(key, value).apply();
     }
 
-    public static void putLong(Context context, String key, long value) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        prefs.edit().putLong(key, value).apply();
+    public static long getLong(String key, long defaultValue) {
+        return sharedPreferences.getLong(key, defaultValue);
     }
 
-    public static String getString(Context context, final String key, final String defaultValue) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        return prefs.getString(key, defaultValue);
+    public static void putLong(String key, long value) {
+        editor.putLong(key, value).apply();
     }
 
-    public static void putString(Context context, String key, String value) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        prefs.edit().putString(key, value).apply();
+    public static String getString(final String key, final String defaultValue) {
+        return sharedPreferences.getString(key, defaultValue);
     }
 
-    public static boolean getBoolean(Context context, String key, boolean defaultValue) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        return prefs.getBoolean(key, defaultValue);
+    public static void putString(String key, String value) {
+        editor.putString(key, value).apply();
     }
 
-    public static void putBoolean(Context context, String key, boolean value) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        prefs.edit().putBoolean(key, value).apply();
+    public static boolean getBoolean(String key, boolean defaultValue) {
+        return sharedPreferences.getBoolean(key, defaultValue);
     }
 
-    public static void remove(Context context, String key) {
-        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);
-        prefs.edit().remove(key).apply();
+    public static void putBoolean(String key, boolean value) {
+        editor.putBoolean(key, value).apply();
+    }
+
+    public static void remove(String key) {
+        editor.remove(key).apply();
     }
 }

@@ -12,11 +12,11 @@ import xyz.zimuju.sample.util.PrefUtils;
 public class SettingCenter {
 
     public static boolean getOnlyWifiLoadImage() {
-        return PrefUtils.getBoolean(GankIOApplication.getInstance(), "getOnlyWifiLoadImage", false);
+        return PrefUtils.getBoolean("getOnlyWifiLoadImage", false);
     }
 
     public static void setOnlyWifiLoadImage(boolean isEnable) {
-        PrefUtils.putBoolean(GankIOApplication.getInstance(), "getOnlyWifiLoadImage", isEnable);
+        PrefUtils.putBoolean("getOnlyWifiLoadImage", isEnable);
     }
 
     //region 缓存相关

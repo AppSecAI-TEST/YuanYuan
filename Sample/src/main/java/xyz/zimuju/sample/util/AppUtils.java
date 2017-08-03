@@ -11,7 +11,6 @@ import com.afollestad.materialdialogs.MaterialDialog;
 import cn.bmob.v3.listener.SaveListener;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.SettingCenter;
-import xyz.zimuju.sample.application.GankIOApplication;
 import xyz.zimuju.sample.entity.bomb.FeedBack;
 
 /**
@@ -22,19 +21,19 @@ import xyz.zimuju.sample.entity.bomb.FeedBack;
 public class AppUtils {
 
     public static boolean isFirstRun() {
-        return PrefUtils.getBoolean(GankIOApplication.getInstance(), "isFirstRun", true);
+        return PrefUtils.getBoolean("isFirstRun", true);
     }
 
     public static void setFirstRun(boolean isFirstRun) {
-        PrefUtils.putBoolean(GankIOApplication.getInstance(), "isFirstRun", isFirstRun);
+        PrefUtils.putBoolean("isFirstRun", isFirstRun);
     }
 
     public static boolean shakePicture() {
-        return PrefUtils.getBoolean(GankIOApplication.getInstance(), "shakePicture", true);
+        return PrefUtils.getBoolean("shakePicture", true);
     }
 
     public static void setShakePicture(boolean isEnable) {
-        PrefUtils.putBoolean(GankIOApplication.getInstance(), "shakePicture", isEnable);
+        PrefUtils.putBoolean("shakePicture", isEnable);
     }
 
 

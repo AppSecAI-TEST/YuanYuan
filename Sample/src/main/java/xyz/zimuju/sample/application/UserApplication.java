@@ -15,7 +15,7 @@ public class UserApplication extends BaseApplication {
 	public static UserApplication getInstance() {
 		return context;
 	}
-	
+
 	@Override
 	public void onCreate() {
 		super.onCreate();
@@ -23,15 +23,20 @@ public class UserApplication extends BaseApplication {
 
 	}
 
-	
-	/**获取当前用户id
+
+	/**
+	 * 获取当前用户id
+	 *
 	 * @return
 	 */
 	public long getCurrentUserId() {
 		currentUser = getCurrentUser();
 		return currentUser == null ? 0 : currentUser.getId();
 	}
-	/**获取当前用户phone
+
+	/**
+	 * 获取当前用户phone
+	 *
 	 * @return
 	 */
 	public String getCurrentUserPhone() {
@@ -63,8 +68,10 @@ public class UserApplication extends BaseApplication {
 		currentUser = null;
 		DataManager.getInstance().saveCurrentUser(currentUser);
 	}
-	
-	/**判断是否为当前用户
+
+	/**
+	 * 判断是否为当前用户
+	 *
 	 * @param userId
 	 * @return
 	 */
@@ -75,7 +82,6 @@ public class UserApplication extends BaseApplication {
 	public boolean isLoggedIn() {
 		return getCurrentUserId() > 0;
 	}
-
 
 
 }

@@ -1,24 +1,15 @@
 package xyz.zimuju.sample.util;
 
-import android.content.Context;
-
 import com.sina.weibo.sdk.auth.Oauth2AccessToken;
 
-import xyz.zimuju.sample.application.GankIOApplication;
 import xyz.zimuju.sample.entity.content.Weibo;
 
 public class AuthorityUtils {
-
-    private static Context getContext() {
-        return GankIOApplication.getInstance();
-    }
-
     public static boolean isLogin() {
-        return PrefUtils.getBoolean(GankIOApplication.getInstance(), "isLogin", false);
+        return PrefUtils.getBoolean("isLogin", false);
     }
 
     public static void login(Weibo result) {
-
         setUserName(result.getScreen_name());
         setDescription(result.getDescription());
         setAvatar(result.getAvatar_large());
@@ -33,66 +24,66 @@ public class AuthorityUtils {
     }
 
     private static void setIsLogin(boolean isLogin) {
-        PrefUtils.putBoolean(GankIOApplication.getInstance(), "isLogin", isLogin);
+        PrefUtils.putBoolean("isLogin", isLogin);
     }
 
     public static String getUserName() {
-        return PrefUtils.getString(getContext(), "UserName", "");
+        return PrefUtils.getString("UserName", "");
     }
 
     public static void setUserName(String userName) {
-        PrefUtils.putString(getContext(), "UserName", userName);
+        PrefUtils.putString("UserName", userName);
     }
 
     public static String getDescription() {
-        return PrefUtils.getString(getContext(), "Description", "未填写");
+        return PrefUtils.getString("Description", "未填写");
     }
 
     public static void setDescription(String desc) {
-        PrefUtils.putString(getContext(), "Description", desc);
+        PrefUtils.putString("Description", desc);
     }
 
     public static String getAvatar() {
-        return PrefUtils.getString(getContext(), "Avatar", "");
+        return PrefUtils.getString("Avatar", "");
     }
 
     public static void setAvatar(String avatar) {
-        PrefUtils.putString(getContext(), "Avatar", avatar);
+        PrefUtils.putString("Avatar", avatar);
     }
 
 
     //新浪微博相关
 
     public static String getAccessToken() {
-        return PrefUtils.getString(getContext(), "access_token", "");
+        return PrefUtils.getString("access_token", "");
     }
 
     public static void setAccessToken(String access_token) {
-        PrefUtils.putString(getContext(), "access_token", access_token);
+        PrefUtils.putString("access_token", access_token);
     }
 
     public static String getUid() {
-        return PrefUtils.getString(getContext(), "uid", "");
+        return PrefUtils.getString("uid", "");
     }
 
     public static void setUid(String uid) {
-        PrefUtils.putString(getContext(), "uid", uid);
+        PrefUtils.putString("uid", uid);
     }
 
     public static String getRefreshToken() {
-        return PrefUtils.getString(getContext(), "refresh_token", "");
+        return PrefUtils.getString("refresh_token", "");
     }
 
     public static void setRefreshToken(String refresh_token) {
-        PrefUtils.putString(getContext(), "refresh_token", refresh_token);
+        PrefUtils.putString("refresh_token", refresh_token);
     }
 
     public static long getExpiresIn() {
-        return PrefUtils.getLong(getContext(), "expires_in", 0);
+        return PrefUtils.getLong("expires_in", 0);
     }
 
     public static void setExpiresIn(long expires_in) {
-        PrefUtils.putLong(getContext(), "expires_in", expires_in);
+        PrefUtils.putLong("expires_in", expires_in);
     }
 
     /**

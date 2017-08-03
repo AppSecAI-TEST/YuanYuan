@@ -15,7 +15,6 @@ import java.util.Collections;
 import java.util.List;
 
 import xyz.zimuju.sample.R;
-import xyz.zimuju.sample.application.GankIOApplication;
 import xyz.zimuju.sample.event.SortChangeEvent;
 import xyz.zimuju.sample.rx.RxBus;
 import xyz.zimuju.sample.util.CommonUtils;
@@ -38,12 +37,12 @@ public class SortFragment extends BaseFragment {
 
 
     private void showTips() {
-        boolean isHaveTips = PrefUtils.getBoolean(GankIOApplication.getInstance(), "isHaveTips", true);
+        boolean isHaveTips = PrefUtils.getBoolean("isHaveTips", true);
         if (isHaveTips) {
             SnackBarUtils.makeLong(mRecyclerView, "长按条目进行拖拽排序").info("我知道了", new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    PrefUtils.putBoolean(GankIOApplication.getInstance(), "isHaveTips", false);
+                    PrefUtils.putBoolean("isHaveTips", false);
                 }
             });
         }
@@ -86,7 +85,7 @@ public class SortFragment extends BaseFragment {
             }
         }
         String str = builder.toString();
-        PrefUtils.putString(getContext(), "HomeCategory", str);
+        PrefUtils.putString("HomeCategory", str);
         return str;
     }
 

@@ -9,7 +9,6 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import xyz.zimuju.common.basal.BasalActivity;
 import xyz.zimuju.sample.R;
-import xyz.zimuju.sample.util.SpannableStringUtils;
 
 public class AboutActivity extends BasalActivity implements View.OnClickListener {
     @BindView(R.id.header_back_tv)
@@ -45,17 +44,7 @@ public class AboutActivity extends BasalActivity implements View.OnClickListener
 
         SpannableStringBuilder builder = new SpannableStringBuilder();
         builder.append(getString(R.string.about_msg));
-        builder.append("\n");
-        builder.append("\n");
-        builder.append(SpannableStringUtils.format(this, getString(R.string.about_author), R.style.AboutItemText));
-        builder.append("\n");
-        builder.append(SpannableStringUtils.format(this, getString(R.string.about_github), R.style.AboutItemText));
-        builder.append("\n");
-        builder.append(SpannableStringUtils.format(this, getString(R.string.about_blog), R.style.AboutItemText));
-        builder.append("\n");
-        builder.append(SpannableStringUtils.format(this, getString(R.string.about_weibo), R.style.AboutItemText));
-        builder.append("\n");
-        builder.append(SpannableStringUtils.format(this, getString(R.string.about_project), R.style.AboutItemText));
+        // builder.append(SpannableStringUtils.format(this, getString(R.string.about_project), R.style.AboutItemText));
         textView.setText(builder.subSequence(0, builder.length()));
     }
 
