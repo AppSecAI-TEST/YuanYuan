@@ -1,9 +1,9 @@
 package xyz.zimuju.sample.engine.api;
 
 import io.reactivex.Single;
-import xyz.zimuju.sample.entity.content.Weibo;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
+import xyz.zimuju.sample.entity.content.Weibo;
 
 /**
  * Created by _SOLID

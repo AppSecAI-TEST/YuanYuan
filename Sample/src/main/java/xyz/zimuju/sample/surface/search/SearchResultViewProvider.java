@@ -8,9 +8,9 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import me.drakeet.multitype.ItemViewProvider;
+import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.entity.content.SearchResult;
 import xyz.zimuju.sample.surface.gank.activity.WebViewActivity;
-import xyz.zimuju.sample.R;
 
 /**
  * Created by _SOLID

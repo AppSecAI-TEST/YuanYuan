@@ -3,8 +3,8 @@ package xyz.zimuju.sample.application;
 
 import xyz.zimuju.common.basal.BaseApplication;
 import xyz.zimuju.common.util.StringUtils;
-import xyz.zimuju.sample.manager.DataManager;
 import xyz.zimuju.sample.entity.User;
+import xyz.zimuju.sample.manager.DataManager;
 
 public class UserApplication extends BaseApplication {
 

@@ -1,8 +1,8 @@
 package xyz.zimuju.sample.engine.api;
 
 import io.reactivex.Single;
-import xyz.zimuju.sample.entity.content.RandomPicture;
 import retrofit2.http.GET;
+import xyz.zimuju.sample.entity.content.RandomPicture;
 
 /**
  * Created by _SOLID

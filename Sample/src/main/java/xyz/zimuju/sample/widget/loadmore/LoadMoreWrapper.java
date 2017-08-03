@@ -38,6 +38,7 @@ public class LoadMoreWrapper extends RecyclerView.Adapter<RecyclerView.ViewHolde
 
     private boolean isLoadError = false;//标记是否加载出错
     private boolean isHaveStatesView = true;
+    private OnLoadListener mOnLoadListener;
 
     public LoadMoreWrapper(Context context, RecyclerView.Adapter adapter) {
         this.mContext = context;
@@ -104,6 +105,7 @@ public class LoadMoreWrapper extends RecyclerView.Adapter<RecyclerView.ViewHolde
         }
         return new ViewHolder(mLoadMoreFailedView);
     }
+    //endregion
 
     private ViewHolder getNoMoreViewHolder() {
         if (mNoMoreView == null) {
@@ -115,7 +117,6 @@ public class LoadMoreWrapper extends RecyclerView.Adapter<RecyclerView.ViewHolde
         }
         return new ViewHolder(mNoMoreView);
     }
-    //endregion
 
     @Override
     public int getItemViewType(int position) {
@@ -172,7 +173,6 @@ public class LoadMoreWrapper extends RecyclerView.Adapter<RecyclerView.ViewHolde
         recyclerView.addOnScrollListener(mLoadMoreScrollListener);
     }
 
-
     @Override
     public void onViewAttachedToWindow(RecyclerView.ViewHolder holder) {
         mInnerAdapter.onViewAttachedToWindow(holder);
@@ -201,14 +201,12 @@ public class LoadMoreWrapper extends RecyclerView.Adapter<RecyclerView.ViewHolde
                 type == ITEM_TYPE_NO_MORE_VIEW ||
                 type == ITEM_TYPE_LOAD_MORE_VIEW;
     }
-
-    public class ViewHolder extends RecyclerView.ViewHolder {
-
-        public ViewHolder(View itemView) {
-            super(itemView);
-        }
-    }
     //region 加载监听
+
+    public LoadMoreWrapper setOnLoadListener(OnLoadListener onLoadListener) {
+        mOnLoadListener = onLoadListener;
+        return this;
+    }
 
     public interface OnLoadListener {
         void onRetry();
@@ -216,11 +214,11 @@ public class LoadMoreWrapper extends RecyclerView.Adapter<RecyclerView.ViewHolde
         void onLoadMore();
     }
 
-    private OnLoadListener mOnLoadListener;
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
-    public LoadMoreWrapper setOnLoadListener(OnLoadListener onLoadListener) {
-        mOnLoadListener = onLoadListener;
-        return this;
+        public ViewHolder(View itemView) {
+            super(itemView);
+        }
     }
 
     //endregion

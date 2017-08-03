@@ -29,8 +29,8 @@ import xyz.zimuju.common.defination.CacheCallBack;
 import xyz.zimuju.common.util.JSON;
 import xyz.zimuju.sample.adapter.content.UserAdapter;
 import xyz.zimuju.sample.entity.User;
-import xyz.zimuju.sample.util.HttpRequest;
 import xyz.zimuju.sample.util.DataUtils;
+import xyz.zimuju.sample.util.HttpRequest;
 
 /**用户列表界面fragment
  * @author Lemon

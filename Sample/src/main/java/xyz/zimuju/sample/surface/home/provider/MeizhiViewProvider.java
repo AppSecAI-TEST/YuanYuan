@@ -9,12 +9,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import me.drakeet.multitype.ItemViewProvider;
+import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.application.GankIOApplication;
 import xyz.zimuju.sample.entity.content.GanHuoData;
-import xyz.zimuju.sample.surface.gank.activity.ViewPicActivity;
 import xyz.zimuju.sample.loader.ImageLoader;
+import xyz.zimuju.sample.surface.gank.activity.ViewPicActivity;
 import xyz.zimuju.sample.util.ViewUtils;
-import xyz.zimuju.sample.R;
 
 /**
  * Created by _SOLID

@@ -5,7 +5,6 @@ import android.support.annotation.IdRes;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import java.util.ArrayList;

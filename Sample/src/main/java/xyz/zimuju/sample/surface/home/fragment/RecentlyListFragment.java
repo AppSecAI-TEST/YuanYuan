@@ -10,14 +10,14 @@ import java.util.List;
 
 import me.drakeet.multitype.MultiTypeAdapter;
 import xyz.zimuju.sample.engine.api.GankService;
+import xyz.zimuju.sample.entity.HttpResult;
 import xyz.zimuju.sample.entity.content.DailyList;
 import xyz.zimuju.sample.entity.content.DailyTitle;
 import xyz.zimuju.sample.entity.content.GanHuoData;
-import xyz.zimuju.sample.surface.gank.fragment.AbsListFragment;
-import xyz.zimuju.sample.entity.HttpResult;
 import xyz.zimuju.sample.factory.ServiceFactory;
 import xyz.zimuju.sample.http.subscriber.HttpResultSubscriber;
 import xyz.zimuju.sample.rx.RxUtils;
+import xyz.zimuju.sample.surface.gank.fragment.AbsListFragment;
 
 /**
  * Created by _SOLID

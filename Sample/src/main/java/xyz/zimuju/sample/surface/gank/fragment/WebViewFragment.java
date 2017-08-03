@@ -7,8 +7,8 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
-import xyz.zimuju.sample.util.WebViewUtil;
 import xyz.zimuju.sample.R;
+import xyz.zimuju.sample.util.WebViewUtil;
 
 
 /**
@@ -100,6 +100,35 @@ public class WebViewFragment extends BaseFragment {
         if (mWebView != null) {
             mWebView.goBack();
         }
+    }
+
+    protected void loadStart() {
+
+    }
+
+    protected void onPageLoadFinished(WebView view, String url) {
+
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        if (mWebView != null)
+            mWebView.onPause();
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (mWebView != null)
+            mWebView.onResume();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        if (mWebView != null)
+            mWebView.destroy();
     }
 
     //WebViewClient就是帮助WebView处理各种通知、请求事件的。
@@ -211,35 +240,6 @@ public class WebViewFragment extends BaseFragment {
 //            //
 //            return true;
 //        }
-    }
-
-    protected void loadStart() {
-
-    }
-    protected void onPageLoadFinished(WebView view, String url) {
-
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        if (mWebView != null)
-            mWebView.onPause();
-    }
-
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        if (mWebView != null)
-            mWebView.onResume();
-    }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        if (mWebView != null)
-            mWebView.destroy();
     }
 
 

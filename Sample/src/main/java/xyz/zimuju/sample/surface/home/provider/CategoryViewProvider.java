@@ -10,11 +10,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import me.drakeet.multitype.ItemViewProvider;
-import xyz.zimuju.sample.surface.gank.activity.SubActivity;
-import xyz.zimuju.sample.entity.content.CategoryList;
-import xyz.zimuju.sample.surface.home.activity.CategoryActivity;
-import xyz.zimuju.sample.loader.ImageLoader;
 import xyz.zimuju.sample.R;
+import xyz.zimuju.sample.entity.content.CategoryList;
+import xyz.zimuju.sample.loader.ImageLoader;
+import xyz.zimuju.sample.surface.gank.activity.SubActivity;
+import xyz.zimuju.sample.surface.home.activity.CategoryActivity;
 
 /**
  * Created by _SOLID

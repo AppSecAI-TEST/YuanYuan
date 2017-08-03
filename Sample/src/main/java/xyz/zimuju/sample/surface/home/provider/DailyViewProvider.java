@@ -13,11 +13,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import me.drakeet.multitype.ItemViewProvider;
-import xyz.zimuju.sample.entity.content.Daily;
-import xyz.zimuju.sample.surface.home.activity.DailyActivity;
-import xyz.zimuju.sample.loader.ImageLoader;
-import xyz.zimuju.sample.util.DateUtils;
 import xyz.zimuju.sample.R;
+import xyz.zimuju.sample.entity.content.Daily;
+import xyz.zimuju.sample.loader.ImageLoader;
+import xyz.zimuju.sample.surface.home.activity.DailyActivity;
+import xyz.zimuju.sample.util.DateUtils;
 
 /**
  * Created by _SOLID

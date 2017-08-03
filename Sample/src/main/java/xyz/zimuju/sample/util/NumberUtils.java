@@ -29,6 +29,10 @@ public class NumberUtils {
         this.setMobile(mobile);
     }
 
+    public String getMobile() {
+        return mobile;
+    }
+
     public void setMobile(String mobile)
     {
         if (mobile == null)
@@ -85,24 +89,9 @@ public class NumberUtils {
         }
     }
 
-    public String getMobile()
-    {
-        return mobile;
-    }
-
     public int getFacilitatorType()
     {
         return facilitatorType;
-    }
-
-    public boolean isLawful()
-    {
-        return isLawful;
-    }
-
-    public boolean isIs3G()
-    {
-        return is3G;
     }
 
     private void setFacilitatorType(int facilitatorType)
@@ -110,9 +99,19 @@ public class NumberUtils {
         this.facilitatorType = facilitatorType;
     }
 
+    public boolean isLawful()
+    {
+        return isLawful;
+    }
+
     private void setLawful(boolean isLawful)
     {
         this.isLawful = isLawful;
+    }
+
+    public boolean isIs3G()
+    {
+        return is3G;
     }
 
     private void setIs3G(boolean is3G)

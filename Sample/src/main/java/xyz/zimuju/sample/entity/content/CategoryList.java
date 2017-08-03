@@ -10,6 +10,16 @@ import java.util.List;
  * Desc:
  */
 public class CategoryList {
+    private List<Category> data;
+
+    public List<Category> getData() {
+        return data;
+    }
+
+    public void setData(List<Category> data) {
+        this.data = data;
+    }
+
    public static class Category {
         private String name;
         private String imgUrl;
@@ -32,15 +42,5 @@ public class CategoryList {
 
 
     }
-
-    public List<Category> getData() {
-        return data;
-    }
-
-    public void setData(List<Category> data) {
-        this.data = data;
-    }
-
-    private List<Category> data;
 
 }

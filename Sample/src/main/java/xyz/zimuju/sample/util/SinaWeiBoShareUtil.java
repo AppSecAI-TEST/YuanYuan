@@ -19,8 +19,8 @@ import com.sina.weibo.sdk.auth.WeiboAuthListener;
 import com.sina.weibo.sdk.exception.WeiboException;
 import com.sina.weibo.sdk.utils.Utility;
 
-import xyz.zimuju.sample.constant.ConfigConstants;
 import xyz.zimuju.sample.R;
+import xyz.zimuju.sample.constant.ConfigConstants;
 
 /**
  * Created by _SOLID

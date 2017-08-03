@@ -5,8 +5,8 @@ import android.os.Looper;
 
 import java.io.File;
 
-import xyz.zimuju.sample.util.PrefUtils;
 import xyz.zimuju.sample.application.SolidApplication;
+import xyz.zimuju.sample.util.PrefUtils;
 
 
 public class SettingCenter {

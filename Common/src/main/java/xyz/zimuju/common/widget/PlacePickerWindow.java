@@ -28,9 +28,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 import xyz.zimuju.common.base.BaseViewBottomWindow;
-import xyz.zimuju.common.manager.CityDB;
 import xyz.zimuju.common.entity.Entry;
 import xyz.zimuju.common.entity.PickerConfig;
+import xyz.zimuju.common.manager.CityDB;
 import xyz.zimuju.common.util.PlaceUtil;
 import xyz.zimuju.common.util.StringUtils;
 

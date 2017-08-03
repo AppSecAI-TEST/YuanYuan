@@ -9,13 +9,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import me.drakeet.multitype.ItemViewProvider;
-import xyz.zimuju.sample.entity.content.XianDuItem;
-import xyz.zimuju.sample.entity.bomb.CollectTable;
-import xyz.zimuju.sample.util.DialogUtils;
-import xyz.zimuju.sample.surface.gank.activity.WebViewActivity;
-import xyz.zimuju.sample.loader.ImageLoader;
-import xyz.zimuju.sample.util.ToastUtils;
 import xyz.zimuju.sample.R;
+import xyz.zimuju.sample.entity.bomb.CollectTable;
+import xyz.zimuju.sample.entity.content.XianDuItem;
+import xyz.zimuju.sample.loader.ImageLoader;
+import xyz.zimuju.sample.surface.gank.activity.WebViewActivity;
+import xyz.zimuju.sample.util.DialogUtils;
+import xyz.zimuju.sample.util.ToastUtils;
 
 /**
  * Created by _SOLID

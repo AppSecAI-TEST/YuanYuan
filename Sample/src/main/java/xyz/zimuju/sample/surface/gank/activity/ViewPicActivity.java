@@ -24,15 +24,15 @@ import java.util.ArrayList;
 
 import io.reactivex.annotations.NonNull;
 import io.reactivex.functions.Consumer;
+import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.application.SolidApplication;
-import xyz.zimuju.sample.provider.ObservableProvider;
-import xyz.zimuju.sample.http.subscriber.DownLoadSubscriber;
+import xyz.zimuju.sample.http.subscriber.DownloadSubscriber;
 import xyz.zimuju.sample.loader.ImageLoader;
+import xyz.zimuju.sample.provider.ObservableProvider;
 import xyz.zimuju.sample.util.FileUtils;
 import xyz.zimuju.sample.util.SLog;
 import xyz.zimuju.sample.util.SnackBarUtils;
 import xyz.zimuju.sample.util.SystemShareUtils;
-import xyz.zimuju.sample.R;
 
 /**
  * Created by _SOLID
@@ -146,7 +146,7 @@ public class ViewPicActivity extends BaseActivity {
         SLog.i(this, mSavePath);
         ObservableProvider.getDefault()
                 .download(mUrlList.get(0)
-                        , new DownLoadSubscriber(
+                        , new DownloadSubscriber(
                                 FileUtils.getSaveImagePath(getApplication()),
                                 FileUtils.getFileName(mUrlList.get(0))) {
                             @Override

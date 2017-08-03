@@ -9,11 +9,11 @@ import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 
 import cn.bmob.v3.listener.SaveListener;
-import xyz.zimuju.sample.application.GankIOApplication;
-import xyz.zimuju.sample.entity.bomb.FeedBack;
-import xyz.zimuju.sample.SettingCenter;
-import xyz.zimuju.sample.application.SolidApplication;
 import xyz.zimuju.sample.R;
+import xyz.zimuju.sample.SettingCenter;
+import xyz.zimuju.sample.application.GankIOApplication;
+import xyz.zimuju.sample.application.SolidApplication;
+import xyz.zimuju.sample.entity.bomb.FeedBack;
 
 /**
  * Created by _SOLID
@@ -93,10 +93,6 @@ public class AppUtils {
         dialog.show();
     }
 
-    public interface OnSuccessListener {
-        void onSuccess();
-    }
-
     public static void clearCache(Context context, final SettingCenter.ClearCacheListener listener) {
         MaterialDialog.Builder builder = new MaterialDialog.Builder(context)
                 .title("温馨提示")
@@ -110,5 +106,9 @@ public class AppUtils {
 
         MaterialDialog dialog = builder.build();
         dialog.show();
+    }
+
+    public interface OnSuccessListener {
+        void onSuccess();
     }
 }

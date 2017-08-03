@@ -28,11 +28,8 @@ public class CommonUtils {
      * @return
      */
     public static boolean isExternalStorageExists() {
-        if (Environment.getExternalStorageState().equals(
-                Environment.MEDIA_MOUNTED)) {
-            return true;
-        }
-        return false;
+        return Environment.getExternalStorageState().equals(
+                Environment.MEDIA_MOUNTED);
     }
 
     public static void hideKeyboard(Activity activity) {

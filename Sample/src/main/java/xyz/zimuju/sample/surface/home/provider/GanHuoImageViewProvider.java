@@ -15,14 +15,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import me.drakeet.multitype.ItemViewProvider;
-import xyz.zimuju.sample.entity.content.GanHuoData;
+import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.entity.bomb.CollectTable;
-import xyz.zimuju.sample.util.DialogUtils;
+import xyz.zimuju.sample.entity.content.GanHuoData;
+import xyz.zimuju.sample.loader.ImageLoader;
 import xyz.zimuju.sample.surface.gank.activity.ViewPicActivity;
 import xyz.zimuju.sample.surface.gank.activity.WebViewActivity;
-import xyz.zimuju.sample.loader.ImageLoader;
 import xyz.zimuju.sample.util.DateUtils;
-import xyz.zimuju.sample.R;
+import xyz.zimuju.sample.util.DialogUtils;
 
 /**
  * Created by _SOLID
@@ -69,6 +69,23 @@ public class GanHuoImageViewProvider
 
     }
 
+    static class ViewHolder extends RecyclerView.ViewHolder {
+        TextView tv_title;
+        TextView tv_people;
+        TextView tv_time;
+        ViewPager viewpager;
+        View rl_bottom;
+
+        ViewHolder(View itemView) {
+            super(itemView);
+            tv_title = (TextView) itemView.findViewById(R.id.tv_title);
+            tv_people = (TextView) itemView.findViewById(R.id.tv_people);
+            tv_time = (TextView) itemView.findViewById(R.id.tv_time);
+            viewpager = (ViewPager) itemView.findViewById(R.id.viewpager);
+            rl_bottom = itemView.findViewById(R.id.rl_bottom);
+        }
+    }
+
     class VPAdapter extends PagerAdapter {
         List<String> images;
         Context context;
@@ -108,23 +125,6 @@ public class GanHuoImageViewProvider
         @Override
         public void destroyItem(ViewGroup container, int position, Object object) {
             container.removeView((View) object);
-        }
-    }
-
-    static class ViewHolder extends RecyclerView.ViewHolder {
-        TextView tv_title;
-        TextView tv_people;
-        TextView tv_time;
-        ViewPager viewpager;
-        View rl_bottom;
-
-        ViewHolder(View itemView) {
-            super(itemView);
-            tv_title = (TextView) itemView.findViewById(R.id.tv_title);
-            tv_people = (TextView) itemView.findViewById(R.id.tv_people);
-            tv_time = (TextView) itemView.findViewById(R.id.tv_time);
-            viewpager = (ViewPager) itemView.findViewById(R.id.viewpager);
-            rl_bottom = itemView.findViewById(R.id.rl_bottom);
         }
     }
 }

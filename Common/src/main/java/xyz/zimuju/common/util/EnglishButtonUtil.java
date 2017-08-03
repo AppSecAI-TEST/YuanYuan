@@ -12,7 +12,6 @@ import android.text.style.UnderlineSpan;
 import android.view.View;
 import android.widget.TextView;
 
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.regex.Matcher;

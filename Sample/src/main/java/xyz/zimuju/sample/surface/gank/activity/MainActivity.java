@@ -13,14 +13,14 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import cn.bmob.v3.update.BmobUpdateAgent;
+import xyz.zimuju.sample.R;
+import xyz.zimuju.sample.surface.gank.fragment.AbsListFragment;
+import xyz.zimuju.sample.surface.gank.fragment.BaseFragment;
 import xyz.zimuju.sample.surface.home.fragment.HomeFragment;
 import xyz.zimuju.sample.surface.mine.MineFragment;
 import xyz.zimuju.sample.surface.read.ReadingTabFragment;
 import xyz.zimuju.sample.surface.search.SearchActivity;
-import xyz.zimuju.sample.surface.gank.fragment.AbsListFragment;
-import xyz.zimuju.sample.surface.gank.fragment.BaseFragment;
 import xyz.zimuju.sample.util.ViewUtils;
-import xyz.zimuju.sample.R;
 
 public class MainActivity extends BaseMainActivity {
 

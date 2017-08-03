@@ -3,8 +3,8 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:divider="@drawable/common_shape_vertical_divider"
-              android:showDividers="middle"
-              android:orientation="vertical">
+              android:orientation="vertical"
+              android:showDividers="middle">
 
     <xyz.zimuju.common.widget.NoneScrollViewPager
         android:id="@+id/navigation_container_layout"
