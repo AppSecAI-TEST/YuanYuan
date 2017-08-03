@@ -9,12 +9,12 @@ import xyz.zimuju.common.widget.custom.CustomToast;
 import xyz.zimuju.sample.R;
 
 
-public class ToastActivity extends AppCompatActivity {
+public class CustomToastActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_custom_toast);
     }
 
     public void click(View view) {

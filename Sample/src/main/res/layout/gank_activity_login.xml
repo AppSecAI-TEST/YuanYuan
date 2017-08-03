@@ -5,8 +5,8 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     tools:context=".surface.mine.LoginActivity">
-
-    <include layout="@layout/toolbar"></include>
+    
+    <include layout="@layout/include_toolbar_layout"/>
 
     <LinearLayout
         android:id="@+id/ll_login"

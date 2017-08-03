@@ -81,7 +81,7 @@ public class LoginActivity extends AppCompatActivity implements WeiboAuthListene
                 textView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(final View v) {
-                        v.setSelected(!v.isSelected());
+                        v.setSelected(! v.isSelected());
                     }
                 });
                 return textView;
@@ -102,8 +102,10 @@ public class LoginActivity extends AppCompatActivity implements WeiboAuthListene
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
 
-        // SSO 授权回调
-        // 重要：发起 SSO 登陆的 Activity 必须重写 onActivityResults
+        /*
+         * SSO 授权回调
+         * 重要：发起 SSO 登陆的 Activity 必须重写 onActivityResults
+         */
         if (mSsoHandler != null) {
             mSsoHandler.authorizeCallBack(requestCode, resultCode, data);
         }

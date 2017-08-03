@@ -6,7 +6,7 @@ import xyz.zimuju.sample.R;
 public class AboutActivity extends BasalActivity {
     @Override
     protected int getLayoutId() {
-        return R.layout.about_activity;
+        return R.layout.activity_guide_about;
     }
 
     @Override

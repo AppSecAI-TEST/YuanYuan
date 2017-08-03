@@ -23,7 +23,7 @@ public class AuthorityUtils {
         return PrefUtils.getBoolean("isLogin", false);
     }
 
-    private static void setLogin(boolean isLogin) {
+    public static void setLogin(boolean isLogin) {
         PrefUtils.putBoolean("isLogin", isLogin);
     }
 
