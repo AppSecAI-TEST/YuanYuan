@@ -37,10 +37,12 @@
         android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <!--<activity android:name=".surface.content.SplashActivity">-->
-        <activity android:name=".surface.gank.activity.SplashActivity"
-                  android:screenOrientation="portrait"
-                  android:theme="@style/SplashTheme">
+
+        <!--<activity android:name=".surface.gank.activity.SplashActivity"-->
+        <activity
+            android:name=".surface.content.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
