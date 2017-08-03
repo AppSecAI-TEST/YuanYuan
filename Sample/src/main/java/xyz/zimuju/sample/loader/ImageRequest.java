@@ -4,14 +4,6 @@ import android.widget.ImageView;
 
 import xyz.zimuju.sample.R;
 
-
-/**
- * Created by _SOLID
- * Date:2016/5/13
- * Time:10:03
- * <br />
- * the request of image
- */
 public class ImageRequest {
 
     private String url;

@@ -7,7 +7,7 @@ import io.reactivex.functions.Function;
 import okhttp3.ResponseBody;
 
 public class StringFunction implements Function<ResponseBody, String> {
-   
+
     @Override
     public String apply(@NonNull ResponseBody responseBody) throws Exception {
         String result = null;

@@ -10,11 +10,6 @@ import org.json.JSONObject;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 
-/**
- * Created by _SOLID
- * Date:2016/7/22
- * Time:17:50
- */
 public class JsonConvert<T> extends AbsConvert<T> {
 
     private String mDataName = null;

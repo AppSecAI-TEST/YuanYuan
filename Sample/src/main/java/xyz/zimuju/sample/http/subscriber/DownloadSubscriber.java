@@ -16,11 +16,6 @@ import okhttp3.ResponseBody;
 import xyz.zimuju.sample.application.SolidApplication;
 import xyz.zimuju.sample.util.FileUtils;
 
-/**
- * Created by _SOLID
- * Date:2016/8/1
- * Time:16:40
- */
 public abstract class DownloadSubscriber implements SingleObserver<ResponseBody> {
     private String mSaveFilePath;
     private File mFile;

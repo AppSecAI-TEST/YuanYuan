@@ -8,17 +8,17 @@ import xyz.zimuju.sample.provider.ImageLoaderProvider;
 
 public class ImageLoader {
 
-    private static volatile ImageLoaderProvider mProvider;
+    private static volatile ImageLoaderProvider imageLoaderProvider;
 
     private static ImageLoaderProvider getProvider() {
-        if (mProvider == null) {
+        if (imageLoaderProvider == null) {
             synchronized (ImageLoader.class) {
-                if (mProvider == null) {
-                    mProvider = new GlideImageLoaderProvider();
+                if (imageLoaderProvider == null) {
+                    imageLoaderProvider = new GlideImageLoaderProvider();
                 }
             }
         }
-        return mProvider;
+        return imageLoaderProvider;
     }
 
     public static void displayImage(ImageView iv, String url) {

@@ -38,9 +38,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!--<activity android:name=".surface.gank.activity.SplashActivity"-->
         <activity
-            android:name=".surface.content.SplashActivity"
+            android:name=".surface.common.SplashActivity"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
             <intent-filter>

@@ -7,11 +7,6 @@ import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
 import xyz.zimuju.sample.entity.HttpResult;
 
-/**
- * Created by _SOLID
- * Date:2016/7/27
- * Time:21:27
- */
 public abstract class HttpResultSubscriber<T> implements SingleObserver<HttpResult<T>> {
 
     @Override
@@ -30,8 +25,8 @@ public abstract class HttpResultSubscriber<T> implements SingleObserver<HttpResu
     @Override
     public void onError(Throwable e) {
         if (e != null) {
-            //处理RxLife取消订阅的问题,这实际上并不是一个真正的错误
-            //问题链接:https://github.com/trello/RxLifecycle/tree/2.x#unsubscription
+            // 处理RxLife取消订阅的问题,这实际上并不是一个真正的错误
+            // 问题链接:https://github.com/trello/RxLifecycle/tree/2.x#unsubscription
             if (!(e instanceof CancellationException)) {
                 e.printStackTrace();
                 if (e.getMessage() == null) {

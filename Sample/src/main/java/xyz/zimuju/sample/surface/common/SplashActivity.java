@@ -1,4 +1,4 @@
-package xyz.zimuju.sample.surface.content;
+package xyz.zimuju.sample.surface.common;
 
 
 import android.content.Intent;
