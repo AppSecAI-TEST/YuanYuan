@@ -16,20 +16,16 @@ import java.util.Calendar;
 import cn.bmob.push.PushConstants;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.application.GankIOApplication;
+import xyz.zimuju.sample.entity.bomb.PushMessage;
 import xyz.zimuju.sample.surface.gank.activity.WebViewActivity;
 
-/**
- * Created by _SOLID
- * Date:2016/6/2
- * Time:15:41
- */
 public class BombPushMessageReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         if (intent.getAction().equals(PushConstants.ACTION_MESSAGE)) {
             String msg = intent.getStringExtra("msg");
             Gson gson = new Gson();
-            Message message = gson.fromJson(msg, Message.class);
+            PushMessage message = gson.fromJson(msg, PushMessage.class);
             if (!TextUtils.isEmpty(message.getTitle()) &&
                     !TextUtils.isEmpty(message.getContent())) {
                 showNotification(context, message);
@@ -37,7 +33,7 @@ public class BombPushMessageReceiver extends BroadcastReceiver {
         }
     }
 
-    private void showNotification(Context context, Message message) {
+    private void showNotification(Context context, PushMessage message) {
         NotificationCompat.Builder builder =
                 new NotificationCompat.Builder(context)
                         .setSmallIcon(R.mipmap.logo)
@@ -66,36 +62,5 @@ public class BombPushMessageReceiver extends BroadcastReceiver {
                         .getSystemService(
                                 Context.NOTIFICATION_SERVICE);
         notifyManager.notify(mNotificationId, notification);
-    }
-
-    class Message {
-        private String title;
-        private String content;
-        private String url;
-
-        public String getUrl() {
-            return url;
-        }
-
-        public void setUrl(String url) {
-            this.url = url;
-        }
-
-
-        public String getContent() {
-            return content;
-        }
-
-        public void setContent(String content) {
-            this.content = content;
-        }
-
-        public String getTitle() {
-            return title;
-        }
-
-        public void setTitle(String title) {
-            this.title = title;
-        }
     }
 }

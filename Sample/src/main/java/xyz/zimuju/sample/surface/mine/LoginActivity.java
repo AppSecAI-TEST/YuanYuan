@@ -116,7 +116,7 @@ public class LoginActivity extends AppCompatActivity {
         params.put("uid", AuthorityUtils.getUid());
 
         SinaApiService service = ServiceFactory.getInstance().createService(SinaApiService.class);
-        service.getUserInfo(AuthorityUtils.getAccessToken(), AuthorityUtils.getUid()).compose(RxUtils.<Weibo>defaultSchedulers_single())
+        service.getUserInfo(AuthorityUtils.getAccessToken(), AuthorityUtils.getUid()).compose(RxUtils.<Weibo>defaultSchedulersSingle())
                 .subscribe(new Consumer<Weibo>() {
                     @Override
                     public void accept(@NonNull Weibo result) throws Exception {

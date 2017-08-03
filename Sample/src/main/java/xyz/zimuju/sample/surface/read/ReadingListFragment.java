@@ -55,7 +55,7 @@ public class ReadingListFragment extends AbsListFragment {
     @Override
     public void loadData(final int pageIndex) {
         XianDuService.getData(category, pageIndex)
-                .compose(RxUtils.<List<XianDuItem>>defaultSchedulers_single())
+                .compose(RxUtils.<List<XianDuItem>>defaultSchedulersSingle())
                 .subscribe(new SingleObserver<List<XianDuItem>>() {
                     @Override
                     public void onSubscribe(@NonNull Disposable d) {

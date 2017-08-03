@@ -16,12 +16,6 @@ import xyz.zimuju.sample.SettingCenter;
 import xyz.zimuju.sample.loader.ImageRequest;
 import xyz.zimuju.sample.util.NetworkUtil;
 
-
-/**
- * Created by _SOLID
- * Date:2016/5/13
- * Time:10:27
- */
 public class GlideImageLoaderProvider implements ImageLoaderProvider {
     @Override
     public void loadImage(ImageRequest request) {

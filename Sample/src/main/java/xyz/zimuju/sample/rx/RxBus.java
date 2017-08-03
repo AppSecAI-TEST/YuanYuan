@@ -1,21 +1,15 @@
 package xyz.zimuju.sample.rx;
 
-
 import io.reactivex.Observable;
 import io.reactivex.subjects.PublishSubject;
 import io.reactivex.subjects.Subject;
 
-/**
- * Created by _SOLID
- * Date:2016/6/1
- * Time:11:44
- */
 public class RxBus {
 
-    private final Subject<Object> _bus;
+    private final Subject<Object> objectSubject;
 
     private RxBus() {
-        _bus = PublishSubject.create();
+        objectSubject = PublishSubject.create();
     }
 
     public static synchronized RxBus getInstance() {
@@ -23,11 +17,11 @@ public class RxBus {
     }
 
     public void send(Object o) {
-        _bus.onNext(o);
+        objectSubject.onNext(o);
     }
 
     public <T> Observable<T> toObservable(Class<T> eventType) {
-        return _bus.ofType(eventType);
+        return objectSubject.ofType(eventType);
     }
 
     private static class RxBusHolder {

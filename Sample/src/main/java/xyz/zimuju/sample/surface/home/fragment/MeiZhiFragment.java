@@ -48,7 +48,7 @@ public class MeiZhiFragment extends AbsListFragment {
                 .createService(GankService.class)
                 .getGanHuo("福利", pageIndex)
                 .compose(this.<HttpResult<List<GanHuoData>>>bindToLifecycle())
-                .compose(RxUtils.<HttpResult<List<GanHuoData>>>defaultSchedulers_single())
+                .compose(RxUtils.<HttpResult<List<GanHuoData>>>defaultSchedulersSingle())
                 .subscribe(new HttpResultSubscriber<List<GanHuoData>>() {
                     @Override
                     public void _onError(Throwable e) {

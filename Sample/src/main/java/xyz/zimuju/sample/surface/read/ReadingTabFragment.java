@@ -56,7 +56,7 @@ public class ReadingTabFragment extends BaseFragment {
     protected void setUpData() {
         status_view_layout.showLoading();
         XianDuService.getCategorys()
-                .compose(RxUtils.<List<XianDuCategory>>defaultSchedulers_single())
+                .compose(RxUtils.<List<XianDuCategory>>defaultSchedulersSingle())
                 .subscribe(new SingleObserver<List<XianDuCategory>>() {
                     @Override
                     public void onSubscribe(@NonNull Disposable d) {

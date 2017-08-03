@@ -36,7 +36,7 @@ public class ObservableProvider {
     public void download(String url, final DownloadSubscriber subscribe) {
         mCommonService
                 .download(url)
-                .compose(RxUtils.<ResponseBody>all_io_single())
+                .compose(RxUtils.<ResponseBody>allIoSingle())
                 .subscribe(subscribe);
 
     }

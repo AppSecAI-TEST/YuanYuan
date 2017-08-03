@@ -20,13 +20,8 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.schedulers.Schedulers;
 
-/**
- * Created by _SOLID
- * Date:2016/7/27
- * Time:21:17
- */
 public class RxUtils {
-    public static <T> FlowableTransformer<T, T> defaultSchedulers_flow() {
+    public static <T> FlowableTransformer<T, T> defaultSchedulersFlow() {
         return new FlowableTransformer<T, T>() {
             @Override
             public Publisher<T> apply(@NonNull Flowable<T> upstream) {
@@ -36,7 +31,7 @@ public class RxUtils {
         };
     }
 
-    public static <T> SingleTransformer<T, T> defaultSchedulers_single() {
+    public static <T> SingleTransformer<T, T> defaultSchedulersSingle() {
         return new SingleTransformer<T, T>() {
 
             @Override
@@ -46,7 +41,7 @@ public class RxUtils {
         };
     }
 
-    public static <T> FlowableTransformer<T, T> all_io_flow() {
+    public static <T> FlowableTransformer<T, T> allIoFlow() {
         return new FlowableTransformer<T, T>() {
             @Override
             public Publisher<T> apply(@NonNull Flowable<T> upstream) {
@@ -56,44 +51,12 @@ public class RxUtils {
         };
     }
 
-    public static <T> SingleTransformer<T, T> all_io_single() {
+    public static <T> SingleTransformer<T, T> allIoSingle() {
         return new SingleTransformer<T, T>() {
             @Override
             public SingleSource<T> apply(@NonNull Single<T> upstream) {
                 return upstream.observeOn(Schedulers.io()).subscribeOn(Schedulers.io());
             }
         };
-    }
-
-    class SchedulerTransform<T> implements ObservableTransformer<T, T>,
-            FlowableTransformer<T, T>,
-            SingleTransformer<T, T>,
-            MaybeTransformer<T, T>,
-            CompletableTransformer {
-
-        @Override
-        public CompletableSource apply(@NonNull Completable upstream) {
-            return null;
-        }
-
-        @Override
-        public Publisher<T> apply(@NonNull Flowable<T> upstream) {
-            return null;
-        }
-
-        @Override
-        public MaybeSource<T> apply(@NonNull Maybe<T> upstream) {
-            return null;
-        }
-
-        @Override
-        public ObservableSource<T> apply(@NonNull Observable<T> upstream) {
-            return null;
-        }
-
-        @Override
-        public SingleSource<T> apply(@NonNull Single<T> upstream) {
-            return null;
-        }
     }
 }

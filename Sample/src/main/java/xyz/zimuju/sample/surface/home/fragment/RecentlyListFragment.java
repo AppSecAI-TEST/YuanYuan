@@ -77,7 +77,7 @@ public class RecentlyListFragment extends AbsListFragment {
         ServiceFactory.getInstance().createService(GankService.class)
                 .getRecentlyGanHuo(date)
                 .compose(this.<HttpResult<DailyList>>bindToLifecycle())
-                .compose(RxUtils.<HttpResult<DailyList>>defaultSchedulers_single())
+                .compose(RxUtils.<HttpResult<DailyList>>defaultSchedulersSingle())
                 .subscribe(new HttpResultSubscriber<DailyList>() {
 
                     @Override

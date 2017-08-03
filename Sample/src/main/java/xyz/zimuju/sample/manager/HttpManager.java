@@ -47,8 +47,6 @@ import xyz.zimuju.common.util.StringUtils;
 
 /**
  * HTTP请求管理类
- *
- * @author Lemon
  * @use HttpManager.getInstance().get(...)或HttpManager.getInstance().post(...)  > 在回调方法onHttpRequestSuccess和onHttpRequestError处理HTTP请求结果
  * @must 解决getToken，getResponseCode，getResponseData中的TODO
  */

@@ -46,7 +46,7 @@ public class HomeFragment extends AbsListFragment {
                 .createService(GankService.class)
                 .getRecently(pageIndex)
                 .compose(this.<HttpResult<List<Daily>>>bindToLifecycle())
-                .compose(RxUtils.<HttpResult<List<Daily>>>defaultSchedulers_single())
+                .compose(RxUtils.<HttpResult<List<Daily>>>defaultSchedulersSingle())
                 .subscribe(new HttpResultSubscriber<List<Daily>>() {
                     @Override
                     public void _onSuccess(List<Daily> dailies) {
