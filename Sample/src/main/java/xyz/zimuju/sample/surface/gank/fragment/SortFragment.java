@@ -22,11 +22,6 @@ import xyz.zimuju.sample.util.CommonUtils;
 import xyz.zimuju.sample.util.PrefUtils;
 import xyz.zimuju.sample.util.SnackBarUtils;
 
-/**
- * Created by _SOLID
- * Date:2016/5/17
- * Time:15:52
- */
 public class SortFragment extends BaseFragment {
 
     private RecyclerView mRecyclerView;
@@ -43,12 +38,12 @@ public class SortFragment extends BaseFragment {
 
 
     @Override
-    protected void setUpView() {
+    protected void initView() {
         mRecyclerView = $(R.id.recyclerview);
 
-      //  mList = Category.getGanHuoCateGory();
-        mAdapter = new SortAdapter(getMContext(), mList);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(getMContext()));
+        //  mList = Category.getGanHuoCateGory();
+        mAdapter = new SortAdapter(getContext(), mList);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         mRecyclerView.setAdapter(mAdapter);
 
         ItemTouchHelper.Callback callback = new SortCallBack(mAdapter);
@@ -70,7 +65,7 @@ public class SortFragment extends BaseFragment {
     }
 
     @Override
-    protected void setUpData() {
+    protected void initData() {
 
         mRecyclerView.postDelayed(new Runnable() {
             @Override
@@ -92,7 +87,7 @@ public class SortFragment extends BaseFragment {
             }
         }
         String str = builder.toString();
-        PrefUtils.putString(getMContext(), "HomeCategory", str);
+        PrefUtils.putString(getContext(), "HomeCategory", str);
         return str;
     }
 
@@ -131,7 +126,7 @@ public class SortFragment extends BaseFragment {
             holder.itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    CommonUtils.vibrate(getMContext(), 100);
+                    CommonUtils.vibrate(getContext(), 100);
                 }
             });
         }

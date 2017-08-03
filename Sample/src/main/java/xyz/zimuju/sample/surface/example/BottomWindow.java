@@ -12,11 +12,11 @@ import xyz.zimuju.common.entity.Entry;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.surface.content.UserActivity;
 
-public class DemoBottomWindow extends BaseViewBottomWindow<Entry<String, String>, DemoView> implements OnClickListener {
+public class BottomWindow extends BaseViewBottomWindow<Entry<String, String>, DemoView> implements OnClickListener {
     private static final String TAG = "DemoBottomWindow";
 
     public static Intent createIntent(Context context, String title) {
-        return new Intent(context, DemoBottomWindow.class).putExtra(INTENT_TITLE, title);
+        return new Intent(context, BottomWindow.class).putExtra(INTENT_TITLE, title);
     }
 
 
@@ -36,13 +36,13 @@ public class DemoBottomWindow extends BaseViewBottomWindow<Entry<String, String>
     }
 
     @Override
-    public void initView() {//必须调用
+    public void initView() {
         super.initView();
 
     }
 
     @Override
-    public void initData() {//必须调用
+    public void initData() {
         super.initData();
 
         data = new Entry<String, String>("Activity", TAG);
@@ -77,13 +77,11 @@ public class DemoBottomWindow extends BaseViewBottomWindow<Entry<String, String>
     }
 
     @Override
-    public void initEvent() {//必须调用
+    public void initEvent() {
         super.initEvent();
 
         containerView.setOnClickListener(this);
     }
-
-    //系统自带监听<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 
     @Override
     public void onClick(View v) {

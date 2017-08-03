@@ -51,7 +51,7 @@ import xyz.zimuju.common.widget.TimePickerWindow;
 import xyz.zimuju.common.widget.TopMenuWindow;
 import xyz.zimuju.common.widget.WebViewActivity;
 import xyz.zimuju.sample.R;
-import xyz.zimuju.sample.surface.example.DemoBottomWindow;
+import xyz.zimuju.sample.surface.example.BottomWindow;
 
 public class DemoMainActivity extends BaseActivity implements View.OnClickListener, OnBottomDragListener, AlertDialog.OnDialogButtonClickListener, ItemDialog.OnDialogItemClickListener, View.OnTouchListener {
     public static final int REQUEST_TO_CAMERA_SCAN = 22;
@@ -319,7 +319,7 @@ public class DemoMainActivity extends BaseActivity implements View.OnClickListen
                 toActivity(DemoBroadcastReceiverActivity.createIntent(context));
                 break;
             case R.id.llDemoMainDemoBottomWindow:
-                toActivity(DemoBottomWindow.createIntent(context, ""), REQUEST_TO_DEMO_BOTTOM_WINDOW, false);
+                toActivity(BottomWindow.createIntent(context, ""), REQUEST_TO_DEMO_BOTTOM_WINDOW, false);
                 break;
 
 
@@ -388,7 +388,7 @@ public class DemoMainActivity extends BaseActivity implements View.OnClickListen
                 break;
             case REQUEST_TO_DEMO_BOTTOM_WINDOW:
                 if (data != null) {
-                    showShortToast(data.getStringExtra(DemoBottomWindow.RESULT_DATA));
+                    showShortToast(data.getStringExtra(BottomWindow.RESULT_DATA));
                 }
                 break;
 

@@ -51,7 +51,7 @@ public abstract class AbsListFragment extends LazyLoadFragment implements IList 
     }
 
     @Override
-    protected final void init() {
+    protected final void initialize() {
         mCurrentPageIndex = getInitPageIndex();
         mItems = new ArrayList<>();
         mMultiTypeAdapter = getAdapter();
@@ -76,7 +76,7 @@ public abstract class AbsListFragment extends LazyLoadFragment implements IList 
     }
 
     @Override
-    protected void setUpView() {
+    protected void initView() {
         mStatusViewLayout = $(R.id.status_view_layout);
         mSwipeRefreshLayout = $(R.id.swipe_refresh_layout);
         mRecyclerView = $(R.id.recyclerview);
@@ -105,7 +105,7 @@ public abstract class AbsListFragment extends LazyLoadFragment implements IList 
 
 
     @Override
-    protected final void setUpData() {
+    protected final void initData() {
     }
 
     @Override

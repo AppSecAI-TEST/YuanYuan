@@ -4,24 +4,23 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 
-/**
- * Created by _SOLID
- * Date:2016/12/18
- * Time:1:07
- * Desc:懒加载Fragment
+/*
+ * @description LazyLoadFragment ：懒加载Fragment
+ * @author Nathaniel
+ * @time 2017/8/3 - 10:18
+ * @version 1.0.0
  */
-
 public abstract class LazyLoadFragment extends BaseFragment {
 
-    protected boolean isViewCreated = false;
-    protected boolean isFirstLoad = true;
-    protected boolean isNeedInitView = false;
+    protected boolean viewCreated = false;
+    protected boolean firstLoad = true;
+    protected boolean needInitView = false;
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        isViewCreated = true;
-        if (isNeedInitView) {
+        viewCreated = true;
+        if (needInitView) {
             lazyLoad();
         }
     }
@@ -29,12 +28,12 @@ public abstract class LazyLoadFragment extends BaseFragment {
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
         super.setUserVisibleHint(isVisibleToUser);
-        if (isVisibleToUser && isFirstLoad) {
-            if (isViewCreated) {
-                isFirstLoad = false;
+        if (isVisibleToUser && firstLoad) {
+            if (viewCreated) {
+                firstLoad = false;
                 lazyLoad();
             } else {
-                isNeedInitView = true;
+                needInitView = true;
             }
         }
     }

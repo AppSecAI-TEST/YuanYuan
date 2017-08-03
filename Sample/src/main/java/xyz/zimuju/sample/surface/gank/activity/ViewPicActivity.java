@@ -210,7 +210,7 @@ public class ViewPicActivity extends BaseActivity {
 //            photoViewAttacher.setOnViewTapListener(new PhotoViewAttacher.OnViewTapListener() {
 //                @Override
 //                public void onViewTap(View view, float v, float v1) {
-//                    ViewPicActivity activity = (ViewPicActivity) getMContext();
+//                    ViewPicActivity activity = (ViewPicActivity) getContext();
 //                    activity.hideOrShowToolbar();
 //                }
 //            });

@@ -37,7 +37,7 @@ public class MineFragment extends BaseFragment {
     private TextView tv_clear_cache;
 
     @Override
-    protected void init() {
+    protected void initialize() {
         RxBus.getInstance()
                 .toObservable(LoginEvent.class)
                 .compose(this.<LoginEvent>bindToLifecycle())
@@ -55,7 +55,7 @@ public class MineFragment extends BaseFragment {
     }
 
     @Override
-    protected void setUpView() {
+    protected void initView() {
 
         iv_avatar = $(R.id.iv_avatar);
         tv_username = $(R.id.tv_username);
@@ -116,7 +116,7 @@ public class MineFragment extends BaseFragment {
     }
 
     @Override
-    protected void setUpData() {
+    protected void initData() {
         setUserInfo();
         refresh();
     }

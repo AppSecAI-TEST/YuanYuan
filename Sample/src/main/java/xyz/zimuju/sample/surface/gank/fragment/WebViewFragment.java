@@ -10,12 +10,6 @@ import android.widget.ProgressBar;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.util.WebViewUtil;
 
-
-/**
- * Created by _SOLID
- * Date:2016/3/31
- * Time:14:27
- */
 public class WebViewFragment extends BaseFragment {
 
     protected WebView mWebView;
@@ -46,7 +40,7 @@ public class WebViewFragment extends BaseFragment {
     }
 
     @Override
-    protected void setUpView() {
+    protected void initView() {
         mProgressBar = (ProgressBar) getContentView().findViewById(R.id.progressbar);
         mWebView = (WebView) getContentView().findViewById(R.id.webView);
         WebViewUtil.setWebViewOptions(mWebView);
@@ -59,7 +53,7 @@ public class WebViewFragment extends BaseFragment {
     }
 
     @Override
-    protected void setUpData() {
+    protected void initData() {
 
     }
 

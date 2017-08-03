@@ -13,11 +13,11 @@ public class SampleApplication extends Application {
 
         if (LeakCanary.isInAnalyzerProcess(this)) {
             // This process is dedicated to LeakCanary for heap analysis.
-            // You should not init your app in this process.
+            // You should not initialize your app in this process.
             return;
         }
         LeakCanary.install(this);
-        // Normal app init code...
+        // Normal app initialize code...
 
     }
 }

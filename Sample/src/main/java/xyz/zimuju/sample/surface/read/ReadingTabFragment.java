@@ -39,7 +39,7 @@ public class ReadingTabFragment extends BaseFragment {
     }
 
     @Override
-    protected void setUpView() {
+    protected void initView() {
         status_view_layout = $(R.id.status_view_layout);
         tab_layout = $(R.id.tab_layout);
         view_pager = $(R.id.view_pager);
@@ -47,13 +47,13 @@ public class ReadingTabFragment extends BaseFragment {
         status_view_layout.setOnRetryListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setUpData();
+                initData();
             }
         });
     }
 
     @Override
-    protected void setUpData() {
+    protected void initData() {
         status_view_layout.showLoading();
         XianDuService.getCategorys()
                 .compose(RxUtils.<List<XianDuCategory>>defaultSchedulersSingle())
