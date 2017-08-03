@@ -1,4 +1,4 @@
-package xyz.zimuju.sample.surface.navigation.fragment;
+package xyz.zimuju.sample.surface;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;

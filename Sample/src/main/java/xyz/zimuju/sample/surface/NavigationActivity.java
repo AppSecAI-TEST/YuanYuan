@@ -1,4 +1,4 @@
-package xyz.zimuju.sample.surface.navigation.activity;
+package xyz.zimuju.sample.surface;
 
 import android.os.Bundle;
 import android.support.annotation.IdRes;
@@ -13,20 +13,17 @@ import java.util.List;
 import xyz.zimuju.common.util.ToastUtils;
 import xyz.zimuju.common.widget.NoneScrollViewPager;
 import xyz.zimuju.sample.R;
-import xyz.zimuju.sample.surface.navigation.adapter.NavigationFragmentPagerAdapter;
-import xyz.zimuju.sample.surface.navigation.fragment.DiscoveryFragment;
-import xyz.zimuju.sample.surface.navigation.fragment.MineFragment;
-import xyz.zimuju.sample.surface.navigation.fragment.NewsFragment;
+import xyz.zimuju.sample.adapter.navigation.NavigationFragmentPagerAdapter;
+import xyz.zimuju.sample.surface.mine.MineFragment;
 
 /*
- * @description NavigationActivity
+ * @description NavigationActivity:导航界面
  * @author Nathaniel
  * @time 2017/8/1 - 10:32
  * @version 1.0.0
  */
 public class NavigationActivity extends FragmentActivity implements RadioGroup.OnCheckedChangeListener, ViewPager.OnPageChangeListener {
     private RadioGroup navigationGroup;
-    private Fragment newsFragment, discoveryFragment, mineFragment;
     private List<Fragment> fragmentList;
     private NoneScrollViewPager navigationContainer;
     private long exitTime = 0L;
@@ -42,11 +39,11 @@ public class NavigationActivity extends FragmentActivity implements RadioGroup.O
 
     private void initView() {
         fragmentList = new ArrayList<>();
-        newsFragment = new NewsFragment();
+        Fragment newsFragment = new NewsFragment();
         fragmentList.add(newsFragment);
-        discoveryFragment = new DiscoveryFragment();
+        Fragment discoveryFragment = new DiscoveryFragment();
         fragmentList.add(discoveryFragment);
-        mineFragment = new MineFragment();
+        Fragment mineFragment = new MineFragment();
         fragmentList.add(mineFragment);
 
         navigationContainer = (NoneScrollViewPager) findViewById(R.id.navigation_container_layout);

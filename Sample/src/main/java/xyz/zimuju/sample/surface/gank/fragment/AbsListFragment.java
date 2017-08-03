@@ -77,9 +77,9 @@ public abstract class AbsListFragment extends LazyLoadFragment implements IList 
 
     @Override
     protected void initView() {
-        mStatusViewLayout = $(R.id.status_view_layout);
-        mSwipeRefreshLayout = $(R.id.swipe_refresh_layout);
-        mRecyclerView = $(R.id.recyclerview);
+        mStatusViewLayout = findView(R.id.status_view_layout);
+        mSwipeRefreshLayout = findView(R.id.swipe_refresh_layout);
+        mRecyclerView = findView(R.id.recyclerview);
         mRecyclerView.setLayoutManager(getLayoutManager());
         mRecyclerView.setAdapter(mLoadMoreWrapper);
         customConfig();

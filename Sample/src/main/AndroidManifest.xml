@@ -104,7 +104,7 @@
             android:screenOrientation="portrait"/>
 
         <activity
-            android:name=".surface.navigation.activity.NavigationActivity"
+            android:name=".surface.NavigationActivity"
             android:screenOrientation="portrait"/>
 
         <activity

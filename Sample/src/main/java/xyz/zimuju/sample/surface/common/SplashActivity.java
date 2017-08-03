@@ -7,7 +7,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
 import xyz.zimuju.sample.R;
-import xyz.zimuju.sample.surface.navigation.activity.NavigationActivity;
+import xyz.zimuju.sample.surface.NavigationActivity;
 
 /*
  * @description SplashActivity : 启动页面

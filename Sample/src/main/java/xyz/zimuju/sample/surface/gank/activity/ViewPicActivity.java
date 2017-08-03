@@ -34,13 +34,6 @@ import xyz.zimuju.sample.util.SLog;
 import xyz.zimuju.sample.util.SnackBarUtils;
 import xyz.zimuju.sample.util.SystemShareUtils;
 
-/**
- * Created by _SOLID
- * Date:2016/4/22
- * Time:14:28
- * <p/>
- * view full picture
- */
 public class ViewPicActivity extends BaseActivity {
     public final static String IMG_URLS = "ImageUrls";
     public final static String IMG_INDEX = "ImageIndex";
@@ -57,10 +50,8 @@ public class ViewPicActivity extends BaseActivity {
         Intent intent = new Intent(context, ViewPicActivity.class);
         intent.putStringArrayListExtra(IMG_URLS, urls);
         intent.putExtra(IMG_INDEX, position);
-        ActivityOptionsCompat compat = ActivityOptionsCompat.makeScaleUpAnimation(view,
-                view.getWidth() / 2, view.getHeight() / 2, 0, 0);
-        ActivityCompat.startActivity(context, intent,
-                compat.toBundle());
+        ActivityOptionsCompat compat = ActivityOptionsCompat.makeScaleUpAnimation(view, view.getWidth() / 2, view.getHeight() / 2, 0, 0);
+        ActivityCompat.startActivity(context, intent, compat.toBundle());
     }
 
     public static void start(Context context, View view, String url) {
@@ -71,7 +62,6 @@ public class ViewPicActivity extends BaseActivity {
 
     @Override
     protected void init(Bundle savedInstanceState) {
-        super.init(savedInstanceState);
         mUrlList = getIntent().getExtras().getStringArrayList(IMG_URLS);
         mCurrentIndex = getIntent().getExtras().getInt(IMG_INDEX);
     }

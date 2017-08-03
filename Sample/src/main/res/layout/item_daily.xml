@@ -12,7 +12,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:scaleType="centerCrop"
-        android:src="@mipmap/avatar"
+        android:src="@mipmap/icon_portrait_default"
         android:transitionName="@string/image_transition"/>
 
     <LinearLayout

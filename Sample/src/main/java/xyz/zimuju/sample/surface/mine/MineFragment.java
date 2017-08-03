@@ -23,13 +23,6 @@ import xyz.zimuju.sample.util.AuthorityUtils;
 import xyz.zimuju.sample.util.SpannableStringUtils;
 import xyz.zimuju.sample.util.ToastUtils;
 
-/**
- * Created by _SOLID
- * Date:2017/3/14
- * Time:11:33
- * Desc:
- */
-
 public class MineFragment extends BaseFragment {
 
     private TextView tv_username;
@@ -51,16 +44,16 @@ public class MineFragment extends BaseFragment {
 
     @Override
     protected int setLayoutResourceID() {
-        return R.layout.gank_fragment_mine;
+        return R.layout.fragment_mine;
     }
 
     @Override
     protected void initView() {
 
-        iv_avatar = $(R.id.iv_avatar);
-        tv_username = $(R.id.tv_username);
-        tv_clear_cache = $(R.id.tv_clear_cache);
-        $(R.id.tv_my_collect).setOnClickListener(new View.OnClickListener() {
+        iv_avatar = findView(R.id.iv_avatar);
+        tv_username = findView(R.id.tv_username);
+        tv_clear_cache = findView(R.id.tv_clear_cache);
+        findView(R.id.tv_my_collect).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if (!AuthorityUtils.isLogin()) {
@@ -78,19 +71,19 @@ public class MineFragment extends BaseFragment {
                 }
             }
         });
-        $(R.id.tv_feedback).setOnClickListener(new View.OnClickListener() {
+        findView(R.id.tv_feedback).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AppUtils.feedBack(getContext(), v);
             }
         });
-        $(R.id.tv_about).setOnClickListener(new View.OnClickListener() {
+        findView(R.id.tv_about).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getContext(), AboutActivity.class));
             }
         });
-        $(R.id.tv_logout).setOnClickListener(new View.OnClickListener() {
+        findView(R.id.tv_logout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AppUtils.logOut(getContext(), new AppUtils.OnSuccessListener() {
@@ -141,8 +134,7 @@ public class MineFragment extends BaseFragment {
             ImageLoader.displayImage(iv_avatar, AuthorityUtils.getAvatar());
         } else {
             tv_username.setText(getString(R.string.mine_click_login));
-            iv_avatar.setImageDrawable(new ColorDrawable(ContextCompat.getColor(getContext(),
-                    R.color.colorPrimaryDark)));
+            iv_avatar.setImageDrawable(new ColorDrawable(ContextCompat.getColor(getContext(), R.color.colorPrimaryDark)));
         }
     }
 }

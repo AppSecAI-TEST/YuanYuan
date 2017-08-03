@@ -39,7 +39,7 @@ public class SortFragment extends BaseFragment {
 
     @Override
     protected void initView() {
-        mRecyclerView = $(R.id.recyclerview);
+        mRecyclerView = findView(R.id.recyclerview);
 
         //  mList = Category.getGanHuoCateGory();
         mAdapter = new SortAdapter(getContext(), mList);

@@ -24,7 +24,7 @@ public class MultiComponent implements Component {
         textView.setTextColor(inflater.getContext().getResources().getColor(R.color.color_white));
         textView.setTextSize(20);
         ImageView imageView = new ImageView(inflater.getContext());
-        imageView.setImageResource(R.mipmap.arrow);
+        imageView.setImageResource(R.mipmap.icon_arrow_green);
         linearLayout.removeAllViews();
         linearLayout.addView(textView);
         linearLayout.addView(imageView);

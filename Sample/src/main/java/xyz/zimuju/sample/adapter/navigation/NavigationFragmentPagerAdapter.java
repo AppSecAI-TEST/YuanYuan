@@ -1,4 +1,4 @@
-package xyz.zimuju.sample.surface.navigation.adapter;
+package xyz.zimuju.sample.adapter.navigation;
 
 
 import android.support.v4.app.Fragment;

@@ -25,7 +25,7 @@ public class StringFragment extends BaseFragment {
     @Override
     protected void initView() {
         mText = getArguments().getString("text");
-        mTvText = $(R.id.tv_text);
+        mTvText = findView(R.id.tv_text);
 
     }
 

@@ -104,9 +104,9 @@
         <item name="android:textColor">@color/md_grey_400</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
 
     <style name="PictureDialog" parent="android:style/Theme.Dialog">
@@ -120,13 +120,15 @@
 
     <style name="MineItem">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">48dp</item>
         <item name="android:background">?attr/selectableItemBackground</item>
         <item name="android:clickable">true</item>
-        <item name="android:gravity">center</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
         <item name="android:padding">10dp</item>
         <item name="android:textColor">@color/md_grey_700</item>
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:textStyle">bold</item>
     </style>
 
@@ -139,7 +141,7 @@
         <item name="android:textColor">@android:color/transparent</item>
     </style>
 
-    <style name="ListItem" />
+    <style name="ListItem"/>
 
     <style name="ListItem.Title">
         <item name="android:layout_width">wrap_content</item>

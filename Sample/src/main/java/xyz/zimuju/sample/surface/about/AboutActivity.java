@@ -1,5 +1,6 @@
 package xyz.zimuju.sample.surface.about;
 
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.SpannableStringBuilder;
 import android.view.View;
@@ -10,11 +11,6 @@ import xyz.zimuju.sample.surface.gank.activity.BaseActivity;
 import xyz.zimuju.sample.util.SpannableStringUtils;
 import xyz.zimuju.sample.util.SystemUtils;
 
-/**
- * Created by _SOLID
- * Date:2016/5/5
- * Time:10:30
- */
 public class AboutActivity extends BaseActivity {
 
     private TextView tv_version;
@@ -62,6 +58,16 @@ public class AboutActivity extends BaseActivity {
                 getString(R.string.about_project),
                 R.style.AboutItemText));
         tv_msg.setText(builder.subSequence(0, builder.length()));
+
+    }
+
+    @Override
+    protected void initData() {
+
+    }
+
+    @Override
+    protected void init(Bundle savedInstanceState) {
 
     }
 

@@ -1,4 +1,4 @@
-package xyz.zimuju.sample.surface.navigation.fragment;
+package xyz.zimuju.sample.surface;
 
 
 import xyz.zimuju.common.basal.BasalFragment;

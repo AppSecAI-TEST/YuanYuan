@@ -3,6 +3,7 @@ package xyz.zimuju.sample.surface.home.activity;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
@@ -83,6 +84,11 @@ public class DailyActivity extends BaseActivity {
     }
 
     @Override
+    protected void init(Bundle savedInstanceState) {
+
+    }
+
+    @Override
     protected int getLayoutId() {
         return R.layout.gank_activity_daily;
     }
@@ -101,6 +107,11 @@ public class DailyActivity extends BaseActivity {
                 ViewPicActivity.start(DailyActivity.this, v, getImageUrl());
             }
         });
+
+    }
+
+    @Override
+    protected void initData() {
 
     }
 

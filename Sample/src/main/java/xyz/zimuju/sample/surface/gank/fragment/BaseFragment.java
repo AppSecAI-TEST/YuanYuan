@@ -40,7 +40,7 @@ public abstract class BaseFragment extends RxFragment {
     protected abstract void initData();
 
     @SuppressWarnings("unchecked")
-    protected <T extends View> T $(int id) {
+    protected <T extends View> T findView(int id) {
         return (T) rootView.findViewById(id);
     }
 

@@ -40,9 +40,9 @@ public class ReadingTabFragment extends BaseFragment {
 
     @Override
     protected void initView() {
-        status_view_layout = $(R.id.status_view_layout);
-        tab_layout = $(R.id.tab_layout);
-        view_pager = $(R.id.view_pager);
+        status_view_layout = findView(R.id.status_view_layout);
+        tab_layout = findView(R.id.tab_layout);
+        view_pager = findView(R.id.view_pager);
         ViewCompat.setElevation(tab_layout, ViewUtils.dp2px(getContext(), 4));
         status_view_layout.setOnRetryListener(new View.OnClickListener() {
             @Override
