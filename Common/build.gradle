@@ -11,10 +11,11 @@ android {
     defaultConfig {
         minSdkVersion configurations.minSdkVersion
         targetSdkVersion configurations.targetSdkVersion
-        versionCode configurations.versionCode
-        versionName configurations.versionName
     }
 
+    lintOptions {
+        abortOnError false
+    }
 }
 
 dependencies {
