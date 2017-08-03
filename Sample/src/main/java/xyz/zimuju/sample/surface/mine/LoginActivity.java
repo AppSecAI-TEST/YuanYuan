@@ -27,7 +27,7 @@ import xyz.zimuju.common.util.ToastUtils;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.constant.ConfigConstants;
 import xyz.zimuju.sample.engine.api.SinaApiService;
-import xyz.zimuju.sample.entity.content.Weibo;
+import xyz.zimuju.sample.entity.content.WeiBo;
 import xyz.zimuju.sample.event.LoginEvent;
 import xyz.zimuju.sample.factory.ServiceFactory;
 import xyz.zimuju.sample.rx.RxBus;
@@ -116,10 +116,10 @@ public class LoginActivity extends AppCompatActivity implements WeiboAuthListene
         params.put("uid", AuthorityUtils.getUid());
 
         SinaApiService service = ServiceFactory.getInstance().createService(SinaApiService.class);
-        service.getUserInfo(AuthorityUtils.getAccessToken(), AuthorityUtils.getUid()).compose(RxUtils.<Weibo>defaultSchedulersSingle())
-                .subscribe(new Consumer<Weibo>() {
+        service.getUserInfo(AuthorityUtils.getAccessToken(), AuthorityUtils.getUid()).compose(RxUtils.<WeiBo>defaultSchedulersSingle())
+                .subscribe(new Consumer<WeiBo>() {
                     @Override
-                    public void accept(@NonNull Weibo result) throws Exception {
+                    public void accept(@NonNull WeiBo result) throws Exception {
                         if (result != null) {
                             AuthorityUtils.setUserName(result.getName());
                             AuthorityUtils.login(result);

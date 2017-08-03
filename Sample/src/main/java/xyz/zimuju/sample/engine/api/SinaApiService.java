@@ -3,7 +3,7 @@ package xyz.zimuju.sample.engine.api;
 import io.reactivex.Single;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
-import xyz.zimuju.sample.entity.content.Weibo;
+import xyz.zimuju.sample.entity.content.WeiBo;
 
 /**
  * Created by _SOLID
@@ -14,5 +14,5 @@ public interface SinaApiService {
     String BASE_URL = "https://api.weibo.com/2/";
 
     @GET("users/show.json")
-    Single<Weibo> getUserInfo(@Query("access_token") String access_token, @Query("uid") String uid);
+    Single<WeiBo> getUserInfo(@Query("access_token") String access_token, @Query("uid") String uid);
 }

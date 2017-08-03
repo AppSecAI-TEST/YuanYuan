@@ -2,28 +2,28 @@ package xyz.zimuju.sample.util;
 
 import com.sina.weibo.sdk.auth.Oauth2AccessToken;
 
-import xyz.zimuju.sample.entity.content.Weibo;
+import xyz.zimuju.sample.entity.content.WeiBo;
 
 public class AuthorityUtils {
-    public static boolean isLogin() {
-        return PrefUtils.getBoolean("isLogin", false);
-    }
-
-    public static void login(Weibo result) {
+    public static void login(WeiBo result) {
         setUserName(result.getScreen_name());
         setDescription(result.getDescription());
         setAvatar(result.getAvatar_large());
-        setIsLogin(true);
+        setLogin(true);
     }
 
     public static void logout() {
         setUserName("");
         setDescription("");
         setAvatar("");
-        setIsLogin(false);
+        setLogin(false);
     }
 
-    private static void setIsLogin(boolean isLogin) {
+    public static boolean isLogin() {
+        return PrefUtils.getBoolean("isLogin", false);
+    }
+
+    private static void setLogin(boolean isLogin) {
         PrefUtils.putBoolean("isLogin", isLogin);
     }
 
@@ -86,29 +86,31 @@ public class AuthorityUtils {
         PrefUtils.putLong("expires_in", expires_in);
     }
 
-    /**
-     * 从 SharedPreferences 读取 Token 信息。
-     *
-     * @return 返回 Token 对象
+    /*
+     * @function 从 SharedPreferences 读取 Token 信息
+     * @author Nathaniel-nathanwriting@126.com
+     * @time 17-8-3-下午9:37
+     * @return Oauth2AccessToken token
+     * @version v1.0.0
      */
     public static Oauth2AccessToken readOauth2AccessToken() {
-
         Oauth2AccessToken token = new Oauth2AccessToken();
         token.setUid(getUid());
         token.setToken(getAccessToken());
         token.setRefreshToken(getRefreshToken());
         token.setExpiresTime(getExpiresIn());
-
         return token;
     }
 
-    /**
-     * 保存 Token 对象到 SharedPreferences。
-     *
-     * @param token Token 对象
+    /*
+     * @function 保存 Token 对象到 SharedPreferences
+     * @author Nathaniel-nathanwriting@126.com
+     * @time 17-8-3-下午9:39
+     * @parameters Oauth2AccessToken token
+     * @return void
+     * @version v1.0.0
      */
     public static void writeAccessToken(Oauth2AccessToken token) {
-
         setUid(token.getUid());
         setAccessToken(token.getToken());
         setRefreshToken(token.getRefreshToken());

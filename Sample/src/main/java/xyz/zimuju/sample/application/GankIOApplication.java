@@ -40,6 +40,7 @@ public class GankIOApplication extends Application {
 
         MultiTypeInstaller.install();
 
+        // 初始化SharedPreferences
         PrefUtils.initialize(this);
     }
 
