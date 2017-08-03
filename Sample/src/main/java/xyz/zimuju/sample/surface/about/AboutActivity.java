@@ -1,74 +1,31 @@
 package xyz.zimuju.sample.surface.about;
 
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.text.SpannableStringBuilder;
 import android.view.View;
 import android.widget.TextView;
 
+import butterknife.BindView;
+import butterknife.OnClick;
+import xyz.zimuju.common.basal.BasalActivity;
 import xyz.zimuju.sample.R;
-import xyz.zimuju.sample.surface.gank.activity.BaseActivity;
 import xyz.zimuju.sample.util.SpannableStringUtils;
-import xyz.zimuju.sample.util.SystemUtils;
 
-public class AboutActivity extends BaseActivity {
+public class AboutActivity extends BasalActivity implements View.OnClickListener {
+    @BindView(R.id.header_back_tv)
+    TextView back;
 
-    private TextView tv_version;
-    private TextView tv_msg;
+    @BindView(R.id.header_title_tv)
+    TextView title;
 
-    @Override
-    protected void initView() {
+    @BindView(R.id.about_message_tv)
+    TextView textView;
 
-        Toolbar toolbar = $(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setDisplayShowHomeEnabled(true);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
-
-        tv_msg = $(R.id.tv_msg);
-        tv_version = $(R.id.tv_version);
-        tv_version.setText("v" + SystemUtils.getAppVersion(this));
-
-        SpannableStringBuilder builder = new SpannableStringBuilder();
-        builder.append(getString(R.string.about_msg));
-        builder.append("\n");
-        builder.append("\n");
-        builder.append(SpannableStringUtils.format(this,
-                getString(R.string.about_author),
-                R.style.AboutItemText));
-        builder.append("\n");
-        builder.append(SpannableStringUtils.format(this,
-                getString(R.string.about_github),
-                R.style.AboutItemText));
-        builder.append("\n");
-        builder.append(SpannableStringUtils.format(this,
-                getString(R.string.about_blog),
-                R.style.AboutItemText));
-        builder.append("\n");
-        builder.append(SpannableStringUtils.format(this,
-                getString(R.string.about_weibo),
-                R.style.AboutItemText));
-        builder.append("\n");
-        builder.append(SpannableStringUtils.format(this,
-                getString(R.string.about_project),
-                R.style.AboutItemText));
-        tv_msg.setText(builder.subSequence(0, builder.length()));
-
-    }
+    private String titleText;
 
     @Override
-    protected void initData() {
-
-    }
-
-    @Override
-    protected void init(Bundle savedInstanceState) {
-
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
     }
 
     @Override
@@ -76,4 +33,39 @@ public class AboutActivity extends BaseActivity {
         return R.layout.gank_activity_about;
     }
 
+    @Override
+    protected void initData() {
+        titleText = "关于";
+    }
+
+    @Override
+    protected void viewOption() {
+        title.setText(titleText);
+        back.setVisibility(View.VISIBLE);
+
+        SpannableStringBuilder builder = new SpannableStringBuilder();
+        builder.append(getString(R.string.about_msg));
+        builder.append("\n");
+        builder.append("\n");
+        builder.append(SpannableStringUtils.format(this, getString(R.string.about_author), R.style.AboutItemText));
+        builder.append("\n");
+        builder.append(SpannableStringUtils.format(this, getString(R.string.about_github), R.style.AboutItemText));
+        builder.append("\n");
+        builder.append(SpannableStringUtils.format(this, getString(R.string.about_blog), R.style.AboutItemText));
+        builder.append("\n");
+        builder.append(SpannableStringUtils.format(this, getString(R.string.about_weibo), R.style.AboutItemText));
+        builder.append("\n");
+        builder.append(SpannableStringUtils.format(this, getString(R.string.about_project), R.style.AboutItemText));
+        textView.setText(builder.subSequence(0, builder.length()));
+    }
+
+    @OnClick(R.id.header_back_tv)
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.header_back_tv:
+                finish();
+                break;
+        }
+    }
 }

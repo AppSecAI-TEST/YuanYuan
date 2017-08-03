@@ -1,6 +1,6 @@
 package xyz.zimuju.sample.surface.gank.activity;
 
-import xyz.zimuju.sample.util.ToastUtils;
+import xyz.zimuju.common.util.ToastUtils;
 
 /*
  * @description BaseMainActivity ：主界面的基类
@@ -17,7 +17,7 @@ public abstract class BaseMainActivity extends BaseActivity {
         if (beforeOnBackPressed()) {
             long currentTick = System.currentTimeMillis();
             if (currentTick - lastBackKeyDownTick > MAX_DOUBLE_BACK_DURATION) {
-                ToastUtils.getInstance().showToast("再按一次退出");
+                ToastUtils.showToast(getContext(), "再按一次退出");
                 lastBackKeyDownTick = currentTick;
             } else {
                 finish();

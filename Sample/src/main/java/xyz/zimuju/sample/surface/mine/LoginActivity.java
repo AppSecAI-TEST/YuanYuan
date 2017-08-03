@@ -23,6 +23,7 @@ import java.util.Map;
 import cn.bmob.v3.BmobUser;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.functions.Consumer;
+import xyz.zimuju.common.util.ToastUtils;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.constant.ConfigConstants;
 import xyz.zimuju.sample.engine.api.SinaApiService;
@@ -32,9 +33,8 @@ import xyz.zimuju.sample.factory.ServiceFactory;
 import xyz.zimuju.sample.rx.RxBus;
 import xyz.zimuju.sample.rx.RxUtils;
 import xyz.zimuju.sample.util.AuthorityUtils;
-import xyz.zimuju.sample.util.ToastUtils;
 
-public class LoginActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity implements WeiboAuthListener {
 
     private AuthInfo mAuthInfo;
     private SsoHandler mSsoHandler;
@@ -95,7 +95,7 @@ public class LoginActivity extends AppCompatActivity {
     private void login() {
         mAuthInfo = new AuthInfo(this, ConfigConstants.SINA_APP_KEY, ConfigConstants.SINA_REDIRECT_URL, ConfigConstants.SINA_SCOPE);
         mSsoHandler = new SsoHandler(this, mAuthInfo);
-        mSsoHandler.authorize(new AuthListener());
+        mSsoHandler.authorize(this);
     }
 
     @Override
@@ -151,30 +151,28 @@ public class LoginActivity extends AppCompatActivity {
         finish();
     }
 
-    class AuthListener implements WeiboAuthListener {
-        @Override
-        public void onComplete(Bundle values) {
-            mAccessToken = Oauth2AccessToken.parseAccessToken(values);
-            if (mAccessToken.isSessionValid()) {
-                ToastUtils.getInstance().showToast("登录成功");
-                AuthorityUtils.setUid(mAccessToken.getUid());
-                AuthorityUtils.setAccessToken(mAccessToken.getToken());
-                AuthorityUtils.setRefreshToken(mAccessToken.getRefreshToken());
-                AuthorityUtils.setExpiresIn(mAccessToken.getExpiresTime());
-                getUserInfo();
-            } else {
-                ToastUtils.getInstance().showToast(values.getString("code", ""));
-            }
+    @Override
+    public void onComplete(Bundle values) {
+        mAccessToken = Oauth2AccessToken.parseAccessToken(values);
+        if (mAccessToken.isSessionValid()) {
+            ToastUtils.showToast(this, "登录成功");
+            AuthorityUtils.setUid(mAccessToken.getUid());
+            AuthorityUtils.setAccessToken(mAccessToken.getToken());
+            AuthorityUtils.setRefreshToken(mAccessToken.getRefreshToken());
+            AuthorityUtils.setExpiresIn(mAccessToken.getExpiresTime());
+            getUserInfo();
+        } else {
+            ToastUtils.showToast(this, values.getString("code", ""));
         }
+    }
 
-        @Override
-        public void onCancel() {
-            ToastUtils.getInstance().showToast("onCancel");
-        }
+    @Override
+    public void onCancel() {
+        ToastUtils.showToast(this, "onCancel");
+    }
 
-        @Override
-        public void onWeiboException(WeiboException e) {
-            ToastUtils.getInstance().showToast("微博授权异常");
-        }
+    @Override
+    public void onWeiboException(WeiboException e) {
+        ToastUtils.showToast(this, "微博授权异常");
     }
 }

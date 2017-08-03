@@ -12,6 +12,7 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.functions.Consumer;
+import xyz.zimuju.common.util.ToastUtils;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.SettingCenter;
 import xyz.zimuju.sample.event.LoginEvent;
@@ -23,7 +24,6 @@ import xyz.zimuju.sample.surface.gank.fragment.BaseFragment;
 import xyz.zimuju.sample.util.AppUtils;
 import xyz.zimuju.sample.util.AuthorityUtils;
 import xyz.zimuju.sample.util.SpannableStringUtils;
-import xyz.zimuju.sample.util.ToastUtils;
 
 public class MineFragment extends BaseFragment implements View.OnClickListener {
     @BindView(R.id.mine_username_tv)
@@ -64,8 +64,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
             @Override
             public void onResult(long result) {
                 SpannableStringBuilder builder = new SpannableStringBuilder();
-                builder.append(getString(R.string.mine_cache_clear));
-                builder.append("\n");
+                builder.append(getString(R.string.mine_cache_clear)).append("  ");
                 builder.append(SpannableStringUtils.format(getContext(), "(" + SettingCenter.formatFileSize(result) + ")", R.style.ByTextAppearance));
                 clearCache.setText(builder);
             }
@@ -116,7 +115,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
                 AppUtils.clearCache(getContext(), new SettingCenter.ClearCacheListener() {
                     @Override
                     public void onResult() {
-                        ToastUtils.getInstance().showToast(getString(R.string.cache_clear_success));
+                        ToastUtils.showToast(getContext(), getString(R.string.cache_clear_success));
                         clearCache.setText(getString(R.string.mine_cache_clear));
                     }
                 });

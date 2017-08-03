@@ -6,12 +6,13 @@
                 android:background="@color/navigation_text_pressed">
 
     <TextView
+        android:id="@+id/header_back_tv"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_marginLeft="10dp"
         android:gravity="center"
         android:textColor="@android:color/white"
-        android:textSize="14sp"
+        android:textSize="16sp"
         android:visibility="gone"
         tools:text="返回"
         tools:visibility="visible"/>
@@ -23,7 +24,7 @@
         android:layout_centerInParent="true"
         android:gravity="center"
         android:textColor="@android:color/white"
-        android:textSize="14sp"
+        android:textSize="16sp"
         tools:text="消息"/>
 
     <TextView

@@ -19,7 +19,7 @@ import android.widget.ViewSwitcher;
 import java.lang.reflect.Method;
 
 import xyz.zimuju.sample.R;
-import xyz.zimuju.sample.application.SolidApplication;
+import xyz.zimuju.sample.application.GankIOApplication;
 import xyz.zimuju.sample.surface.gank.fragment.WebViewFragment;
 import xyz.zimuju.sample.util.ClipboardUtils;
 import xyz.zimuju.sample.util.SystemShareUtils;
@@ -130,7 +130,7 @@ public class WebViewActivity extends BaseActivity {
         int id = item.getItemId();
 
         if (id == R.id.action_copy) {
-            ClipboardUtils.setText(SolidApplication.getInstance(), mUrl);
+            ClipboardUtils.setText(GankIOApplication.getInstance(), mUrl);
             Snackbar.make(mToolbar, "已复制到剪切板", Snackbar.LENGTH_SHORT).show();
             return true;
         } else if (id == R.id.action_share) {

@@ -5,18 +5,18 @@ import android.os.Looper;
 
 import java.io.File;
 
-import xyz.zimuju.sample.application.SolidApplication;
+import xyz.zimuju.sample.application.GankIOApplication;
 import xyz.zimuju.sample.util.PrefUtils;
 
 
 public class SettingCenter {
 
     public static boolean getOnlyWifiLoadImage() {
-        return PrefUtils.getBoolean(SolidApplication.getInstance(), "getOnlyWifiLoadImage", false);
+        return PrefUtils.getBoolean(GankIOApplication.getInstance(), "getOnlyWifiLoadImage", false);
     }
 
     public static void setOnlyWifiLoadImage(boolean isEnable) {
-        PrefUtils.putBoolean(SolidApplication.getInstance(), "getOnlyWifiLoadImage", isEnable);
+        PrefUtils.putBoolean(GankIOApplication.getInstance(), "getOnlyWifiLoadImage", isEnable);
     }
 
     //region 缓存相关
@@ -29,7 +29,7 @@ public class SettingCenter {
     public static void countDirSizeTask(final CountDirSizeListener listener) {
         new Thread() {
             public void run() {
-                final long result = getDirSize(SolidApplication.getInstance().getCacheDir());
+                final long result = getDirSize(GankIOApplication.getInstance().getCacheDir());
                 Handler handler = new Handler(Looper.getMainLooper());
                 handler.post(new Runnable() {
                     @Override
@@ -49,7 +49,7 @@ public class SettingCenter {
     public static void clearAppCache(final ClearCacheListener listener) {
         new Thread() {
             public void run() {
-                clearFile(SolidApplication.getInstance().getCacheDir());
+                clearFile(GankIOApplication.getInstance().getCacheDir());
                 Handler handler = new Handler(Looper.getMainLooper());
                 handler.post(new Runnable() {
                     @Override

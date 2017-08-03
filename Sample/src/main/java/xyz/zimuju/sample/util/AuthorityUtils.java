@@ -7,13 +7,7 @@ import com.sina.weibo.sdk.auth.Oauth2AccessToken;
 import xyz.zimuju.sample.application.GankIOApplication;
 import xyz.zimuju.sample.entity.content.Weibo;
 
-/**
- * Created by _SOLID
- * Date:2016/5/19
- * Time:14:49
- */
 public class AuthorityUtils {
-
 
     private static Context getContext() {
         return GankIOApplication.getInstance();
@@ -28,7 +22,6 @@ public class AuthorityUtils {
         setUserName(result.getScreen_name());
         setDescription(result.getDescription());
         setAvatar(result.getAvatar_large());
-
         setIsLogin(true);
     }
 
@@ -36,7 +29,6 @@ public class AuthorityUtils {
         setUserName("");
         setDescription("");
         setAvatar("");
-
         setIsLogin(false);
     }
 

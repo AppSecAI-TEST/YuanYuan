@@ -1,5 +1,6 @@
 package xyz.zimuju.sample.surface.read;
 
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -9,13 +10,13 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import me.drakeet.multitype.ItemViewProvider;
+import xyz.zimuju.common.util.ToastUtils;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.entity.bomb.CollectTable;
 import xyz.zimuju.sample.entity.content.XianDuItem;
 import xyz.zimuju.sample.loader.ImageLoader;
 import xyz.zimuju.sample.surface.gank.activity.WebViewActivity;
 import xyz.zimuju.sample.util.DialogUtils;
-import xyz.zimuju.sample.util.ToastUtils;
 
 /**
  * Created by _SOLID
@@ -26,11 +27,13 @@ import xyz.zimuju.sample.util.ToastUtils;
  */
 public class XianDuViewProvider
         extends ItemViewProvider<XianDuItem, XianDuViewProvider.ViewHolder> {
+    private Context context;
 
     @NonNull
     @Override
     protected ViewHolder onCreateViewHolder(
             @NonNull LayoutInflater inflater, @NonNull ViewGroup parent) {
+        context = parent.getContext();
         View root = inflater.inflate(R.layout.gank_item_xian_du, parent, false);
         return new ViewHolder(root);
     }
@@ -50,7 +53,7 @@ public class XianDuViewProvider
         holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                ToastUtils.getInstance().showToast("LongClick");
+                ToastUtils.showToast(context, "LongClick");
                 return true;
             }
         });

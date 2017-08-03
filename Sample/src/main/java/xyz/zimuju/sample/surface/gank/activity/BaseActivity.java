@@ -1,5 +1,6 @@
 package xyz.zimuju.sample.surface.gank.activity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -15,6 +16,8 @@ import com.umeng.analytics.MobclickAgent;
  * @version 1.0.0
  */
 public abstract class BaseActivity extends RxAppCompatActivity {
+    private Context context;
+
     // 用于在初始化View之前做一些事
     protected abstract void init(Bundle savedInstanceState);
 
@@ -26,11 +29,12 @@ public abstract class BaseActivity extends RxAppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
         init(savedInstanceState);
         setContentView(getLayoutId());
         initView();
         initData();
+        context = this;
+        super.onCreate(savedInstanceState);
     }
 
 
@@ -72,5 +76,9 @@ public abstract class BaseActivity extends RxAppCompatActivity {
     protected void onPause() {
         super.onPause();
         MobclickAgent.onPause(this);
+    }
+
+    protected Context getContext() {
+        return context;
     }
 }

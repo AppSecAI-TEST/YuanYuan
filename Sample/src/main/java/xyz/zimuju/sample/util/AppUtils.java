@@ -12,7 +12,6 @@ import cn.bmob.v3.listener.SaveListener;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.SettingCenter;
 import xyz.zimuju.sample.application.GankIOApplication;
-import xyz.zimuju.sample.application.SolidApplication;
 import xyz.zimuju.sample.entity.bomb.FeedBack;
 
 /**
@@ -31,11 +30,11 @@ public class AppUtils {
     }
 
     public static boolean shakePicture() {
-        return PrefUtils.getBoolean(SolidApplication.getInstance(), "shakePicture", true);
+        return PrefUtils.getBoolean(GankIOApplication.getInstance(), "shakePicture", true);
     }
 
     public static void setShakePicture(boolean isEnable) {
-        PrefUtils.putBoolean(SolidApplication.getInstance(), "shakePicture", isEnable);
+        PrefUtils.putBoolean(GankIOApplication.getInstance(), "shakePicture", isEnable);
     }
 
 

@@ -20,8 +20,6 @@ public abstract class BasalActivity extends AppCompatActivity {
 
     protected abstract void initData();
 
-    // protected abstract void initView();
-
     protected abstract void viewOption();
 
     @Override
@@ -31,7 +29,6 @@ public abstract class BasalActivity extends AppCompatActivity {
         ActivityController.initController().addActivity(this);
         ButterKnife.bind(this);
         initData();
-        // initView();
         viewOption();
     }
 

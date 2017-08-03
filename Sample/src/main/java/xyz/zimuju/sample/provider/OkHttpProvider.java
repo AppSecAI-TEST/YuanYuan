@@ -16,7 +16,7 @@ import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import xyz.zimuju.sample.application.SolidApplication;
+import xyz.zimuju.sample.application.GankIOApplication;
 import xyz.zimuju.sample.util.NetworkUtil;
 import xyz.zimuju.sample.util.SLog;
 
@@ -64,14 +64,14 @@ public class OkHttpProvider {
         @Override
         public Response intercept(Chain chain) throws IOException {
             Request request = chain.request();
-            if (!NetworkUtil.isConnected(SolidApplication.getInstance())) {
+            if (!NetworkUtil.isConnected(GankIOApplication.getInstance())) {
                 request = request.newBuilder()
                         .cacheControl(CacheControl.FORCE_CACHE)
                         .build();
             }
 
             Response response = chain.proceed(request);
-            if (NetworkUtil.isConnected(SolidApplication.getInstance())) {
+            if (NetworkUtil.isConnected(GankIOApplication.getInstance())) {
                 int maxAge = 60;//在有网络连接的情况下，一分钟内不再请求网络
                 String cacheControl = request.cacheControl().toString();
                 if (TextUtils.isEmpty(cacheControl)) {

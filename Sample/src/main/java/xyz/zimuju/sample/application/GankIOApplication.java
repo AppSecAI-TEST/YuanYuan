@@ -1,13 +1,27 @@
 package xyz.zimuju.sample.application;
 
+import android.app.Application;
+import android.os.Environment;
+
 import com.squareup.leakcanary.LeakCanary;
+
+import java.io.File;
 
 import cn.bmob.push.BmobPush;
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobInstallation;
 import xyz.zimuju.sample.MultiTypeInstaller;
 
-public class GankIOApplication extends SolidApplication {
+public class GankIOApplication extends Application {
+    private static GankIOApplication gankIOApplication;
+
+    public static GankIOApplication getInstance() {
+        if (gankIOApplication == null) {
+            gankIOApplication = new GankIOApplication();
+        }
+        return gankIOApplication;
+    }
+
     @Override
     public void onCreate() {
         super.onCreate();
@@ -18,7 +32,20 @@ public class GankIOApplication extends SolidApplication {
         // 启动推送服务
         BmobPush.startWork(this);
 
+        if (LeakCanary.isInAnalyzerProcess(this)) {
+            return;
+        }
         LeakCanary.install(this);
+
         MultiTypeInstaller.install();
+    }
+
+    @Override
+    public File getCacheDir() {
+        File file = new File(Environment.getExternalStorageDirectory(), "/YuanYuan/Cache/");
+        if (!file.exists()) {
+            file.mkdirs();
+        }
+        return file;
     }
 }

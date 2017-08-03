@@ -13,7 +13,7 @@ import java.io.OutputStream;
 import io.reactivex.SingleObserver;
 import io.reactivex.disposables.Disposable;
 import okhttp3.ResponseBody;
-import xyz.zimuju.sample.application.SolidApplication;
+import xyz.zimuju.sample.application.GankIOApplication;
 import xyz.zimuju.sample.util.FileUtils;
 
 public abstract class DownloadSubscriber implements SingleObserver<ResponseBody> {
@@ -24,7 +24,7 @@ public abstract class DownloadSubscriber implements SingleObserver<ResponseBody>
     private long fileSize = 0;
 
     public DownloadSubscriber(@NonNull String fileName) {
-        mSaveFilePath = FileUtils.getCacheDir(SolidApplication.getInstance()).getAbsolutePath();
+        mSaveFilePath = FileUtils.getCacheDir(GankIOApplication.getInstance()).getAbsolutePath();
         mFile = new File(mSaveFilePath + File.separator + fileName);
     }
 

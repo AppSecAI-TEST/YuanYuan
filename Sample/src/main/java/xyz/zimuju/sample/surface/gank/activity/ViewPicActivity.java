@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.functions.Consumer;
 import xyz.zimuju.sample.R;
-import xyz.zimuju.sample.application.SolidApplication;
+import xyz.zimuju.sample.application.GankIOApplication;
 import xyz.zimuju.sample.http.subscriber.DownloadSubscriber;
 import xyz.zimuju.sample.loader.ImageLoader;
 import xyz.zimuju.sample.provider.ObservableProvider;
@@ -143,7 +143,7 @@ public class ViewPicActivity extends BaseActivity {
                             public void onCompleted(File file) {
                                 if (action == 0) {
                                     SnackBarUtils.makeLong(mViewPager, "已保存至相册").info();
-                                    MediaScannerConnection.scanFile(SolidApplication.getInstance(), new String[]{
+                                    MediaScannerConnection.scanFile(GankIOApplication.getInstance(), new String[]{
                                                     mSavePath},
                                             null, null);
                                 } else {

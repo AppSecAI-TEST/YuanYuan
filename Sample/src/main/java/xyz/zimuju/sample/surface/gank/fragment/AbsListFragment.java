@@ -11,8 +11,8 @@ import java.util.List;
 
 import me.drakeet.multitype.MultiTypeAdapter;
 import me.solidev.statusviewlayout.StatusViewLayout;
+import xyz.zimuju.common.util.ToastUtils;
 import xyz.zimuju.sample.R;
-import xyz.zimuju.sample.util.ToastUtils;
 import xyz.zimuju.sample.widget.loadmore.LoadMoreWrapper;
 
 /*
@@ -198,7 +198,7 @@ public abstract class AbsListFragment extends LazyLoadFragment implements IList 
             mStatusViewLayout.showError(e.getMessage());
         } else {
             mLoadMoreWrapper.showLoadError();
-            ToastUtils.getInstance().showToast(e.getMessage());
+            ToastUtils.showToast(getContext(), e.getMessage());
         }
         mSwipeRefreshLayout.setRefreshing(false);
     }
