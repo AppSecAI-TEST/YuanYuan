@@ -1,5 +1,7 @@
 package xyz.zimuju.sample.transformer;
 
+import android.support.annotation.NonNull;
+
 import org.reactivestreams.Publisher;
 
 import io.reactivex.Completable;
@@ -16,7 +18,6 @@ import io.reactivex.ObservableTransformer;
 import io.reactivex.Single;
 import io.reactivex.SingleSource;
 import io.reactivex.SingleTransformer;
-import io.reactivex.annotations.NonNull;
 
 public class SchedulerTransformer<T> implements ObservableTransformer<T, T>, FlowableTransformer<T, T>, SingleTransformer<T, T>, MaybeTransformer<T, T>, CompletableTransformer {
 
