@@ -37,11 +37,11 @@ public class GankIOApplication extends Application {
                 .build();
         Bmob.initialize(config);
 
-        // Bmob.initialize(this, ConfigConstants.BOMB_APPLICATION_ID);
+        // 使用推送服务时的初始化操作
+        BmobInstallation.getCurrentInstallation(this).save();
 
-        BmobInstallation.getCurrentInstallation(this).save(); // 使用推送服务时的初始化操作
-
-        BmobPush.startWork(this); // 启动推送服务
+        // 启动推送服务
+        BmobPush.startWork(this);
 
         if (LeakCanary.isInAnalyzerProcess(this)) {
             return;
@@ -52,12 +52,15 @@ public class GankIOApplication extends Application {
 
         // 初始化SharedPreferences
         PrefUtils.initialize(this);
+
+        // 初始化UserApplication
+        UserApplication.initialize(this);
     }
 
     @Override
     public File getCacheDir() {
         File file = new File(Environment.getExternalStorageDirectory(), "/YuanYuan/Cache/");
-        if (!file.exists()) {
+        if (! file.exists()) {
             file.mkdirs();
         }
         return file;

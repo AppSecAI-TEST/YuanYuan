@@ -1,87 +1,68 @@
 package xyz.zimuju.sample.application;
 
 
-import xyz.zimuju.common.basal.BaseApplication;
+import android.annotation.SuppressLint;
+import android.content.Context;
+
 import xyz.zimuju.common.util.StringUtils;
 import xyz.zimuju.sample.entity.User;
 import xyz.zimuju.sample.manager.DataManager;
 
-public class UserApplication extends BaseApplication {
+public class UserApplication {
+    private static User currentUser = null;
+    private static UserApplication userApplication;
+    @SuppressLint("StaticFieldLeak")
+    private static Context context;
 
-	private static User currentUser = null;
-	private static UserApplication context;
+    private UserApplication(Context context) {
+        UserApplication.context = context;
+    }
 
+    public static void initialize(Context context) {
+        userApplication = new UserApplication(context);
+    }
 
-	public static UserApplication getInstance() {
-		return context;
-	}
+    public static UserApplication getInstance() {
+        return userApplication;
+    }
 
-	@Override
-	public void onCreate() {
-		super.onCreate();
-		context = this;
+    public long getCurrentUserId() {
+        currentUser = getCurrentUser();
+        return currentUser == null ? 0 : currentUser.getId();
+    }
 
-	}
+    public String getCurrentUserPhone() {
+        currentUser = getCurrentUser();
+        return currentUser == null ? null : currentUser.getPhone();
+    }
 
+    public User getCurrentUser() {
+        if (currentUser == null) {
+            currentUser = DataManager.getInstance().getCurrentUser();
+        }
+        return currentUser;
+    }
 
-	/**
-	 * 获取当前用户id
-	 *
-	 * @return
-	 */
-	public long getCurrentUserId() {
-		currentUser = getCurrentUser();
-		return currentUser == null ? 0 : currentUser.getId();
-	}
+    public void saveCurrentUser(User user) {
+        if (user == null) {
+            return;
+        }
+        if (user.getId() <= 0 && StringUtils.isNotEmpty(user.getUsername(), true) == false) {
+            return;
+        }
 
-	/**
-	 * 获取当前用户phone
-	 *
-	 * @return
-	 */
-	public String getCurrentUserPhone() {
-		currentUser = getCurrentUser();
-		return currentUser == null ? null : currentUser.getPhone();
-	}
+        DataManager.getInstance().saveCurrentUser(user);
+    }
 
+    public void logout() {
+        DataManager.getInstance().saveCurrentUser(null);
+    }
 
-	public User getCurrentUser() {
-		if (currentUser == null) {
-			currentUser = DataManager.getInstance().getCurrentUser();
-		}
-		return currentUser;
-	}
+    public boolean isCurrentUser(long userId) {
+        return DataManager.getInstance().isCurrentUser(userId);
+    }
 
-	public void saveCurrentUser(User user) {
-		if (user == null) {
-			return;
-		}
-		if (user.getId() <= 0 && StringUtils.isNotEmpty(user.getUsername(), true) == false) {
-			return;
-		}
-
-		currentUser = user;
-		DataManager.getInstance().saveCurrentUser(currentUser);
-	}
-
-	public void logout() {
-		currentUser = null;
-		DataManager.getInstance().saveCurrentUser(currentUser);
-	}
-
-	/**
-	 * 判断是否为当前用户
-	 *
-	 * @param userId
-	 * @return
-	 */
-	public boolean isCurrentUser(long userId) {
-		return DataManager.getInstance().isCurrentUser(userId);
-	}
-
-	public boolean isLoggedIn() {
-		return getCurrentUserId() > 0;
-	}
-
-
+    public boolean isLoggedIn() {
+        return getCurrentUserId() > 0;
+    }
 }
