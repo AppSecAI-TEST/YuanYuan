@@ -39,11 +39,9 @@ public class GankIOApplication extends Application {
 
         // Bmob.initialize(this, ConfigConstants.BOMB_APPLICATION_ID);
 
-        // 使用推送服务时的初始化操作
-        BmobInstallation.getCurrentInstallation().save();
+        BmobInstallation.getCurrentInstallation().save(); // 使用推送服务时的初始化操作
 
-        // 启动推送服务
-        BmobPush.startWork(this);
+        BmobPush.startWork(this); // 启动推送服务
 
         if (LeakCanary.isInAnalyzerProcess(this)) {
             return;
