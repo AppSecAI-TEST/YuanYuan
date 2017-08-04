@@ -34,7 +34,7 @@ public class XianDuService {
         return getDocumentObservable(BASE_URL)
                 .map(new Function<Document, List<XianDuCategory>>() {
                     @Override
-                    public List<XianDuCategory> apply(@io.reactivex.annotations.NonNull Document document) throws Exception {
+                    public List<XianDuCategory> apply(@NonNull Document document) throws Exception {
                         List<XianDuCategory> list = new ArrayList<>();
                         Elements elements = document.body().getElementById("xiandu_cat").getElementsByTag("a");
                         for (Element element : elements) {
@@ -57,7 +57,7 @@ public class XianDuService {
         return getDocumentObservable(requestUrl)
                 .map(new Function<Document, List<XianDuItem>>() {
                     @Override
-                    public List<XianDuItem> apply(@io.reactivex.annotations.NonNull Document document) throws Exception {
+                    public List<XianDuItem> apply(@NonNull Document document) throws Exception {
                         List<XianDuItem> list = new ArrayList<>();
                         Elements items = document.body().getElementsByClass("xiandu_item");
                         for (Element element : items) {
@@ -87,7 +87,7 @@ public class XianDuService {
                 .loadString(requestUrl)
                 .map(new Function<ResponseBody, Document>() {
                     @Override
-                    public Document apply(@io.reactivex.annotations.NonNull ResponseBody responseBody) throws Exception {
+                    public Document apply(@NonNull ResponseBody responseBody) throws Exception {
                         return Jsoup.parse(responseBody.string());
                     }
                 });

@@ -23,7 +23,6 @@ import java.util.Map;
 import butterknife.BindView;
 import butterknife.OnClick;
 import cn.bmob.v3.BmobUser;
-import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
 import io.reactivex.functions.Consumer;
 import xyz.zimuju.common.basal.BasalActivity;
@@ -231,9 +230,14 @@ public class LoginActivity extends BasalActivity implements WeiboAuthListener, V
         BmobUser bmobUser = new BmobUser();
         bmobUser.setUsername(usernameText);
         bmobUser.setPassword(passwordText);
-        bmobUser.signUp(new SaveListener<BmobUser>() {
+        bmobUser.signUp(this, new SaveListener() {
             @Override
-            public void done(BmobUser bmobUser, BmobException e) {
+            public void onSuccess() {
+
+            }
+
+            @Override
+            public void onFailure(int i, String s) {
 
             }
         });
