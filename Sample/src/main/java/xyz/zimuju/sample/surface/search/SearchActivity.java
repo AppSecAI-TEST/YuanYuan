@@ -13,7 +13,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 
 import xyz.zimuju.sample.R;
-import xyz.zimuju.sample.surface.gank.activity.BaseActivity;
+import xyz.zimuju.sample.surface.gank.BaseActivity;
 import xyz.zimuju.sample.util.SnackBarUtils;
 
 /**

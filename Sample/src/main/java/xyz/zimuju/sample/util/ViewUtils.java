@@ -5,7 +5,7 @@ import android.content.res.TypedArray;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 
-import xyz.zimuju.sample.surface.gank.fragment.BaseFragment;
+import xyz.zimuju.sample.surface.gank.BaseFragment;
 
 /**
  * Created by _SOLID

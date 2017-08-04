@@ -17,7 +17,7 @@ import cn.bmob.push.PushConstants;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.application.GankIOApplication;
 import xyz.zimuju.sample.entity.bomb.PushMessage;
-import xyz.zimuju.sample.surface.gank.activity.WebViewActivity;
+import xyz.zimuju.sample.surface.gank.WebViewActivity;
 
 public class BombPushMessageReceiver extends BroadcastReceiver {
     @Override

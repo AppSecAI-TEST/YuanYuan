@@ -12,7 +12,7 @@ import me.drakeet.multitype.ItemViewProvider;
 import me.drakeet.multitype.MultiTypeAdapter;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.entity.bomb.CollectTable;
-import xyz.zimuju.sample.surface.gank.activity.WebViewActivity;
+import xyz.zimuju.sample.surface.gank.WebViewActivity;
 import xyz.zimuju.sample.util.DateUtils;
 import xyz.zimuju.sample.util.DialogUtils;
 import xyz.zimuju.sample.util.SnackBarUtils;

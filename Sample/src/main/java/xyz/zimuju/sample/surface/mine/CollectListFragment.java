@@ -14,7 +14,7 @@ import me.drakeet.multitype.MultiTypeAdapter;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.application.GankIOApplication;
 import xyz.zimuju.sample.entity.bomb.CollectTable;
-import xyz.zimuju.sample.surface.gank.fragment.AbsListFragment;
+import xyz.zimuju.sample.surface.gank.AbsListFragment;
 import xyz.zimuju.sample.util.AuthorityUtils;
 
 /**

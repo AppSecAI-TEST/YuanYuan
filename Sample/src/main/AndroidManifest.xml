@@ -198,11 +198,11 @@
             android:value="Tencent"/>
 
         <activity
-            android:name=".surface.gank.activity.MainActivity"
+            android:name=".surface.gank.MainActivity"
             android:screenOrientation="portrait"/>
 
         <activity
-            android:name=".surface.gank.activity.SortActivity"
+            android:name=".surface.gank.SortActivity"
             android:screenOrientation="portrait"/>
         <activity
             android:name=".surface.about.AboutActivity"
@@ -211,11 +211,11 @@
             android:name=".surface.mine.LoginActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".surface.gank.activity.ViewPicActivity"
+            android:name=".surface.gank.ViewPicActivity"
             android:screenOrientation="portrait"
             android:theme="@style/ViewPicTheme"/>
         <activity
-            android:name=".surface.gank.activity.WebViewActivity"
+            android:name=".surface.gank.WebViewActivity"
             android:screenOrientation="portrait"/>
 
         <activity
@@ -223,15 +223,15 @@
             android:screenOrientation="portrait"/>
 
         <activity
-            android:name=".surface.home.activity.CategoryActivity"
+            android:name=".surface.home.CategoryActivity"
             android:screenOrientation="portrait"/>
 
         <activity
-            android:name=".surface.home.activity.DailyActivity"
+            android:name=".surface.home.DailyActivity"
             android:screenOrientation="portrait"/>
 
         <activity
-            android:name=".surface.gank.activity.SubActivity"
+            android:name=".surface.gank.SubActivity"
             android:screenOrientation="portrait"/>
 
         <!-- 新浪微博账号登录页面 -->
