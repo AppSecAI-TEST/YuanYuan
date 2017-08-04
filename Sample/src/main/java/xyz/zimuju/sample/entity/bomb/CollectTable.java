@@ -1,6 +1,9 @@
 package xyz.zimuju.sample.entity.bomb;
 
+import android.content.Context;
+
 import cn.bmob.v3.BmobObject;
+import cn.bmob.v3.listener.SaveListener;
 
 /**
  * Created by _SOLID
@@ -89,5 +92,9 @@ public class CollectTable extends BmobObject {
 
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public void save(Context context, SaveListener saveListener) {
+
     }
 }

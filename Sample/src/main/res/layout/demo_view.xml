@@ -20,7 +20,7 @@
             android:layout_alignTop="@+id/ivDemoViewHead"
             android:layout_marginRight="6dp"
             android:layout_toRightOf="@+id/ivDemoViewHead"
-            android:text="name"/>
+            android:text="username"/>
 
         <TextView
             android:id="@+id/tvDemoViewSex"
@@ -28,7 +28,7 @@
             android:layout_alignBaseline="@+id/tvDemoViewName"
             android:layout_alignBottom="@+id/tvDemoViewName"
             android:layout_toRightOf="@+id/tvDemoViewName"
-            android:text="sex"/>
+            android:text="gander"/>
 
         <LinearLayout
             style="@style/ll_vertical_match_wrap"

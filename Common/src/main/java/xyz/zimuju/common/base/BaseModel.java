@@ -2,7 +2,9 @@ package xyz.zimuju.common.base;
 
 import java.io.Serializable;
 
-public abstract class BaseModel implements Serializable {
+import cn.bmob.v3.BmobObject;
+
+public abstract class BaseModel extends BmobObject implements Serializable {
 
     public long id;
 

@@ -117,10 +117,10 @@ public class QRCodeActivity extends BaseActivity implements OnBottomDragListener
 				runUiThread(new Runnable() {
 					@Override
 					public void run() {
-						ImageLoaderUtil.loadImage(ivQRCodeHead, user.getHead());
+						ImageLoaderUtil.loadImage(ivQRCodeHead, user.getPortrait());
 						tvQRCodeName.setText(StringUtils.getTrimedString(
-								StringUtils.isNotEmpty(user.getName(), true)
-								? user.getName() : user.getPhone()));
+								StringUtils.isNotEmpty(user.getUsername(), true)
+										? user.getUsername() : user.getPhone()));
 					}
 				});
 

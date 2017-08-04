@@ -22,7 +22,6 @@ dependencies {
     //butterknife
     compile libraries.butterKnife
     annotationProcessor libraries.butterKnifeCompiler
-
     //rx
     compile libraries.retrofit
     compile libraries.retrofitConverterGson
@@ -32,25 +31,21 @@ dependencies {
     compile libraries.rxjava
     compile libraries.rxandroid
     compile libraries.rxpermissions
-
     compile libraries.zip4j
-
     // image
     compile libraries.picasso
     compile libraries.glide
-
     compile libraries.v7recyclerView
     compile libraries.v7appcompat
-
     compile libraries.nohttp
-
     compile libraries.fastJson
     compile libraries.fastJsonAndroid
-
     compile libraries.okio
-
     compile libraries.universalImageLoader
-
     compile libraries.design
     compile libraries.v4support
+
+    //Bmob
+    compile files('libs/Bmob_Push_V1.0.0beta_20160627.jar')
+    compile files('libs/BmobSDK_3.5.6_20170705.jar')
 }

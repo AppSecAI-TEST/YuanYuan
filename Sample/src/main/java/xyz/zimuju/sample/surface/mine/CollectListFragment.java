@@ -9,10 +9,10 @@ import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 import java.util.List;
 
 import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.FindListener;
 import me.drakeet.multitype.MultiTypeAdapter;
 import xyz.zimuju.sample.R;
-import xyz.zimuju.sample.application.GankIOApplication;
 import xyz.zimuju.sample.entity.bomb.CollectTable;
 import xyz.zimuju.sample.surface.gank.fragment.AbsListFragment;
 import xyz.zimuju.sample.util.AuthorityUtils;
@@ -53,15 +53,14 @@ public class CollectListFragment extends AbsListFragment {
         query.setSkip(mPageSize * (pageIndex - 1));
         query.order("-createdAt");
         if (AuthorityUtils.isLogin()) {
-            query.findObjects(GankIOApplication.getInstance(), new FindListener<CollectTable>() {
+            query.findObjects(new FindListener<CollectTable>() {
                 @Override
-                public void onSuccess(List<CollectTable> list) {
-                    onDataSuccessReceived(pageIndex, list);
-                }
-
-                @Override
-                public void onError(int i, String s) {
-                    showError(new Exception(s));
+                public void done(List<CollectTable> list, BmobException e) {
+                    if (e != null) {
+                        onDataSuccessReceived(pageIndex, list);
+                    } else {
+                        showError(new Exception(e));
+                    }
                 }
             });
         } else {

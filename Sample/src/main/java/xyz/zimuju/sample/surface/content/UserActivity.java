@@ -171,7 +171,7 @@ public class UserActivity extends BaseActivity implements OnClickListener, OnBot
                 //				uvlUser.bindView(user);//方式二
                 userView.bindView(user);//方式三
 
-                etUserRemark.setText(StringUtils.getTrimedString(user.getHead()));
+                etUserRemark.setText(StringUtils.getTrimedString(user.getPortrait()));
                 tvUserTag.setText(StringUtils.getTrimedString(user.getTag()));
             }
         });
@@ -345,7 +345,7 @@ public class UserActivity extends BaseActivity implements OnClickListener, OnBot
     public void finish() {
         super.finish();
         if (user != null) {
-            user.setHead(StringUtils.getTrimedString(etUserRemark));
+            user.setPortrait(StringUtils.getTrimedString(etUserRemark));
             CacheManager.getInstance().save(User.class, user, "" + user.getId());//更新缓存
         }
     }

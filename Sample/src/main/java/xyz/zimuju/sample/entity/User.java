@@ -3,49 +3,79 @@ package xyz.zimuju.sample.entity;
 import xyz.zimuju.common.base.BaseModel;
 
 public class User extends BaseModel {
-    private int sex; // 性别
-    private String head; // 头像
-    private String name; // 名字
-    private String phone; // 电话号码
-    private String tag; // 标签
-    private boolean starred; // 星标
+    private String username;
+    private String password;
+    private String portrait;
+    private String signature;
+    private int level;
+    private int gander;
+    private String phone;
+    private String tag;
+    private boolean starred;
 
     public User() {
 
     }
-
     public User(long id) {
         this();
         this.id = id;
     }
 
-    public User(long id, String name) {
+    public User(long id, String username) {
         this(id);
-        this.name = name;
+        this.username = username;
     }
 
-    public int getSex() {
-        return sex;
+    public String getSignature() {
+        return signature;
     }
 
-    public void setSex(int sex) {
-        this.sex = sex;
+    public void setSignature(String signature) {
+        this.signature = signature;
     }
 
-    public String getHead() {
-        return head;
+    public int getLevel() {
+        return level;
     }
 
-    public void setHead(String head) {
-        this.head = head;
+    public void setLevel(int level) {
+        this.level = level;
     }
 
-    public String getName() {
-        return name;
+    public String getPassword() {
+        return password;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public boolean isStarred() {
+        return starred;
+    }
+
+    public int getGander() {
+        return gander;
+    }
+
+    public void setGander(int gander) {
+        this.gander = gander;
+    }
+
+    public String getPortrait() {
+        return portrait;
+    }
+
+    public void setPortrait(String portrait) {
+        this.portrait = portrait;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getPhone() {

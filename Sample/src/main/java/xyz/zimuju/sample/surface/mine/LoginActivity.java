@@ -22,6 +22,8 @@ import java.util.Map;
 import butterknife.BindView;
 import butterknife.OnClick;
 import cn.bmob.v3.BmobUser;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.SaveListener;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.functions.Consumer;
 import xyz.zimuju.common.basal.BasalActivity;
@@ -160,7 +162,7 @@ public class LoginActivity extends BasalActivity implements WeiboAuthListener, V
                             user.setUsername(result.getName());
                             user.setPassword("123456");
                             try {
-                                user.signUp(LoginActivity.this, null);
+                                // login
                             } catch (Exception e) {
                                 e.printStackTrace();
                             }
@@ -217,8 +219,23 @@ public class LoginActivity extends BasalActivity implements WeiboAuthListener, V
                 break;
 
             case R.id.login_submit_tv:
-
+                bombLogin();
                 break;
         }
+    }
+
+    private void bombLogin() {
+        String usernameText = username.getText().toString().trim();
+        String passwordText = password.getText().toString().trim();
+
+        BmobUser bmobUser = new BmobUser();
+        bmobUser.setUsername(usernameText);
+        bmobUser.setPassword(passwordText);
+        bmobUser.signUp(new SaveListener<BmobUser>() {
+            @Override
+            public void done(BmobUser bmobUser, BmobException e) {
+
+            }
+        });
     }
 }

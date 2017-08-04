@@ -56,7 +56,7 @@ public class UserApplication extends BaseApplication {
 		if (user == null) {
 			return;
 		}
-		if (user.getId() <= 0 && StringUtils.isNotEmpty(user.getName(), true) == false) {
+		if (user.getId() <= 0 && StringUtils.isNotEmpty(user.getUsername(), true) == false) {
 			return;
 		}
 

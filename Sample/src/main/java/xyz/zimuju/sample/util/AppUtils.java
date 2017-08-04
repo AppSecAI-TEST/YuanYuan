@@ -8,6 +8,7 @@ import android.view.View;
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 
+import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.SettingCenter;
@@ -54,15 +55,14 @@ public class AppUtils {
                         feedBack.setDeviceName(SystemUtils.getDeviceName());
                         feedBack.setSystemVersion(SystemUtils.getSystemVersion());
                         feedBack.setUsername(AuthorityUtils.getUserName());
-                        feedBack.save(context, new SaveListener() {
+                        feedBack.save(new SaveListener<String>() {
                             @Override
-                            public void onSuccess() {
-                                SnackBarUtils.makeShort(view, context.getResources().getString(R.string.feedback_success)).success();
-                            }
-
-                            @Override
-                            public void onFailure(int i, String s) {
-                                SnackBarUtils.makeShort(view, context.getResources().getString(R.string.feedback_failed)).danger();
+                            public void done(String s, BmobException e) {
+                                if (e != null) {
+                                    SnackBarUtils.makeShort(view, context.getResources().getString(R.string.feedback_success)).success();
+                                } else {
+                                    SnackBarUtils.makeShort(view, context.getResources().getString(R.string.feedback_failed)).danger();
+                                }
                             }
                         });
                     }

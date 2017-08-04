@@ -107,7 +107,6 @@ dependencies {
 
     testCompile libraries.junit
 
-    compile files('libs/alipaySingle-20170510.jar')
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.1'
     releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
     testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
@@ -120,12 +119,8 @@ dependencies {
     compile libraries.butterKnife
     annotationProcessor libraries.butterKnifeCompiler
 
-    compile files('libs/Bmob_Push_V0.8beta_20160420.jar')
-    compile files('libs/BmobSDK_V3.4.7_0518.jar')
+    compile files('libs/alipaySingle-20170510.jar')
     compile files('libs/weiboSDKCore_3.1.4.jar')
-    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
-    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
-    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
 
     // compile 'com.mikepenz:google-material-typeface:2.2.0.1@aar'
     compile 'com.afollestad.material-dialogs:core:0.8.5.9'

@@ -135,7 +135,7 @@ public class DataManager {
         if (user == null) {
             user = new User();
         }
-        user.setName(name);
+        user.setUsername(name);
         saveUser(user);
     }
 

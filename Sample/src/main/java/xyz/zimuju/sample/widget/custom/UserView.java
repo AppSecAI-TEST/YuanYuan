@@ -57,15 +57,15 @@ public class UserView extends BaseView<User> implements View.OnClickListener {
         }
         this.data = data;
 
-        ImageLoaderUtil.loadImage(ivUserViewHead, data.getHead(), ImageLoaderUtil.TYPE_OVAL);
+        ImageLoaderUtil.loadImage(ivUserViewHead, data.getPortrait(), ImageLoaderUtil.TYPE_OVAL);
         ivUserViewStar.setImageResource(data.getStarred() ? R.mipmap.star_light : R.mipmap.star);
 
-        tvUserViewSex.setBackgroundResource(data.getSex() == UserConstants.SEX_FEMALE
+        tvUserViewSex.setBackgroundResource(data.getGander() == UserConstants.SEX_FEMALE
                 ? R.drawable.circle_pink : R.drawable.circle_blue);
-        tvUserViewSex.setText(data.getSex() == UserConstants.SEX_FEMALE ? "女" : "男");
-        tvUserViewSex.setTextColor(getColor(data.getSex() == UserConstants.SEX_FEMALE ? R.color.pink : R.color.blue));
+        tvUserViewSex.setText(data.getGander() == UserConstants.SEX_FEMALE ? "女" : "男");
+        tvUserViewSex.setTextColor(getColor(data.getGander() == UserConstants.SEX_FEMALE ? R.color.pink : R.color.blue));
 
-        tvUserViewName.setText(StringUtils.getTrimedString(data.getName()));
+        tvUserViewName.setText(StringUtils.getTrimedString(data.getUsername()));
         tvUserViewId.setText("ID:" + data.getId());
         tvUserViewNumber.setText("Phone:" + StringUtils.getNoBlankString(data.getPhone()));
     }
@@ -77,7 +77,7 @@ public class UserView extends BaseView<User> implements View.OnClickListener {
         }
         switch (v.getId()) {
             case R.id.ivUserViewHead:
-                toActivity(WebViewActivity.createIntent(context, data.getName(), data.getHead()));
+                toActivity(WebViewActivity.createIntent(context, data.getUsername(), data.getPortrait()));
                 break;
             default:
                 switch (v.getId()) {
@@ -85,7 +85,7 @@ public class UserView extends BaseView<User> implements View.OnClickListener {
                         data.setStarred(!data.getStarred());
                         break;
                     case R.id.tvUserViewSex:
-                        data.setSex(data.getSex() == UserConstants.SEX_FEMALE ? UserConstants.SEX_MALE : UserConstants.SEX_FEMALE);
+                        data.setGander(data.getGander() == UserConstants.SEX_FEMALE ? UserConstants.SEX_MALE : UserConstants.SEX_FEMALE);
                         break;
                 }
                 bindView(data);

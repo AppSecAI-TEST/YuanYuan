@@ -6,8 +6,9 @@ import android.view.View;
 
 import com.afollestad.materialdialogs.MaterialDialog;
 
-import cn.bmob.v3.listener.DeleteListener;
+import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
+import cn.bmob.v3.listener.UpdateListener;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.entity.bomb.CollectTable;
 import xyz.zimuju.sample.event.CollectChangeEvent;
@@ -46,14 +47,13 @@ public class DialogUtils {
             bean.setUsername(AuthorityUtils.getUserName());
             bean.save(context, new SaveListener() {
                 @Override
-                public void onSuccess() {
+                public void done(Object o, BmobException e) {
+
                     SnackBarUtils.makeShort(view, "收藏成功").success();
                     RxBus.getInstance().send(new CollectChangeEvent());
-                }
 
-                @Override
-                public void onFailure(int i, String s) {
-                    if (i == 401) {
+
+                    if (00 == 401) {
                         SnackBarUtils.makeShort(view, "你已经收藏过了").info();
                     } else {
                         SnackBarUtils.makeShort(view, "收藏失败").danger();
@@ -73,7 +73,7 @@ public class DialogUtils {
     }
 
     public static void showUnDoCollectDialog(final View itemView
-            , final CollectTable bean, final DeleteListener listener) {
+            , final CollectTable bean, final UpdateListener listener) {
         new MaterialDialog.Builder(itemView.getContext())
                 .items(R.array.deleteCollect)
                 .itemsCallback(new MaterialDialog.ListCallback() {
@@ -86,8 +86,7 @@ public class DialogUtils {
 
     }
 
-    private static void unDoCollect(CollectTable bean, final View view
-            , final DeleteListener listener) {
-        bean.delete(view.getContext(), listener);
+    private static void unDoCollect(CollectTable bean, final View view, final UpdateListener listener) {
+        bean.delete(bean.getObjectId(), listener);
     }
 }
