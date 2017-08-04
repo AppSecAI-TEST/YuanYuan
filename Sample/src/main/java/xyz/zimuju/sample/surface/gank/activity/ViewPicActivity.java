@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.view.PagerAdapter;
@@ -22,7 +23,6 @@ import com.tbruyelle.rxpermissions2.RxPermissions;
 import java.io.File;
 import java.util.ArrayList;
 
-import io.reactivex.annotations.NonNull;
 import io.reactivex.functions.Consumer;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.application.GankIOApplication;

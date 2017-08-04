@@ -2,6 +2,7 @@ package xyz.zimuju.sample.surface.mine;
 
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
+import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.text.SpannableStringBuilder;
 import android.view.View;
@@ -10,7 +11,6 @@ import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.OnClick;
-import io.reactivex.annotations.NonNull;
 import io.reactivex.functions.Consumer;
 import xyz.zimuju.common.util.ToastUtils;
 import xyz.zimuju.sample.R;

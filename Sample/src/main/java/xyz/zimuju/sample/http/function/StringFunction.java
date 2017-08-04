@@ -1,8 +1,9 @@
 package xyz.zimuju.sample.http.function;
 
+import android.support.annotation.NonNull;
+
 import java.io.IOException;
 
-import io.reactivex.annotations.NonNull;
 import io.reactivex.functions.Function;
 import okhttp3.ResponseBody;
 

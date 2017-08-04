@@ -1,6 +1,7 @@
 package xyz.zimuju.sample.surface.read;
 
 
+import android.support.annotation.NonNull;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewCompat;
 import android.support.v4.view.ViewPager;
@@ -9,7 +10,6 @@ import android.view.View;
 import java.util.List;
 
 import io.reactivex.SingleObserver;
-import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
 import me.solidev.statusviewlayout.StatusViewLayout;
 import xyz.zimuju.sample.R;

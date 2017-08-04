@@ -34,7 +34,7 @@ public abstract class DownloadSubscriber implements SingleObserver<ResponseBody>
     }
 
     @Override
-    public void onSubscribe(@io.reactivex.annotations.NonNull Disposable d) {
+    public void onSubscribe(@NonNull Disposable d) {
 
     }
 
@@ -72,7 +72,7 @@ public abstract class DownloadSubscriber implements SingleObserver<ResponseBody>
     }
 
     @Override
-    public final void onSuccess(@io.reactivex.annotations.NonNull ResponseBody responseBody) {
+    public final void onSuccess(@NonNull ResponseBody responseBody) {
         writeResponseBodyToDisk(responseBody);
         handler.post(new Runnable() {
             @Override

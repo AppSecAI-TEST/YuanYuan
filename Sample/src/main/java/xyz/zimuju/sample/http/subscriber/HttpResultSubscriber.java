@@ -1,9 +1,10 @@
 package xyz.zimuju.sample.http.subscriber;
 
+import android.support.annotation.NonNull;
+
 import java.util.concurrent.CancellationException;
 
 import io.reactivex.SingleObserver;
-import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
 import xyz.zimuju.sample.entity.HttpResult;
 
