@@ -723,7 +723,7 @@
     </style>
 
     <style name="topbar_return_img" parent="topbar_left_btn">
-        <item name="android:src">@mipmap/back2</item>
+        <item name="android:src">@mipmap/icon_back_white2</item>
     </style>
 
     <style name="topbar_right_img" parent="topbar_right_btn">

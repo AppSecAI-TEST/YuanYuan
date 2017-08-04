@@ -89,12 +89,13 @@ android {
 
 //    android.applicationVariants.all { variant ->
 //        variant.outputs.each { output ->
+//		if (variant.buildType.name.equals('release')) { 
 //            def outputFile = output.outputFile
 //            if (outputFile != null && outputFile.name.endsWith('.apk')) {
 //                def fileName = "YunYuan-${defaultConfig.versionName}-${buildTime()}.apk"
 //                output.outputFile = new File(outputFile.parent, fileName)
 //            }
-//        }
+//        }}
 //    }
 }
 

@@ -9,7 +9,7 @@
         android:id="@+id/header_back_tv"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_marginLeft="10dp"
+        android:drawableLeft="@mipmap/icon_back_white"
         android:gravity="center"
         android:textColor="@android:color/white"
         android:textSize="16sp"

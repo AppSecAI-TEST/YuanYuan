@@ -1,33 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
-    tools:context=".surface.mine.LoginActivity">
-    
-    <include layout="@layout/include_toolbar_layout"></include>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:orientation="vertical"
+              tools:context=".surface.mine.LoginActivity">
+
+    <include layout="@layout/include_header_layout"/>
 
     <LinearLayout
         android:id="@+id/ll_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
 
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@mipmap/weibo" />
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:src="@mipmap/ic_launcher"/>
+
+        <xyz.zimuju.common.widget.ClearEditText
+            android:id="@+id/login_username_tv"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_editor_background"
+            android:cursorVisible="true"
+            android:digits="@string/editor_digits"
+            android:drawableLeft="@mipmap/icon_login_portrait"
+            android:hint="请输入用户名"
+            android:inputType="text"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/app_text"
+            android:textSize="14sp"/>
+
+        <xyz.zimuju.common.widget.ClearEditText
+            android:id="@+id/login_password_tv"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_editor_background"
+            android:cursorVisible="true"
+            android:drawableLeft="@mipmap/icon_login_password"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textColor="@color/app_text"
+            android:textSize="14sp"/>
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="新浪微博登录"
-            android:textColor="@color/app_text"
-            android:textSize="18sp" />
+            android:id="@+id/login_submit_tv"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/selector_login_button"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="登  录"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"/>
     </LinearLayout>
 
-</RelativeLayout>
+    <include layout="@layout/include_third_authority_layout"/>
+</LinearLayout>

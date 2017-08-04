@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_horizontal"
+              android:orientation="vertical"
+              android:paddingLeft="20dp"
+              android:paddingRight="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:background="#CCCCCC"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:gravity="center"
+            android:text="第三方登陆"/>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_gravity="center"
+            android:layout_weight="3"
+            android:background="#CCCCCC"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/authority_sina_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="center"
+                android:src="@mipmap/icon_sina_logo"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="微博"
+                android:textColor="@color/app_text"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/authority_tencent_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:scaleType="center"
+                android:src="@mipmap/icon_tencent_logo"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="QQ"
+                android:textColor="@color/app_text"
+                android:textSize="14sp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/authority_wechat_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@mipmap/icon_wechat_logo"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="微信"
+                android:textColor="@color/app_text"
+                android:textSize="14sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

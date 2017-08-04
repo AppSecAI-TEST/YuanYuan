@@ -90,4 +90,6 @@
     <string name="tips_no_collect">暂无收藏</string>
     <string name="about">关于</string>
 
+    <string name="editor_digits">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMOPQRSTUVWXYZ.@_</string>
+    <string name="common_tip_back">返回</string>
 </resources>
