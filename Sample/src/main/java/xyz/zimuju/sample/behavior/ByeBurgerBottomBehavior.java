@@ -5,6 +5,8 @@ import android.support.design.widget.CoordinatorLayout;
 import android.util.AttributeSet;
 import android.view.View;
 
+import xyz.zimuju.sample.helper.TranslateAnimateHelper;
+
 /*
  * @description ByeBurgerBottomBehavior ：Bye Bye Burger Navigation Bar Behavior
  * @author Nathaniel

@@ -1,7 +1,9 @@
-package xyz.zimuju.sample.behavior;
+package xyz.zimuju.sample.helper;
 
 import android.view.View;
 import android.view.animation.TranslateAnimation;
+
+import xyz.zimuju.sample.behavior.AnimateHelper;
 
 public class TranslateAnimateHelper implements AnimateHelper {
     public static int MODE_TITLE = 233;

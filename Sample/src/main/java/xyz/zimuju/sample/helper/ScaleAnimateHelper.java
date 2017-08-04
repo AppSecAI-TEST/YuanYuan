@@ -1,8 +1,10 @@
-package xyz.zimuju.sample.behavior;
+package xyz.zimuju.sample.helper;
 
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.ScaleAnimation;
+
+import xyz.zimuju.sample.behavior.AnimateHelper;
 
 
 public class ScaleAnimateHelper implements AnimateHelper {

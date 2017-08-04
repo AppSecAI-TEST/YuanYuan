@@ -5,6 +5,9 @@ import android.support.design.widget.CoordinatorLayout;
 import android.util.AttributeSet;
 import android.view.View;
 
+import xyz.zimuju.sample.helper.ScaleAnimateHelper;
+import xyz.zimuju.sample.helper.TranslateAnimateHelper;
+
 public class ByeBurgerFloatButtonBehavior extends ByeBurgerBehavior {
 
     private ScaleAnimateHelper mAnimateHelper;
