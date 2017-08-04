@@ -71,13 +71,12 @@ public class LoginActivity extends BasalActivity implements WeiboAuthListener, V
 
     @Override
     protected void initData() {
-
+        title.setText(getString(R.string.mine_login));
+        back.setText(R.string.common_tip_back);
     }
 
     @Override
     protected void viewOption() {
-        title.setText(getString(R.string.mine_login));
-        back.setText(R.string.common_tip_back);
         back.setVisibility(View.VISIBLE);
     }
 

@@ -20,8 +20,6 @@ public class AboutActivity extends BasalActivity implements View.OnClickListener
     @BindView(R.id.about_message_tv)
     TextView textView;
 
-    private String titleText;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,12 +32,12 @@ public class AboutActivity extends BasalActivity implements View.OnClickListener
 
     @Override
     protected void initData() {
-        titleText = "关于";
+        title.setText(getString(R.string.common_tip_about));
+        back.setText(getString(R.string.common_tip_back));
     }
 
     @Override
     protected void viewOption() {
-        title.setText(titleText);
         back.setVisibility(View.VISIBLE);
 
         SpannableStringBuilder builder = new SpannableStringBuilder();

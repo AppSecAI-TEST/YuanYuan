@@ -92,6 +92,7 @@ dependencies {
 
     testCompile libraries.junit
 
+    // 内存泄露的检测
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.1'
     releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
     testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
