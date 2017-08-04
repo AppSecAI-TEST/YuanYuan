@@ -16,11 +16,6 @@ import android.view.inputmethod.InputMethodManager;
 import xyz.zimuju.sample.R;
 
 
-/**
- * Created by _SOLID
- * Date:2016/5/10
- * Time:10:03
- */
 public class CommonUtils {
     /**
      * 是否存在外部存储
@@ -28,14 +23,12 @@ public class CommonUtils {
      * @return
      */
     public static boolean isExternalStorageExists() {
-        return Environment.getExternalStorageState().equals(
-                Environment.MEDIA_MOUNTED);
+        return Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED);
     }
 
     public static void hideKeyboard(Activity activity) {
         try {
-            ((InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE))
-                    .hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
+            ((InputMethodManager) activity.getSystemService(Context.INPUT_METHOD_SERVICE)).hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
         } catch (Exception ex) {
             ex.printStackTrace();
         }

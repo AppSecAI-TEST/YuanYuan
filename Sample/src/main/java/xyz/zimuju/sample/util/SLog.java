@@ -4,11 +4,6 @@ import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.util.Log;
 
-/**
- * Created by _SOLID
- * Date:2016/5/10
- * Time:10:15
- */
 public class SLog {
 
     private static boolean mDebug = true;

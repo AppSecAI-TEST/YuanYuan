@@ -5,6 +5,7 @@ import com.sina.weibo.sdk.auth.Oauth2AccessToken;
 import xyz.zimuju.sample.entity.content.WeiBo;
 
 public class AuthorityUtils {
+
     public static void login(WeiBo result) {
         setUserName(result.getScreen_name());
         setDescription(result.getDescription());

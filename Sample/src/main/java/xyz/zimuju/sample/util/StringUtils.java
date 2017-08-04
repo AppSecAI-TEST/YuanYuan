@@ -7,10 +7,11 @@ import java.security.NoSuchAlgorithmException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * Created by _SOLID
- * Date:2016/4/1
- * Time:16:11
+/*
+ * @description StringUtils : 字符串操作工具类
+ * @author Nathaniel-nathanwriting@126.com
+ * @time 17-8-5-上午2:06
+ * @version v1.0.0
  */
 public class StringUtils {
 
