@@ -56,19 +56,19 @@ ext {
             okhttp                     : "com.squareup.okhttp3:okhttp:3.4.1",
             okhttpLoggingInterceptor   : "com.squareup.okhttp3:logging-interceptor:3.4.0",
             rxjava                     : "io.reactivex.rxjava2:rxjava:2.0.1",
-            rxandroid                  : "io.reactivex.rxjava2:rxandroid:2.0.1",
-            rxpermissions              : "com.tbruyelle.rxpermissions2:rxpermissions:0.9.3@aar",
+            rxandroid           : "io.reactivex.rxjava2:rxandroid:2.0.1",
+            rxpermissions       : "com.tbruyelle.rxpermissions2:rxpermissions:0.9.3@aar",
 
-            okhttpUrlConnection        : "com.squareup.okhttp:okhttp-urlconnection:2.2.0",
+            okhttpUrlConnection : "com.squareup.okhttp:okhttp-urlconnection:2.2.0",
 
-            nohttp                     : "com.yanzhenjie.nohttp:okhttp:1.1.2",
+            nohttp              : "com.yanzhenjie.nohttp:okhttp:1.1.2",
 
-            fastJson                   : "com.alibaba:fastjson:1.2.33",
-            fastJsonAndroid            : "com.alibaba:fastjson:1.1.58.android",
-            okio                       : "com.squareup.okio:okio:1.13.0",
-            universalImageLoader       : "com.nostra13.universalimageloader:universal-image-loader:1.9.3",
+            fastJson            : "com.alibaba:fastjson:1.2.33",
+            fastJsonAndroid     : "com.alibaba:fastjson:1.1.58.android",
+            okio                : "com.squareup.okio:okio:1.13.0",
+            universalImageLoader: "com.nostra13.universalimageloader:universal-image-loader:1.9.5",
 
-            gif                        : "pl.droidsonroids.gif:android-gif-drawable:1.2.7"
+            gif                 : "pl.droidsonroids.gif:android-gif-drawable:1.2.7"
 
     ]
 

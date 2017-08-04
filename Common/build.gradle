@@ -44,8 +44,4 @@ dependencies {
     compile libraries.universalImageLoader
     compile libraries.design
     compile libraries.v4support
-
-    //Bmob
-    compile files('libs/Bmob_Push_V1.0.0beta_20160627.jar')
-    compile files('libs/BmobSDK_3.5.6_20170705.jar')
 }
