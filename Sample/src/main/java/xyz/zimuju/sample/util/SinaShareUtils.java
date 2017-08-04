@@ -22,21 +22,19 @@ import com.sina.weibo.sdk.utils.Utility;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.constant.ConfigConstants;
 
-/**
- * Created by _SOLID
- * Date:2016/5/23
- * Time:15:34
+/*
+ * @description SinaWeiBoShareUtil :
+ * @author Nathaniel-nathanwriting@126.com
+ * @time 17-8-5-上午2:07
+ * @version v1.0.0
  */
-public class SinaWeiBoShareUtil {
-
-
+public class SinaShareUtils {
     private final Context mContext;
-
     private WebpageObject mWebPageObject = null;
     private TextObject mTextObject = null;
     private ImageObject mImageObject = null;
 
-    public SinaWeiBoShareUtil(Context context) {
+    public SinaShareUtils(Context context) {
         this.mContext = context;
         setImageObj();
     }

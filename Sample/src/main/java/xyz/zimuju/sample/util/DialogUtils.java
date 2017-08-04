@@ -29,7 +29,7 @@ public class DialogUtils {
                     public void onSelection(MaterialDialog dialog, View view, int which, CharSequence text) {
                         CharSequence[] action = context.getResources().getTextArray(R.array.action);
                         if (text.equals(action[0])) {
-                            SinaWeiBoShareUtil share = new SinaWeiBoShareUtil(context);
+                            SinaShareUtils share = new SinaShareUtils(context);
                             share.setTextObj(bean.getDesc() + "\n" + context.getString(R.string.app_download_url));
                             share.setWebpageObj("来自干货IO的分享", bean.getUrl(), bean.getDesc());
                             share.sendMultiMessage();

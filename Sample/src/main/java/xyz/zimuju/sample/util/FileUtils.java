@@ -15,10 +15,11 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
-/**
- * Created by _SOLID
- * Date:2016/4/20
- * Time:15:01
+/*
+ * @description FileUtils : 文件管理工具类
+ * @author Nathaniel-nathanwriting@126.com
+ * @time 17-8-5-上午2:09
+ * @version v1.0.0
  */
 public class FileUtils {
 
