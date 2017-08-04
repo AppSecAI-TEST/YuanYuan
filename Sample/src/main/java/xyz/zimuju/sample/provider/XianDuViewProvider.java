@@ -18,21 +18,12 @@ import xyz.zimuju.sample.loader.ImageLoader;
 import xyz.zimuju.sample.surface.gank.WebViewActivity;
 import xyz.zimuju.sample.util.DialogUtils;
 
-/**
- * Created by _SOLID
- * GitHub:https://github.com/burgessjp
- * Date:2017/3/18
- * Time:15:02
- * Desc:
- */
-public class XianDuViewProvider
-        extends ItemViewProvider<XianDuItem, XianDuViewProvider.ViewHolder> {
+public class XianDuViewProvider extends ItemViewProvider<XianDuItem, XianDuViewProvider.ViewHolder> {
     private Context context;
 
     @NonNull
     @Override
-    protected ViewHolder onCreateViewHolder(
-            @NonNull LayoutInflater inflater, @NonNull ViewGroup parent) {
+    protected ViewHolder onCreateViewHolder(@NonNull LayoutInflater inflater, @NonNull ViewGroup parent) {
         context = parent.getContext();
         View root = inflater.inflate(R.layout.gank_item_xian_du, parent, false);
         return new ViewHolder(root);

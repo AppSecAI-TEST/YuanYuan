@@ -14,25 +14,17 @@ import xyz.zimuju.sample.entity.content.DailyHeader;
 import xyz.zimuju.sample.loader.ImageLoader;
 import xyz.zimuju.sample.surface.gank.ViewPicActivity;
 
-/**
- * Created by _SOLID
- * Date:2016/11/30
- * Time:22:23
- */
-public class DailyViewItemHeaderProvider
-        extends ItemViewProvider<DailyHeader, DailyViewItemHeaderProvider.ViewHolder> {
+public class DailyViewItemHeaderProvider extends ItemViewProvider<DailyHeader, DailyViewItemHeaderProvider.ViewHolder> {
 
     @NonNull
     @Override
-    protected ViewHolder onCreateViewHolder(
-            @NonNull LayoutInflater inflater, @NonNull ViewGroup parent) {
+    protected ViewHolder onCreateViewHolder(@NonNull LayoutInflater inflater, @NonNull ViewGroup parent) {
         View root = inflater.inflate(R.layout.gank_item_daily_item_header, parent, false);
         return new ViewHolder(root);
     }
 
     @Override
-    protected void onBindViewHolder(
-            @NonNull final ViewHolder holder, @NonNull final DailyHeader recentlyHeader) {
+    protected void onBindViewHolder(@NonNull final ViewHolder holder, @NonNull final DailyHeader recentlyHeader) {
         //holder.tv_title.setText(recentlyHeader.getTitle());
         ImageLoader.displayImage(holder.iv_img, recentlyHeader.getImgUrl());
         holder.iv_img.setOnClickListener(new View.OnClickListener() {

@@ -19,20 +19,11 @@ import xyz.zimuju.sample.loader.ImageLoader;
 import xyz.zimuju.sample.surface.home.DailyActivity;
 import xyz.zimuju.sample.util.DateUtils;
 
-/**
- * Created by _SOLID
- * GitHub:https://github.com/burgessjp
- * Date:2017/3/12
- * Time:16:00
- * Desc:
- */
-public class DailyViewProvider
-        extends ItemViewProvider<Daily, DailyViewProvider.ViewHolder> {
+public class DailyViewProvider extends ItemViewProvider<Daily, DailyViewProvider.ViewHolder> {
 
     @NonNull
     @Override
-    protected ViewHolder onCreateViewHolder(
-            @NonNull LayoutInflater inflater, @NonNull ViewGroup parent) {
+    protected ViewHolder onCreateViewHolder(@NonNull LayoutInflater inflater, @NonNull ViewGroup parent) {
         View root = inflater.inflate(R.layout.gank_item_daily, parent, false);
         return new ViewHolder(root);
     }

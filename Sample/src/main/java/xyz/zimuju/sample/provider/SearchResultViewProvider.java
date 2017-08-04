@@ -12,26 +12,17 @@ import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.entity.content.SearchResult;
 import xyz.zimuju.sample.surface.gank.WebViewActivity;
 
-/**
- * Created by _SOLID
- * Date:2016/12/1
- * Time:13:13
- * Desc:
- */
-public class SearchResultViewProvider
-        extends ItemViewProvider<SearchResult, SearchResultViewProvider.ViewHolder> {
+public class SearchResultViewProvider extends ItemViewProvider<SearchResult, SearchResultViewProvider.ViewHolder> {
 
     @NonNull
     @Override
-    protected ViewHolder onCreateViewHolder(
-            @NonNull LayoutInflater inflater, @NonNull ViewGroup parent) {
+    protected ViewHolder onCreateViewHolder(@NonNull LayoutInflater inflater, @NonNull ViewGroup parent) {
         View root = inflater.inflate(R.layout.gank_item_search_result, parent, false);
         return new ViewHolder(root);
     }
 
     @Override
-    protected void onBindViewHolder(
-            @NonNull final ViewHolder holder, @NonNull final SearchResult searchResult) {
+    protected void onBindViewHolder(@NonNull final ViewHolder holder, @NonNull final SearchResult searchResult) {
         holder.tv_title.setText(searchResult.getDesc());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

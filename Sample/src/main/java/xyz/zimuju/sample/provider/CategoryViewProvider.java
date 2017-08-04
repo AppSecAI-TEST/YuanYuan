@@ -16,28 +16,18 @@ import xyz.zimuju.sample.loader.ImageLoader;
 import xyz.zimuju.sample.surface.gank.SubActivity;
 import xyz.zimuju.sample.surface.home.CategoryActivity;
 
-/**
- * Created by _SOLID
- * GitHub:https://github.com/burgessjp
- * Date:2017/3/12
- * Time:15:11
- * Desc:
- */
-public class CategoryViewProvider
-        extends ItemViewProvider<CategoryList, CategoryViewProvider.ViewHolder> {
+public class CategoryViewProvider extends ItemViewProvider<CategoryList, CategoryViewProvider.ViewHolder> {
 
     @NonNull
     @Override
-    protected ViewHolder onCreateViewHolder(
-            @NonNull LayoutInflater inflater, @NonNull ViewGroup parent) {
+    protected ViewHolder onCreateViewHolder(@NonNull LayoutInflater inflater, @NonNull ViewGroup parent) {
         View root = inflater.inflate(R.layout.gank_item_categorys, parent, false);
         return new ViewHolder(root);
     }
 
     @Override
     protected void onBindViewHolder(@NonNull ViewHolder holder, @NonNull CategoryList categoryList) {
-        holder.recyclerView.setLayoutManager(new LinearLayoutManager(holder.itemView.getContext(),
-                LinearLayoutManager.HORIZONTAL, false));
+        holder.recyclerView.setLayoutManager(new LinearLayoutManager(holder.itemView.getContext(), LinearLayoutManager.HORIZONTAL, false));
         holder.recyclerView.setAdapter(new SubAdapter(categoryList));
     }
 

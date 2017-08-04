@@ -16,19 +16,11 @@ import xyz.zimuju.sample.loader.ImageLoader;
 import xyz.zimuju.sample.surface.gank.ViewPicActivity;
 import xyz.zimuju.sample.util.ViewUtils;
 
-/**
- * Created by _SOLID
- * Date:2016/11/30
- * Time:11:24
- * Desc:
- */
-public class MeizhiViewProvider
-        extends ItemViewProvider<GanHuoData, MeizhiViewProvider.ViewHolder> {
+public class MeizhiViewProvider extends ItemViewProvider<GanHuoData, MeizhiViewProvider.ViewHolder> {
 
     @NonNull
     @Override
-    protected ViewHolder onCreateViewHolder(
-            @NonNull LayoutInflater inflater, @NonNull ViewGroup parent) {
+    protected ViewHolder onCreateViewHolder(@NonNull LayoutInflater inflater, @NonNull ViewGroup parent) {
         View root = inflater.inflate(R.layout.gank_item_meizhi, parent, false);
         DisplayMetrics displayMetrics = ViewUtils.getDisplayMetrics(GankIOApplication.getInstance());
         int width = displayMetrics.widthPixels / 2;
@@ -42,8 +34,7 @@ public class MeizhiViewProvider
     }
 
     @Override
-    protected void onBindViewHolder(
-            @NonNull final ViewHolder holder, @NonNull final GanHuoData bean) {
+    protected void onBindViewHolder(@NonNull final ViewHolder holder, @NonNull final GanHuoData bean) {
         ImageLoader.displayImage(holder.iv_img, bean.getUrl());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

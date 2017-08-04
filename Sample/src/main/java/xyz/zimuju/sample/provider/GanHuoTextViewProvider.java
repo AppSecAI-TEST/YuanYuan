@@ -15,26 +15,17 @@ import xyz.zimuju.sample.surface.gank.WebViewActivity;
 import xyz.zimuju.sample.util.DateUtils;
 import xyz.zimuju.sample.util.DialogUtils;
 
-/**
- * Created by _SOLID
- * Date:2016/11/30
- * Time:11:24
- * Desc:
- */
-public class GanHuoTextViewProvider
-        extends ItemViewProvider<GanHuoData, GanHuoTextViewProvider.ViewHolder> {
+public class GanHuoTextViewProvider extends ItemViewProvider<GanHuoData, GanHuoTextViewProvider.ViewHolder> {
 
     @NonNull
     @Override
-    protected ViewHolder onCreateViewHolder(
-            @NonNull LayoutInflater inflater, @NonNull ViewGroup parent) {
+    protected ViewHolder onCreateViewHolder(@NonNull LayoutInflater inflater, @NonNull ViewGroup parent) {
         View root = inflater.inflate(R.layout.gank_item_ganhuo_text, parent, false);
         return new ViewHolder(root);
     }
 
     @Override
-    protected void onBindViewHolder(
-            @NonNull final ViewHolder holder, @NonNull final GanHuoData bean) {
+    protected void onBindViewHolder(@NonNull final ViewHolder holder, @NonNull final GanHuoData bean) {
         String date = bean.getPublishedAt().replace('T', ' ').replace('Z', ' ');
         holder.tv_title.setText(bean.getDesc());
         holder.tv_time.setText(DateUtils.friendlyTime(date));

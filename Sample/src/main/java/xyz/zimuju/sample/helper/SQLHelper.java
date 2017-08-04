@@ -13,15 +13,16 @@ import java.util.Set;
 
 import xyz.zimuju.common.util.StringUtils;
 
-/**
- * SQLite数据库Helper
- *
- * @author Lemon
+/*
+ * @description SQLHelper : SQLite数据库Helper
+ * @author Nathaniel-nathanwriting@126.com
+ * @time 17-8-5-上午1:32
+ * @version v1.0.0
  */
 public class SQLHelper extends SQLiteOpenHelper {
     public static final int TABLE_VERSION = 1;
     public static final String TABLE_NAME = "library";
-    public static final String COLUMN_ID = "_id";//long类型的id不能自增，primary key autoincrement会出错
+    public static final String COLUMN_ID = "_id"; // long类型的id不能自增，primary key autoincrement会出错
     public static final String COLUMN_NAME = "name";
     public static final String COLUMN_PHONE = "phone";
     public static final String COLUMN_MAIL = "mail";

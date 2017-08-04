@@ -24,26 +24,17 @@ import xyz.zimuju.sample.surface.gank.WebViewActivity;
 import xyz.zimuju.sample.util.DateUtils;
 import xyz.zimuju.sample.util.DialogUtils;
 
-/**
- * Created by _SOLID
- * Date:2016/11/30
- * Time:11:22
- * Desc:
- */
-public class GanHuoImageViewProvider
-        extends ItemViewProvider<GanHuoData, GanHuoImageViewProvider.ViewHolder> {
+public class GanHuoImageViewProvider extends ItemViewProvider<GanHuoData, GanHuoImageViewProvider.ViewHolder> {
 
     @NonNull
     @Override
-    protected ViewHolder onCreateViewHolder(
-            @NonNull LayoutInflater inflater, @NonNull ViewGroup parent) {
+    protected ViewHolder onCreateViewHolder(@NonNull LayoutInflater inflater, @NonNull ViewGroup parent) {
         View root = inflater.inflate(R.layout.gank_item_ganhuo_image, parent, false);
         return new ViewHolder(root);
     }
 
     @Override
-    protected void onBindViewHolder(
-            @NonNull final ViewHolder holder, @NonNull final GanHuoData bean) {
+    protected void onBindViewHolder(@NonNull final ViewHolder holder, @NonNull final GanHuoData bean) {
         final Context context = holder.itemView.getContext();
         String date = bean.getPublishedAt().replace('T', ' ').replace('Z', ' ');
         holder.tv_title.setText(bean.getDesc());
@@ -99,8 +90,7 @@ public class GanHuoImageViewProvider
         public Object instantiateItem(ViewGroup container, int position) {
             final ImageView imageView = new ImageView(context);
             imageView.setScaleType(ImageView.ScaleType.CENTER_CROP);
-            imageView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT
-                    , ViewGroup.LayoutParams.MATCH_PARENT));
+            imageView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
             ImageLoader.displayImage(imageView, images.get(position));
             imageView.setOnClickListener(new View.OnClickListener() {
                 @Override

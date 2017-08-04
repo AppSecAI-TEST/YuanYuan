@@ -17,33 +17,21 @@ import xyz.zimuju.sample.util.DateUtils;
 import xyz.zimuju.sample.util.DialogUtils;
 import xyz.zimuju.sample.util.SpannableStringUtils;
 
-/**
- * Created by _SOLID
- * Date:2016/11/30
- * Time:22:26
- */
-public class DailyViewItemProvider
-        extends ItemViewProvider<GanHuoData, DailyViewItemProvider.ViewHolder> {
+public class DailyViewItemProvider extends ItemViewProvider<GanHuoData, DailyViewItemProvider.ViewHolder> {
 
     @NonNull
     @Override
-    protected ViewHolder onCreateViewHolder(
-            @NonNull LayoutInflater inflater, @NonNull ViewGroup parent) {
+    protected ViewHolder onCreateViewHolder(@NonNull LayoutInflater inflater, @NonNull ViewGroup parent) {
         View root = inflater.inflate(R.layout.gank_item_daily_item, parent, false);
         return new ViewHolder(root);
     }
 
     @Override
-    protected void onBindViewHolder(
-            @NonNull final ViewHolder holder, @NonNull final GanHuoData recently) {
+    protected void onBindViewHolder(@NonNull final ViewHolder holder, @NonNull final GanHuoData recently) {
         SpannableStringBuilder builder = new SpannableStringBuilder();
-        builder.append(
-                SpannableStringUtils.format(holder.tv_title.getContext(), "[" + DateUtils.friendlyTime(recently.getPublishedAt().replace('T', ' ').replace('Z', ' ')) +
-                        "]", R.style.ByTextAppearance));
+        builder.append(SpannableStringUtils.format(holder.tv_title.getContext(), "[" + DateUtils.friendlyTime(recently.getPublishedAt().replace('T', ' ').replace('Z', ' ')) + "]", R.style.ByTextAppearance));
         builder.append(recently.getDesc());
-        builder.append(
-                SpannableStringUtils.format(holder.tv_title.getContext(), " [via " +
-                        recently.getWho() + "]", R.style.ByTextAppearance));
+        builder.append(SpannableStringUtils.format(holder.tv_title.getContext(), " [via " + recently.getWho() + "]", R.style.ByTextAppearance));
         holder.tv_title.setText(builder.subSequence(0, builder.length()));
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,8 +42,7 @@ public class DailyViewItemProvider
         holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View v) {
-                DialogUtils.showActionDialog(v.getContext(), v
-                        , new CollectTable(recently.getDesc(), recently.getUrl(), recently.getType()));
+                DialogUtils.showActionDialog(v.getContext(), v, new CollectTable(recently.getDesc(), recently.getUrl(), recently.getType()));
                 return true;
             }
         });
