@@ -17,7 +17,6 @@ import android.view.ViewGroup;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -45,20 +44,20 @@ public class AgentWebFragment extends Fragment implements FragmentKeyDown {
 
             switch (v.getId()) {
 
-                case R.id.iv_back:
+                case R.id.header_back_tv:
 
                     if (!mAgentWeb.back())
                         AgentWebFragment.this.getActivity().finish();
 
                     break;
-                case R.id.iv_finish:
+                case R.id.header_menu_tv:
                     AgentWebFragment.this.getActivity().finish();
                     break;
             }
         }
     };
-    private ImageView mBackImageView;
-    private View mLineView;
+    private TextView mBackImageView;
+    private TextView mLineView;
     protected WebViewClient mWebViewClient = new WebViewClient() {
 
         @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
@@ -94,7 +93,7 @@ public class AgentWebFragment extends Fragment implements FragmentKeyDown {
 
         }
     };
-    private ImageView mFinishImageView;
+    private TextView mFinishImageView;
     private TextView mTitleTextView;
     protected ChromeClientCallbackManager.ReceivedTitleCallback mCallback = new ChromeClientCallbackManager.ReceivedTitleCallback() {
         @Override
@@ -163,11 +162,11 @@ public class AgentWebFragment extends Fragment implements FragmentKeyDown {
     }
 
     protected void initView(View view) {
-        mBackImageView = (ImageView) view.findViewById(R.id.iv_back);
-        mLineView = view.findViewById(R.id.view_line);
+        mBackImageView = (TextView) view.findViewById(R.id.header_back_tv);
+        mLineView = (TextView) view.findViewById(R.id.header_title_tv);
 
-        mFinishImageView = (ImageView) view.findViewById(R.id.iv_finish);
-        mTitleTextView = (TextView) view.findViewById(R.id.toolbar_title);
+        mFinishImageView = (TextView) view.findViewById(R.id.header_menu_tv);
+        mTitleTextView = (TextView) view.findViewById(R.id.header_title_tv);
 
         mBackImageView.setOnClickListener(mOnClickListener);
         mFinishImageView.setOnClickListener(mOnClickListener);
