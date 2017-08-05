@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import butterknife.ButterKnife;
 import xyz.zimuju.common.controller.ActivityController;
+import xyz.zimuju.common.util.ToastUtils;
 
 /*
  * @description BasalActivity :Activity的基类 如果不想用ButterKnife 而是用findViewById 则打开 initView()
@@ -21,8 +22,6 @@ public abstract class BasalActivity extends AppCompatActivity {
     protected abstract void initData();
 
     protected abstract void viewOption();
-
-    protected abstract void showToast(String message);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,4 +46,9 @@ public abstract class BasalActivity extends AppCompatActivity {
         ActivityController.initController().removeActivity(this);
         super.onDestroy();
     }
+
+    protected void showToast(String message) {
+        ToastUtils.showToast(getContext(), message);
+    }
+
 }

@@ -9,7 +9,6 @@ import butterknife.OnClick;
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.listener.SaveListener;
 import xyz.zimuju.common.basal.BasalActivity;
-import xyz.zimuju.common.util.ToastUtils;
 import xyz.zimuju.sample.R;
 
 /*
@@ -51,16 +50,11 @@ public class LoginActivity extends BasalActivity implements View.OnClickListener
     }
 
     @Override
-    protected void showToast(String message) {
-        ToastUtils.showToast(getContext(), message);
-    }
-
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
 
-    public void getUserInfo() {
+    private void getUserInfo() {
 
     }
 
@@ -94,6 +88,7 @@ public class LoginActivity extends BasalActivity implements View.OnClickListener
             @Override
             public void onSuccess() {
                 showToast("注册成功");
+                getUserInfo();
             }
 
             @Override

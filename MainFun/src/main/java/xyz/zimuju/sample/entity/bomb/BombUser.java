@@ -19,6 +19,9 @@ public class BombUser extends BmobUser {
     private Integer gander;
     private String nickname;
     private Integer age;
+    private String tencent;
+    private String wechat;
+    private String sina;
 
     public Integer getGander() {
         return gander;
@@ -42,5 +45,29 @@ public class BombUser extends BmobUser {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+    public String getTencent() {
+        return tencent;
+    }
+
+    public void setTencent(String tencent) {
+        this.tencent = tencent;
+    }
+
+    public String getWechat() {
+        return wechat;
+    }
+
+    public void setWechat(String wechat) {
+        this.wechat = wechat;
+    }
+
+    public String getSina() {
+        return sina;
+    }
+
+    public void setSina(String sina) {
+        this.sina = sina;
     }
 }
