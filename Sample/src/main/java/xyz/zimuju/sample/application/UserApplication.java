@@ -1,29 +1,28 @@
 package xyz.zimuju.sample.application;
 
 
-import android.annotation.SuppressLint;
 import android.content.Context;
 
+import xyz.zimuju.common.helper.InitializeHelper;
 import xyz.zimuju.common.util.StringUtils;
 import xyz.zimuju.sample.entity.User;
 import xyz.zimuju.sample.manager.DataManager;
 
-public class UserApplication {
+public class UserApplication implements InitializeHelper {
     private static User currentUser = null;
     private static UserApplication userApplication;
-    @SuppressLint("StaticFieldLeak")
-    private static Context context;
-
-    private UserApplication(Context context) {
-        UserApplication.context = context;
-    }
-
-    public static void initialize(Context context) {
-        userApplication = new UserApplication(context);
-    }
+    private Context context;
 
     public static UserApplication getInstance() {
+        if (userApplication == null) {
+            userApplication = new UserApplication();
+        }
         return userApplication;
+    }
+
+    @Override
+    public void initialize(Context context) {
+        DataManager.getInstance().initialize(context);
     }
 
     public long getCurrentUserId() {

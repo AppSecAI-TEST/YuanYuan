@@ -54,7 +54,7 @@ public class GankIOApplication extends Application {
         PrefUtils.initialize(this);
 
         // 初始化UserApplication
-        UserApplication.initialize(this);
+        UserApplication.getInstance().initialize(this);
     }
 
     @Override

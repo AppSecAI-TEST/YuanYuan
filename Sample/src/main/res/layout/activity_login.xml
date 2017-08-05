@@ -36,10 +36,10 @@
             android:drawableLeft="@mipmap/icon_login_portrait"
             android:hint="请输入用户名"
             android:inputType="text"
-            android:paddingLeft="10dp"
+            android:maxLines="1"
             android:paddingRight="10dp"
             android:textColor="@color/app_text"
-            android:textSize="14sp"/>
+            android:textSize="16sp"/>
 
         <xyz.zimuju.common.widget.ClearEditText
             android:id="@+id/login_password_tv"
@@ -51,10 +51,10 @@
             android:drawableLeft="@mipmap/icon_login_password"
             android:hint="请输入密码"
             android:inputType="textPassword"
-            android:paddingLeft="10dp"
+            android:maxLines="1"
             android:paddingRight="10dp"
             android:textColor="@color/app_text"
-            android:textSize="14sp"/>
+            android:textSize="16sp"/>
 
         <TextView
             android:id="@+id/login_submit_tv"
@@ -64,7 +64,7 @@
             android:background="@drawable/selector_login_button"
             android:clickable="true"
             android:gravity="center"
-            android:text="登  录"
+            android:text="登        录"
             android:textColor="@android:color/white"
             android:textSize="18sp"/>
     </LinearLayout>

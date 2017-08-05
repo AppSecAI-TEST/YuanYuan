@@ -6,11 +6,11 @@ import android.util.Log;
 
 import com.alibaba.fastjson.JSON;
 
+import xyz.zimuju.common.helper.InitializeHelper;
 import xyz.zimuju.common.util.StringUtils;
-import xyz.zimuju.sample.application.UserApplication;
 import xyz.zimuju.sample.entity.User;
 
-public class DataManager {
+public class DataManager implements InitializeHelper {
     private static DataManager instance;
     public final String KEY_USER = "KEY_USER";
     public final String KEY_USER_ID = "KEY_USER_ID";
@@ -23,19 +23,16 @@ public class DataManager {
     private Context context;
     private String PATH_USER = "PATH_USER";
 
-    private DataManager(Context context) {
-        this.context = context;
-    }
-
-    public static DataManager getInstance() {
+    public static synchronized DataManager getInstance() {
         if (instance == null) {
-            synchronized (DataManager.class) {
-                if (instance == null) {
-                    instance = new DataManager(UserApplication.getInstance());
-                }
-            }
+            instance = new DataManager();
         }
         return instance;
+    }
+
+    @Override
+    public void initialize(Context context) {
+        this.context = context;
     }
 
     public boolean isCurrentUser(long userId) {
@@ -138,5 +135,4 @@ public class DataManager {
         user.setUsername(name);
         saveUser(user);
     }
-
 }
