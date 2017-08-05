@@ -25,7 +25,7 @@ import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
 
-import xyz.zimuju.common.basal.BaseApplication;
+import xyz.zimuju.common.basal.BasalApplication;
 import xyz.zimuju.common.util.DataKeeper;
 import xyz.zimuju.common.util.StringUtils;
 
@@ -61,7 +61,7 @@ public class CacheManager {
         if (instance == null) {
             synchronized (CacheManager.class) {
                 if (instance == null) {
-                    instance = new CacheManager(BaseApplication.getInstance());
+                    instance = new CacheManager(BasalApplication.getInstance());
                 }
             }
         }

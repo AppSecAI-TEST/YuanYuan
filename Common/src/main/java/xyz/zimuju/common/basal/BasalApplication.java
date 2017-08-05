@@ -14,7 +14,7 @@ import xyz.zimuju.common.util.SettingUtil;
  * @time 2017/06/24 - 13:28
  * @version 1.0.0
  */
-public class BaseApplication extends Application {
+public class BasalApplication extends Application {
     private static Application instance;
 
     public static Application getInstance() {

@@ -38,7 +38,7 @@ import okhttp3.FormBody;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import xyz.zimuju.common.basal.BaseApplication;
+import xyz.zimuju.common.basal.BasalApplication;
 import xyz.zimuju.common.entity.Parameter;
 import xyz.zimuju.common.manager.OnHttpResponseListener;
 import xyz.zimuju.common.util.SSLUtil;
@@ -79,7 +79,7 @@ public class HttpManager {
         if (instance == null) {
             synchronized (HttpManager.class) {
                 if (instance == null) {
-                    instance = new HttpManager(BaseApplication.getInstance());
+                    instance = new HttpManager(BasalApplication.getInstance());
                 }
             }
         }
