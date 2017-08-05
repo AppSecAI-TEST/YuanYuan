@@ -123,6 +123,7 @@ dependencies {
     compile project(':Common')
     compile project(':QRCode')
     compile project(':Guide')
+    compile project(':Dialog')
 
     //butterknife
     compile libraries.butterKnife

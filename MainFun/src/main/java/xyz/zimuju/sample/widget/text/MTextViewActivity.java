@@ -1,11 +1,11 @@
 package xyz.zimuju.sample.widget.text;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 
 import xyz.zimuju.sample.R;
 
