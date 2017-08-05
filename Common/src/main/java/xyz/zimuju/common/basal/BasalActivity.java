@@ -22,6 +22,8 @@ public abstract class BasalActivity extends AppCompatActivity {
 
     protected abstract void viewOption();
 
+    protected abstract void showToast(String message);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -46,6 +46,11 @@ public class AboutActivity extends BasalActivity implements View.OnClickListener
         textView.setText(builder.subSequence(0, builder.length()));
     }
 
+    @Override
+    protected void showToast(String message) {
+
+    }
+
     @OnClick(R.id.header_back_tv)
     @Override
     public void onClick(View view) {

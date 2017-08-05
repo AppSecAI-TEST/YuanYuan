@@ -42,6 +42,11 @@ public class FullGuideActivity extends BasalActivity implements View.OnClickList
     }
 
     @Override
+    protected void showToast(String message) {
+
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }

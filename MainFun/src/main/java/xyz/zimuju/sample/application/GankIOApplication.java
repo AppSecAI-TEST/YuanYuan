@@ -43,10 +43,13 @@ public class GankIOApplication extends Application {
         // 启动推送服务
         BmobPush.startWork(this);
 
-        if (LeakCanary.isInAnalyzerProcess(this)) {
-            return;
+        // 内存泄露检测
+        if (ConfigConstants.debugEnable) {
+            if (LeakCanary.isInAnalyzerProcess(this)) {
+                return;
+            }
+            LeakCanary.install(this);
         }
-        LeakCanary.install(this);
 
         MultiTypeInstaller.install();
 
@@ -60,7 +63,7 @@ public class GankIOApplication extends Application {
     @Override
     public File getCacheDir() {
         File file = new File(Environment.getExternalStorageDirectory(), "/YuanYuan/Cache/");
-        if (! file.exists()) {
+        if (!file.exists()) {
             file.mkdirs();
         }
         return file;

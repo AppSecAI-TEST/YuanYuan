@@ -19,4 +19,9 @@ public class AboutActivity extends BasalActivity {
 
     }
 
+    @Override
+    protected void showToast(String message) {
+
+    }
+
 }

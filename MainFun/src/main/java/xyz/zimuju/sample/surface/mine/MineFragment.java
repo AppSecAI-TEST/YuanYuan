@@ -103,7 +103,7 @@ public class MineFragment extends BaseFragment implements View.OnClickListener {
                 break;
 
             case R.id.mine_logout_tv:
-                AppUtils.logOut(getContext(), new AppUtils.OnSuccessListener() {
+                AppUtils.logout(getContext(), new AppUtils.OnSuccessListener() {
                     @Override
                     public void onSuccess() {
                         refreshUserInfo();

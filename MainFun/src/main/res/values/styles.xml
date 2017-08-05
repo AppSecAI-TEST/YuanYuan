@@ -4,7 +4,7 @@
         <item name="android:width">0dp</item>
     </style>
 
-    <style name="bottom_tab_iv" parent="img_btn"></style>
+    <style name="bottom_tab_iv" parent="img_btn"/>
 
     <style name="bottom_tab_tv" parent="text_micro">
         <item name="android:textColor">@color/black_to_white_selector</item>
@@ -14,14 +14,14 @@
     <style name="toolBar">
         <item name="colorControlNormal">#ffffff</item>
         <item name="android:homeAsUpIndicator">@mipmap/cha</item>
-        <item name="android:titleTextStyle">@style/titlestyle</item>
+        <item name="android:titleTextStyle">@style/titleStyle</item>
 
     </style>
 
-    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar"></style>
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar"/>
 
 
-    <style name="titlestyle">
+    <style name="titleStyle">
         <item name="android:textSize">12sp</item>
     </style>
 
@@ -47,7 +47,7 @@
     <style name="ToolBarTheme" parent="Theme.AppCompat.Light">
         <item name="android:textColorSecondary">#000000</item>
         <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle</item>
-        <!--<item name="android:actionOverflowButtonStyle">@style/OverflowButtonStyle</item>-->
+        <item name="android:actionOverflowButtonStyle">@style/OverflowButtonStyle</item>
         <item name="dropDownListViewStyle">@style/OverflowDropDownStyle</item>
     </style>
 
@@ -61,7 +61,7 @@
     </style>
 
     <style name="OverflowButtonStyle" parent="Widget.AppCompat.Light.ActionButton.Overflow">
-        <!--<item name="android:src">@drawable/ic_more_vert_black_24dp</item>-->
+        <item name="android:src">@drawable/ic_more_vert_black_24dp</item>
     </style>
 
     <!-- Base application theme. -->
@@ -86,7 +86,7 @@
         <item name="android:windowFullscreen">true</item>
     </style>
 
-    <style name="ViewPicTheme" parent="AppTheme"></style>
+    <style name="ViewPicTheme" parent="AppTheme"/>
 
     <style name="SplashTheme" parent="FullScreen">
         <item name="android:windowBackground">@drawable/bg_splash_activity</item>

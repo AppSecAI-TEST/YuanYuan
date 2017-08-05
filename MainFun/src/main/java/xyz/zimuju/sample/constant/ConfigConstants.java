@@ -19,4 +19,6 @@ public class ConfigConstants {
             + "follow_app_official_microblog," + "invitation_write";
     // 获取新浪用户信息
     public static String SINA_USER_INFO_URL = "https://api.weibo.com/2/users/show.json";
+
+    public static boolean debugEnable = false;
 }

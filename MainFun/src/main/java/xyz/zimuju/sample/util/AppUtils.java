@@ -14,10 +14,11 @@ import xyz.zimuju.sample.SettingCenter;
 import xyz.zimuju.sample.application.GankIOApplication;
 import xyz.zimuju.sample.entity.bomb.FeedBack;
 
-/**
- * Created by _SOLID
- * Date:2016/5/20
- * Time:8:42
+/*
+ * @description AppUtils : App 相关的工具类
+ * @author Nathaniel
+ * @time 2017/8/5 - 13:11
+ * @version 1.0.0
  */
 public class AppUtils {
 
@@ -70,18 +71,20 @@ public class AppUtils {
                 }).show();
     }
 
-    public static void logOut(final Context context, final OnSuccessListener listener) {
+    public static void logout(final Context context, final OnSuccessListener listener) {
         if (!AuthorityUtils.isLogin()) return;
         MaterialDialog.Builder builder = new MaterialDialog.Builder(context)
                 .title("提示")
                 .content("确定注销吗？")
-                .positiveText("确定").onPositive(new MaterialDialog.SingleButtonCallback() {
+                .positiveText("确定")
+                .onPositive(new MaterialDialog.SingleButtonCallback() {
                     @Override
                     public void onClick(MaterialDialog dialog, DialogAction which) {
                         AuthorityUtils.logout();
                         listener.onSuccess();
                     }
-                }).negativeText("取消").onNegative(new MaterialDialog.SingleButtonCallback() {
+                }).negativeText("取消")
+                .onNegative(new MaterialDialog.SingleButtonCallback() {
                     @Override
                     public void onClick(MaterialDialog dialog, DialogAction which) {
 
@@ -96,7 +99,8 @@ public class AppUtils {
         MaterialDialog.Builder builder = new MaterialDialog.Builder(context)
                 .title("温馨提示")
                 .content("确定清空缓存吗？如果你使用的是移动网络不建议清空缓存哦")
-                .positiveText("确定").onPositive(new MaterialDialog.SingleButtonCallback() {
+                .positiveText("确定")
+                .onPositive(new MaterialDialog.SingleButtonCallback() {
                     @Override
                     public void onClick(MaterialDialog dialog, DialogAction which) {
                         SettingCenter.clearAppCache(listener);

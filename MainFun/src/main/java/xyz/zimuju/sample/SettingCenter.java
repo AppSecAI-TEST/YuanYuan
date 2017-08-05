@@ -8,7 +8,12 @@ import java.io.File;
 import xyz.zimuju.sample.application.GankIOApplication;
 import xyz.zimuju.sample.util.PrefUtils;
 
-
+/*
+ * @description SettingCenter ：设置中心
+ * @author Nathaniel
+ * @time 2017/8/5 - 13:09
+ * @version 1.0.0
+ */
 public class SettingCenter {
 
     public static boolean getOnlyWifiLoadImage() {
@@ -19,13 +24,7 @@ public class SettingCenter {
         PrefUtils.putBoolean("getOnlyWifiLoadImage", isEnable);
     }
 
-    //region 缓存相关
-
-    /**
-     * 计算缓存大小
-     *
-     * @param listener
-     */
+    // 计算缓存大小
     public static void countDirSizeTask(final CountDirSizeListener listener) {
         new Thread() {
             public void run() {
@@ -41,11 +40,7 @@ public class SettingCenter {
         }.start();
     }
 
-    /**
-     * 清除缓存
-     *
-     * @param listener
-     */
+    // 清除缓存
     public static void clearAppCache(final ClearCacheListener listener) {
         new Thread() {
             public void run() {
@@ -120,5 +115,4 @@ public class SettingCenter {
     public interface CountDirSizeListener {
         void onResult(long result);
     }
-    //endregion
 }

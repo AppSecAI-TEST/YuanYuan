@@ -207,13 +207,16 @@
         <activity
             android:name=".surface.about.AboutActivity"
             android:screenOrientation="portrait"/>
+
         <activity
             android:name=".surface.mine.LoginActivity"
             android:screenOrientation="portrait"/>
+
         <activity
             android:name=".surface.gank.ViewPicActivity"
             android:screenOrientation="portrait"
             android:theme="@style/ViewPicTheme"/>
+
         <activity
             android:name=".surface.gank.WebViewActivity"
             android:screenOrientation="portrait"/>
