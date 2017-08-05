@@ -2,11 +2,6 @@ package xyz.zimuju.sample.entity.bomb;
 
 import cn.bmob.v3.BmobObject;
 
-/**
- * Created by _SOLID
- * Date:2016/5/25
- * Time:16:36
- */
 public class FeedBack extends BmobObject {
 
     private String content;

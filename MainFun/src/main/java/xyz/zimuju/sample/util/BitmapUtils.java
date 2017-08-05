@@ -21,9 +21,6 @@ import java.io.IOException;
 
 /**
  * 与Bitmap有关的工具类
- * Created by _SOLID
- * Date:2016/4/5
- * Time:19:50
  */
 public class BitmapUtils {
 

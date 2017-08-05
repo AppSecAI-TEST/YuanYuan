@@ -3,11 +3,6 @@ package xyz.zimuju.sample.util;
 import android.support.design.widget.Snackbar;
 import android.view.View;
 
-/**
- * Created by _SOLID
- * Date:2016/5/9
- * Time:11:30
- */
 public class SnackBarUtils {
     private static final int color_danger = 0XFFA94442;
     private static final int color_success = 0XFF00CD00;

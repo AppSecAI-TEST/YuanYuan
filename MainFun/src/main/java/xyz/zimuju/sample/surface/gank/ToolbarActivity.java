@@ -14,14 +14,6 @@ import android.widget.ViewSwitcher;
 
 import xyz.zimuju.sample.R;
 
-
-/**
- * Created by _SOLID
- * Date:2016/4/22
- * Time:13:30
- * <p/>
- * ToolbarActivity
- */
 public abstract class ToolbarActivity extends BaseActivity {
 
     protected AppBarLayout mAppBarLayout;

@@ -2,12 +2,7 @@ package xyz.zimuju.sample.entity.bomb;
 
 import cn.bmob.v3.BmobObject;
 
-/**
- * Created by _SOLID
- * Date:2016/6/1
- * Time:16:57
- */
-public class RxOperators extends BmobObject {
+public class RxOperator extends BmobObject {
 
     private String name;
     private String desc;

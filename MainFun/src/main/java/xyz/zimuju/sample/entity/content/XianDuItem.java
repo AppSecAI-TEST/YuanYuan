@@ -1,12 +1,5 @@
 package xyz.zimuju.sample.entity.content;
 
-/**
- * Created by _SOLID
- * GitHub:https://github.com/burgessjp
- * Date:2017/3/18
- * Time:15:02
- * Desc:
- */
 public class XianDuItem {
     private String title;
     private String url;

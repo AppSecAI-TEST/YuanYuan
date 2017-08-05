@@ -19,11 +19,6 @@ import xyz.zimuju.sample.http.subscriber.HttpResultSubscriber;
 import xyz.zimuju.sample.rx.RxUtils;
 import xyz.zimuju.sample.surface.gank.AbsListFragment;
 
-/**
- * Created by _SOLID
- * Date:2016/5/18
- * Time:15:24
- */
 public class RecentlyListFragment extends AbsListFragment {
 
 

@@ -2,11 +2,6 @@ package xyz.zimuju.sample.entity.content;
 
 import java.util.List;
 
-/**
- * Created by _SOLID
- * Date:2016/5/18
- * Time:15:27
- */
 public class DailyList {
 
 

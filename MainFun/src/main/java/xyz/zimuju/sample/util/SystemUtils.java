@@ -10,9 +10,6 @@ import android.text.TextUtils;
 
 /**
  * 与系统有关的工具类
- * Created by _SOLID
- * Date:2016/4/5
- * Time:19:37
  */
 public class SystemUtils {
 

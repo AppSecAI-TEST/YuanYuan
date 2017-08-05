@@ -6,14 +6,6 @@ import android.support.v4.app.Fragment;
 
 import xyz.zimuju.sample.surface.gank.ToolbarActivity;
 
-/**
- * Created by _SOLID
- * GitHub:https://github.com/burgessjp
- * Date:2017/3/12
- * Time:16:51
- * Desc:
- */
-
 public class CategoryActivity extends ToolbarActivity {
 
     public static void start(Context context, String type) {

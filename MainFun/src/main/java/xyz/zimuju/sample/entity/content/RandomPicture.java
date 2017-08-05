@@ -1,10 +1,5 @@
 package xyz.zimuju.sample.entity.content;
 
-/**
- * Created by _SOLID
- * Date:2016/6/2
- * Time:17:20
- */
 public class RandomPicture {
 
     /**

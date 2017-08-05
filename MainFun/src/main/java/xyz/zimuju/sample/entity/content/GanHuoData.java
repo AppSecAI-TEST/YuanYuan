@@ -4,11 +4,6 @@ package xyz.zimuju.sample.entity.content;
 import java.io.Serializable;
 import java.util.List;
 
-/**
- * Created by _SOLID
- * Date:2016/5/16
- * Time:16:41
- */
 public class GanHuoData implements Serializable {
 
     private String _id;

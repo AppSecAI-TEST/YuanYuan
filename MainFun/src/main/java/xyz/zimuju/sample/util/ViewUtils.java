@@ -7,11 +7,6 @@ import android.util.TypedValue;
 
 import xyz.zimuju.sample.surface.gank.BaseFragment;
 
-/**
- * Created by _SOLID
- * Date:2016/3/30
- * Time:19:37
- */
 public class ViewUtils {
 
     /**

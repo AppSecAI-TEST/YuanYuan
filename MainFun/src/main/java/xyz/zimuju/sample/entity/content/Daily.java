@@ -1,12 +1,5 @@
 package xyz.zimuju.sample.entity.content;
 
-/**
- * Created by _SOLID
- * GitHub:https://github.com/burgessjp
- * Date:2017/3/12
- * Time:16:00
- * Desc:每日干货
- */
 public class Daily {
 
     private String desc;

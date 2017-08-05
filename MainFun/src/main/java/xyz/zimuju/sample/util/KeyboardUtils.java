@@ -5,11 +5,6 @@ import android.content.Context;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
-/**
- * Created by _SOLID
- * Date:2016/5/5
- * Time:9:30
- */
 public final class KeyboardUtils {
     private KeyboardUtils() {
     }

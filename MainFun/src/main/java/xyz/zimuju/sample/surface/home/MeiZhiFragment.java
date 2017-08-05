@@ -17,11 +17,6 @@ import xyz.zimuju.sample.http.subscriber.HttpResultSubscriber;
 import xyz.zimuju.sample.rx.RxUtils;
 import xyz.zimuju.sample.surface.gank.AbsListFragment;
 
-/**
- * Created by _SOLID
- * Date:2016/5/21
- * Time:9:31
- */
 public class MeiZhiFragment extends AbsListFragment {
 
     public static MeiZhiFragment newInstance() {

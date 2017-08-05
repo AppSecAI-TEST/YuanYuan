@@ -7,13 +7,6 @@ import android.support.v4.app.Fragment;
 import xyz.zimuju.sample.surface.home.MeiZhiFragment;
 import xyz.zimuju.sample.surface.mine.CollectListFragment;
 
-/**
- * Created by _SOLID
- * Date:2017/3/14
- * Time:13:24
- * Desc:包含有一个共同的Title的页面
- */
-
 public class SubActivity extends ToolbarActivity {
     public final static int TYPE_MEIZHI = 0X000001;
     public final static int TYPE_COLLECT = 0X000002;

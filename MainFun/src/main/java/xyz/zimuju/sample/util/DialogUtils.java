@@ -14,11 +14,6 @@ import xyz.zimuju.sample.event.CollectChangeEvent;
 import xyz.zimuju.sample.rx.RxBus;
 import xyz.zimuju.sample.surface.mine.LoginActivity;
 
-/**
- * Created by _SOLID
- * Date:2016/5/19
- * Time:10:02
- */
 public class DialogUtils {
 
     public static void showActionDialog(final Context context, final View itemView, final CollectTable bean) {

@@ -1,10 +1,5 @@
 package xyz.zimuju.sample.constant;
 
-/**
- * Created by _SOLID
- * Date:2016/5/19
- * Time:17:40
- */
 public class ConfigConstants {
 
     public static final String BOMB_APPLICATION_ID = "52a9ee2492786d438dfdf8c2792b4dc8";

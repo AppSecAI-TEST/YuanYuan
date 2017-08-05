@@ -2,13 +2,6 @@ package xyz.zimuju.sample.entity.content;
 
 import java.util.List;
 
-/**
- * Created by _SOLID
- * GitHub:https://github.com/burgessjp
- * Date:2017/3/12
- * Time:15:11
- * Desc:
- */
 public class CategoryList {
     private List<Category> data;
 

@@ -1,12 +1,5 @@
 package xyz.zimuju.sample.entity.content;
 
-/**
- * Created by _SOLID
- * Date:2016/11/22
- * Time:9:44
- * Desc:搜索结果实体类
- */
-
 public class SearchResult {
     private String desc;
     private String ganhuo_id;

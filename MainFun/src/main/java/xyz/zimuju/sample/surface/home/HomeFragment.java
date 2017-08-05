@@ -18,14 +18,6 @@ import xyz.zimuju.sample.http.subscriber.HttpResultSubscriber;
 import xyz.zimuju.sample.rx.RxUtils;
 import xyz.zimuju.sample.surface.gank.AbsListFragment;
 
-/**
- * Created by _SOLID
- * GitHub:https://github.com/burgessjp
- * Date:2017/3/12
- * Time:14:48
- * Desc:
- */
-
 public class HomeFragment extends AbsListFragment {
 
     @Override

@@ -5,11 +5,6 @@ import android.content.Context;
 import cn.bmob.v3.BmobObject;
 import cn.bmob.v3.listener.SaveListener;
 
-/**
- * Created by _SOLID
- * Date:2016/5/19
- * Time:13:32
- */
 public class CollectTable extends BmobObject {
 
     private String desc;

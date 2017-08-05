@@ -19,13 +19,6 @@ import xyz.zimuju.sample.rx.RxUtils;
 import xyz.zimuju.sample.surface.gank.BaseFragment;
 import xyz.zimuju.sample.util.ViewUtils;
 
-/**
- * Created by _SOLID
- * Date:2016/11/29
- * Time:17:01
- * Desc:闲读
- */
-
 public class ReadingTabFragment extends BaseFragment {
 
     private TabLayout tab_layout;

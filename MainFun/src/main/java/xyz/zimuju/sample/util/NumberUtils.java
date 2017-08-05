@@ -1,10 +1,5 @@
 package xyz.zimuju.sample.util;
 
-/**
- * Created by _SOLID
- * Date:2016/5/10
- * Time:10:12
- */
 public class NumberUtils {
     /**
      * 中国移动拥有号码段为:139,138,137,136,135,134,159,158,157(3G),151,150,188(3G),187(3G
@@ -24,8 +19,7 @@ public class NumberUtils {
     private boolean isLawful = false;
     private boolean is3G = false;
 
-    public NumberUtils(String mobile)
-    {
+    public NumberUtils(String mobile) {
         this.setMobile(mobile);
     }
 
@@ -33,89 +27,73 @@ public class NumberUtils {
         return mobile;
     }
 
-    public void setMobile(String mobile)
-    {
-        if (mobile == null)
-        {
+    public void setMobile(String mobile) {
+        if (mobile == null) {
             return;
         }
         /** */
         /** 第一步判断中国移动 */
-        if (mobile.matches(NumberUtils.mRegMobileStr))
-        {
+        if (mobile.matches(NumberUtils.mRegMobileStr)) {
             this.mobile = mobile;
             this.setFacilitatorType(0);
             this.setLawful(true);
-            if (mobile.matches(NumberUtils.mRegMobile3GStr))
-            {
+            if (mobile.matches(NumberUtils.mRegMobile3GStr)) {
                 this.setIs3G(true);
             }
         }
         /** */
         /** 第二步判断中国联通 */
-        else if (mobile.matches(NumberUtils.mRegUnicomStr))
-        {
+        else if (mobile.matches(NumberUtils.mRegUnicomStr)) {
             this.mobile = mobile;
             this.setFacilitatorType(1);
             this.setLawful(true);
-            if (mobile.matches(NumberUtils.mRegUnicom3GStr))
-            {
+            if (mobile.matches(NumberUtils.mRegUnicom3GStr)) {
                 this.setIs3G(true);
             }
         }
         /** */
         /** 第三步判断中国电信 */
-        else if (mobile.matches(NumberUtils.mRegTelecomStr))
-        {
+        else if (mobile.matches(NumberUtils.mRegTelecomStr)) {
             this.mobile = mobile;
             this.setFacilitatorType(2);
             this.setLawful(true);
-            if (mobile.matches(NumberUtils.mRegTelocom3GStr))
-            {
+            if (mobile.matches(NumberUtils.mRegTelocom3GStr)) {
                 this.setIs3G(true);
             }
         }
         /** */
         /** 第四步判断座机 */
-        if (mobile.matches(NumberUtils.mRegPhoneString))
-        {
+        if (mobile.matches(NumberUtils.mRegPhoneString)) {
             this.mobile = mobile;
             this.setFacilitatorType(0);
             this.setLawful(true);
-            if (mobile.matches(NumberUtils.mRegMobile3GStr))
-            {
+            if (mobile.matches(NumberUtils.mRegMobile3GStr)) {
                 this.setIs3G(true);
             }
         }
     }
 
-    public int getFacilitatorType()
-    {
+    public int getFacilitatorType() {
         return facilitatorType;
     }
 
-    private void setFacilitatorType(int facilitatorType)
-    {
+    private void setFacilitatorType(int facilitatorType) {
         this.facilitatorType = facilitatorType;
     }
 
-    public boolean isLawful()
-    {
+    public boolean isLawful() {
         return isLawful;
     }
 
-    private void setLawful(boolean isLawful)
-    {
+    private void setLawful(boolean isLawful) {
         this.isLawful = isLawful;
     }
 
-    public boolean isIs3G()
-    {
+    public boolean isIs3G() {
         return is3G;
     }
 
-    private void setIs3G(boolean is3G)
-    {
+    private void setIs3G(boolean is3G) {
         this.is3G = is3G;
     }
 }

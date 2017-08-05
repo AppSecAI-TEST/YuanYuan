@@ -23,12 +23,6 @@ import xyz.zimuju.sample.application.GankIOApplication;
 import xyz.zimuju.sample.util.ClipboardUtils;
 import xyz.zimuju.sample.util.SystemShareUtils;
 
-
-/**
- * Created by _SOLID
- * Date:2016/4/19
- * Time:13:03
- */
 public class WebViewActivity extends BaseActivity {
 
     public static String WEB_URL = "webViewUrl";

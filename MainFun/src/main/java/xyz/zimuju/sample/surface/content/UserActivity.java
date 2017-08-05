@@ -48,8 +48,6 @@ import xyz.zimuju.sample.widget.custom.UserView;
 
 /**
  * 联系人资料界面
- *
- * @author Lemon
  */
 public class UserActivity extends BaseActivity implements OnClickListener, OnBottomDragListener, BottomMenuView.OnBottomMenuItemClickListener, OnHttpResponseListener {
     public static final String TAG = "UserActivity";

@@ -3,11 +3,6 @@ package xyz.zimuju.sample.util;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * Created by _SOLID
- * Date:2016/5/10
- * Time:10:36
- */
 public class RegexUtils {
     /**
      * 判断email格式是否正确
@@ -65,12 +60,12 @@ public class RegexUtils {
         Matcher isNum = pattern.matcher(str);
         return isNum.matches();
     }
+
     /**
      * 判断是否为整数
      *
-     * @param str
-     *            传入的字符串
-     * @return 是整数返回true,否则返回false
+     * @param str 传入的字符串
+     * @return 是整数返回true, 否则返回false
      */
     public static boolean isInteger(String str) {
         Pattern pattern = Pattern.compile("^[-\\+]?[\\d]*$");
@@ -80,9 +75,8 @@ public class RegexUtils {
     /**
      * 判断是否为浮点数，包括double和float
      *
-     * @param str
-     *            传入的字符串
-     * @return 是浮点数返回true,否则返回false
+     * @param str 传入的字符串
+     * @return 是浮点数返回true, 否则返回false
      */
     public static boolean isDouble(String str) {
         Pattern pattern = Pattern.compile("^[-\\+]?[.\\d]*$");

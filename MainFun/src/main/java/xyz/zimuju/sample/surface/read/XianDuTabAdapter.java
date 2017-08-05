@@ -8,14 +8,6 @@ import java.util.List;
 
 import xyz.zimuju.sample.entity.content.XianDuCategory;
 
-/**
- * Created by _SOLID
- * GitHub:https://github.com/burgessjp
- * Date:2017/3/18
- * Time:16:02
- * Desc:
- */
-
 public class XianDuTabAdapter extends FragmentStatePagerAdapter {
     private List<XianDuCategory> list;
 

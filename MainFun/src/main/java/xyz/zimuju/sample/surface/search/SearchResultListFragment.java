@@ -14,13 +14,6 @@ import xyz.zimuju.sample.rx.RxUtils;
 import xyz.zimuju.sample.surface.gank.AbsListFragment;
 import xyz.zimuju.sample.widget.custom.LinearDecoration;
 
-/**
- * Created by _SOLID
- * Date:2016/11/22
- * Time:9:56
- * Desc:
- */
-
 public class SearchResultListFragment extends AbsListFragment {
     private String keyWord = "Android";
     private String category = "all";

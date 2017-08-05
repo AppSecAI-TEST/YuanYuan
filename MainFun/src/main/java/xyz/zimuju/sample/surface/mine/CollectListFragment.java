@@ -17,11 +17,6 @@ import xyz.zimuju.sample.entity.bomb.CollectTable;
 import xyz.zimuju.sample.surface.gank.AbsListFragment;
 import xyz.zimuju.sample.util.AuthorityUtils;
 
-/**
- * Created by _SOLID
- * Date:2016/5/18
- * Time:14:23
- */
 public class CollectListFragment extends AbsListFragment {
 
     public static CollectListFragment newInstance() {

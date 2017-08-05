@@ -33,7 +33,6 @@ import xyz.zimuju.sample.util.DataUtils;
 import xyz.zimuju.sample.util.HttpRequest;
 
 /**用户列表界面fragment
- * @author Lemon
  * @use new UserListFragment(),详细使用见.DemoFragmentActivity(initData方法内)
  * @must 查看 .HttpManager 中的@must和@warn
  *       查看 .SettingUtil 中的@must和@warn

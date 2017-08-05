@@ -5,11 +5,6 @@ import android.content.ClipboardManager;
 import android.content.Context;
 import android.os.Build;
 
-/**
- * Created by _SOLID
- * Date:2016/4/22
- * Time:11:45
- */
 public class ClipboardUtils {
     private static ClipboardManager mClipboardManager;
     private static android.content.ClipboardManager mNewCliboardManager;

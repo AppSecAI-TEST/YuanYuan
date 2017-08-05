@@ -18,14 +18,6 @@ import xyz.zimuju.sample.entity.content.XianDuItem;
 import xyz.zimuju.sample.rx.RxUtils;
 import xyz.zimuju.sample.surface.gank.AbsListFragment;
 
-/**
- * Created by _SOLID
- * GitHub:https://github.com/burgessjp
- * Date:2017/3/18
- * Time:16:16
- * Desc:
- */
-
 public class ReadingListFragment extends AbsListFragment {
 
     private String category;

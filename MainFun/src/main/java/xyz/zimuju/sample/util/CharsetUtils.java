@@ -5,11 +5,6 @@ import java.nio.charset.Charset;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-/**
- * Created by _SOLID
- * Date:2016/4/18
- * Time:16:17
- */
 public class CharsetUtils {
     public static String decodeUnicode(String str) {
         Charset set = Charset.forName("UTF-16");

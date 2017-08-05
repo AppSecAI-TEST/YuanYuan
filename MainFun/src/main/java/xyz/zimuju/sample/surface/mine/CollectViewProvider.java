@@ -17,12 +17,6 @@ import xyz.zimuju.sample.util.DateUtils;
 import xyz.zimuju.sample.util.DialogUtils;
 import xyz.zimuju.sample.util.SnackBarUtils;
 
-/**
- * Created by _SOLID
- * Date:2016/12/1
- * Time:13:38
- * Desc:
- */
 public class CollectViewProvider
         extends ItemViewProvider<CollectTable, CollectViewProvider.ViewHolder> {
 

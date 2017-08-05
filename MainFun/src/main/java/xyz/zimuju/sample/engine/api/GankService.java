@@ -11,11 +11,6 @@ import xyz.zimuju.sample.entity.content.DailyList;
 import xyz.zimuju.sample.entity.content.GanHuoData;
 import xyz.zimuju.sample.entity.content.SearchResult;
 
-/**
- * Created by _SOLID
- * Date:2016/8/3
- * Time:9:28
- */
 public interface GankService {
 
     String BASE_URL = "http://www.gank.io/api/";

@@ -16,13 +16,6 @@ import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.surface.gank.BaseActivity;
 import xyz.zimuju.sample.util.SnackBarUtils;
 
-/**
- * Created by _SOLID
- * Date:2016/11/22
- * Time:10:08
- * Desc:
- */
-
 public class SearchActivity extends BaseActivity {
 
     private Toolbar mToolbar;

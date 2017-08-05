@@ -9,13 +9,6 @@ import android.webkit.WebView;
 
 import java.io.File;
 
-/**
- * Created by _SOLID
- * Date:2016/12/12
- * Time:17:25
- * Desc:
- */
-
 public class WebViewUtil {
     public static void setWebViewOptions(WebView webView) {
         Context context = webView.getContext().getApplicationContext();

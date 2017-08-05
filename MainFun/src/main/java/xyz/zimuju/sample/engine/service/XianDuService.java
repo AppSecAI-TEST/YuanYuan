@@ -17,14 +17,6 @@ import xyz.zimuju.sample.entity.content.XianDuCategory;
 import xyz.zimuju.sample.entity.content.XianDuItem;
 import xyz.zimuju.sample.factory.ServiceFactory;
 
-/**
- * Created by _SOLID
- * GitHub:https://github.com/burgessjp
- * Date:2017/3/18
- * Time:15:22
- * Desc:使用Jsoup解析闲读数据
- */
-
 public class XianDuService {
 
     private final static String BASE_URL = "http://gank.io/xiandu";

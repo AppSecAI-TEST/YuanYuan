@@ -1,7 +1,7 @@
 package xyz.zimuju.sample.entity.bomb;
 
 /*
- * @description PushMessage
+ * @description PushMessage ：推送的消息
  * @author Nathaniel
  * @time 2017/8/3 - 10:00
  * @version 1.0.0

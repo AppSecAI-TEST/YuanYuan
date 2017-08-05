@@ -1,10 +1,4 @@
 package xyz.zimuju.sample.util;
-/*
- * @description 
- * @author Nathaniel
- * @time 2017/8/1 - 16:57
- * @version 1.0.0
- */
 
 import java.util.ArrayList;
 import java.util.List;

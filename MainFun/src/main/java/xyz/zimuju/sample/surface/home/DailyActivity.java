@@ -20,15 +20,6 @@ import xyz.zimuju.sample.loader.ImageLoader;
 import xyz.zimuju.sample.surface.gank.BaseActivity;
 import xyz.zimuju.sample.surface.gank.ViewPicActivity;
 
-
-/**
- * Created by _SOLID
- * GitHub:https://github.com/burgessjp
- * Date:2017/3/12
- * Time:17:30
- * Desc:
- */
-
 public class DailyActivity extends BaseActivity {
 
     public static void start(Context context, String title, String date, String imageUrl) {
