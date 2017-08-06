@@ -33,12 +33,11 @@ public class GlideImageLoaderProvider implements ImageLoaderProvider {
     }
 
     private void loadNormal(Context ctx, ImageRequest img) {
-        Glide.with(ctx)
-                .load(img.getUrl())
-                .placeholder(img.getPlaceHolder())
+        Glide.with(ctx).load(img.getUrl())
                 .error(img.getError())
+                .placeholder(R.mipmap.icon_image_error)
                 .animate(R.anim.fade_in)
-                .diskCacheStrategy(DiskCacheStrategy.SOURCE)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(img.getImageView());
     }
 
@@ -72,7 +71,7 @@ public class GlideImageLoaderProvider implements ImageLoaderProvider {
                 })
                 .load(img.getUrl())
                 .placeholder(img.getPlaceHolder())
-                .diskCacheStrategy(DiskCacheStrategy.SOURCE)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .animate(R.anim.fade_in)
                 .into(img.getImageView());
     }
