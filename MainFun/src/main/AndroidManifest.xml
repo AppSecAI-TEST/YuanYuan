@@ -205,14 +205,13 @@
 
         <activity
             android:name=".surface.user.LoginActivity"
-            android:screenOrientation="portrait"
-            android:launchMode="singleTop"/>
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".surface.user.RegisterActivity"
-            android:screenOrientation="portrait"
-            android:launchMode="singleTop"/>
-
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"/>
 
         <activity
             android:name=".surface.gank.ViewPicActivity"
@@ -271,10 +270,16 @@
             android:name="cn.bmob.push.lib.service.PushService"
             android:exported="true"
             android:label="PushService"
-            android:process="cn.bmob.push">
+            android:process=":bmobpush">
             <intent-filter>
                 <action android:name="cn.bmob.push.lib.service.PushService"/>
             </intent-filter>
+        </service>
+
+        <!-- 用于进程保活 -->
+        <service
+            android:name="cn.bmob.push.lib.service.PushNotifyService"
+            android:process=":bmobpush">
         </service>
 
         <receiver android:name="cn.bmob.push.PushReceiver">
@@ -288,9 +293,22 @@
             </intent-filter>
         </receiver>
 
+        <!-- 创建的消息接收器，在这里进行注册 -->
         <receiver android:name=".receiver.BombPushMessageReceiver">
             <intent-filter>
                 <action android:name="cn.bmob.push.action.MESSAGE"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- 接收心跳和唤醒的广播，要和PushService运行在同个进程 -->
+        <receiver
+            android:name="cn.bmob.push.PushNotifyReceiver"
+            android:process=":bmobpush">
+            <intent-filter>
+                <!-- 接收心跳广播的action -->
+                <action android:name="cn.bmob.push.action.HEARTBEAT"/>
+                <!-- 接收唤醒广播的action -->
+                <action android:name="cn.bmob.push.action.NOTIFY"/>
             </intent-filter>
         </receiver>
 

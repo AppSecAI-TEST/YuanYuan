@@ -1,6 +1,7 @@
 package xyz.zimuju.sample.surface.user;
 
 import cn.bmob.v3.BmobUser;
+import cn.bmob.v3.exception.BmobException;
 import cn.bmob.v3.listener.SaveListener;
 import xyz.zimuju.common.rx.RxContract;
 
@@ -10,22 +11,21 @@ public class LoginContract extends RxContract<LoginView> implements LoginPresent
         BmobUser bmobUser = new BmobUser();
         bmobUser.setUsername(parameters[0]);
         bmobUser.setPassword(parameters[1]);
-        bmobUser.signUp(context, new SaveListener() {
+        bmobUser.login(new SaveListener() {
             @Override
-            public void onSuccess() {
-                basalView.showToast("注册成功");
-            }
-
-            @Override
-            public void onFailure(int errorCode, String errorMessage) {
-                basalView.showToast("errorCode=" + errorCode + ", errorMessage=" + errorMessage);
+            public void done(Object o, BmobException e) {
+                if (e == null) {
+                    basalView.showToast("注册成功");
+                } else {
+                    basalView.showToast("errorCode=" + e.getErrorCode() + ", errorMessage=" + e.getMessage());
+                }
             }
         });
     }
 
     @Override
     public void getUserInfo() {
-        BmobUser bmobUser = BmobUser.getCurrentUser(context);
+        BmobUser bmobUser = BmobUser.getCurrentUser(BmobUser.class);
         basalView.getUserInfoResult(bmobUser);
     }
 }

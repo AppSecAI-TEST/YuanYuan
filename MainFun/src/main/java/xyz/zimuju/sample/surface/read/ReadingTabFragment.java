@@ -12,10 +12,10 @@ import java.util.List;
 import io.reactivex.SingleObserver;
 import io.reactivex.disposables.Disposable;
 import me.solidev.statusviewlayout.StatusViewLayout;
-import xyz.zimuju.common.rx.RxUtils;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.engine.service.XianDuService;
 import xyz.zimuju.sample.entity.content.XianDuCategory;
+import xyz.zimuju.sample.rx.RxUtils;
 import xyz.zimuju.sample.surface.gank.BaseFragment;
 import xyz.zimuju.sample.util.ViewUtils;
 

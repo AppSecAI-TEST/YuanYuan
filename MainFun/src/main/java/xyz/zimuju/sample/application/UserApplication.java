@@ -3,6 +3,7 @@ package xyz.zimuju.sample.application;
 
 import android.content.Context;
 
+import cn.bmob.v3.BmobUser;
 import xyz.zimuju.common.helper.InitializeHelper;
 import xyz.zimuju.common.util.StringUtils;
 import xyz.zimuju.sample.entity.User;
@@ -42,15 +43,15 @@ public class UserApplication implements InitializeHelper {
         return currentUser;
     }
 
-    public void saveCurrentUser(User user) {
+    public void saveBmobUser(BmobUser user) {
         if (user == null) {
             return;
         }
-        if (user.getId() <= 0 && StringUtils.isNotEmpty(user.getUsername(), true) == false) {
+        if (StringUtils.isNotEmpty(user.getUsername(), true) == false) {
             return;
         }
 
-        DataManager.getInstance().saveCurrentUser(user);
+        DataManager.getInstance().saveBmobUser(user);
     }
 
     public void logout() {
