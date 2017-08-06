@@ -1,10 +1,8 @@
-package xyz.zimuju.sample.surface.mine;
+package xyz.zimuju.sample.surface.user;
 
 import cn.bmob.v3.BmobUser;
 import cn.bmob.v3.listener.SaveListener;
 import xyz.zimuju.common.rx.RxContract;
-
-import static com.yanzhenjie.nohttp.NoHttp.getContext;
 
 public class LoginContract extends RxContract<LoginView> implements LoginPresenter {
     @Override
@@ -12,11 +10,10 @@ public class LoginContract extends RxContract<LoginView> implements LoginPresent
         BmobUser bmobUser = new BmobUser();
         bmobUser.setUsername(parameters[0]);
         bmobUser.setPassword(parameters[1]);
-        bmobUser.signUp(getContext(), new SaveListener() {
+        bmobUser.signUp(context, new SaveListener() {
             @Override
             public void onSuccess() {
                 basalView.showToast("注册成功");
-                getUserInfo();
             }
 
             @Override
@@ -28,6 +25,7 @@ public class LoginContract extends RxContract<LoginView> implements LoginPresent
 
     @Override
     public void getUserInfo() {
-
+        BmobUser bmobUser = BmobUser.getCurrentUser(context);
+        basalView.getUserInfoResult(bmobUser);
     }
 }

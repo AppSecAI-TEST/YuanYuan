@@ -12,7 +12,7 @@ import xyz.zimuju.common.rx.RxBus;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.entity.bomb.CollectTable;
 import xyz.zimuju.sample.event.CollectChangeEvent;
-import xyz.zimuju.sample.surface.mine.LoginActivity;
+import xyz.zimuju.sample.surface.user.LoginActivity;
 
 public class DialogUtils {
 

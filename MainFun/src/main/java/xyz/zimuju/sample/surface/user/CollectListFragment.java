@@ -1,4 +1,4 @@
-package xyz.zimuju.sample.surface.mine;
+package xyz.zimuju.sample.surface.user;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

@@ -12,8 +12,8 @@ import xyz.zimuju.guideview.Guide;
 import xyz.zimuju.guideview.GuideBuilder;
 import xyz.zimuju.guideview.OnVisibilityChangedListener;
 import xyz.zimuju.sample.R;
-import xyz.zimuju.sample.surface.component.MultiComponent;
-import xyz.zimuju.sample.surface.component.SimpleComponent;
+import xyz.zimuju.sample.component.MultiComponent;
+import xyz.zimuju.sample.component.SimpleComponent;
 
 public class SimpleViewGuideActivity extends Activity {
 

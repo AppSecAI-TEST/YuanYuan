@@ -1,5 +1,6 @@
-package xyz.zimuju.sample.surface.mine;
+package xyz.zimuju.sample.surface.user;
 
+import cn.bmob.v3.BmobUser;
 import xyz.zimuju.common.basal.BasalView;
 
 /*
@@ -11,4 +12,6 @@ import xyz.zimuju.common.basal.BasalView;
  */
 public interface LoginView extends BasalView {
     void loginResult();
+
+    void getUserInfoResult(BmobUser bmobUser);
 }

@@ -1,13 +1,15 @@
 package xyz.zimuju.sample.surface.common;
 
 
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 
 import xyz.zimuju.sample.R;
-import xyz.zimuju.sample.surface.NavigationActivity;
 
 /*
  * @description SplashActivity : 启动页面
@@ -21,19 +23,26 @@ public class SplashActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+        setTheme(R.style.SplashTheme);
         setContentView(R.layout.activity_splash);
 
-        new Handler().postDelayed(new Runnable() {
-
+        ObjectAnimator rotate = ObjectAnimator.ofFloat(findViewById(R.id.splash_logo_iv), "rotationY", 180, 360);
+        AnimatorSet animatorSet = new AnimatorSet();
+        animatorSet.playSequentially(rotate);
+        animatorSet.setDuration(3000);
+        animatorSet.start();
+        animatorSet.addListener(new AnimatorListenerAdapter() {
             @Override
-            public void run() {
+            public void onAnimationEnd(Animator animation) {
+                // startActivity(new Intent(SplashActivity.this, MainActivity.class));
                 Intent splashIntent = new Intent();
                 splashIntent.setClass(SplashActivity.this, NavigationActivity.class);
                 startActivity(splashIntent);
                 finish();
             }
-        }, 3 * 1000);
+        });
+
+        super.onCreate(savedInstanceState);
     }
 
     @Override

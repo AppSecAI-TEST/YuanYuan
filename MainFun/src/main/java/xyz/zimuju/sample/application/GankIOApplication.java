@@ -7,11 +7,12 @@ import com.squareup.leakcanary.LeakCanary;
 
 import java.io.File;
 
+import cn.bmob.newsmssdk.BmobSMS;
 import cn.bmob.push.BmobPush;
 import cn.bmob.v3.Bmob;
 import cn.bmob.v3.BmobConfig;
 import cn.bmob.v3.BmobInstallation;
-import xyz.zimuju.sample.MultiTypeInstaller;
+import xyz.zimuju.sample.component.MultiTypeInstaller;
 import xyz.zimuju.sample.constant.ConfigConstants;
 import xyz.zimuju.sample.util.PrefUtils;
 
@@ -36,6 +37,8 @@ public class GankIOApplication extends Application {
                 .setFileExpiration(2500) //文件的过期时间(单位为秒)：默认1800s
                 .build();
         Bmob.initialize(config);
+
+        BmobSMS.initialize(this, ConfigConstants.BOMB_APPLICATION_ID);
 
         // 使用推送服务时的初始化操作
         BmobInstallation.getCurrentInstallation(this).save();

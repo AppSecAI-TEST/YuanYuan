@@ -1,5 +1,7 @@
 package xyz.zimuju.common.basal;
 
+import android.content.Context;
+
 /*
  * @description BasicView View 的基类
  * @author Nathaniel - nathanwriting@126.com
@@ -8,4 +10,6 @@ package xyz.zimuju.common.basal;
  */
 public interface BasalView {
     void showToast(String message);
+
+    Context getContext();
 }

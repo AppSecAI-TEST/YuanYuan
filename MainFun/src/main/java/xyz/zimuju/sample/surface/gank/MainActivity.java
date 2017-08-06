@@ -15,7 +15,7 @@ import android.view.ViewGroup;
 import cn.bmob.v3.update.BmobUpdateAgent;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.surface.home.HomeFragment;
-import xyz.zimuju.sample.surface.mine.MineFragment;
+import xyz.zimuju.sample.surface.user.MineFragment;
 import xyz.zimuju.sample.surface.read.ReadingTabFragment;
 import xyz.zimuju.sample.surface.search.SearchActivity;
 import xyz.zimuju.sample.util.ViewUtils;

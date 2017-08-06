@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:fitsSystemWindows="true"
-              android:orientation="vertical"
-              tools:context=".surface.user.LoginActivity">
+              android:orientation="vertical">
 
     <include layout="@layout/include_header_layout"/>
 
@@ -56,46 +53,81 @@
             android:textColor="@color/app_text"
             android:textSize="16sp"/>
 
+        <xyz.zimuju.common.widget.ClearEditText
+            android:id="@+id/login_confirm_cet"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_editor_background"
+            android:cursorVisible="true"
+            android:drawableLeft="@mipmap/icon_login_password"
+            android:hint="请再次输入密码"
+            android:inputType="textPassword"
+            android:maxLines="1"
+            android:paddingRight="10dp"
+            android:textColor="@color/app_text"
+            android:textSize="16sp"/>
+
+        <xyz.zimuju.common.widget.ClearEditText
+            android:id="@+id/login_phone_cet"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_editor_background"
+            android:cursorVisible="true"
+            android:drawableLeft="@mipmap/icon_login_phone"
+            android:hint="请输入手机号"
+            android:inputType="number"
+            android:maxLength="11"
+            android:maxLines="1"
+            android:paddingRight="10dp"
+            android:textColor="@color/app_text"
+            android:textSize="16sp"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="10dp"
-            android:background="@drawable/edit_item_text_bg"
-            android:divider="@drawable/shape_linear_layout_horizontal_split"
-            android:orientation="horizontal"
-            android:showDividers="middle">
+            android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/login_register_tv"
+            <xyz.zimuju.common.widget.ClearEditText
+                android:id="@+id/login_code_cet"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center"
-                android:text="新用户注册"
-                android:textSize="14dp"
-                android:textStyle="bold"/>
+                android:background="@drawable/shape_editor_background"
+                android:cursorVisible="true"
+                android:drawableLeft="@mipmap/icon_login_badge"
+                android:hint="请输入验证码"
+                android:inputType="number"
+                android:maxLines="1"
+                android:paddingRight="10dp"
+                android:textColor="@color/app_text"
+                android:textSize="16sp"/>
 
             <TextView
-                android:id="@+id/login_forgot_tv"
-                android:layout_width="0dp"
+                android:id="@+id/login_obtain_tv"
+                android:layout_width="120dp"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/selector_login_button"
                 android:gravity="center"
-                android:text="忘记密码？"
-                android:textSize="14dp"/>
+                android:text="获取验证码"
+                android:textColor="@android:color/white"
+                android:textSize="14sp"/>
         </LinearLayout>
 
+
         <TextView
-            android:id="@+id/login_submit_tv"
+            android:id="@+id/login_register_tv"
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
             android:background="@drawable/selector_login_button"
             android:gravity="center"
-            android:text="登    录"
+            android:text="注    册"
             android:textColor="@android:color/white"
             android:textSize="18sp"/>
     </LinearLayout>
 
-    <include layout="@layout/include_third_authority_layout"/>
 </LinearLayout>

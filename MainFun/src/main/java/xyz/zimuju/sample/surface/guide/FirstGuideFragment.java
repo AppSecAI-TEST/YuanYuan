@@ -14,7 +14,7 @@ import xyz.zimuju.guideview.Guide;
 import xyz.zimuju.guideview.GuideBuilder;
 import xyz.zimuju.guideview.OnVisibilityChangedListener;
 import xyz.zimuju.sample.R;
-import xyz.zimuju.sample.surface.component.MultiComponent;
+import xyz.zimuju.sample.component.MultiComponent;
 
 public class FirstGuideFragment extends Fragment {
     Guide guide;

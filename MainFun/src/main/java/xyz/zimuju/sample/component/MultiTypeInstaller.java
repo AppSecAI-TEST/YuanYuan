@@ -1,4 +1,4 @@
-package xyz.zimuju.sample;
+package xyz.zimuju.sample.component;
 
 import me.drakeet.multitype.GlobalMultiTypePool;
 import xyz.zimuju.sample.entity.content.CategoryList;

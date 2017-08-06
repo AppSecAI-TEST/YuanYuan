@@ -1,4 +1,4 @@
-package xyz.zimuju.sample.surface.component;
+package xyz.zimuju.sample.component;
 
 import android.view.LayoutInflater;
 import android.view.View;

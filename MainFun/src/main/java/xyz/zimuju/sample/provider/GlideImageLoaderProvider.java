@@ -12,7 +12,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import xyz.zimuju.sample.R;
-import xyz.zimuju.sample.SettingCenter;
+import xyz.zimuju.sample.component.SettingCenter;
 import xyz.zimuju.sample.loader.ImageRequest;
 import xyz.zimuju.sample.util.NetworkUtil;
 

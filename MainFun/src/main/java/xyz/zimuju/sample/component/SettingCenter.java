@@ -1,4 +1,4 @@
-package xyz.zimuju.sample;
+package xyz.zimuju.sample.component;
 
 import android.os.Handler;
 import android.os.Looper;

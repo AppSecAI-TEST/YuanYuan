@@ -1,4 +1,4 @@
-package xyz.zimuju.sample.surface;
+package xyz.zimuju.sample.surface.common;
 
 import android.os.Bundle;
 import android.support.annotation.IdRes;
@@ -14,7 +14,7 @@ import xyz.zimuju.common.util.ToastUtils;
 import xyz.zimuju.common.widget.NoneScrollViewPager;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.adapter.navigation.NavigationFragmentPagerAdapter;
-import xyz.zimuju.sample.surface.mine.MineFragment;
+import xyz.zimuju.sample.surface.user.MineFragment;
 
 /*
  * @description NavigationActivity:导航界面

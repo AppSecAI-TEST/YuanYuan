@@ -5,7 +5,7 @@ import android.content.Intent;
 import android.support.v4.app.Fragment;
 
 import xyz.zimuju.sample.surface.home.MeiZhiFragment;
-import xyz.zimuju.sample.surface.mine.CollectListFragment;
+import xyz.zimuju.sample.surface.user.CollectListFragment;
 
 public class SubActivity extends ToolbarActivity {
     public final static int TYPE_MEIZHI = 0X000001;

@@ -1,4 +1,4 @@
-package xyz.zimuju.sample.surface.mine;
+package xyz.zimuju.sample.surface.user;
 
 import xyz.zimuju.common.basal.BasalPresenter;
 

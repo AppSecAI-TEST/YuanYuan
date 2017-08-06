@@ -1,12 +1,17 @@
-package xyz.zimuju.sample.surface.mine;
+package xyz.zimuju.sample.surface.user;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import cn.bmob.v3.BmobUser;
 import xyz.zimuju.common.basal.BasalActivity;
+import xyz.zimuju.common.util.EmptyUtil;
+import xyz.zimuju.common.widget.ClearEditText;
 import xyz.zimuju.sample.R;
 
 /*
@@ -22,11 +27,17 @@ public class LoginActivity extends BasalActivity<LoginPresenter> implements View
     @BindView(R.id.header_title_tv)
     TextView title;
 
-    @BindView(R.id.login_username_tv)
-    TextView username;
+    @BindView(R.id.login_username_cet)
+    ClearEditText username;
 
-    @BindView(R.id.login_password_tv)
-    TextView password;
+    @BindView(R.id.login_password_cet)
+    ClearEditText password;
+
+    @BindView(R.id.login_register_tv)
+    TextView register;
+
+    @BindView(R.id.login_forgot_tv)
+    TextView forgot;
 
     @BindView(R.id.login_submit_tv)
     TextView submit;
@@ -57,16 +68,12 @@ public class LoginActivity extends BasalActivity<LoginPresenter> implements View
         super.onCreate(savedInstanceState);
     }
 
-    private void getUserInfo() {
-
-    }
-
     @Override
     public void onBackPressed() {
         finish();
     }
 
-    @OnClick({R.id.header_back_tv, R.id.login_submit_tv})
+    @OnClick({R.id.header_back_tv, R.id.login_submit_tv, R.id.login_register_tv, R.id.login_forgot_tv})
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
@@ -79,11 +86,27 @@ public class LoginActivity extends BasalActivity<LoginPresenter> implements View
                 String passwordText = password.getText().toString().trim();
                 presenter.login(usernameText, passwordText);
                 break;
+
+            case R.id.login_register_tv:
+                startActivity(new Intent(getContext(), RegisterActivity.class));
+                break;
+
+            case R.id.login_forgot_tv:
+
+                break;
         }
     }
 
     @Override
     public void loginResult() {
+        presenter.getUserInfo();
+    }
 
+    @Override
+    public void getUserInfoResult(BmobUser bmobUser) {
+        if (EmptyUtil.isEmpty(bmobUser)) {
+            return;
+        }
+        Log.d("Nathaniel", bmobUser.getUsername());
     }
 }

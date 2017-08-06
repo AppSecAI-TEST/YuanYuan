@@ -1,4 +1,4 @@
-package xyz.zimuju.sample.surface;
+package xyz.zimuju.sample.surface.common;
 
 
 import xyz.zimuju.common.basal.BasalFragment;

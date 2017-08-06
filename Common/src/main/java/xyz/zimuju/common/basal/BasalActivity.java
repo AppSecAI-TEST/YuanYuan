@@ -45,7 +45,8 @@ public abstract class BasalActivity<T extends BasalPresenter> extends AppCompatA
         viewOption();
     }
 
-    protected Context getContext() {
+    @Override
+    public Context getContext() {
         return getActivity();
     }
 

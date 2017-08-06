@@ -89,7 +89,7 @@
     <style name="ViewPicTheme" parent="AppTheme"/>
 
     <style name="SplashTheme" parent="FullScreen">
-        <item name="android:windowBackground">@drawable/bg_splash_activity</item>
+        <item name="android:windowBackground">@drawable/layer_splash_activity</item>
         <!--<item name="android:windowBackground">@drawable/splash</item>-->
         <item name="android:windowFullscreen">true</item>
     </style>
