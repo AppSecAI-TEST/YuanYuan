@@ -8,10 +8,10 @@ import com.afollestad.materialdialogs.MaterialDialog;
 
 import cn.bmob.v3.listener.DeleteListener;
 import cn.bmob.v3.listener.SaveListener;
+import xyz.zimuju.common.rx.RxBus;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.entity.bomb.CollectTable;
 import xyz.zimuju.sample.event.CollectChangeEvent;
-import xyz.zimuju.sample.rx.RxBus;
 import xyz.zimuju.sample.surface.mine.LoginActivity;
 
 public class DialogUtils {

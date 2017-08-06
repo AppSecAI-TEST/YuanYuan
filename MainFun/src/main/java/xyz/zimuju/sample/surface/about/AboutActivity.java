@@ -8,6 +8,7 @@ import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.OnClick;
 import xyz.zimuju.common.basal.BasalActivity;
+import xyz.zimuju.common.basal.BasalPresenter;
 import xyz.zimuju.sample.R;
 
 public class AboutActivity extends BasalActivity implements View.OnClickListener {
@@ -31,6 +32,11 @@ public class AboutActivity extends BasalActivity implements View.OnClickListener
     }
 
     @Override
+    protected BasalPresenter initPresenter() {
+        return null;
+    }
+
+    @Override
     protected void initData() {
         title.setText(getString(R.string.common_tip_about));
         back.setText(getString(R.string.common_tip_back));
@@ -44,11 +50,6 @@ public class AboutActivity extends BasalActivity implements View.OnClickListener
         builder.append(getString(R.string.about_msg));
         // builder.append(SpannableStringUtils.format(this, getString(R.string.about_project), R.style.AboutItemText));
         textView.setText(builder.subSequence(0, builder.length()));
-    }
-
-    @Override
-    protected void showToast(String message) {
-
     }
 
     @OnClick(R.id.header_back_tv)

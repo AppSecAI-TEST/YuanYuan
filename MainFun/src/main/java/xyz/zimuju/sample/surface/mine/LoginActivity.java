@@ -6,8 +6,6 @@ import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.OnClick;
-import cn.bmob.v3.BmobUser;
-import cn.bmob.v3.listener.SaveListener;
 import xyz.zimuju.common.basal.BasalActivity;
 import xyz.zimuju.sample.R;
 
@@ -17,7 +15,7 @@ import xyz.zimuju.sample.R;
  * @time 2017/8/4 - 9:36
  * @version 1.0.0
  */
-public class LoginActivity extends BasalActivity implements View.OnClickListener {
+public class LoginActivity extends BasalActivity<LoginPresenter> implements View.OnClickListener, LoginView {
     @BindView(R.id.header_back_tv)
     TextView back;
 
@@ -36,6 +34,11 @@ public class LoginActivity extends BasalActivity implements View.OnClickListener
     @Override
     protected int getLayoutId() {
         return R.layout.activity_login;
+    }
+
+    @Override
+    protected LoginPresenter initPresenter() {
+        return new LoginContract();
     }
 
     @Override
@@ -72,29 +75,15 @@ public class LoginActivity extends BasalActivity implements View.OnClickListener
                 break;
 
             case R.id.login_submit_tv:
-                bombLogin();
+                String usernameText = username.getText().toString().trim();
+                String passwordText = password.getText().toString().trim();
+                presenter.login(usernameText, passwordText);
                 break;
         }
     }
 
-    private void bombLogin() {
-        String usernameText = username.getText().toString().trim();
-        String passwordText = password.getText().toString().trim();
+    @Override
+    public void loginResult() {
 
-        BmobUser bmobUser = new BmobUser();
-        bmobUser.setUsername(usernameText);
-        bmobUser.setPassword(passwordText);
-        bmobUser.signUp(getContext(), new SaveListener() {
-            @Override
-            public void onSuccess() {
-                showToast("注册成功");
-                getUserInfo();
-            }
-
-            @Override
-            public void onFailure(int errorCode, String errorMessage) {
-                showToast("errorCode=" + errorCode + ", errorMessage=" + errorMessage);
-            }
-        });
     }
 }

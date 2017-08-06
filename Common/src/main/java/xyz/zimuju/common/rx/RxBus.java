@@ -1,4 +1,4 @@
-package xyz.zimuju.sample.rx;
+package xyz.zimuju.common.rx;
 
 import io.reactivex.Observable;
 import io.reactivex.subjects.PublishSubject;

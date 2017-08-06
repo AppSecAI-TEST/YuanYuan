@@ -8,6 +8,7 @@ import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.OnClick;
 import xyz.zimuju.common.basal.BasalActivity;
+import xyz.zimuju.common.basal.BasalPresenter;
 import xyz.zimuju.sample.R;
 
 public class GuideHomeActivity extends BasalActivity implements View.OnClickListener {
@@ -35,6 +36,11 @@ public class GuideHomeActivity extends BasalActivity implements View.OnClickList
     }
 
     @Override
+    protected BasalPresenter initPresenter() {
+        return null;
+    }
+
+    @Override
     protected void initData() {
 
     }
@@ -43,12 +49,6 @@ public class GuideHomeActivity extends BasalActivity implements View.OnClickList
     protected void viewOption() {
         
     }
-
-    @Override
-    protected void showToast(String message) {
-
-    }
-
 
     @OnClick({R.id.guide_activity_tv, R.id.guide_activity_view_tv, R.id.guide_fragment_tv, R.id.guide_fragmnet_view_tv, R.id.guide_list_tv, R.id.guide_more_tv})
     @Override

@@ -1,4 +1,4 @@
-package xyz.zimuju.sample.rx;
+package xyz.zimuju.common.rx;
 
 import android.support.annotation.NonNull;
 

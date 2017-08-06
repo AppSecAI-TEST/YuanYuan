@@ -1,4 +1,4 @@
-package xyz.zimuju.sample.surface.mine;
+package xyz.zimuju.sample.provider;
 
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -7,13 +7,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import cn.bmob.v3.exception.BmobException;
-import cn.bmob.v3.listener.UpdateListener;
+import cn.bmob.v3.listener.DeleteListener;
 import me.drakeet.multitype.ItemViewProvider;
 import me.drakeet.multitype.MultiTypeAdapter;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.entity.bomb.CollectTable;
-import xyz.zimuju.sample.surface.gank.activity.WebViewActivity;
+import xyz.zimuju.sample.surface.gank.WebViewActivity;
 import xyz.zimuju.sample.util.DateUtils;
 import xyz.zimuju.sample.util.DialogUtils;
 import xyz.zimuju.sample.util.SnackBarUtils;
@@ -53,18 +52,19 @@ public class CollectViewProvider
             public boolean onLongClick(View v) {
                 CollectTable deleteBean = new CollectTable();
                 deleteBean.setObjectId(collect.getObjectId());
-                DialogUtils.showUnDoCollectDialog(v, deleteBean, new UpdateListener() {
+                DialogUtils.showUnDoCollectDialog(v, deleteBean, new DeleteListener() {
                     @Override
-                    public void done(BmobException e) {
-                        if (e != null) {
-                            int position = getPosition(holder);
-                            MultiTypeAdapter adapter = (MultiTypeAdapter) getAdapter();
-                            adapter.getItems().remove(position);
-                            recyclerView.getAdapter().notifyItemRemoved(position);
-                            recyclerView.getAdapter().notifyItemChanged(position, adapter.getItemCount());
-                        } else {
-                            SnackBarUtils.makeShort(holder.itemView, "删除失败").danger();
-                        }
+                    public void onSuccess() {
+                        int position = getPosition(holder);
+                        MultiTypeAdapter adapter = (MultiTypeAdapter) getAdapter();
+                        adapter.getItems().remove(position);
+                        recyclerView.getAdapter().notifyItemRemoved(position);
+                        recyclerView.getAdapter().notifyItemChanged(position, adapter.getItemCount());
+                    }
+
+                    @Override
+                    public void onFailure(int i, String s) {
+                        SnackBarUtils.makeShort(holder.itemView, "删除失败").danger();
                     }
                 });
                 return true;

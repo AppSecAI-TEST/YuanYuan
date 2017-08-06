@@ -15,9 +15,12 @@ import xyz.zimuju.common.util.ToastUtils;
  * @time 2016/9/10-16:29
  * @version v1.0.0
  */
-public abstract class BasalActivity extends AppCompatActivity {
+public abstract class BasalActivity<T extends BasalPresenter> extends AppCompatActivity implements BasalView {
+    protected T presenter;
 
     protected abstract int getLayoutId();
+
+    protected abstract T initPresenter();
 
     protected abstract void initData();
 
@@ -27,7 +30,16 @@ public abstract class BasalActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
+        initialize();
+    }
+
+    @SuppressWarnings("unchecked")
+    private void initialize() {
+        presenter = initPresenter();
         ActivityController.initController().addActivity(this);
+        if (presenter != null) {
+            presenter.attachView(this);
+        }
         ButterKnife.bind(this);
         initData();
         viewOption();
@@ -44,11 +56,14 @@ public abstract class BasalActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         ActivityController.initController().removeActivity(this);
+        if (presenter != null) {
+            presenter.detachView();
+        }
         super.onDestroy();
     }
 
-    protected void showToast(String message) {
+    @Override
+    public void showToast(String message) {
         ToastUtils.showToast(getContext(), message);
     }
-
 }

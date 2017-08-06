@@ -11,6 +11,4 @@ public interface BasalPresenter<T extends BasalView> {
     void attachView(T basalView);
 
     void detachView();
-
-    void onDestroy();
 }

@@ -5,12 +5,12 @@ import android.support.v7.widget.RecyclerView;
 import java.util.List;
 
 import me.drakeet.multitype.MultiTypeAdapter;
+import xyz.zimuju.common.rx.RxUtils;
 import xyz.zimuju.sample.engine.api.GankService;
 import xyz.zimuju.sample.entity.HttpResult;
 import xyz.zimuju.sample.entity.content.SearchResult;
 import xyz.zimuju.sample.factory.ServiceFactory;
 import xyz.zimuju.sample.http.subscriber.HttpResultSubscriber;
-import xyz.zimuju.sample.rx.RxUtils;
 import xyz.zimuju.sample.surface.gank.AbsListFragment;
 import xyz.zimuju.sample.widget.custom.LinearDecoration;
 

@@ -7,6 +7,7 @@ import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.OnClick;
 import xyz.zimuju.common.basal.BasalActivity;
+import xyz.zimuju.common.basal.BasalPresenter;
 import xyz.zimuju.common.util.ToastUtils;
 import xyz.zimuju.guideview.Guide;
 import xyz.zimuju.guideview.GuideBuilder;
@@ -27,6 +28,11 @@ public class FullGuideActivity extends BasalActivity implements View.OnClickList
     }
 
     @Override
+    protected BasalPresenter initPresenter() {
+        return null;
+    }
+
+    @Override
     protected void initData() {
         headerMenu.post(new Runnable() {
             @Override
@@ -38,11 +44,6 @@ public class FullGuideActivity extends BasalActivity implements View.OnClickList
 
     @Override
     protected void viewOption() {
-
-    }
-
-    @Override
-    protected void showToast(String message) {
 
     }
 
