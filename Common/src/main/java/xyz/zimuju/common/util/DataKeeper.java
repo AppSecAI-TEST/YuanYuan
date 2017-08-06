@@ -38,7 +38,7 @@ public class DataKeeper {
         Log.i(TAG, "init fileRootPath = " + fileRootPath);
 
         //判断SD卡存在
-        if (android.os.Environment.getExternalStorageState().equals(android.os.Environment.MEDIA_MOUNTED)) {
+        if (Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
             if (fileRootPath != null) {
                 File file = new File(imagePath);
                 if (!file.exists()) {

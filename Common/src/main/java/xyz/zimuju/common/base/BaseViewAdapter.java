@@ -20,7 +20,7 @@ public abstract class BaseViewAdapter<T, BV extends BaseView<T>> extends BaseAda
      * 为ItemView设置点击View的事件监听
      *
      * @param listener
-     * @see BaseView.OnViewClickListener
+     * @see OnViewClickListener
      */
     public void setOnViewClickListener(OnViewClickListener<T, BV> listener) {
         onViewClickListener = listener;

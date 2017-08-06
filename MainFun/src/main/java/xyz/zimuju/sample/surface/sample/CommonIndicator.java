@@ -4,7 +4,6 @@ import android.content.Context;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
-import android.widget.FrameLayout;
 
 import xyz.zimuju.common.webview.BaseIndicatorView;
 
@@ -36,6 +35,6 @@ public class CommonIndicator extends BaseIndicatorView {
 
     @Override
     public LayoutParams offerLayoutParams() {
-        return new FrameLayout.LayoutParams(-1, -1);
+        return new LayoutParams(-1, -1);
     }
 }

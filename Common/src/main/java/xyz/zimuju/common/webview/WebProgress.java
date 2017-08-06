@@ -11,7 +11,6 @@ import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
-import android.widget.FrameLayout;
 
 /**
  * <b>@项目名：</b> agentweb<br>
@@ -217,7 +216,7 @@ public class WebProgress extends BaseIndicatorView implements BaseProgressSpec {
 
 
     @Override
-    public FrameLayout.LayoutParams offerLayoutParams() {
-        return new FrameLayout.LayoutParams(-1, AgentWebUtils.dp2px(getContext(), 2));
+    public LayoutParams offerLayoutParams() {
+        return new LayoutParams(-1, AgentWebUtils.dp2px(getContext(), 2));
     }
 }

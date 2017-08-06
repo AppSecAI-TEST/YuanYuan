@@ -93,10 +93,10 @@ public class NathanielDialog extends Dialog {
         private CharSequence hint;
 
         // listener
-        private NathanielDialog.OnClickListener positiveButtonClickListener;
-        private NathanielDialog.OnClickListener negativeButtonClickListener;
-        private NathanielDialog.OnClickListener neutralButtonClickListener;
-        private NathanielDialog.OnClickListener onClickListener;
+        private OnClickListener positiveButtonClickListener;
+        private OnClickListener negativeButtonClickListener;
+        private OnClickListener neutralButtonClickListener;
+        private OnClickListener onClickListener;
         private OnItemClickListener onItemClickListener;
         private OnDismissListener onDismissListener;
         private AdapterView.OnItemSelectedListener onItemSelectedListener;

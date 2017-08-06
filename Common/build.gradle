@@ -22,6 +22,7 @@ dependencies {
     //butterknife
     compile libraries.butterKnife
     annotationProcessor libraries.butterKnifeCompiler
+
     //rx
     compile libraries.retrofit
     compile libraries.retrofitConverterGson
@@ -32,6 +33,7 @@ dependencies {
     compile libraries.rxandroid
     compile libraries.rxpermissions
     compile libraries.zip4j
+
     // image
     compile libraries.picasso
     compile libraries.glide

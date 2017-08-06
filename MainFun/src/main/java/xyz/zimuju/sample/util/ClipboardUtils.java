@@ -7,7 +7,7 @@ import android.os.Build;
 
 public class ClipboardUtils {
     private static ClipboardManager mClipboardManager;
-    private static android.content.ClipboardManager mNewCliboardManager;
+    private static ClipboardManager mNewCliboardManager;
 
 
     private static boolean isNew() {
@@ -17,7 +17,7 @@ public class ClipboardUtils {
     private static void instance(Context context) {
         if (isNew()) {
             if (mNewCliboardManager == null)
-                mNewCliboardManager = (android.content.ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
+                mNewCliboardManager = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);
         } else {
             if (mClipboardManager == null)
                 mClipboardManager = (ClipboardManager) context.getSystemService(Context.CLIPBOARD_SERVICE);

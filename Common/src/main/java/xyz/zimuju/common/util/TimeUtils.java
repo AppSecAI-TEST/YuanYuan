@@ -667,13 +667,13 @@ public class TimeUtils {
                 return days + "天后";
             }
             if (days >= 2) {
-                return TimeUtils.Day.NAME_THE_DAY_AFTER_TOMORROW;
+                return Day.NAME_THE_DAY_AFTER_TOMORROW;
             }
             if (days >= 1) {
-                return TimeUtils.Day.NAME_TOMORROW;
+                return Day.NAME_TOMORROW;
             }
             if (days >= 0) {
-                return TimeUtils.Day.NAME_TODAY;
+                return Day.NAME_TODAY;
             }
         }
 

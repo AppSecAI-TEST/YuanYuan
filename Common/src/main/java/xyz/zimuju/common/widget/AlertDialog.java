@@ -10,7 +10,7 @@ import android.widget.TextView;
 import xyz.zimuju.common.R;
 import xyz.zimuju.common.util.StringUtils;
 
-public class AlertDialog extends Dialog implements android.view.View.OnClickListener {
+public class AlertDialog extends Dialog implements View.OnClickListener {
     private Context context;
     private String title;
     private String message;

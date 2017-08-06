@@ -6,7 +6,6 @@ import android.util.Log;
 
 import com.alibaba.fastjson.JSON;
 
-import cn.bmob.v3.BmobUser;
 import xyz.zimuju.common.helper.InitializeHelper;
 import xyz.zimuju.common.util.StringUtils;
 import xyz.zimuju.sample.entity.User;
@@ -17,7 +16,6 @@ public class DataManager implements InitializeHelper {
     public final String KEY_USER_ID = "KEY_USER_ID";
     public final String KEY_USER_NAME = "KEY_USER_NAME";
     public final String KEY_USER_PHONE = "KEY_USER_PHONE";
-    public final String KEY_USER_PASS = "KEY_USER_PASS";
 
     public final String KEY_CURRENT_USER_ID = "KEY_CURRENT_USER_ID";
     public final String KEY_LAST_USER_ID = "KEY_LAST_USER_ID";
@@ -107,24 +105,6 @@ public class DataManager implements InitializeHelper {
         saveUser(sdf, user);
     }
 
-    public void saveBmobUser(BmobUser user) {
-        SharedPreferences sdf = context.getSharedPreferences(PATH_USER, Context.MODE_PRIVATE);
-        if (sdf == null) {
-            Log.e(TAG, "saveUser sdf == null  >> return;");
-            return;
-        }
-        if (user == null) {
-            Log.w(TAG, "saveUser  user == null >>  user = new User();");
-            user = new BmobUser();
-        }
-        SharedPreferences.Editor editor = sdf.edit();
-        editor.remove(KEY_USER_NAME).putString(KEY_USER_NAME, user.getUsername());
-        editor.remove(KEY_USER_PHONE).putString(KEY_USER_PHONE, user.getMobilePhoneNumber());
-        editor.commit();
-
-        saveUser(sdf, user);
-    }
-
     public void saveUser(User user) {
         saveUser(context.getSharedPreferences(PATH_USER, Context.MODE_PRIVATE), user);
     }
@@ -136,16 +116,6 @@ public class DataManager implements InitializeHelper {
         }
         String key = StringUtils.getTrimedString(user.getId());
         Log.i(TAG, "saveUser  key = user.getId() = " + user.getId());
-        sdf.edit().remove(key).putString(key, JSON.toJSONString(user)).commit();
-    }
-
-    public void saveUser(SharedPreferences sdf, BmobUser user) {
-        if (sdf == null || user == null) {
-            Log.e(TAG, "saveUser sdf == null || user == null >> return;");
-            return;
-        }
-        String key = StringUtils.getTrimedString(user.getUsername());
-        Log.i(TAG, "saveUser  key = user.getId() = " + user.getUsername());
         sdf.edit().remove(key).putString(key, JSON.toJSONString(user)).commit();
     }
 
