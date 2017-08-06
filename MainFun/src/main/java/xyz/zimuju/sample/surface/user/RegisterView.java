@@ -12,5 +12,7 @@ import xyz.zimuju.common.basal.BasalView;
 public interface RegisterView extends BasalView {
     void obtainResult(Integer smsId);
 
+    void verifyCodeResult(boolean verified);
+
     void registerResult();
 }

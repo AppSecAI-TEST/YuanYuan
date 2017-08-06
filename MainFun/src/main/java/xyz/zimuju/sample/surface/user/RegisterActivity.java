@@ -11,9 +11,11 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import cn.bmob.newsmssdk.BmobSMS;
 import cn.bmob.newsmssdk.listener.SMSCodeListener;
+import cn.bmob.v3.BmobUser;
 import xyz.zimuju.common.basal.BasalActivity;
 import xyz.zimuju.common.widget.ClearEditText;
 import xyz.zimuju.sample.R;
+import xyz.zimuju.sample.application.UserApplication;
 
 /*
  * @description RegisterActivity
@@ -82,7 +84,9 @@ public class RegisterActivity extends BasalActivity<RegisterPresenter> implement
                 break;
 
             case R.id.login_register_tv:
-
+                String phoneText = phone.getText().toString().trim();
+                String codeText = code.getText().toString().trim();
+                presenter.verifyCode(phoneText, codeText);
                 break;
         }
     }
@@ -94,8 +98,19 @@ public class RegisterActivity extends BasalActivity<RegisterPresenter> implement
     }
 
     @Override
-    public void registerResult() {
+    public void verifyCodeResult(boolean verified) {
+        if (verified) {
+            String usernameText = username.getText().toString().trim();
+            String passwordText = password.getText().toString().trim();
+            String phoneText = phone.getText().toString().trim();
+            presenter.register(usernameText, passwordText, phoneText);
+        }
+    }
 
+    @Override
+    public void registerResult() {
+        BmobUser user = BmobUser.getCurrentUser();//获取登录成功后的本地用户信息
+        UserApplication.getInstance().saveBmobUser(user);
     }
 
     private class MTextWatcher implements TextWatcher {

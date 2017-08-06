@@ -10,9 +10,11 @@ import xyz.zimuju.common.basal.BasalPresenter;
  * @version 1.0.0
  */
 public interface RegisterPresenter extends BasalPresenter<RegisterView> {
-    void obtain(String phone);
+    void obtain(String phone); // 获取验证码
 
-    void register(String parameters);
+    void querySmsState(Integer smsId); // 查询验证码状态
 
-    void querySmsState(Integer smsId);
+    void verifyCode(String phone, String code);
+
+    void register(String... parameters);
 }
