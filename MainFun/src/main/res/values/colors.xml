@@ -17,8 +17,8 @@
     <color name="color_white">#FFFFFF</color>
 
     <color name="common_header_bg">#b6292d</color>
-    <color name="navigation_text_normal">#c8bca5</color>
-    <color name="navigation_text_pressed">#8b572a</color>
+    <color name="navigation_text_pressed">#c8bca5</color>
+    <color name="navigation_text_normal">#8b572a</color>
     <color name="line">#c8bca5</color>
     <color name="windowBackground">#fafafa</color>
     <color name="white">#ffffff</color>
