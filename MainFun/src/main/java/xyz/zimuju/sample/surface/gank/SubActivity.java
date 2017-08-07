@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 
-import xyz.zimuju.sample.surface.home.MeiZhiFragment;
+import xyz.zimuju.sample.surface.news.MeiZhiFragment;
 import xyz.zimuju.sample.surface.user.CollectListFragment;
 
 public class SubActivity extends ToolbarActivity {

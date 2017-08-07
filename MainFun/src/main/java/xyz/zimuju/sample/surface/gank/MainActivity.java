@@ -13,7 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import xyz.zimuju.sample.R;
-import xyz.zimuju.sample.surface.home.HomeFragment;
+import xyz.zimuju.sample.surface.news.HomeFragment;
 import xyz.zimuju.sample.surface.read.ReadingTabFragment;
 import xyz.zimuju.sample.surface.search.SearchActivity;
 import xyz.zimuju.sample.surface.user.MineFragment;

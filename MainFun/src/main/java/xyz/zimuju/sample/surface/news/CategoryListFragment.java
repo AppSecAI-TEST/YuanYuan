@@ -1,4 +1,4 @@
-package xyz.zimuju.sample.surface.home;
+package xyz.zimuju.sample.surface.news;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;

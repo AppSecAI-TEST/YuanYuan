@@ -14,6 +14,7 @@ import xyz.zimuju.common.util.ToastUtils;
 import xyz.zimuju.common.widget.NoneScrollViewPager;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.adapter.navigation.NavigationFragmentPagerAdapter;
+import xyz.zimuju.sample.surface.news.NewsFragment;
 import xyz.zimuju.sample.surface.user.MineFragment;
 
 /*

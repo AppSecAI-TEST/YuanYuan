@@ -18,9 +18,7 @@ public class ServiceFactory {
 
 
     private ServiceFactory() {
-        mGson = new GsonBuilder()
-                .setDateFormat("yyyy-MM-dd hh:mm:ss")
-                .create();
+        mGson = new GsonBuilder().setDateFormat("yyyy-MM-dd hh:mm:ss").create();
         mOkHttpClient = OkHttpProvider.getDefaultOkHttpClient();
 
     }
@@ -38,8 +36,8 @@ public class ServiceFactory {
     public <S> S createService(Class<S> serviceClass) {
         String baseUrl = "";
         try {
-            Field field1 = serviceClass.getField("BASE_URL");
-            baseUrl = (String) field1.get(serviceClass);
+            Field field = serviceClass.getField("BASE_URL");
+            baseUrl = (String) field.get(serviceClass);
         } catch (NoSuchFieldException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
@@ -58,6 +56,4 @@ public class ServiceFactory {
     private static class SingletonHolder {
         private static final ServiceFactory INSTANCE = new ServiceFactory();
     }
-
-
 }

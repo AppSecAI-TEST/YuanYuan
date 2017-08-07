@@ -15,47 +15,23 @@ public interface GankService {
 
     String BASE_URL = "http://www.gank.io/api/";
 
-    /**
-     * 获取发布干货的日期
-     *
-     * @return
-     */
+    // 获取发布干货的日期
     @GET("day/history")
     Single<HttpResult<List<String>>> getRecentlyDate();
 
-    /***
-     * 根据类别查询干货
-     *
-     * @param category
-     * @param pageIndex
-     * @return
-     */
+    // 根据类别查询干货
     @GET("data/{category}/20/{pageIndex}")
-    Single<HttpResult<List<GanHuoData>>> getGanHuo(@Path("category") String category
-            , @Path("pageIndex") int pageIndex);
+    Single<HttpResult<List<GanHuoData>>> getGanHuo(@Path("category") String category, @Path("pageIndex") int pageIndex);
 
-    /**
-     * 获取某天的干货
-     *
-     * @param date
-     * @return
-     */
+    // 获取某天的干货
     @GET("day/{date}")
     Single<HttpResult<DailyList>> getRecentlyGanHuo(@Path("date") String date);
 
-    /**
-     * 搜索
-     *
-     * @param keyword
-     * @param pageIndex
-     * @return
-     */
+    // 搜索
     @GET("search/query/{keyword}/category/{category}/count/20/page/{pageIndex}")
-    Single<HttpResult<List<SearchResult>>> search(
-            @Path("category") String category
-            , @Path("keyword") String keyword
-            , @Path("pageIndex") int pageIndex);
+    Single<HttpResult<List<SearchResult>>> search(@Path("category") String category, @Path("keyword") String keyword, @Path("pageIndex") int pageIndex);
 
+    // 历史
     @GET("history/content/10/{pageIndex}")
     Single<HttpResult<List<Daily>>> getRecently(@Path("pageIndex") int pageIndex);
 }

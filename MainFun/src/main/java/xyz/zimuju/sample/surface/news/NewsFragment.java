@@ -1,4 +1,4 @@
-package xyz.zimuju.sample.surface.common;
+package xyz.zimuju.sample.surface.news;
 
 import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 
 import butterknife.BindView;
 import xyz.zimuju.common.basal.BasalFragment;
+import xyz.zimuju.common.basal.BasalPresenter;
 import xyz.zimuju.common.basal.MRecyclerViewAdapter;
 import xyz.zimuju.common.widget.custom.CustomRecyclerView;
 import xyz.zimuju.sample.R;
@@ -25,6 +26,11 @@ public class NewsFragment extends BasalFragment implements MRecyclerViewAdapter.
     @Override
     protected int getLayoutId() {
         return R.layout.fragment_news;
+    }
+
+    @Override
+    protected BasalPresenter initPresenter() {
+        return null;
     }
 
     @Override

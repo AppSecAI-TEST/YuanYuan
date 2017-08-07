@@ -225,11 +225,11 @@
             android:screenOrientation="portrait"/>
 
         <activity
-            android:name=".surface.home.CategoryActivity"
+            android:name=".surface.news.CategoryActivity"
             android:screenOrientation="portrait"/>
 
         <activity
-            android:name=".surface.home.DailyActivity"
+            android:name=".surface.news.DailyActivity"
             android:screenOrientation="portrait"/>
 
         <activity

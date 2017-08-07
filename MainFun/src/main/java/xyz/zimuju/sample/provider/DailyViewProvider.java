@@ -16,7 +16,7 @@ import me.drakeet.multitype.ItemViewProvider;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.entity.content.Daily;
 import xyz.zimuju.sample.loader.ImageLoader;
-import xyz.zimuju.sample.surface.home.DailyActivity;
+import xyz.zimuju.sample.surface.news.DailyActivity;
 import xyz.zimuju.sample.util.DateUtils;
 
 public class DailyViewProvider extends ItemViewProvider<Daily, DailyViewProvider.ViewHolder> {

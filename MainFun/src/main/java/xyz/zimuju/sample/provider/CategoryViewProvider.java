@@ -14,7 +14,7 @@ import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.entity.content.CategoryList;
 import xyz.zimuju.sample.loader.ImageLoader;
 import xyz.zimuju.sample.surface.gank.SubActivity;
-import xyz.zimuju.sample.surface.home.CategoryActivity;
+import xyz.zimuju.sample.surface.news.CategoryActivity;
 
 public class CategoryViewProvider extends ItemViewProvider<CategoryList, CategoryViewProvider.ViewHolder> {
 

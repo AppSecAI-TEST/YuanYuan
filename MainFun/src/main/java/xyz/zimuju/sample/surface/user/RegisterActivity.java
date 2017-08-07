@@ -50,6 +50,7 @@ public class RegisterActivity extends BasalActivity<RegisterPresenter> implement
     TextView register;
 
     private TimeCountUtil timeCountUtil;
+    private boolean clickable = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -112,6 +113,7 @@ public class RegisterActivity extends BasalActivity<RegisterPresenter> implement
                 timeCountUtil.start();
                 obtain.setBackgroundResource(R.drawable.shape_login_submit_pressed);
                 presenter.obtain(phone.getText().toString().trim());
+                clickable = true;
                 break;
 
             case R.id.login_register_tv:
@@ -205,7 +207,7 @@ public class RegisterActivity extends BasalActivity<RegisterPresenter> implement
                     break;
 
                 case R.id.login_code_cet:
-                    if (s.length() == 6) {
+                    if (clickable && s.length() == 6) {
                         register.setClickable(true);
                         register.setBackgroundResource(R.drawable.shape_login_submit_normal);
                     } else {
