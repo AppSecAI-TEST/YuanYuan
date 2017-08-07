@@ -1,31 +1,26 @@
 package xyz.zimuju.sample.surface.user;
 
-import cn.bmob.v3.BmobUser;
-import cn.bmob.v3.exception.BmobException;
-import cn.bmob.v3.listener.SaveListener;
+import com.avos.avoscloud.AVException;
+import com.avos.avoscloud.AVUser;
+import com.avos.avoscloud.LogInCallback;
+
 import xyz.zimuju.common.rx.RxContract;
 
 public class LoginContract extends RxContract<LoginView> implements LoginPresenter {
     @Override
     public void login(String... parameters) {
-        BmobUser bmobUser = new BmobUser();
-        bmobUser.setUsername(parameters[0]);
-        bmobUser.setPassword(parameters[1]);
-        bmobUser.login(new SaveListener() {
+        AVUser.logInInBackground(parameters[0], parameters[1], new LogInCallback<AVUser>() {
             @Override
-            public void done(Object o, BmobException e) {
+            public void done(AVUser avUser, AVException e) {
                 if (e == null) {
-                    basalView.showToast("注册成功");
-                } else {
-                    basalView.showToast("errorCode=" + e.getErrorCode() + ", errorMessage=" + e.getMessage());
+                    if (e == null) {
+                        basalView.showToast("登陆成功");
+                        basalView.loginResult(avUser);
+                    } else {
+                        basalView.showToast("errorCode=" + e.getCode() + ", errorMessage=" + e.getMessage());
+                    }
                 }
             }
         });
-    }
-
-    @Override
-    public void getUserInfo() {
-        BmobUser bmobUser = BmobUser.getCurrentUser(BmobUser.class);
-        basalView.getUserInfoResult(bmobUser);
     }
 }

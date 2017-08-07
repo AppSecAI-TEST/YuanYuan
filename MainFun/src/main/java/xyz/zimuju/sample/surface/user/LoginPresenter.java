@@ -11,6 +11,4 @@ import xyz.zimuju.common.basal.BasalPresenter;
  */
 public interface LoginPresenter extends BasalPresenter<LoginView> {
     void login(String... parameters);
-
-    void getUserInfo();
 }

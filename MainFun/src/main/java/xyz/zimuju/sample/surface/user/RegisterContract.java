@@ -2,15 +2,15 @@ package xyz.zimuju.sample.surface.user;
 
 import android.util.Log;
 
-import cn.bmob.v3.BmobSMS;
-import cn.bmob.v3.BmobUser;
-import cn.bmob.v3.datatype.BmobSmsState;
-import cn.bmob.v3.exception.BmobException;
-import cn.bmob.v3.listener.QueryListener;
-import cn.bmob.v3.listener.SaveListener;
-import cn.bmob.v3.listener.UpdateListener;
+import com.avos.avoscloud.AVException;
+import com.avos.avoscloud.AVMobilePhoneVerifyCallback;
+import com.avos.avoscloud.AVSMS;
+import com.avos.avoscloud.AVSMSOption;
+import com.avos.avoscloud.AVUser;
+import com.avos.avoscloud.RequestMobileCodeCallback;
+import com.avos.avoscloud.SignUpCallback;
+
 import xyz.zimuju.common.rx.RxContract;
-import xyz.zimuju.common.util.EmptyUtil;
 
 /*
  * @description RegisterContract
@@ -21,34 +21,37 @@ import xyz.zimuju.common.util.EmptyUtil;
  */
 public class RegisterContract extends RxContract<RegisterView> implements RegisterPresenter {
 
-    private Integer smsId;
-
     @Override
     public void obtain(String phone) {
-        BmobSMS.requestSMSCode(phone, "猿媛", new QueryListener<Integer>() {
+        AVSMSOption option = new AVSMSOption();
+        option.setTtl(10);                     // 验证码有效时间为 10 分钟
+        option.setApplicationName("应用名称");
+        option.setOperation("某种操作");
+        AVSMS.requestSMSCodeInBackground(phone, option, new RequestMobileCodeCallback() {
             @Override
-            public void done(Integer integer, BmobException e) {
-                if (e == null) {
-                    basalView.obtainResult(smsId);
+            public void done(AVException e) {
+                if (null == e) {
+                    basalView.showToast("验证码发送成功，请注意查收");
+                    basalView.obtainResult();
                 } else {
-                    basalView.showToast(e.toString());
+                    basalView.showToast("验证码发送失败，原因：" + e.getMessage());
                 }
             }
         });
     }
 
     @Override
-    public void register(String... parameters) {
-        BmobUser bmobUser = new BmobUser();
-        bmobUser.setUsername(parameters[0]);
-        bmobUser.setPassword(parameters[1]);
-        bmobUser.setMobilePhoneNumber(parameters[2]);
-        bmobUser.signUp(new SaveListener<BmobUser>() {
+    public void register(final String... parameters) {
+        AVUser user = new AVUser();
+        user.setUsername(parameters[0]);
+        user.setPassword(parameters[1]);
+        user.setMobilePhoneNumber(parameters[3]);
+        user.signUpInBackground(new SignUpCallback() {
             @Override
-            public void done(BmobUser user, BmobException e) {
+            public void done(AVException e) {
                 if (e == null) {
                     basalView.showToast("注册成功");
-                    basalView.registerResult();
+                    basalView.registerResult(parameters);
                 } else {
                     basalView.showToast("注册失败：原因：" + e.getMessage());
                 }
@@ -57,57 +60,20 @@ public class RegisterContract extends RxContract<RegisterView> implements Regist
     }
 
     @Override
-    public void querySmsState(Integer smsId) {
-        /*
-         * 注：SmsState包含两种状态：
-         * 1、smsState（短信状态） :SUCCESS（发送成功）、FAIL（发送失败）、SENDING(发送中)。
-         * 2、verifyState（验证状态）:true(已验证)、false(未验证)。
-         */
-        BmobSMS.querySmsState(smsId, new QueryListener<BmobSmsState>() {
-            @Override
-            public void done(BmobSmsState bmobSmsState, BmobException e) {
-                if (EmptyUtil.isEmpty(e)) {
-                    switch (bmobSmsState.getSmsState()) {
-                        case "SUCCESS":
-                            basalView.showToast("验证码发送成功，请注意查收");
-                            break;
-
-                        case "FAIL":
-                            basalView.showToast("由于未知原因验证码发送失败");
-                            break;
-
-                        case "SENDING":
-                            basalView.showToast("验证码正在火速向您奔来");
-                            break;
-                    }
-
-                    switch (bmobSmsState.getVerifyState()) {
-                        case "true":
-                            basalView.showToast("已通过验证");
-                            break;
-
-                        case "false":
-                            basalView.showToast("未通过验证");
-                            break;
-                    }
-                } else {
-                    Log.d("Nathaniel", "发送失败，原因：" + e.getMessage());
-                }
-            }
-        });
+    public void login(String... parameters) {
+        
     }
 
     @Override
-    public void verifyCode(String phone, String code) {
-        BmobSMS.verifySmsCode("11位手机号码", "验证码", new UpdateListener() {
-
+    public void querySmsState(String phone, String code) {
+        AVSMS.verifySMSCodeInBackground(code, phone, new AVMobilePhoneVerifyCallback() {
             @Override
-            public void done(BmobException ex) {
-                if (ex == null) {
+            public void done(AVException e) {
+                if (e == null) {
                     basalView.verifyCodeResult(true);
                 } else {
                     basalView.showToast("验证码失效");
-                    Log.d("Nathaniel", "验证失败：code =" + ex.getErrorCode() + ",msg = " + ex.getLocalizedMessage());
+                    Log.d("Nathaniel", "验证失败：code =" + e.getCode() + ",msg = " + e.getLocalizedMessage());
                 }
             }
         });

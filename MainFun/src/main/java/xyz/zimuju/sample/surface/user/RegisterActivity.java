@@ -9,13 +9,9 @@ import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.OnClick;
-import cn.bmob.newsmssdk.BmobSMS;
-import cn.bmob.newsmssdk.listener.SMSCodeListener;
-import cn.bmob.v3.BmobUser;
 import xyz.zimuju.common.basal.BasalActivity;
 import xyz.zimuju.common.widget.ClearEditText;
 import xyz.zimuju.sample.R;
-import xyz.zimuju.sample.application.UserApplication;
 
 /*
  * @description RegisterActivity
@@ -63,7 +59,7 @@ public class RegisterActivity extends BasalActivity<RegisterPresenter> implement
 
     @Override
     protected void initData() {
-        BmobSMS.initialize(this, "猿媛", new MSMSCodeListener());
+
     }
 
     @Override
@@ -86,15 +82,17 @@ public class RegisterActivity extends BasalActivity<RegisterPresenter> implement
             case R.id.login_register_tv:
                 String phoneText = phone.getText().toString().trim();
                 String codeText = code.getText().toString().trim();
-                presenter.verifyCode(phoneText, codeText);
+                presenter.querySmsState(phoneText, codeText);
                 break;
         }
     }
 
     @Override
-    public void obtainResult(Integer smsId) {
+    public void obtainResult() {
         // 查询发送验证码状态
-        presenter.querySmsState(smsId);
+        String phoneText = phone.getText().toString().trim();
+        String codeText = code.getText().toString().trim();
+        presenter.querySmsState(phoneText, codeText);
     }
 
     @Override
@@ -108,9 +106,8 @@ public class RegisterActivity extends BasalActivity<RegisterPresenter> implement
     }
 
     @Override
-    public void registerResult() {
-        BmobUser user = BmobUser.getCurrentUser();//获取登录成功后的本地用户信息
-        UserApplication.getInstance().saveBmobUser(user);
+    public void registerResult(String... parameters) {
+        presenter.login(parameters);
     }
 
     private class MTextWatcher implements TextWatcher {
@@ -165,13 +162,6 @@ public class RegisterActivity extends BasalActivity<RegisterPresenter> implement
                     }
                     break;
             }
-        }
-    }
-
-    private class MSMSCodeListener implements SMSCodeListener {
-        @Override
-        public void onReceive(String string) {
-            code.setText(string);
         }
     }
 }
