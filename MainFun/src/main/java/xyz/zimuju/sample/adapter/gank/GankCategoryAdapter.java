@@ -31,10 +31,10 @@ public class GankCategoryAdapter extends MRecyclerViewAdapter<Category> {
         }
 
         if (index == position) {
-            categoryViewHolder.categoryName.setTextColor(context.getResources().getColor(R.color.navigation_text_pressed));
+            categoryViewHolder.categoryName.setTextColor(context.getResources().getColor(R.color.navigation_text_normal));
             categoryViewHolder.categoryDivide.setVisibility(View.VISIBLE);
         } else {
-            categoryViewHolder.categoryName.setTextColor(context.getResources().getColor(R.color.navigation_text_normal));
+            categoryViewHolder.categoryName.setTextColor(context.getResources().getColor(R.color.navigation_text_pressed));
             categoryViewHolder.categoryDivide.setVisibility(View.GONE);
         }
 
