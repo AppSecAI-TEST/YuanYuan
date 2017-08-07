@@ -100,7 +100,17 @@ public class RegisterActivity extends BasalActivity<RegisterPresenter> implement
 
             case R.id.login_obtain_tv:
                 timeCountUtil = new TimeCountUtil(getContext(), 60 * 1000, 1000, obtain);
+                timeCountUtil.setChangeListener(new TimeCountUtil.ChangeListener() {
+
+                    @Override
+                    public void finishListener() {
+                        obtain.setClickable(true);
+                        obtain.setBackgroundResource(R.drawable.shape_login_submit_normal);
+                        obtain.setText("重新获取");
+                    }
+                }, false);
                 timeCountUtil.start();
+                obtain.setBackgroundResource(R.drawable.shape_login_submit_pressed);
                 presenter.obtain(phone.getText().toString().trim());
                 break;
 

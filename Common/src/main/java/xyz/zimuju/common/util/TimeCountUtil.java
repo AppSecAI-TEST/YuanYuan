@@ -2,7 +2,6 @@ package xyz.zimuju.common.util;
 
 import android.content.Context;
 import android.os.CountDownTimer;
-import android.widget.Button;
 import android.widget.TextView;
 
 
@@ -19,7 +18,7 @@ public class TimeCountUtil extends CountDownTimer {
         this.textView = textView;
     }
 
-    public TimeCountUtil(long millisInFuture, long countDownInterval, Button textView) {
+    public TimeCountUtil(long millisInFuture, long countDownInterval, TextView textView) {
         super(millisInFuture, countDownInterval);
         this.textView = textView;
     }
@@ -43,7 +42,7 @@ public class TimeCountUtil extends CountDownTimer {
         } else {
             textView.setText("00");
             textView.setClickable(false);
-            changeListener.finishLinstener();
+            changeListener.finishListener();
         }
     }
 
@@ -60,6 +59,6 @@ public class TimeCountUtil extends CountDownTimer {
     }
 
     public interface ChangeListener {
-        void finishLinstener();
+        void finishListener();
     }
 }
