@@ -1,8 +1,8 @@
 package xyz.zimuju.sample.entity.bomb;
 
-import cn.bmob.v3.BmobObject;
+import com.avos.avoscloud.AVObject;
 
-public class RxOperator extends BmobObject {
+public class RxOperator extends AVObject {
 
     private String name;
     private String desc;
@@ -22,6 +22,4 @@ public class RxOperator extends BmobObject {
     public void setName(String name) {
         this.name = name;
     }
-
-
 }

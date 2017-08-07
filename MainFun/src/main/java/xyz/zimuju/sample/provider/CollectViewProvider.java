@@ -7,8 +7,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import cn.bmob.v3.exception.BmobException;
-import cn.bmob.v3.listener.UpdateListener;
+import com.avos.avoscloud.AVException;
+import com.avos.avoscloud.AVObject;
+import com.avos.avoscloud.GetCallback;
+
 import me.drakeet.multitype.ItemViewProvider;
 import me.drakeet.multitype.MultiTypeAdapter;
 import xyz.zimuju.sample.R;
@@ -35,7 +37,7 @@ public class CollectViewProvider extends ItemViewProvider<CollectTable, CollectV
 
     @Override
     protected void onBindViewHolder(@NonNull final ViewHolder holder, @NonNull final CollectTable collect) {
-        holder.tv_time.setText(DateUtils.friendlyTime(collect.getCreatedAt()));
+        holder.tv_time.setText(DateUtils.friendlyTime(String.valueOf(collect.getCreatedAt())));
         holder.tv_tag.setText(collect.getType());
         holder.tv_desc.setText(collect.getDesc());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
@@ -49,9 +51,10 @@ public class CollectViewProvider extends ItemViewProvider<CollectTable, CollectV
             public boolean onLongClick(View v) {
                 CollectTable deleteBean = new CollectTable();
                 deleteBean.setObjectId(collect.getObjectId());
-                DialogUtils.showUnDoCollectDialog(v, deleteBean, new UpdateListener() {
+                DialogUtils.showUnDoCollectDialog(v, deleteBean, new GetCallback<AVObject>() {
+
                     @Override
-                    public void done(BmobException e) {
+                    public void done(AVObject avObject, AVException e) {
                         if (e == null) {
                             int position = getPosition(holder);
                             MultiTypeAdapter adapter = (MultiTypeAdapter) getAdapter();

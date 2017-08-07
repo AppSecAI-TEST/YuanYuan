@@ -1,11 +1,8 @@
 package xyz.zimuju.sample.entity.bomb;
 
-import android.content.Context;
+import com.avos.avoscloud.AVObject;
 
-import cn.bmob.v3.BmobObject;
-import cn.bmob.v3.listener.SaveListener;
-
-public class CollectTable extends BmobObject {
+public class CollectTable extends AVObject {
 
     private String desc;
     private String source;
@@ -87,9 +84,5 @@ public class CollectTable extends BmobObject {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public void save(Context context, SaveListener saveListener) {
-
     }
 }

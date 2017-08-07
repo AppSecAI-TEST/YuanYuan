@@ -124,17 +124,14 @@ dependencies {
 
     // project
     compile project(':Common')
-    compile project(':QRCode')
     compile project(':Guide')
     compile project(':Dialog')
+    compile project(':QRCode')
     compile project(':YunYue')
 
     // jar file
     compile files('libs/alipaySingle-20170510.jar')
-    compile files('libs/Bmob_Push_V1.0.0beta_20160627.jar')
-    compile files('libs/BmobSDK_3.5.6_20170705.jar')
     compile files('libs/weiboSDKCore_3.1.4.jar')
-    compile files('libs/BmobSMS_V1.2.2_20170303.jar')
 
     // 内存泄露的检测
     debugCompile libraries.leakCanaryAndroid

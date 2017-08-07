@@ -71,22 +71,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             mBinding.drawerLayout.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    switch (v.getId()) {
-                        case R.id.ll_nav_homepage:// 主页
-                            NavHomePageActivity.startHome(MainActivity.this);
-                            break;
-                        case R.id.ll_nav_scan_download://扫码下载
-                            NavDownloadActivity.start(MainActivity.this);
-                            break;
-                        case R.id.ll_nav_deedback:// 问题反馈
-                            NavDeedBackActivity.start(MainActivity.this);
-                            break;
-                        case R.id.ll_nav_about:// 关于云阅
-                            NavAboutActivity.start(MainActivity.this);
-                            break;
-                        case R.id.ll_nav_login:// 登录GitHub账号
-                            WebViewActivity.loadUrl(v.getContext(), "https://github.com/login", "登录GitHub账号");
-                            break;
+                    int i = v.getId();
+                    if (i == R.id.ll_nav_homepage) {
+                        NavHomePageActivity.startHome(MainActivity.this);
+
+                    } else if (i == R.id.ll_nav_scan_download) {
+                        NavDownloadActivity.start(MainActivity.this);
+
+                    } else if (i == R.id.ll_nav_deedback) {
+                        NavDeedBackActivity.start(MainActivity.this);
+
+                    } else if (i == R.id.ll_nav_about) {
+                        NavAboutActivity.start(MainActivity.this);
+
+                    } else if (i == R.id.ll_nav_login) {
+                        WebViewActivity.loadUrl(v.getContext(), "https://github.com/login", "登录GitHub账号");
+
                     }
                 }
             }, 260);
@@ -183,42 +183,41 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.ll_title_menu:// 开启菜单
-                drawerLayout.openDrawer(GravityCompat.START);
-                break;
-            case R.id.iv_title_gank:// 干货栏
-                if (vpContent.getCurrentItem() != 0) {//不然cpu会有损耗
-                    llTitleGank.setSelected(true);
-                    llTitleOne.setSelected(false);
-                    llTitleDou.setSelected(false);
-                    vpContent.setCurrentItem(0);
-                }
-                break;
-            case R.id.iv_title_one:// 电影栏
-                if (vpContent.getCurrentItem() != 1) {
-                    llTitleOne.setSelected(true);
-                    llTitleGank.setSelected(false);
-                    llTitleDou.setSelected(false);
-                    vpContent.setCurrentItem(1);
-                }
-                break;
-            case R.id.iv_title_dou:// 书籍栏
-                if (vpContent.getCurrentItem() != 2) {
-                    llTitleDou.setSelected(true);
-                    llTitleOne.setSelected(false);
-                    llTitleGank.setSelected(false);
-                    vpContent.setCurrentItem(2);
-                }
-                break;
-            case R.id.iv_avatar: // 头像进入GitHub
-                WebViewActivity.loadUrl(v.getContext(), CommonUtils.getString(R.string.string_url_cloudreader), "CloudReader");
-                break;
-            case R.id.ll_nav_exit:// 退出应用
-                finish();
-                break;
-            default:
-                break;
+        int i = v.getId();
+        if (i == R.id.ll_title_menu) {
+            drawerLayout.openDrawer(GravityCompat.START);
+
+        } else if (i == R.id.iv_title_gank) {
+            if (vpContent.getCurrentItem() != 0) {//不然cpu会有损耗
+                llTitleGank.setSelected(true);
+                llTitleOne.setSelected(false);
+                llTitleDou.setSelected(false);
+                vpContent.setCurrentItem(0);
+            }
+
+        } else if (i == R.id.iv_title_one) {
+            if (vpContent.getCurrentItem() != 1) {
+                llTitleOne.setSelected(true);
+                llTitleGank.setSelected(false);
+                llTitleDou.setSelected(false);
+                vpContent.setCurrentItem(1);
+            }
+
+        } else if (i == R.id.iv_title_dou) {
+            if (vpContent.getCurrentItem() != 2) {
+                llTitleDou.setSelected(true);
+                llTitleOne.setSelected(false);
+                llTitleGank.setSelected(false);
+                vpContent.setCurrentItem(2);
+            }
+
+        } else if (i == R.id.iv_avatar) {
+            WebViewActivity.loadUrl(v.getContext(), CommonUtils.getString(R.string.string_url_cloudreader), "CloudReader");
+
+        } else if (i == R.id.ll_nav_exit) {
+            finish();
+
+        } else {
         }
     }
 
@@ -249,12 +248,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.action_search:
-//                Toast.makeText(this, "搜索", Toast.LENGTH_SHORT).show();
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        int i = item.getItemId();
+        if (i == R.id.action_search) {
+            // Toast.makeText(this, "搜索", Toast.LENGTH_SHORT).show();
+            return true;
+        } else {
+            return super.onOptionsItemSelected(item);
         }
     }
 

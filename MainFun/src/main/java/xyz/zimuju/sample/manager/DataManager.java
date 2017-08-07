@@ -6,7 +6,6 @@ import android.util.Log;
 
 import com.alibaba.fastjson.JSON;
 
-import cn.bmob.v3.BmobUser;
 import xyz.zimuju.common.helper.InitializeHelper;
 import xyz.zimuju.common.util.StringUtils;
 import xyz.zimuju.sample.entity.User;
@@ -135,9 +134,5 @@ public class DataManager implements InitializeHelper {
         }
         user.setUsername(name);
         saveUser(user);
-    }
-
-    public void saveBmobUser(BmobUser user) {
-
     }
 }

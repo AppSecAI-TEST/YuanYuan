@@ -1,5 +1,6 @@
 package com.example.jingbin.cloudreader.base;
 
+import android.annotation.TargetApi;
 import android.databinding.DataBindingUtil;
 import android.databinding.ViewDataBinding;
 import android.graphics.Color;
@@ -242,10 +243,9 @@ public abstract class BaseHeaderActivity<HV extends ViewDataBinding, SV extends 
         bindingTitleView.tbBaseTitle.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.actionbar_more:// 更多信息
-                        setTitleClickMore();
-                        break;
+                if (item.getItemId() == R.id.actionbar_more) {
+                    // 更多信息
+                    setTitleClickMore();
                 }
                 return false;
             }
@@ -284,6 +284,7 @@ public abstract class BaseHeaderActivity<HV extends ViewDataBinding, SV extends 
      * @param imgUrl    header头部的高斯背景imageUrl
      * @param mHeaderBg header头部高斯背景ImageView控件
      */
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     protected void initSlideShapeTheme(String imgUrl, ImageView mHeaderBg) {
         setImgHeaderBg(imgUrl);
 
@@ -331,6 +332,7 @@ public abstract class BaseHeaderActivity<HV extends ViewDataBinding, SV extends 
                     return false;
                 }
 
+                @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
                 @Override
                 public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
                     bindingTitleView.tbBaseTitle.setBackgroundColor(Color.TRANSPARENT);

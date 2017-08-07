@@ -4,13 +4,13 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 
+import com.avos.avoscloud.AVException;
+import com.avos.avoscloud.AVQuery;
+import com.avos.avoscloud.FindCallback;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import java.util.List;
 
-import cn.bmob.v3.BmobQuery;
-import cn.bmob.v3.exception.BmobException;
-import cn.bmob.v3.listener.FindListener;
 import me.drakeet.multitype.MultiTypeAdapter;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.entity.bomb.CollectTable;
@@ -43,15 +43,15 @@ public class CollectListFragment extends AbsListFragment {
     @Override
     public void loadData(final int pageIndex) {
         mPageSize = 10;
-        BmobQuery<CollectTable> query = new BmobQuery<>();
-        query.addWhereEqualTo("username", AuthorityUtils.getUserName());
+        AVQuery<CollectTable> query = new AVQuery<>("Todo");
+        query.whereEqualTo("username", AuthorityUtils.getUserName());
         query.setLimit(mPageSize);
         query.setSkip(mPageSize * (pageIndex - 1));
         query.order("-createdAt");
         if (AuthorityUtils.isLogin()) {
-            query.findObjects(new FindListener<CollectTable>() {
+            query.findInBackground(new FindCallback<CollectTable>() {
                 @Override
-                public void done(List<CollectTable> list, BmobException e) {
+                public void done(List<CollectTable> list, AVException e) {
                     if (e == null) {
                         onDataSuccessReceived(pageIndex, list);
                     } else {

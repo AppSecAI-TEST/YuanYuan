@@ -22,19 +22,19 @@ public class NavAboutActivity extends BaseActivity<ActivityNavAboutBinding> {
         @Override
         protected void onNoDoubleClick(View v) {
             String url = null;
-            switch (v.getId()) {
-                case R.id.tv_gankio:
-                    url = CommonUtils.getString(R.string.string_url_gankio);
-                    break;
-                case R.id.tv_douban:
-                    url = CommonUtils.getString(R.string.string_url_douban);
-                    break;
-                case R.id.tv_about_star:
-                    url = CommonUtils.getString(R.string.string_url_cloudreader);
-                    break;
-                case R.id.tv_function:// 更新日志
-                    url = string_url_update_log;
-                    break;
+            int i = v.getId();
+            if (i == R.id.tv_gankio) {
+                url = CommonUtils.getString(R.string.string_url_gankio);
+
+            } else if (i == R.id.tv_douban) {
+                url = CommonUtils.getString(R.string.string_url_douban);
+
+            } else if (i == R.id.tv_about_star) {
+                url = CommonUtils.getString(R.string.string_url_cloudreader);
+
+            } else if (i == R.id.tv_function) {
+                url = string_url_update_log;
+
             }
             WebViewActivity.loadUrl(v.getContext(), url, "加载中...");
         }

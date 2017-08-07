@@ -107,18 +107,18 @@ public class WebViewActivity extends AppCompatActivity implements IWebPageView {
         mTitleToolBar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.actionbar_share:// 分享到
-                        String shareText = mWebChromeClient.getTitle() + mUrl + "（分享自云阅）";
-                        ShareUtils.share(WebViewActivity.this, shareText);
-                        break;
-                    case R.id.actionbar_cope:// 复制链接
-                        BaseTools.copy(mUrl);
-                        ToastUtil.showToast("复制成功");
-                        break;
-                    case R.id.actionbar_open:// 打开链接
-                        BaseTools.openLink(WebViewActivity.this, mUrl);
-                        break;
+                int i = item.getItemId();
+                if (i == R.id.actionbar_share) {
+                    String shareText = mWebChromeClient.getTitle() + mUrl + "（分享自云阅）";
+                    ShareUtils.share(WebViewActivity.this, shareText);
+
+                } else if (i == R.id.actionbar_cope) {
+                    BaseTools.copy(mUrl);
+                    ToastUtil.showToast("复制成功");
+
+                } else if (i == R.id.actionbar_open) {
+                    BaseTools.openLink(WebViewActivity.this, mUrl);
+
                 }
                 return false;
             }

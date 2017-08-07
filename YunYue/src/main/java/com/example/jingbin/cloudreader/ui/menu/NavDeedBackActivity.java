@@ -19,25 +19,25 @@ public class NavDeedBackActivity extends BaseActivity<ActivityNavDeedBackBinding
     private PerfectClickListener listener = new PerfectClickListener() {
         @Override
         protected void onNoDoubleClick(View v) {
-            switch (v.getId()) {
-                case R.id.tv_issues:
-                    WebViewActivity.loadUrl(v.getContext(), CommonUtils.getString(R.string.string_url_issues), "Issues");
-                    break;
-                case R.id.tv_qq:
-                    String url = "mqqwpa://im/chat?chat_type=wpa&uin=770413277";
-                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
-                    break;
-                case R.id.tv_email:
-                    Intent data = new Intent(Intent.ACTION_SENDTO);
-                    data.setData(Uri.parse("mailto:jingbin127@163.com"));
-                    startActivity(data);
-                    break;
-                case R.id.tv_jianshu:
-                    WebViewActivity.loadUrl(v.getContext(), CommonUtils.getString(R.string.string_url_jianshu), "加载中...");
-                    break;
-                case R.id.tv_faq:
-                    WebViewActivity.loadUrl(v.getContext(), string_url_faq, "常见问题归纳");
-                    break;
+            int i = v.getId();
+            if (i == R.id.tv_issues) {
+                WebViewActivity.loadUrl(v.getContext(), CommonUtils.getString(R.string.string_url_issues), "Issues");
+
+            } else if (i == R.id.tv_qq) {
+                String url = "mqqwpa://im/chat?chat_type=wpa&uin=770413277";
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
+
+            } else if (i == R.id.tv_email) {
+                Intent data = new Intent(Intent.ACTION_SENDTO);
+                data.setData(Uri.parse("mailto:jingbin127@163.com"));
+                startActivity(data);
+
+            } else if (i == R.id.tv_jianshu) {
+                WebViewActivity.loadUrl(v.getContext(), CommonUtils.getString(R.string.string_url_jianshu), "加载中...");
+
+            } else if (i == R.id.tv_faq) {
+                WebViewActivity.loadUrl(v.getContext(), string_url_faq, "常见问题归纳");
+
             }
         }
     };

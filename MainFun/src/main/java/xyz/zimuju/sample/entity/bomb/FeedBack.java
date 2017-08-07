@@ -1,8 +1,8 @@
 package xyz.zimuju.sample.entity.bomb;
 
-import cn.bmob.v3.BmobObject;
+import com.avos.avoscloud.AVObject;
 
-public class FeedBack extends BmobObject {
+public class FeedBack extends AVObject {
 
     private String content;
     private String deviceName;

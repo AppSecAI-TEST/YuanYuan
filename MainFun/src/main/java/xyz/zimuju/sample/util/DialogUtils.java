@@ -5,14 +5,11 @@ import android.content.Intent;
 import android.view.View;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.avos.avoscloud.AVObject;
+import com.avos.avoscloud.GetCallback;
 
-import cn.bmob.v3.exception.BmobException;
-import cn.bmob.v3.listener.SaveListener;
-import cn.bmob.v3.listener.UpdateListener;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.entity.bomb.CollectTable;
-import xyz.zimuju.sample.event.CollectChangeEvent;
-import xyz.zimuju.sample.rx.RxBus;
 import xyz.zimuju.sample.surface.user.LoginActivity;
 
 public class DialogUtils {
@@ -37,22 +34,19 @@ public class DialogUtils {
                 .show();
     }
 
-    private static void doCollect(CollectTable bean, final Context context, final View view) {
+    private static void doCollect(CollectTable collectTable, final Context context, final View view) {
         if (AuthorityUtils.isLogin()) {
-            bean.setUsername(AuthorityUtils.getUserName());
-            bean.save(new SaveListener<String>() {
-                @Override
-                public void done(String s, BmobException e) {
-                    SnackBarUtils.makeShort(view, "收藏成功").success();
-                    RxBus.getInstance().send(new CollectChangeEvent());
+            collectTable.setUsername(AuthorityUtils.getUserName());
+             /*
+            SnackBarUtils.makeShort(view, "收藏成功").success();
+            RxBus.getInstance().send(new CollectChangeEvent());
 
-                    if (e.getErrorCode() == 401) {
-                        SnackBarUtils.makeShort(view, "你已经收藏过了").info();
-                    } else {
-                        SnackBarUtils.makeShort(view, "收藏失败").danger();
-                    }
-                }
-            });
+            if (e.getErrorCode() == 401) {
+                SnackBarUtils.makeShort(view, "你已经收藏过了").info();
+            } else {
+                SnackBarUtils.makeShort(view, "收藏失败").danger();
+            }
+             */
         } else {
             SnackBarUtils.makeLong(view, context.getResources().getString(R.string.mine_no_login))
                     .warning(context.getString(R.string.mine_click_login)
@@ -65,20 +59,20 @@ public class DialogUtils {
         }
     }
 
-    public static void showUnDoCollectDialog(final View itemView, final CollectTable bean, final UpdateListener listener) {
+    public static void showUnDoCollectDialog(final View itemView, final CollectTable bean, final GetCallback<AVObject> getCallback) {
         new MaterialDialog.Builder(itemView.getContext())
                 .items(R.array.deleteCollect)
                 .itemsCallback(new MaterialDialog.ListCallback() {
                     @Override
                     public void onSelection(MaterialDialog dialog, View view, int which, CharSequence text) {
-                        unDoCollect(bean, itemView, listener);
+                        unDoCollect(bean, itemView, getCallback);
                     }
                 })
                 .show();
 
     }
 
-    private static void unDoCollect(CollectTable bean, View view, UpdateListener listener) {
-        bean.delete(bean.getObjectId(), listener);
+    private static void unDoCollect(CollectTable collectTable, View view, GetCallback<AVObject> getCallback) {
+        collectTable.deleteInBackground();
     }
 }

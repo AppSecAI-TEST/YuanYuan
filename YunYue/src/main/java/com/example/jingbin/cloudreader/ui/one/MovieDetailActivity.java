@@ -1,10 +1,12 @@
 package com.example.jingbin.cloudreader.ui.one;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
@@ -223,10 +225,9 @@ public class MovieDetailActivity extends AppCompatActivity {
         binding.titleToolBar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.actionbar_more:// 更多信息
-                        WebViewActivity.loadUrl(MovieDetailActivity.this, mMoreUrl, mMovieName);
-                        break;
+                if (item.getItemId() == R.id.actionbar_more) {
+                    // 更多信息
+                    WebViewActivity.loadUrl(MovieDetailActivity.this, mMoreUrl, mMovieName);
                 }
                 return false;
             }
@@ -236,6 +237,7 @@ public class MovieDetailActivity extends AppCompatActivity {
     /**
      * 初始化滑动渐变
      */
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     private void initSlideShapeTheme() {
         setImgHeaderBg();
 
