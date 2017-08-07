@@ -24,6 +24,11 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
+    // dataBinding 加入
+    dataBinding {
+        enabled = true
+    }
+
     aaptOptions {
         cruncherEnabled false
     }
@@ -113,75 +118,85 @@ android {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile libraries.constraintLayout
     compile libraries.multidex
     testCompile libraries.junit
-
-    // 内存泄露的检测
-    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.1'
-    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
-    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
 
     // project
     compile project(':Common')
     compile project(':QRCode')
     compile project(':Guide')
     compile project(':Dialog')
+    compile project(':YunYue')
 
     // jar file
     compile files('libs/alipaySingle-20170510.jar')
     compile files('libs/Bmob_Push_V1.0.0beta_20160627.jar')
-    compile files('libs/BmobSDK_V3.4.7_0518.jar')
+    compile files('libs/BmobSDK_3.5.6_20170705.jar')
     compile files('libs/weiboSDKCore_3.1.4.jar')
     compile files('libs/BmobSMS_V1.2.2_20170303.jar')
-    compile files('libs/okio-1.12.0.jar')
-    compile files('libs/rxandroid-1.2.0.jar')
-    compile files('libs/rxjava-1.1.6.jar')
+
+    // 内存泄露的检测
+    debugCompile libraries.leakCanaryAndroid
+    releaseCompile libraries.leakCanaryAndroidNoOp
+    testCompile libraries.leakCanaryAndroidNoOp
 
     //butterknife
     compile libraries.butterKnife
     annotationProcessor libraries.butterKnifeCompiler
 
-    compile 'com.mikepenz:google-material-typeface:2.2.0.1@aar'
-    compile 'com.afollestad.material-dialogs:core:0.8.5.9'
-    compile 'com.squareup.okhttp3:okhttp:3.2.0'
-    compile 'com.github.bumptech.glide:glide:3.7.0'
-    compile 'com.github.chrisbanes:PhotoView:2.1.3'
-    compile 'de.hdodenhof:circleimageview:1.3.0'
-    compile 'com.google.code.gson:gson:2.7'
+    compile libraries.googleMaterialTypeface
+    compile libraries.materialDialogsCore
+    compile libraries.okhttp
+    compile libraries.glide
+    compile libraries.photoView
+    compile libraries.circleImageView
+    compile libraries.gson
 
     //RxAndroid
-    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
-    compile 'io.reactivex.rxjava2:rxjava:2.1.0'
-    compile 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar'
-    compile 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
-    compile 'com.trello.rxlifecycle2:rxlifecycle-components:2.0.1'
+    compile libraries.rxAndroid
+    compile libraries.rxJava
+    compile libraries.okio
+    compile libraries.rxPermissions
+    compile libraries.rxBinding
+    compile libraries.rxLifecycleComponents
 
     //Retrofit
-    compile 'com.squareup.retrofit2:retrofit:2.1.0'
-    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
-    compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
+    compile libraries.retrofit
+    compile libraries.converterGson
+    compile libraries.adapterRxJava2
 
-    //compile 'com.squareup.okhttp:logging-interceptor:latest.integration'
-    compile 'com.umeng.analytics:analytics:latest.integration'
-    compile 'com.nineoldandroids:library:2.4.0'
+    compile libraries.umengAnalytics
+    compile libraries.nineOldAndroidsLibrary
 
     //RecyclerView Adapter
-    compile 'me.drakeet.multitype:multitype:2.4.3'
-    compile 'com.makeramen:roundedimageview:2.3.0'
-    compile 'me.solidev.library:status-view-layout:0.2.2'
-    compile 'org.jsoup:jsoup:1.10.2'
-    compile 'com.yqritc:recyclerview-flexibledivider:1.4.0'
+    compile libraries.multitype
+    compile libraries.roundedImageView
+    compile libraries.statusViewLayout
+    compile libraries.jsoup
+    compile libraries.recyclerviewFlexibleDivider
 
     //support package
-    compile 'com.android.support:recyclerview-v7:25.3.1'
-    compile 'com.android.support:design:25.3.1'
-    compile 'com.android.support:support-v4:25.3.1'
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    compile 'com.android.support:cardview-v7:25.3.1'
+    compile libraries.v7recyclerView
+    compile libraries.design
+    compile libraries.v4support
+    compile libraries.v7appcompat
+    compile libraries.v7cardview
 
     // green dao
-    compile 'org.greenrobot:greendao:3.2.2'
-    compile 'org.greenrobot:greendao-generator:3.2.2'
+    compile libraries.greendao
+    compile libraries.greendaoGenerator
+
+    // LeanCloud 基础包
+    compile libraries.avoscloudSdk
+    // 推送与实时聊天需要的包
+    compile libraries.avoscloudPush
+    // LeanCloud 统计包
+    compile libraries.avoscloudStatistics
+    // LeanCloud 用户反馈包
+    compile libraries.avoscloudFeedback
+    // avoscloud-sns：LeanCloud 第三方登录包
+    compile libraries.avoscloudSns
+    // LeanCloud 应用内搜索包
+    compile libraries.avoscloudSearch
 }

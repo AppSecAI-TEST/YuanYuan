@@ -8,9 +8,8 @@ import com.squareup.leakcanary.LeakCanary;
 import java.io.File;
 
 import cn.bmob.newsmssdk.BmobSMS;
-import cn.bmob.push.BmobPush;
 import cn.bmob.v3.Bmob;
-import cn.bmob.v3.BmobInstallation;
+import cn.bmob.v3.BmobConfig;
 import xyz.zimuju.sample.component.MultiTypeInstaller;
 import xyz.zimuju.sample.constant.ConfigConstants;
 import xyz.zimuju.sample.util.PrefUtils;
@@ -29,23 +28,23 @@ public class GankIOApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-//        BmobConfig config = new BmobConfig.Builder(this)
-//                .setApplicationId(ConfigConstants.BOMB_APPLICATION_ID)
-//                .setConnectTimeout(30) //请求超时时间（单位为秒）：默认15s
-//                .setUploadBlockSize(1024 * 1024) //文件分片上传时每片的大小（单位字节），默认512*1024
-//                .setFileExpiration(2500) //文件的过期时间(单位为秒)：默认1800s
-//                .build();
-//        Bmob.initialize(config);
+        BmobConfig config = new BmobConfig.Builder(this)
+                .setApplicationId(ConfigConstants.BOMB_APPLICATION_ID)
+                .setConnectTimeout(30) //请求超时时间（单位为秒）：默认15s
+                .setUploadBlockSize(1024 * 1024) //文件分片上传时每片的大小（单位字节），默认512*1024
+                .setFileExpiration(2500) //文件的过期时间(单位为秒)：默认1800s
+                .build();
+        Bmob.initialize(config);
 
         Bmob.initialize(this, ConfigConstants.BOMB_APPLICATION_ID);
 
         BmobSMS.initialize(this, ConfigConstants.BOMB_APPLICATION_ID);
 
         // 使用推送服务时的初始化操作
-        BmobInstallation.getCurrentInstallation().save();
+        // BmobInstallation.getCurrentInstallation().save();
 
         // 启动推送服务
-        BmobPush.startWork(this);
+        // BmobPush.startWork(this);
 
         // 内存泄露检测
         if (ConfigConstants.debugEnable) {

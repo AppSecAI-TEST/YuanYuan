@@ -25,13 +25,13 @@ dependencies {
 
     //rx
     compile libraries.retrofit
-    compile libraries.retrofitConverterGson
-    compile libraries.rxjava2Adapter
+    compile libraries.converterGson
+    compile libraries.rxJava2Adapter
     compile libraries.okhttp
     compile libraries.okhttpLoggingInterceptor
-    compile libraries.rxjava
-    compile libraries.rxandroid
-    compile libraries.rxpermissions
+    compile libraries.rxJava
+    compile libraries.rxAndroid
+    compile libraries.rxPermissions
     compile libraries.zip4j
 
     // image

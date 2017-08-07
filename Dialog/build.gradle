@@ -1,15 +1,17 @@
 apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.android.library'
 
+def configurations = rootProject.ext.configurations
+
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion configurations.compileSdkVersion
+    buildToolsVersion configurations.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 25
-        versionCode 9
-        versionName "1.0.9"
+        minSdkVersion configurations.minSdkVersion
+        targetSdkVersion configurations.targetSdkVersion
+        versionCode 10
+        versionName "1.1.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 

@@ -13,6 +13,7 @@ ext {
             applicationId    : "xyz.zimuju.sample"
     ]
 
+
     dependencies = [
             junit                      : "junit:junit:4.12",
 
@@ -33,10 +34,16 @@ ext {
             picasso                    : "com.squareup.picasso:picasso:2.5.2",
             glide                      : "com.github.bumptech.glide:glide:3.7.0",
             circleImageView            : "de.hdodenhof:circleimageview:1.2.1",
+            photoView                  : 'com.github.chrisbanes:PhotoView:2.1.3',
+            gif                        : "pl.droidsonroids.gif:android-gif-drawable:1.2.7",
+            roundedImageView           : 'com.makeramen:roundedimageview:2.3.0',
+            universalImageLoader       : "com.nostra13.universalimageloader:universal-image-loader:1.9.5",
 
             // util
             zip4j                      : "net.lingala.zip4j:zip4j:1.3.2",
-            gson                       : "com.google.code.gson:gson:2.3.1",
+            gson                       : "com.google.code.gson:gson:2.2.4",
+            fastJson                   : "com.alibaba:fastjson:1.2.33",
+            fastJsonAndroid            : "com.alibaba:fastjson:1.1.58.android",
 
             eventBus                   : "de.greenrobot:eventbus:2.4.0",
             //弹出提示信息                代码地址-----> https://github.com/johnkil/Android-AppMsg
@@ -51,27 +58,61 @@ ext {
 
             //rx
             retrofit                   : "com.squareup.retrofit2:retrofit:2.1.0",
-            retrofitConverterGson      : "com.squareup.retrofit2:converter-gson:2.1.0",
-            rxjava2Adapter             : "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0",
+            converterGson              : "com.squareup.retrofit2:converter-gson:2.1.0",
+            rxJava2Adapter             : "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0",
+            adapterRxJava2             : 'com.squareup.retrofit2:adapter-rxjava2:2.2.0',
             okhttp                     : "com.squareup.okhttp3:okhttp:3.4.1",
             okhttpLoggingInterceptor   : "com.squareup.okhttp3:logging-interceptor:3.4.0",
-            rxjava                     : "io.reactivex.rxjava2:rxjava:2.0.1",
-            rxandroid           : "io.reactivex.rxjava2:rxandroid:2.0.1",
-            rxpermissions       : "com.tbruyelle.rxpermissions2:rxpermissions:0.9.3@aar",
+            rxPermissions              : "com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar",
+            rxJava                     : "io.reactivex:rxjava:1.2.1", // 2.x "io.reactivex.rxjava2:rxjava:2.0.0"
+            rxAndroid                  : "io.reactivex:rxandroid:1.2.1", // 2.x "io.reactivex.rxjava2:rxandroid:2.0.0"
+            okio                       : 'com.squareup.okio:okio:1.12.0', // 1.13.0
+            rxBinding                  : 'com.jakewharton.rxbinding2:rxbinding:2.0.0',
+            rxLifecycleComponents      : 'com.trello.rxlifecycle2:rxlifecycle-components:2.0.1',
 
-            okhttpUrlConnection : "com.squareup.okhttp:okhttp-urlconnection:2.2.0",
+            okhttpUrlConnection        : "com.squareup.okhttp:okhttp-urlconnection:2.2.0",
+            nohttp                     : "com.yanzhenjie.nohttp:okhttp:1.1.2",
 
-            nohttp              : "com.yanzhenjie.nohttp:okhttp:1.1.2",
 
-            fastJson            : "com.alibaba:fastjson:1.2.33",
-            fastJsonAndroid     : "com.alibaba:fastjson:1.1.58.android",
-            okio                : "com.squareup.okio:okio:1.13.0",
-            universalImageLoader: "com.nostra13.universalimageloader:universal-image-loader:1.9.5",
 
-            gif                 : "pl.droidsonroids.gif:android-gif-drawable:1.2.7"
+            googleMaterialTypeface     : 'com.mikepenz:google-material-typeface:2.2.0.1@aar',
+            materialDialogsCore        : 'com.afollestad.material-dialogs:core:0.8.5.9',
+
+            umengAnalytics             : 'com.umeng.analytics:analytics:latest.integration',
+            nineOldAndroidsLibrary     : 'com.nineoldandroids:library:2.4.0',
+
+            //RecyclerView Adapter
+            multitype                  : 'me.drakeet.multitype:multitype:2.4.3',
+
+            statusViewLayout           : 'me.solidev.library:status-view-layout:0.2.2',
+            jsoup                      : 'org.jsoup:jsoup:1.10.2',
+            recyclerviewFlexibleDivider: 'com.yqritc:recyclerview-flexibledivider:1.4.0',
+
+            // green dao
+            greendao                   : 'org.greenrobot:greendao:3.2.2',
+            greendaoGenerator          : 'org.greenrobot:greendao-generator:3.2.2',
+
+            leakCanaryAndroid          : 'com.squareup.leakcanary:leakcanary-android:1.5.1',
+            leakCanaryAndroidNoOp      : 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1',
+
+            // LeanCloud 基础包
+            avoscloudSdk               : 'cn.leancloud.android:avoscloud-sdk:v4.4.4',
+
+            // 推送与实时聊天需要的包
+            avoscloudPush              : 'cn.leancloud.android:avoscloud-push:v4.4.4@aar',
+
+            // LeanCloud 统计包
+            avoscloudStatistics        : 'cn.leancloud.android:avoscloud-statistics:v4.4.4',
+
+            // LeanCloud 用户反馈包
+            avoscloudFeedback          : 'cn.leancloud.android:avoscloud-feedback:v4.4.4@aar',
+
+            // avoscloud-sns：LeanCloud 第三方登录包
+            avoscloudSns               : 'cn.leancloud.android:avoscloud-sns:v4.4.4@aar',
+            // LeanCloud 应用内搜索包
+            avoscloudSearch            : 'cn.leancloud.android:avoscloud-search:v4.4.4@aar'
 
     ]
-
     sources = [
             manifestFile: "AndroidManifest.xml",
             srcDir      : "src",
