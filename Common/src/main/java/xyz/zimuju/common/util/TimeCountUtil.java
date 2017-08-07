@@ -14,7 +14,7 @@ public class TimeCountUtil extends CountDownTimer {
     private boolean clickable = true;
     private TextView textView;
 
-    public TimeCountUtil(Context ctx, long millisInFuture, long countDownInterval, TextView textView) {
+    public TimeCountUtil(Context context, long millisInFuture, long countDownInterval, TextView textView) {
         super(millisInFuture, countDownInterval);
         this.textView = textView;
     }
@@ -32,7 +32,7 @@ public class TimeCountUtil extends CountDownTimer {
     @Override
     public void onTick(long millisUntilFinished) {
         textView.setClickable(false);
-        textView.setText(millisUntilFinished / 1000 + "s");
+        textView.setText(millisUntilFinished / 1000 + "S");
     }
 
     @Override

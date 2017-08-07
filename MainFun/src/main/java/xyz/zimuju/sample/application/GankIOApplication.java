@@ -6,7 +6,6 @@ import android.os.Environment;
 import com.avos.avoscloud.AVException;
 import com.avos.avoscloud.AVInstallation;
 import com.avos.avoscloud.AVOSCloud;
-import com.avos.avoscloud.PushService;
 import com.avos.avoscloud.SaveCallback;
 import com.squareup.leakcanary.LeakCanary;
 
@@ -15,7 +14,6 @@ import java.io.File;
 import xyz.zimuju.sample.component.MultiTypeInstaller;
 import xyz.zimuju.sample.constant.ConfigConstants;
 import xyz.zimuju.sample.constant.LeanCloudConstants;
-import xyz.zimuju.sample.surface.user.LoginActivity;
 import xyz.zimuju.sample.util.PrefUtils;
 
 public class GankIOApplication extends Application {
@@ -73,7 +71,7 @@ public class GankIOApplication extends Application {
         });
 
         // 设置默认打开的 Activity
-        PushService.setDefaultPushCallback(this, LoginActivity.class);
+        // PushService.setDefaultPushCallback(this, LoginActivity.class);
     }
 
     @Override

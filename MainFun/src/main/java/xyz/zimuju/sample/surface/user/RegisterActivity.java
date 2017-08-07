@@ -10,6 +10,7 @@ import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.OnClick;
 import xyz.zimuju.common.basal.BasalActivity;
+import xyz.zimuju.common.util.TimeCountUtil;
 import xyz.zimuju.common.widget.ClearEditText;
 import xyz.zimuju.sample.R;
 
@@ -21,6 +22,12 @@ import xyz.zimuju.sample.R;
  * @version 1.0.0
  */
 public class RegisterActivity extends BasalActivity<RegisterPresenter> implements View.OnClickListener, RegisterView {
+    @BindView(R.id.header_back_tv)
+    TextView back;
+
+    @BindView(R.id.header_title_tv)
+    TextView title;
+
     @BindView(R.id.login_username_cet)
     ClearEditText username;
 
@@ -41,6 +48,8 @@ public class RegisterActivity extends BasalActivity<RegisterPresenter> implement
 
     @BindView(R.id.login_register_tv)
     TextView register;
+
+    private TimeCountUtil timeCountUtil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +73,16 @@ public class RegisterActivity extends BasalActivity<RegisterPresenter> implement
 
     @Override
     protected void viewOption() {
+        title.setText("注册");
+        back.setText("返回");
+        back.setVisibility(View.VISIBLE);
+
+        obtain.setBackgroundResource(R.drawable.shape_login_submit_pressed);
+        obtain.setClickable(false);
+
+        register.setBackgroundResource(R.drawable.shape_login_submit_pressed);
+        register.setClickable(false);
+
         username.addTextChangedListener(new MTextWatcher(username));
         password.addTextChangedListener(new MTextWatcher(password));
         confirm.addTextChangedListener(new MTextWatcher(confirm));
@@ -71,15 +90,25 @@ public class RegisterActivity extends BasalActivity<RegisterPresenter> implement
         code.addTextChangedListener(new MTextWatcher(code));
     }
 
-    @OnClick({R.id.login_obtain_tv, R.id.login_register_tv})
+    @OnClick({R.id.login_obtain_tv, R.id.login_register_tv, R.id.header_back_tv})
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
+            case R.id.header_back_tv:
+                finish();
+                break;
+
             case R.id.login_obtain_tv:
+                timeCountUtil = new TimeCountUtil(getContext(), 60 * 1000, 1000, obtain);
+                timeCountUtil.start();
                 presenter.obtain(phone.getText().toString().trim());
                 break;
 
             case R.id.login_register_tv:
+                if (phone.getText().length() != 11) {
+                    showToast("电话号码不合法");
+                    return;
+                }
                 String phoneText = phone.getText().toString().trim();
                 String codeText = code.getText().toString().trim();
                 presenter.querySmsState(phoneText, codeText);
@@ -156,11 +185,23 @@ public class RegisterActivity extends BasalActivity<RegisterPresenter> implement
                     break;
 
                 case R.id.login_phone_cet:
-                    if (phone.getText().length() != 11) {
-                        showToast("电话号码不合法");
-                        return;
+                    if (s.length() == 11) {
+                        obtain.setClickable(true);
+                        obtain.setBackgroundResource(R.drawable.shape_login_submit_normal);
+                    } else {
+                        obtain.setClickable(false);
+                        obtain.setBackgroundResource(R.drawable.shape_login_submit_pressed);
                     }
                     break;
+
+                case R.id.login_code_cet:
+                    if (s.length() == 6) {
+                        register.setClickable(true);
+                        register.setBackgroundResource(R.drawable.shape_login_submit_normal);
+                    } else {
+                        register.setClickable(false);
+                        register.setBackgroundResource(R.drawable.shape_login_submit_pressed);
+                    }
             }
         }
     }
