@@ -55,25 +55,34 @@ android {
         exclude 'META-INF/rxjava.properties'
     }
 
+    signingConfigs {
+        release {
+            storeFile file('../document/keyStore.jks')
+            keyAlias 'Nathaniel'
+            keyPassword 'Nathan@126.com'
+            storePassword 'Nathan@126.com'
+            v2SigningEnabled false
+        }
+    }
+
     buildTypes {
         release {
             applicationIdSuffix '.release'
             versionNameSuffix '-release'
-            minifyEnabled true
-            zipAlignEnabled true
-            shrinkResources true
+            minifyEnabled false
+            zipAlignEnabled false
+            shrinkResources false
             debuggable false
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
 
         debug {
             applicationIdSuffix '.beta'
             versionNameSuffix '-beta'
-            minifyEnabled false
-            zipAlignEnabled false
-            shrinkResources false
             debuggable true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 

@@ -54,20 +54,20 @@ ext {
 
             //butterknife
             butterKnife                : "com.jakewharton:butterknife:8.7.0",
-            butterKnifeCompiler        : "com.jakewharton:butterknife-compiler:8.7.0",
+            butterKnifeCompiler: "com.jakewharton:butterknife-compiler:8.7.0",
 
             //rx
-            retrofit                   : "com.squareup.retrofit2:retrofit:2.1.0",
-            converterGson              : "com.squareup.retrofit2:converter-gson:2.1.0",
-            rxJava2Adapter             : "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0",
-            adapterRxJava2             : 'com.squareup.retrofit2:adapter-rxjava2:2.2.0',
-            okhttp                     : "com.squareup.okhttp3:okhttp:3.4.1",
-            okhttpLoggingInterceptor   : "com.squareup.okhttp3:logging-interceptor:3.4.0",
-            rxPermissions              : "com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar",
-            rxJava                     : "io.reactivex:rxjava:1.2.1", // 2.x "io.reactivex.rxjava2:rxjava:2.0.0"
-            rxAndroid                  : "io.reactivex:rxandroid:1.2.1", // 2.x "io.reactivex.rxjava2:rxandroid:2.0.0"
-            okio                       : 'com.squareup.okio:okio:1.12.0', // 1.13.0
-            rxBinding                  : 'com.jakewharton.rxbinding2:rxbinding:2.0.0',
+            retrofit           : "com.squareup.retrofit2:retrofit:2.1.0",
+            converterGson      : "com.squareup.retrofit2:converter-gson:2.1.0",
+            rxJava2Adapter     : "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0",
+            adapterRxJava2     : 'com.squareup.retrofit2:adapter-rxjava2:2.2.0',
+            okhttp             : "com.squareup.okhttp3:okhttp:3.4.1",
+            loggingInterceptor : "com.squareup.okhttp3:logging-interceptor:3.4.0",
+            rxPermissions      : "com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar",
+            rxJava             : "io.reactivex:rxjava:1.2.1", // 2.x "io.reactivex.rxjava2:rxjava:2.0.0"
+            rxAndroid          : "io.reactivex:rxandroid:1.2.1", // 2.x "io.reactivex.rxjava2:rxandroid:2.0.0"
+            okio               : 'com.squareup.okio:okio:1.12.0', // 1.13.0
+            rxBinding          : 'com.jakewharton.rxbinding2:rxbinding:2.0.0',
             rxLifecycleComponents      : 'com.trello.rxlifecycle2:rxlifecycle-components:2.0.1',
 
             okhttpUrlConnection        : "com.squareup.okhttp:okhttp-urlconnection:2.2.0",
@@ -113,6 +113,7 @@ ext {
             avoscloudSearch            : 'cn.leancloud.android:avoscloud-search:v4.4.4@aar'
 
     ]
+
     sources = [
             manifestFile: "AndroidManifest.xml",
             srcDir      : "src",
@@ -129,5 +130,9 @@ ext {
             'src/main/res/layouts',
             'src/main/res/layouts/guide',
             'src/main/res/layouts/content'
+    ]
+
+    signatures = [
+
     ]
 }

@@ -28,7 +28,7 @@ dependencies {
     compile libraries.converterGson
     compile libraries.rxJava2Adapter
     compile libraries.okhttp
-    compile libraries.okhttpLoggingInterceptor
+    compile libraries.loggingInterceptor
     compile libraries.rxJava
     compile libraries.rxAndroid
     compile libraries.rxPermissions
