@@ -20,7 +20,7 @@
                  android:scrollbars="vertical"
                  app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <com.example.xrecyclerview.XRecyclerView
+        <xyz.zimuju.xrecyclerview.XRecyclerView
             android:id="@+id/list_one"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

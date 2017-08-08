@@ -17,7 +17,7 @@
         android:layout_height="match_parent">
 
         <!--<android.support.v4.widget.NestedScrollView-->
-        <com.example.jingbin.cloudreader.widget.MyNestedScrollView
+        <xyz.zimuju.cloudreader.widget.MyNestedScrollView
             android:id="@+id/nsv_scrollview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -78,7 +78,7 @@
             </LinearLayout>
 
 
-        </com.example.jingbin.cloudreader.widget.MyNestedScrollView>
+        </xyz.zimuju.cloudreader.widget.MyNestedScrollView>
 
 
         <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"

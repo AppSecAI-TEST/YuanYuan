@@ -8,7 +8,7 @@
                   android:background="@color/colorPageBg"
                   android:gravity="center_horizontal"
                   android:orientation="vertical"
-                  tools:context="com.example.jingbin.cloudreader.surface.menu.NavDownloadActivity">
+                  tools:context="com.example.jingbin.cloudreader.xyz.example.jingbin.cloudreader.surface.menu.NavDownloadActivity">
 
         <TextView
             android:layout_width="match_parent"

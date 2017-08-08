@@ -13,12 +13,12 @@
     <application>
 
         <activity
-            android:name=".MainActivity"
+            android:name="xyz.zimuju.cloudreader.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"/>
 
         <activity
-            android:name=".surface.TransitionActivity"
+            android:name="xyz.zimuju.cloudreader.surface.TransitionActivity"
             android:screenOrientation="portrait"
             android:theme="@style/ViewBigPicTheme">
             <!--<intent-filter>-->
@@ -29,57 +29,57 @@
         </activity>
 
         <activity
-            android:name=".base.BaseActivity"
+            android:name="xyz.zimuju.cloudreader.base.BaseActivity"
             android:label="@string/title_activity_base"
             android:theme="@style/AppTheme"/>
         <activity
-            android:name=".surface.one.TestActivity"
+            android:name="xyz.zimuju.cloudreader.surface.one.TestActivity"
             android:screenOrientation="portrait"
             android:theme="@style/MyScrollPage"/>
         <activity
-            android:name=".surface.one.SlideActivity"
+            android:name="xyz.zimuju.cloudreader.surface.one.SlideActivity"
             android:screenOrientation="portrait"
             android:theme="@style/MyScrollPage"/>
         <activity
-            android:name=".surface.one.SlideScrollViewActivity"
+            android:name="xyz.zimuju.cloudreader.surface.one.SlideScrollViewActivity"
             android:screenOrientation="portrait"
             android:theme="@style/MyScrollPage"/>
         <activity
-            android:name=".surface.one.SlideShadeViewActivity"
+            android:name="xyz.zimuju.cloudreader.surface.one.SlideShadeViewActivity"
             android:screenOrientation="portrait"
             android:theme="@style/MyScrollPage"/>
         <activity
-            android:name=".surface.one.MovieDetailActivity"
+            android:name="xyz.zimuju.cloudreader.surface.one.MovieDetailActivity"
             android:screenOrientation="portrait"
             android:theme="@style/MyScrollPage"/>
         <activity
-            android:name=".widget.viewbigimage.ViewBigImageActivity"
+            android:name="xyz.zimuju.cloudreader.widget.viewbigimage.ViewBigImageActivity"
             android:screenOrientation="portrait"
             android:theme="@style/ViewBigPicTheme"/>
         <activity
-            android:name=".widget.webview.WebViewActivity"
+            android:name="xyz.zimuju.cloudreader.widget.webview.WebViewActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".surface.one.DoubanTopActivity"
+            android:name="xyz.zimuju.cloudreader.surface.one.DoubanTopActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".surface.one.OneMovieDetailActivity"
+            android:name="xyz.zimuju.cloudreader.surface.one.OneMovieDetailActivity"
             android:screenOrientation="portrait"
             android:theme="@style/MyScrollPage"/>
         <activity
-            android:name=".surface.menu.NavHomePageActivity"
+            android:name="xyz.zimuju.cloudreader.surface.menu.NavHomePageActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".surface.menu.NavDeedBackActivity"
+            android:name="xyz.zimuju.cloudreader.surface.menu.NavDeedBackActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".surface.menu.NavAboutActivity"
+            android:name="xyz.zimuju.cloudreader.surface.menu.NavAboutActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".surface.book.child.BookDetailActivity"
+            android:name="xyz.zimuju.cloudreader.surface.book.child.BookDetailActivity"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".surface.menu.NavDownloadActivity"
+            android:name="xyz.zimuju.cloudreader.surface.menu.NavDownloadActivity"
             android:screenOrientation="portrait"/>
     </application>
 

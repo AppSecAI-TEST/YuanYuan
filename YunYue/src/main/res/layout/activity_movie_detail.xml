@@ -20,7 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.example.jingbin.cloudreader.widget.MyNestedScrollView
+        <xyz.zimuju.cloudreader.widget.MyNestedScrollView
             android:id="@+id/nsv_scrollview"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -139,7 +139,7 @@
                     </LinearLayout>
 
                     <!--导演&演员-->
-                    <com.example.xrecyclerview.XRecyclerView
+                    <xyz.zimuju.xrecyclerview.XRecyclerView
                         android:id="@+id/xrv_cast"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -149,7 +149,7 @@
 
             </LinearLayout>
 
-        </com.example.jingbin.cloudreader.widget.MyNestedScrollView>
+        </xyz.zimuju.cloudreader.widget.MyNestedScrollView>
 
 
         <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
