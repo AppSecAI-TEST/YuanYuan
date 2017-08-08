@@ -8,7 +8,7 @@ import com.example.jingbin.cloudreader.base.baseadapter.BaseRecyclerViewAdapter;
 import com.example.jingbin.cloudreader.base.baseadapter.BaseRecyclerViewHolder;
 import com.example.jingbin.cloudreader.bean.GankIoDataBean;
 import com.example.jingbin.cloudreader.databinding.ItemWelfareBinding;
-import com.example.jingbin.cloudreader.utils.DensityUtil;
+import com.example.jingbin.cloudreader.util.DensityUtil;
 
 /**
  * Created by jingbin on 2016/12/1.

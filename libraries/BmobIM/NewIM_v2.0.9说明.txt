@@ -1,0 +1,4 @@
+1、修改部分API的bug。
+2、修改Data SDK 为v3.5.6。
+2、具体集成使用教程请见官方开发文档：
+http://docs.bmob.cn/im/Android/b_developdoc/doc/index.html

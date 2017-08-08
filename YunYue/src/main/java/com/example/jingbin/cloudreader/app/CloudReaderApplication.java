@@ -5,7 +5,7 @@ import android.content.res.Configuration;
 import android.content.res.Resources;
 
 import com.example.http.HttpUtils;
-import com.example.jingbin.cloudreader.utils.DebugUtil;
+import com.example.jingbin.cloudreader.util.DebugUtil;
 
 /**
  * Created by jingbin on 2016/11/22.

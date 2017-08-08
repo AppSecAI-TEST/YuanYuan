@@ -5,7 +5,7 @@
 
         <import type="android.text.TextUtils"/>
 
-        <import type="com.example.jingbin.cloudreader.utils.TimeUtil"/>
+        <import type="com.example.jingbin.cloudreader.util.TimeUtil"/>
 
         <variable
             name="resultsBean"

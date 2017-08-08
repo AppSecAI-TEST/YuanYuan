@@ -20,10 +20,10 @@ import com.example.jingbin.cloudreader.databinding.ItemEverydayTitleBinding;
 import com.example.jingbin.cloudreader.databinding.ItemEverydayTwoBinding;
 import com.example.jingbin.cloudreader.http.rx.RxBus;
 import com.example.jingbin.cloudreader.http.rx.RxCodeConstants;
-import com.example.jingbin.cloudreader.utils.CommonUtils;
-import com.example.jingbin.cloudreader.utils.ImgLoadUtil;
-import com.example.jingbin.cloudreader.utils.PerfectClickListener;
-import com.example.jingbin.cloudreader.view.webview.WebViewActivity;
+import com.example.jingbin.cloudreader.util.CommonUtils;
+import com.example.jingbin.cloudreader.util.ImgLoadUtil;
+import com.example.jingbin.cloudreader.util.PerfectClickListener;
+import com.example.jingbin.cloudreader.widget.webview.WebViewActivity;
 
 import java.util.List;
 

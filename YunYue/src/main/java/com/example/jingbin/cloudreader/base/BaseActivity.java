@@ -16,9 +16,9 @@ import android.widget.RelativeLayout;
 
 import com.example.jingbin.cloudreader.R;
 import com.example.jingbin.cloudreader.databinding.ActivityBaseBinding;
-import com.example.jingbin.cloudreader.utils.CommonUtils;
-import com.example.jingbin.cloudreader.utils.PerfectClickListener;
-import com.example.jingbin.cloudreader.view.statusbar.StatusBarUtil;
+import com.example.jingbin.cloudreader.util.CommonUtils;
+import com.example.jingbin.cloudreader.util.PerfectClickListener;
+import com.example.jingbin.cloudreader.widget.statusbar.StatusBarUtil;
 
 import rx.Subscription;
 import rx.subscriptions.CompositeSubscription;

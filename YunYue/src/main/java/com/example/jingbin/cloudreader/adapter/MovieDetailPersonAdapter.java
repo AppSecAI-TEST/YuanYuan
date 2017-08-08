@@ -12,7 +12,7 @@ import android.widget.TextView;
 import com.example.jingbin.cloudreader.R;
 import com.example.jingbin.cloudreader.bean.moviechild.SubjectsBean;
 import com.example.jingbin.cloudreader.databinding.ActivityMovieHeaderBinding;
-import com.example.jingbin.cloudreader.view.statusbar.StatusBarUtil;
+import com.example.jingbin.cloudreader.widget.statusbar.StatusBarUtil;
 
 import java.util.List;
 

@@ -8,7 +8,7 @@
         <!--调用静态方法-->
         <import type="java.lang.String"/>
 
-        <import type="com.example.jingbin.cloudreader.utils.StringFormatUtil"/>
+        <import type="com.example.jingbin.cloudreader.util.StringFormatUtil"/>
         <!--引用bean-->
         <variable
             name="booksBean"

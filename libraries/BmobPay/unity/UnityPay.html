@@ -1,0 +1,126 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style id="system" type="text/css">
+        *{margin:0;padding:0;}body {	font:13.34px helvetica,arial,freesans,clean,sans-serif;	color:black;	line-height:1.4em;	background-color: #F8F8F8;	padding: 0.7em;}p {	margin:1em 0;	line-height:1.5em;}table {	font-size:inherit;	font:100%;	margin:1em;}table th{border-bottom:1px solid #bbb;padding:.2em 1em;}table td{border-bottom:1px solid #ddd;padding:.2em 1em;}input[type=text],input[type=password],input[type=image],textarea{font:99% helvetica,arial,freesans,sans-serif;}select,option{padding:0 .25em;}optgroup{margin-top:.5em;}pre,code{font:12px Monaco,"Courier New","DejaVu Sans Mono","Bitstream Vera Sans Mono",monospace;}pre {	margin:1em 0;	font-size:12px;	background-color:#eee;	border:1px solid #ddd;	padding:5px;	line-height:1.5em;	color:#444;	overflow:auto;	-webkit-box-shadow:rgba(0,0,0,0.07) 0 1px 2px inset;	-webkit-border-radius:3px;	-moz-border-radius:3px;border-radius:3px;white-space: pre-wrap;word-wrap:break-word;}pre code {	padding:0;	font-size:12px;	background-color:#eee;	border:none;}code {	font-size:12px;	background-color:#f8f8ff;	color:#444;	padding:0 .2em;	border:1px solid #dedede;}img{border:0;max-width:100%;}abbr{border-bottom:none;}a{color:#4183c4;text-decoration:none;}a:hover{text-decoration:underline;}a code,a:link code,a:visited code{color:#4183c4;}h2,h3{margin:1em 0;}h1,h2,h3,h4,h5,h6{border:0;}h1{font-size:170%;border-top:4px solid #aaa;padding-top:.5em;margin-top:1.5em;}h1:first-child{margin-top:0;padding-top:.25em;border-top:none;}h2{font-size:150%;margin-top:1.5em;border-top:4px solid #e0e0e0;padding-top:.5em;}h3{margin-top:1em;}hr{border:1px solid #ddd;}ul{margin:1em 0 1em 2em;}ol{margin:1em 0 1em 2em;}ul li,ol li{margin-top:.5em;margin-bottom:.5em;}ul ul,ul ol,ol ol,ol ul{margin-top:0;margin-bottom:0;}blockquote{margin:1em 0;border-left:5px solid #ddd;padding-left:.6em;color:#555;}dt{font-weight:bold;margin-left:1em;}dd{margin-left:2em;margin-bottom:1em;}@media screen and (min-width: 768px) {    body {        width: 748px;        margin:10px auto;    }}
+    </style>
+    <style id="custom" type="text/css"></style>
+</head>
+<body marginheight="0"><h2>支付接口快速入门</h2>
+<h4>添加相关文件,将下载的plugins文件夹放进Assets目录下</h4>
+<ul>
+    <li><p>在unity项目下的Assets文件夹内新建Plugins/Android目录，将下载的支付SDK的libs目录添加到Android文件夹内，包括 <code>&lt;BmobPay_UnityHelper_v3.x.x_xxxxxx.jar&gt;</code> 、 <code>&lt;BmobPay_v3.x.x_xxxxxx.jar&gt;</code> 和 <code>&lt;xxx/libbmobwpay.so&gt;</code> ，so文件按项目需求添加</p>
+        <p>注意：so文件全部添加有可能导致编译不通过的错误，这时留下<code>armeabi-v7a</code>和<code>x86</code>两个目录即可编译通过</p>
+    </li>
+    <li><p>将下载的支付SDK的assets目录添加到项目的Android文件夹下，包括 <code>&lt;payassets.db&gt;</code> 和 <code>&lt;bp.db&gt;</code> ，其中bp.db其实是apk文件，是微信支付插件</p>
+        <p><img src="http://bmob-cdn-10365.b0.upaiyun.com/2017/04/27/e27ed998403fd1db80add1b93806ec1e.png" alt="mahua"></p>
+    </li>
+</ul>
+<h4>修改AndroidManifest.xml，两种方式二选一</h4>
+<h5>方法一：</h5>
+<ul>
+    <li><p>将下载的支付SDK的<code>AndroidMenifest.xml</code>文件打开（比如用sublime打开），把包名修改成你的包名： <code>package="你的包名"</code></p>
+        <pre><code class="lang-c"> package="xx.xx.xx"</code></pre>
+    </li>
+    <li>再把修改完成后AndroidMenifest.xml文件的放进<code>Plugins/Android</code>目录下</li>
+</ul>
+<h5>方法二：</h5>
+<ul>
+    <li>如果你的项目需要更多的设置，可以从你的unity项目Export出<code>googleAndroidProject</code>，导出来的googleAndroidProject里面会自动生成AndroidManifest.xml文件。</li>
+    <li><p>在生成的AndroidManifest.xml文件中添加下添加上网权限、读写权限:</p>
+        <pre><code class="lang-c">&lt;uses-permission android:name="android.permission.INTERNET" /&gt;
+&lt;uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /&gt;</code></pre>
+    </li>
+    <li><p>在AndroidManifest.xml文件中添加下免责Activity</p>
+        <pre><code class="lang-c">&lt;activity android:name="cn.bmob.pay.v3.act.PayAct" /&gt;</code></pre>
+        <p>注意：这个是在运行时加载的类,可以忽略IDE给出的红色标识</p>
+    </li>
+    <li>再把修改完成后AndroidMenifest.xml文件的放进Plugins/Android目录下</li>
+</ul>
+<h4>初始化ApplicationID</h4>
+<ul>
+    <li><p>在Start()方法中调用如下方法：（Application ID在后台应用管理的 数据浏览-&gt;应用信息-&gt;应用密钥-&gt;Application ID，如果appKey为空或者混淆规则不正确，会抛出IllegalArgumentException异常,因为init是异步的，越早初始化越好）</p>
+        <pre><code class="lang-c">  AndroidJavaClass jc = new AndroidJavaClass("cn.bmob.pay.UnityHelper");
+  jc.CallStatic("init","Application ID");</code></pre>
+    </li>
+</ul>
+<h4>发起支付调用：</h4>
+<ul>
+    <li><p>发起支付调用，请使用如下方法</p>
+        <pre><code class="lang-c">  /**
+    * 全部参数都是String类型
+    * 第1个参数不能修改，是UnityHelper.jar中预设的支付方法名
+    * 第2个参数是商品的名称,请注意不要有违禁字眼,可以为空
+    * 第3个参数是商品的详情描述,请注意不要有违禁字眼,可以为空
+    * 第4个参数为时为支付金额，测试建议 "0.02"
+    * 第5个参数为”0"时调用支付宝支付，为"1"时调用微信支付
+    * 第6个参数为Unity内某GameObject的Name(etc. 'unityObj')，详见下一步骤
+  */
+AndroidJavaClass jc = new AndroidJavaClass("cn.bmob.pay.UnityHelper");
+jc.CallStatic("pay","商品名", "商品描述", "0.02", "0", "unityObj");</code></pre>
+    </li>
+    <li><p>在unity项目中新建回调对象unityGameObj，并在其绑定的脚本中添加如下方法（对象名可以自定义，方法名必须相同）：</p>
+        <pre><code class="lang-c">  /* *
+    * 无论支付成功与否,只要成功产生了请求,就返回订单号,请自行保存
+    * 以便以后查询
+  */
+  void OnPay_OrderId(string orderId){
+      // 此处应该保存订单号,比如保存进数据库等,以便以后查询
+      print("OrderId = " + orderId);
+  }
+
+  /* *
+    * 支付成功,保险起见请调用查询方法确认结果
+  */
+  void OnPay_Succeed(string s){
+      print("Pay Succeed");
+  }
+
+  /* *
+   * 支付失败
+  */
+  void OnPay_Fail(string reason){
+      //reason实际为 code+":"+reason
+      print("Pay Fail, "+reason);
+  }</code></pre>
+    </li>
+</ul>
+<h4>订单查询</h4>
+<ul>
+    <li>在需要调用订单查询的地方，调用如下方法(微信订单和支付宝订单通用)：
+        <pre><code class="lang-c">/**
+  * 全部参数都是String类型
+  * 第1个参数不能修改，是UnityHelper.jar中预设的查询方法名
+  * 第2个参数为时为支付订单号orderId
+  * 第3个参数为Unity内某GameObject的Name(etc. 'unityObj')，详见下一步骤
+*/
+AndroidJavaClass jc = new AndroidJavaClass("cn.bmob.pay.UnityHelper");
+jc.CallStatic("query","1234567890","unityObj");</code></pre>
+    </li>
+    <li><p>在unity项目中新建回调对象unityObj，并在其绑定的脚本中添加如下方法（对象名可以自定义，方法名必须相同）：</p>
+        <pre><code class="lang-c">// 查询订单成功接口
+void OnQuery_Succeed(string state){
+    print("Pay Succeed");
+}
+
+// 查询订单失败接口
+void OnQuery_Fail(string reason){
+    //reason实际为 code+":"+reason
+    print("Pay Fail, "+reason);
+}</code></pre>
+    </li>
+</ul>
+<h4>发起安装bmob支付插件，请使用如下方法：</h4>
+<pre><code class="lang-c">  /**
+    * bp.db其实是放在assets目录下的apk文件，是微信支付插件
+  */
+  AndroidJavaClass jc = new AndroidJavaClass("cn.bmob.pay.UnityHelper");
+  jc.CallStatic(“installBmobPayPlugin","bp.db");</code></pre>
+<h4>修改混淆规则(如果你需要混淆的话)</h4>
+<pre><code class="lang-c">  -libraryjars libs/BmobPay_v3.x.x_xxxxxx.jar
+  -keepclasseswithmembers class c.b.** { *; }
+  -keep interface c.b.PListener{ *; }
+  -keep interface c.b.QListener{ *; }</code></pre>
+</body>
+</html>

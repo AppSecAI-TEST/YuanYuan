@@ -14,7 +14,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import com.example.jingbin.cloudreader.R;
-import com.example.jingbin.cloudreader.utils.PerfectClickListener;
+import com.example.jingbin.cloudreader.util.PerfectClickListener;
 
 import rx.Subscription;
 import rx.subscriptions.CompositeSubscription;

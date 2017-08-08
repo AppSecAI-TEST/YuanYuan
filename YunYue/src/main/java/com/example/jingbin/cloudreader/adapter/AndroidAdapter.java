@@ -9,8 +9,8 @@ import com.example.jingbin.cloudreader.base.baseadapter.BaseRecyclerViewAdapter;
 import com.example.jingbin.cloudreader.base.baseadapter.BaseRecyclerViewHolder;
 import com.example.jingbin.cloudreader.bean.GankIoDataBean;
 import com.example.jingbin.cloudreader.databinding.ItemAndroidBinding;
-import com.example.jingbin.cloudreader.utils.ImgLoadUtil;
-import com.example.jingbin.cloudreader.view.webview.WebViewActivity;
+import com.example.jingbin.cloudreader.util.ImgLoadUtil;
+import com.example.jingbin.cloudreader.widget.webview.WebViewActivity;
 
 /**
  * Created by jingbin on 2016/12/2.

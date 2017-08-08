@@ -8,7 +8,7 @@ import com.example.jingbin.cloudreader.bean.FrontpageBean;
 import com.example.jingbin.cloudreader.bean.GankIoDayBean;
 import com.example.jingbin.cloudreader.http.HttpClient;
 import com.example.jingbin.cloudreader.http.RequestImpl;
-import com.example.jingbin.cloudreader.utils.SPUtils;
+import com.example.jingbin.cloudreader.util.SPUtils;
 
 import java.util.ArrayList;
 import java.util.List;

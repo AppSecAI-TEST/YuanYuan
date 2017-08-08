@@ -1,0 +1,19 @@
+v3.2.0_170602:
+
+先挑重点：
+需要替换assets文件夹下的bp.db文件和payassets.db文件
+
+说明：
+
+更换了支付插件，以前的插件包名为com.bmob.app.sport与应用市场上一些应用重复，导致部分用户会从应用市场更新到别的应用去，所以微信支付的插件更改如下：
+
+(17年6月2号)
+包名：cn.bmob.knowledge
+目前最新版本号：8 
+下载地址：https://www.bmob.cn/themes/2016-3/static/resource/BmobPlugin_Apk.apk
+
+不再提供getPluginVersion接口，插件安装情况、版本信息由开发者自行判断(可用新增接口BP.isAppUpToDate)
+
+新增错误码：
+-5 	未安装支付插件，且sdk调用系统浏览器打开插件下载地址
+-6 	未安装支付插件，且无法调起系统浏览器

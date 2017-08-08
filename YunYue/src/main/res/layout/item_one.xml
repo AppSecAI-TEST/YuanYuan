@@ -4,7 +4,7 @@
     <data>
 
         <!--调用静态方法-->
-        <import type="com.example.jingbin.cloudreader.utils.StringFormatUtil"/>
+        <import type="com.example.jingbin.cloudreader.util.StringFormatUtil"/>
 
         <variable
             name="subjectsBean"

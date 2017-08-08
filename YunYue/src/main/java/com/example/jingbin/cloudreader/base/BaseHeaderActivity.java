@@ -32,12 +32,12 @@ import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 import com.example.jingbin.cloudreader.R;
 import com.example.jingbin.cloudreader.databinding.BaseHeaderTitleBarBinding;
-import com.example.jingbin.cloudreader.utils.CommonUtils;
-import com.example.jingbin.cloudreader.utils.PerfectClickListener;
-import com.example.jingbin.cloudreader.view.CustomChangeBounds;
-import com.example.jingbin.cloudreader.view.MyNestedScrollView;
-import com.example.jingbin.cloudreader.view.statusbar.StatusBarUtil;
-import com.example.jingbin.cloudreader.view.test.StatusBarUtils;
+import com.example.jingbin.cloudreader.util.CommonUtils;
+import com.example.jingbin.cloudreader.util.PerfectClickListener;
+import com.example.jingbin.cloudreader.widget.CustomChangeBounds;
+import com.example.jingbin.cloudreader.widget.MyNestedScrollView;
+import com.example.jingbin.cloudreader.widget.statusbar.StatusBarUtil;
+import com.example.jingbin.cloudreader.widget.test.StatusBarUtils;
 
 import java.lang.reflect.Method;
 
