@@ -6,9 +6,9 @@ import android.databinding.Bindable;
 import java.io.Serializable;
 import java.util.List;
 
-import xyz.zimuju.reader.BR;
-import xyz.zimuju.reader.bean.moviechild.SubjectsBean;
 import xyz.zimuju.http.ParamNames;
+import xyz.zimuju.reader.BR;
+import xyz.zimuju.reader.bean.movie.SubjectsBean;
 
 public class HotMovieBean extends BaseObservable implements Serializable {
 

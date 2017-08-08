@@ -14,7 +14,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Random;
 
-import xyz.zimuju.reader.app.CloudReaderApplication;
+import xyz.zimuju.reader.application.CloudReaderApplication;
 
 /**
  * Created by jingbin on 2016/11/22.

@@ -7,3 +7,6 @@ View view
 @BindView(R2.id.xxxx)
 View view
 的形式注解
+
+XRecyclerView
+compile 'com.jcodecraeer:xrecyclerview:1.3.2'

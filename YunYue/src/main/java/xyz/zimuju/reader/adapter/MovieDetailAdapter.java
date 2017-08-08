@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import xyz.zimuju.reader.R;
 import xyz.zimuju.reader.base.BaseRecyclerViewAdapter;
 import xyz.zimuju.reader.base.BaseRecyclerViewHolder;
-import xyz.zimuju.reader.bean.moviechild.PersonBean;
+import xyz.zimuju.reader.bean.movie.PersonBean;
 import xyz.zimuju.reader.databinding.ItemMovieDetailPersonBinding;
 import xyz.zimuju.reader.util.PerfectClickListener;
 import xyz.zimuju.reader.widget.webview.WebViewActivity;

@@ -5,16 +5,15 @@
 
         <variable
             name="bookDetailBean"
-            type="com.example.jingbin.cloudreader.bean.book.BookDetailBean"/>
+            type="xyz.zimuju.reader.bean.book.BookDetailBean"/>
 
     </data>
 
-    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
-                  android:id="@+id/activity_book_detail"
-                  android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:orientation="vertical"
-                  tools:context="com.example.jingbin.cloudreader.xyz.example.jingbin.cloudreader.surface.book.child.BookDetailActivity">
+    <LinearLayout
+        android:id="@+id/activity_book_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
 
         <LinearLayout

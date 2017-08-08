@@ -5,12 +5,12 @@
     <data>
 
         <!--调用静态方法-->
-        <import type="com.example.jingbin.cloudreader.util.StringFormatUtil"/>
+        <import type="xyz.zimuju.reader.util.StringFormatUtil"/>
 
         <!--引用bean-->
         <variable
             name="bean"
-            type="com.example.jingbin.cloudreader.bean.MovieDetailBean"/>
+            type="xyz.zimuju.reader.bean.MovieDetailBean"/>
 
     </data>
 

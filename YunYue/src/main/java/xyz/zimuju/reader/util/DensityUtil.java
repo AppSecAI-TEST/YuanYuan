@@ -3,7 +3,7 @@ package xyz.zimuju.reader.util;
 import android.view.View;
 import android.view.ViewGroup;
 
-import xyz.zimuju.reader.app.CloudReaderApplication;
+import xyz.zimuju.reader.application.CloudReaderApplication;
 
 /**
  * Created by Administrator on 2015/10/19.

@@ -22,7 +22,7 @@ import android.widget.RelativeLayout;
 import java.util.Arrays;
 
 import xyz.zimuju.reader.R;
-import xyz.zimuju.reader.bean.moviechild.SubjectsBean;
+import xyz.zimuju.reader.bean.movie.SubjectsBean;
 import xyz.zimuju.reader.databinding.ActivitySlideScroolViewBinding;
 import xyz.zimuju.reader.util.CommonUtils;
 import xyz.zimuju.reader.util.StringFormatUtil;

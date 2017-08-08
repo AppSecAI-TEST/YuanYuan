@@ -4,7 +4,7 @@
                 android:layout_height="match_parent"
                 android:background="#000000">
 
-    <xyz.zimuju.cloudreader.widget.viewbigimage.HackyViewPager
+    <xyz.zimuju.reader.widget.viewbigimage.HackyViewPager
         android:id="@+id/very_image_viewpager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

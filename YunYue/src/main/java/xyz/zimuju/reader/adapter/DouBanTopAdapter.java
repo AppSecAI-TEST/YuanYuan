@@ -10,7 +10,7 @@ import android.widget.TextView;
 import xyz.zimuju.reader.R;
 import xyz.zimuju.reader.base.BaseRecyclerViewAdapter;
 import xyz.zimuju.reader.base.BaseRecyclerViewHolder;
-import xyz.zimuju.reader.bean.moviechild.SubjectsBean;
+import xyz.zimuju.reader.bean.movie.SubjectsBean;
 import xyz.zimuju.reader.databinding.ItemDoubanTopBinding;
 import xyz.zimuju.reader.surface.one.OneMovieDetailActivity;
 import xyz.zimuju.reader.util.PerfectClickListener;

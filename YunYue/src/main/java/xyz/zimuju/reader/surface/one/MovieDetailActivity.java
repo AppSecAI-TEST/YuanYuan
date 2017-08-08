@@ -35,7 +35,7 @@ import rx.schedulers.Schedulers;
 import xyz.zimuju.reader.R;
 import xyz.zimuju.reader.adapter.MovieDetailAdapter;
 import xyz.zimuju.reader.bean.MovieDetailBean;
-import xyz.zimuju.reader.bean.moviechild.SubjectsBean;
+import xyz.zimuju.reader.bean.movie.SubjectsBean;
 import xyz.zimuju.reader.databinding.ActivityMovieDetailBinding;
 import xyz.zimuju.reader.http.HttpClient;
 import xyz.zimuju.reader.util.CommonUtils;

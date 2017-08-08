@@ -1,4 +1,4 @@
-package xyz.zimuju.reader.app;
+package xyz.zimuju.reader.application;
 
 import java.util.ArrayList;
 

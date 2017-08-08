@@ -12,7 +12,7 @@ import android.widget.TextView;
 import java.util.List;
 
 import xyz.zimuju.reader.R;
-import xyz.zimuju.reader.bean.moviechild.SubjectsBean;
+import xyz.zimuju.reader.bean.movie.SubjectsBean;
 import xyz.zimuju.reader.databinding.ActivityMovieHeaderBinding;
 import xyz.zimuju.reader.widget.statusbar.StatusBarUtil;
 

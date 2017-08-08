@@ -12,7 +12,7 @@ import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
-import xyz.zimuju.reader.app.ConstantsImageUrl;
+import xyz.zimuju.reader.application.ConstantsImageUrl;
 import xyz.zimuju.reader.bean.AndroidBean;
 import xyz.zimuju.reader.bean.FrontpageBean;
 import xyz.zimuju.reader.bean.GankIoDayBean;

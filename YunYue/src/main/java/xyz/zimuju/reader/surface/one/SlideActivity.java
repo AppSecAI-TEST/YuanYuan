@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 
 import xyz.zimuju.reader.R;
-import xyz.zimuju.reader.bean.moviechild.SubjectsBean;
+import xyz.zimuju.reader.bean.movie.SubjectsBean;
 import xyz.zimuju.reader.databinding.ActivitySlideBinding;
 import xyz.zimuju.reader.util.CommonUtils;
 import xyz.zimuju.reader.util.DebugUtil;

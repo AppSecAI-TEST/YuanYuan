@@ -10,16 +10,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.jingbin.cloudreader.databinding.FooterItemBookBinding;
-import com.example.jingbin.cloudreader.databinding.HeaderItemBookBinding;
-
 import java.util.ArrayList;
 import java.util.List;
 
-import xyz.zimuju.reader.surface.MainActivity;
 import xyz.zimuju.reader.R;
 import xyz.zimuju.reader.bean.book.BooksBean;
-import xyz.zimuju.reader.databinding.ItemBookBinding;
+import xyz.zimuju.reader.databinding.ItemBookFooterBinding;
+import xyz.zimuju.reader.databinding.ItemBookHeaderBinding;
+import xyz.zimuju.reader.databinding.ItemBookLayoutBinding;
+import xyz.zimuju.reader.surface.MainActivity;
 import xyz.zimuju.reader.surface.book.BookDetailActivity;
 import xyz.zimuju.reader.util.PerfectClickListener;
 
@@ -60,13 +59,13 @@ public class BookAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         switch (viewType) {
             case TYPE_HEADER_BOOK:
-                HeaderItemBookBinding mBindHeader = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.header_item_book, parent, false);
+                ItemBookHeaderBinding mBindHeader = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.item_book_header, parent, false);
                 return new HeaderViewHolder(mBindHeader.getRoot());
             case TYPE_FOOTER_BOOK:
-                FooterItemBookBinding mBindFooter = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.footer_item_book, parent, false);
+                ItemBookFooterBinding mBindFooter = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.item_book_footer, parent, false);
                 return new FooterViewHolder(mBindFooter.getRoot());
             default:
-                ItemBookBinding mBindBook = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.item_book, parent, false);
+                ItemBookLayoutBinding mBindBook = DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()), R.layout.item_book_layout, parent, false);
                 return new BookViewHolder(mBindBook.getRoot());
         }
     }
@@ -171,7 +170,7 @@ public class BookAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
      */
     private class FooterViewHolder extends RecyclerView.ViewHolder {
 
-        FooterItemBookBinding mBindFooter;
+        ItemBookFooterBinding mBindFooter;
 
         FooterViewHolder(View itemView) {
             super(itemView);
@@ -208,7 +207,7 @@ public class BookAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private class HeaderViewHolder extends RecyclerView.ViewHolder {
 
-        HeaderItemBookBinding mBindBook;
+        ItemBookHeaderBinding mBindBook;
 
         HeaderViewHolder(View view) {
             super(view);
@@ -223,7 +222,7 @@ public class BookAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     private class BookViewHolder extends RecyclerView.ViewHolder {
 
-        ItemBookBinding mBindBook;
+        ItemBookLayoutBinding mBindBook;
 
         BookViewHolder(View view) {
             super(view);

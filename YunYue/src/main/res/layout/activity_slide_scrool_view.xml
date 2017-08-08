@@ -8,11 +8,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <xyz.zimuju.cloudreader.widget.DiscoverScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-                                                              android:id="@+id/discoverScrollView"
-                                                              android:layout_width="match_parent"
-                                                              android:layout_height="match_parent"
-                                                              android:visibility="gone">
+            <xyz.zimuju.reader.widget.DiscoverScrollView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/discoverScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -45,7 +46,7 @@
                 </LinearLayout>
 
 
-            </xyz.zimuju.cloudreader.widget.DiscoverScrollView>
+            </xyz.zimuju.reader.widget.DiscoverScrollView>
         </RelativeLayout>
 
         <RelativeLayout

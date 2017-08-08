@@ -6,8 +6,8 @@ import android.content.SharedPreferences;
 import java.util.ArrayList;
 import java.util.List;
 
-import xyz.zimuju.reader.app.CloudReaderApplication;
-import xyz.zimuju.reader.app.Constants;
+import xyz.zimuju.reader.application.CloudReaderApplication;
+import xyz.zimuju.reader.application.Constants;
 
 /**
  * Created by jingbin on 2015/2/26.

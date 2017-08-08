@@ -6,9 +6,9 @@ import android.databinding.Bindable;
 import java.util.List;
 
 import xyz.zimuju.reader.BR;
-import xyz.zimuju.reader.bean.moviechild.ImagesBean;
-import xyz.zimuju.reader.bean.moviechild.PersonBean;
-import xyz.zimuju.reader.bean.moviechild.RatingBean;
+import xyz.zimuju.reader.bean.movie.ImagesBean;
+import xyz.zimuju.reader.bean.movie.PersonBean;
+import xyz.zimuju.reader.bean.movie.RatingBean;
 
 public class MovieDetailBean extends BaseObservable {
 

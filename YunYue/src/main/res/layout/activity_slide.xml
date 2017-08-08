@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <FrameLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-                 xmlns:tools="http://schemas.android.com/tools"
-                 android:id="@+id/activity_slide"
-                 android:layout_width="match_parent"
-                 android:layout_height="match_parent"
-                 tools:context="com.example.jingbin.cloudreader.xyz.example.jingbin.cloudreader.surface.one.SlideActivity">
+    <FrameLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/activity_slide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <xyz.zimuju.cloudreader.widget.DiscoverScrollView
+        <xyz.zimuju.reader.widget.DiscoverScrollView
             android:id="@+id/scrollView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -18,8 +17,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@color/colorWhite"
-                android:orientation="vertical"
-                tools:context="com.example.jingbin.cloudreader.xyz.example.jingbin.cloudreader.surface.one.MovieDetailActivity">
+                android:orientation="vertical">
 
 
                 <!--高度为下面布局的高度+titlebar(56dp)的高度-->
@@ -57,7 +55,7 @@
             </LinearLayout>
 
 
-        </xyz.zimuju.cloudreader.widget.DiscoverScrollView>
+        </xyz.zimuju.reader.widget.DiscoverScrollView>
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/title_tool_bar"

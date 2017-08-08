@@ -2,7 +2,7 @@ package xyz.zimuju.reader.util;
 
 import java.util.List;
 
-import xyz.zimuju.reader.bean.moviechild.PersonBean;
+import xyz.zimuju.reader.bean.movie.PersonBean;
 
 /**
  * Created by jingbin on 2016/11/26.

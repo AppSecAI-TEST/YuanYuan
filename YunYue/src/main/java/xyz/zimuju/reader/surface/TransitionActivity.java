@@ -14,7 +14,7 @@ import com.example.jingbin.cloudreader.databinding.ActivityTransitionBinding;
 
 import java.util.Random;
 
-import xyz.zimuju.reader.app.ConstantsImageUrl;
+import xyz.zimuju.reader.application.ConstantsImageUrl;
 import xyz.zimuju.reader.util.CommonUtils;
 import xyz.zimuju.reader.util.PerfectClickListener;
 

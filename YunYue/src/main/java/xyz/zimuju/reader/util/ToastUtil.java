@@ -2,7 +2,7 @@ package xyz.zimuju.reader.util;
 
 import android.widget.Toast;
 
-import xyz.zimuju.reader.app.CloudReaderApplication;
+import xyz.zimuju.reader.application.CloudReaderApplication;
 
 /**
  * Created by jingbin on 2016/12/14.

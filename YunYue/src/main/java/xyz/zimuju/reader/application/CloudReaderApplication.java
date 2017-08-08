@@ -1,11 +1,11 @@
-package xyz.zimuju.reader.app;
+package xyz.zimuju.reader.application;
 
 import android.app.Application;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 
-import xyz.zimuju.reader.util.DebugUtil;
 import xyz.zimuju.http.HttpUtils;
+import xyz.zimuju.reader.util.DebugUtil;
 
 public class CloudReaderApplication extends Application {
 
@@ -28,6 +28,7 @@ public class CloudReaderApplication extends Application {
     /**
      * 使其系统更改字体大小无效
      */
+    @SuppressWarnings("deprecation")
     private void initTextSize() {
         Resources res = getResources();
         Configuration config = new Configuration();

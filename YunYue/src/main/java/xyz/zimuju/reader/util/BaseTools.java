@@ -18,7 +18,7 @@ import java.text.NumberFormat;
 import java.util.List;
 import java.util.Locale;
 
-import xyz.zimuju.reader.app.CloudReaderApplication;
+import xyz.zimuju.reader.application.CloudReaderApplication;
 
 /**
  * Created by jingbin on 2017/2/13.

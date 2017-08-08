@@ -28,7 +28,7 @@ import java.util.List;
 
 import jp.wasabeef.glide.transformations.BlurTransformation;
 import xyz.zimuju.reader.adapter.MovieDetailPersonAdapter;
-import xyz.zimuju.reader.bean.moviechild.SubjectsBean;
+import xyz.zimuju.reader.bean.movie.SubjectsBean;
 import xyz.zimuju.reader.widget.test.StatusBarUtils;
 
 /**

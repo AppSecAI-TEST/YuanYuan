@@ -24,7 +24,7 @@ import rx.Subscription;
 import xyz.zimuju.reader.R;
 import xyz.zimuju.reader.adapter.EmptyAdapter;
 import xyz.zimuju.reader.adapter.EverydayAdapter;
-import xyz.zimuju.reader.app.Constants;
+import xyz.zimuju.reader.application.Constants;
 import xyz.zimuju.reader.base.BaseFragment;
 import xyz.zimuju.reader.bean.AndroidBean;
 import xyz.zimuju.reader.bean.FrontpageBean;

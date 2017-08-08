@@ -26,7 +26,7 @@ import com.example.jingbin.cloudreader.R;
 import com.example.jingbin.cloudreader.databinding.ActivitySlideShadeViewBinding;
 
 import jp.wasabeef.glide.transformations.BlurTransformation;
-import xyz.zimuju.reader.bean.moviechild.SubjectsBean;
+import xyz.zimuju.reader.bean.movie.SubjectsBean;
 import xyz.zimuju.reader.util.CommonUtils;
 import xyz.zimuju.reader.util.DebugUtil;
 import xyz.zimuju.reader.util.StringFormatUtil;

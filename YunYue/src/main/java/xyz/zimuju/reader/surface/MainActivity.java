@@ -19,7 +19,6 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
-import com.example.jingbin.cloudreader.R;
 import com.example.jingbin.cloudreader.databinding.ActivityMainBinding;
 import com.example.jingbin.cloudreader.databinding.NavHeaderMainBinding;
 
@@ -27,7 +26,7 @@ import java.util.ArrayList;
 
 import rx.functions.Action1;
 import xyz.zimuju.reader.R;
-import xyz.zimuju.reader.app.ConstantsImageUrl;
+import xyz.zimuju.reader.application.ConstantsImageUrl;
 import xyz.zimuju.reader.http.rx.RxBus;
 import xyz.zimuju.reader.http.rx.RxBusBaseMessage;
 import xyz.zimuju.reader.http.rx.RxCodeConstants;

@@ -5,11 +5,11 @@
 
         <import type="android.text.TextUtils"/>
 
-        <import type="xyz.zimuju.cloudreader.util.TimeUtil"/>
+        <import type="xyz.zimuju.reader.util.TimeUtil"/>
 
         <variable
             name="resultsBean"
-            type="xyz.zimuju.cloudreader.bean.GankIoDataBean.ResultBean"/>
+            type="xyz.zimuju.reader.bean.GankIoDataBean.ResultBean"/>
 
     </data>
 
