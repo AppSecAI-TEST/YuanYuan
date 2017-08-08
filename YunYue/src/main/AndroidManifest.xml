@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.example.jingbin.cloudreader">
+          package="xyz.zimuju.cloudreader">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -20,64 +20,72 @@
         <activity
             android:name="xyz.zimuju.cloudreader.surface.TransitionActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/ViewBigPicTheme">
-            <!--<intent-filter>-->
-            <!--<action android:name="android.intent.action.MAIN"/>-->
-
-            <!--<category android:name="android.intent.category.LAUNCHER"/>-->
-            <!--</intent-filter>-->
-        </activity>
+            android:theme="@style/ViewBigPicTheme"/>
 
         <activity
             android:name="xyz.zimuju.cloudreader.base.BaseActivity"
             android:label="@string/title_activity_base"
             android:theme="@style/AppTheme"/>
+
         <activity
             android:name="xyz.zimuju.cloudreader.surface.one.TestActivity"
             android:screenOrientation="portrait"
             android:theme="@style/MyScrollPage"/>
+
         <activity
             android:name="xyz.zimuju.cloudreader.surface.one.SlideActivity"
             android:screenOrientation="portrait"
             android:theme="@style/MyScrollPage"/>
+
         <activity
             android:name="xyz.zimuju.cloudreader.surface.one.SlideScrollViewActivity"
             android:screenOrientation="portrait"
             android:theme="@style/MyScrollPage"/>
+
         <activity
             android:name="xyz.zimuju.cloudreader.surface.one.SlideShadeViewActivity"
             android:screenOrientation="portrait"
             android:theme="@style/MyScrollPage"/>
+
         <activity
             android:name="xyz.zimuju.cloudreader.surface.one.MovieDetailActivity"
             android:screenOrientation="portrait"
             android:theme="@style/MyScrollPage"/>
+
         <activity
             android:name="xyz.zimuju.cloudreader.widget.viewbigimage.ViewBigImageActivity"
             android:screenOrientation="portrait"
             android:theme="@style/ViewBigPicTheme"/>
+
         <activity
             android:name="xyz.zimuju.cloudreader.widget.webview.WebViewActivity"
             android:screenOrientation="portrait"/>
+
         <activity
             android:name="xyz.zimuju.cloudreader.surface.one.DoubanTopActivity"
             android:screenOrientation="portrait"/>
+
         <activity
             android:name="xyz.zimuju.cloudreader.surface.one.OneMovieDetailActivity"
             android:screenOrientation="portrait"
             android:theme="@style/MyScrollPage"/>
+
         <activity
             android:name="xyz.zimuju.cloudreader.surface.menu.NavHomePageActivity"
             android:screenOrientation="portrait"/>
+
         <activity
             android:name="xyz.zimuju.cloudreader.surface.menu.NavDeedBackActivity"
             android:screenOrientation="portrait"/>
+
         <activity
             android:name="xyz.zimuju.cloudreader.surface.menu.NavAboutActivity"
             android:screenOrientation="portrait"/>
+
         <activity
             android:name="xyz.zimuju.cloudreader.surface.book.child.BookDetailActivity"
             android:screenOrientation="portrait"/>
+
         <activity
             android:name="xyz.zimuju.cloudreader.surface.menu.NavDownloadActivity"
             android:screenOrientation="portrait"/>

@@ -5,12 +5,11 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 
-import com.example.jingbin.cloudreader.R;
-import com.example.jingbin.cloudreader.databinding.FragmentBookBinding;
-
 import java.util.ArrayList;
 
+import xyz.zimuju.cloudreader.R;
 import xyz.zimuju.cloudreader.base.BaseFragment;
+import xyz.zimuju.cloudreader.databinding.FragmentBookBinding;
 import xyz.zimuju.cloudreader.surface.book.child.BookCustomFragment;
 import xyz.zimuju.cloudreader.widget.MyFragmentPagerAdapter;
 

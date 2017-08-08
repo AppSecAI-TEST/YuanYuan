@@ -19,12 +19,11 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-import com.example.jingbin.cloudreader.R;
-import com.example.jingbin.cloudreader.databinding.ActivitySlideScroolViewBinding;
-
 import java.util.Arrays;
 
+import xyz.zimuju.cloudreader.R;
 import xyz.zimuju.cloudreader.bean.moviechild.SubjectsBean;
+import xyz.zimuju.cloudreader.databinding.ActivitySlideScroolViewBinding;
 import xyz.zimuju.cloudreader.util.CommonUtils;
 import xyz.zimuju.cloudreader.util.StringFormatUtil;
 import xyz.zimuju.cloudreader.widget.CallBack_ScrollChanged;

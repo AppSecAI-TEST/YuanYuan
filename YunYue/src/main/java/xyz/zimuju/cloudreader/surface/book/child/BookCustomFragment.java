@@ -8,17 +8,16 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import com.example.jingbin.cloudreader.R;
-import com.example.jingbin.cloudreader.databinding.FragmentBookCustomBinding;
-
 import rx.Observer;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 import xyz.zimuju.cloudreader.MainActivity;
+import xyz.zimuju.cloudreader.R;
 import xyz.zimuju.cloudreader.adapter.BookAdapter;
 import xyz.zimuju.cloudreader.base.BaseFragment;
 import xyz.zimuju.cloudreader.bean.book.BookBean;
+import xyz.zimuju.cloudreader.databinding.FragmentBookCustomBinding;
 import xyz.zimuju.cloudreader.http.HttpClient;
 import xyz.zimuju.cloudreader.util.CommonUtils;
 import xyz.zimuju.cloudreader.util.DebugUtil;

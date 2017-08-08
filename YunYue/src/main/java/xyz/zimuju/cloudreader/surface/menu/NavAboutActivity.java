@@ -7,10 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.bumptech.glide.Glide;
-import com.example.jingbin.cloudreader.R;
-import com.example.jingbin.cloudreader.databinding.ActivityNavAboutBinding;
 
+import xyz.zimuju.cloudreader.R;
 import xyz.zimuju.cloudreader.base.BaseActivity;
+import xyz.zimuju.cloudreader.databinding.ActivityNavAboutBinding;
 import xyz.zimuju.cloudreader.util.BaseTools;
 import xyz.zimuju.cloudreader.util.CommonUtils;
 import xyz.zimuju.cloudreader.util.PerfectClickListener;

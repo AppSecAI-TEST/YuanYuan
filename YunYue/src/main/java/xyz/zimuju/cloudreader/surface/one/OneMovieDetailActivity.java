@@ -9,18 +9,17 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.example.jingbin.cloudreader.R;
-import com.example.jingbin.cloudreader.databinding.ActivityOneMovieDetailBinding;
-import com.example.jingbin.cloudreader.databinding.HeaderSlideShapeBinding;
-
 import rx.Observer;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
+import xyz.zimuju.cloudreader.R;
 import xyz.zimuju.cloudreader.adapter.MovieDetailAdapter;
 import xyz.zimuju.cloudreader.base.BaseHeaderActivity;
 import xyz.zimuju.cloudreader.bean.MovieDetailBean;
 import xyz.zimuju.cloudreader.bean.moviechild.SubjectsBean;
+import xyz.zimuju.cloudreader.databinding.ActivityOneMovieDetailBinding;
+import xyz.zimuju.cloudreader.databinding.HeaderSlideShapeBinding;
 import xyz.zimuju.cloudreader.http.HttpClient;
 import xyz.zimuju.cloudreader.util.CommonUtils;
 import xyz.zimuju.cloudreader.util.StringFormatUtil;

@@ -12,22 +12,22 @@ import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 
 import com.bumptech.glide.Glide;
-import com.example.jingbin.cloudreader.R;
-import com.example.jingbin.cloudreader.databinding.FooterItemEverydayBinding;
-import com.example.jingbin.cloudreader.databinding.FragmentEverydayBinding;
-import com.example.jingbin.cloudreader.databinding.HeaderItemEverydayBinding;
 import com.youth.banner.listener.OnBannerClickListener;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import rx.Subscription;
+import xyz.zimuju.cloudreader.R;
 import xyz.zimuju.cloudreader.adapter.EmptyAdapter;
 import xyz.zimuju.cloudreader.adapter.EverydayAdapter;
 import xyz.zimuju.cloudreader.app.Constants;
 import xyz.zimuju.cloudreader.base.BaseFragment;
 import xyz.zimuju.cloudreader.bean.AndroidBean;
 import xyz.zimuju.cloudreader.bean.FrontpageBean;
+import xyz.zimuju.cloudreader.databinding.FooterItemEverydayBinding;
+import xyz.zimuju.cloudreader.databinding.FragmentEverydayBinding;
+import xyz.zimuju.cloudreader.databinding.HeaderItemEverydayBinding;
 import xyz.zimuju.cloudreader.http.RequestImpl;
 import xyz.zimuju.cloudreader.http.cache.ACache;
 import xyz.zimuju.cloudreader.http.rx.RxBus;

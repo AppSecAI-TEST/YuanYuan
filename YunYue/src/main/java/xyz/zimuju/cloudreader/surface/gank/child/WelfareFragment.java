@@ -5,17 +5,16 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 
-import com.example.jingbin.cloudreader.R;
-import com.example.jingbin.cloudreader.databinding.FragmentWelfareBinding;
-
 import java.util.ArrayList;
 
 import rx.Subscription;
+import xyz.zimuju.cloudreader.R;
 import xyz.zimuju.cloudreader.adapter.WelfareAdapter;
 import xyz.zimuju.cloudreader.app.Constants;
 import xyz.zimuju.cloudreader.base.BaseFragment;
 import xyz.zimuju.cloudreader.base.baseadapter.OnItemClickListener;
 import xyz.zimuju.cloudreader.bean.GankIoDataBean;
+import xyz.zimuju.cloudreader.databinding.FragmentWelfareBinding;
 import xyz.zimuju.cloudreader.http.RequestImpl;
 import xyz.zimuju.cloudreader.http.cache.ACache;
 import xyz.zimuju.cloudreader.model.GankOtherModel;

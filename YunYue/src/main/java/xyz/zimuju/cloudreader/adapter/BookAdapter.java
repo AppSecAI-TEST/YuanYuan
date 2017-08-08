@@ -10,16 +10,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.jingbin.cloudreader.R;
-import com.example.jingbin.cloudreader.databinding.FooterItemBookBinding;
-import com.example.jingbin.cloudreader.databinding.HeaderItemBookBinding;
-import com.example.jingbin.cloudreader.databinding.ItemBookBinding;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import xyz.zimuju.cloudreader.MainActivity;
 import xyz.zimuju.cloudreader.bean.book.BooksBean;
+import xyz.zimuju.cloudreader.databinding.FooterItemBookBinding;
+import xyz.zimuju.cloudreader.databinding.HeaderItemBookBinding;
+import xyz.zimuju.cloudreader.databinding.ItemBookBinding;
 import xyz.zimuju.cloudreader.surface.book.child.BookDetailActivity;
 import xyz.zimuju.cloudreader.util.PerfectClickListener;
 

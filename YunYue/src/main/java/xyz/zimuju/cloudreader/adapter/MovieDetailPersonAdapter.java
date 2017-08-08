@@ -9,12 +9,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.jingbin.cloudreader.R;
-import com.example.jingbin.cloudreader.databinding.ActivityMovieHeaderBinding;
-
 import java.util.List;
 
+import xyz.zimuju.cloudreader.R;
 import xyz.zimuju.cloudreader.bean.moviechild.SubjectsBean;
+import xyz.zimuju.cloudreader.databinding.ActivityMovieHeaderBinding;
 import xyz.zimuju.cloudreader.widget.statusbar.StatusBarUtil;
 
 

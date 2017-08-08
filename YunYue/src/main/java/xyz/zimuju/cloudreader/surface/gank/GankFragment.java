@@ -5,14 +5,13 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 
-import com.example.jingbin.cloudreader.R;
-import com.example.jingbin.cloudreader.databinding.FragmentGankBinding;
-
 import java.util.ArrayList;
 
 import rx.Subscription;
 import rx.functions.Action1;
+import xyz.zimuju.cloudreader.R;
 import xyz.zimuju.cloudreader.base.BaseFragment;
+import xyz.zimuju.cloudreader.databinding.FragmentGankBinding;
 import xyz.zimuju.cloudreader.http.rx.RxBus;
 import xyz.zimuju.cloudreader.http.rx.RxCodeConstants;
 import xyz.zimuju.cloudreader.surface.gank.child.AndroidFragment;

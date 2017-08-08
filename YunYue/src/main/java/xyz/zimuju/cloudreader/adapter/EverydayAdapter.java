@@ -10,17 +10,14 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.jingbin.cloudreader.R;
-import com.example.jingbin.cloudreader.databinding.ItemEverydayOneBinding;
-import com.example.jingbin.cloudreader.databinding.ItemEverydayThreeBinding;
-import com.example.jingbin.cloudreader.databinding.ItemEverydayTitleBinding;
-import com.example.jingbin.cloudreader.databinding.ItemEverydayTwoBinding;
 
 import java.util.List;
 
+import xyz.zimuju.cloudreader.R;
 import xyz.zimuju.cloudreader.base.baseadapter.BaseRecyclerViewAdapter;
 import xyz.zimuju.cloudreader.base.baseadapter.BaseRecyclerViewHolder;
 import xyz.zimuju.cloudreader.bean.AndroidBean;
+import xyz.zimuju.cloudreader.databinding.ItemEverydayTitleBinding;
 import xyz.zimuju.cloudreader.http.rx.RxBus;
 import xyz.zimuju.cloudreader.http.rx.RxCodeConstants;
 import xyz.zimuju.cloudreader.util.CommonUtils;

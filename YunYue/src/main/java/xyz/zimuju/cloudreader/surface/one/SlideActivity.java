@@ -13,10 +13,9 @@ import android.util.Log;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.example.jingbin.cloudreader.R;
-import com.example.jingbin.cloudreader.databinding.ActivitySlideBinding;
-
+import xyz.zimuju.cloudreader.R;
 import xyz.zimuju.cloudreader.bean.moviechild.SubjectsBean;
+import xyz.zimuju.cloudreader.databinding.ActivitySlideBinding;
 import xyz.zimuju.cloudreader.util.CommonUtils;
 import xyz.zimuju.cloudreader.util.DebugUtil;
 import xyz.zimuju.cloudreader.widget.CallBack_ScrollChanged;

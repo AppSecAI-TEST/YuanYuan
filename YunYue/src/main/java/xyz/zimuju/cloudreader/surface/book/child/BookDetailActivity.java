@@ -7,17 +7,16 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.widget.ImageView;
 
-import com.example.jingbin.cloudreader.R;
-import com.example.jingbin.cloudreader.databinding.ActivityBookDetailBinding;
-import com.example.jingbin.cloudreader.databinding.HeaderBookDetailBinding;
-
 import rx.Observer;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
+import xyz.zimuju.cloudreader.R;
 import xyz.zimuju.cloudreader.base.BaseHeaderActivity;
 import xyz.zimuju.cloudreader.bean.book.BookDetailBean;
 import xyz.zimuju.cloudreader.bean.book.BooksBean;
+import xyz.zimuju.cloudreader.databinding.ActivityBookDetailBinding;
+import xyz.zimuju.cloudreader.databinding.HeaderBookDetailBinding;
 import xyz.zimuju.cloudreader.http.HttpClient;
 import xyz.zimuju.cloudreader.util.CommonUtils;
 import xyz.zimuju.cloudreader.util.DebugUtil;

@@ -6,16 +6,15 @@ import android.os.Bundle;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 
-import com.example.jingbin.cloudreader.R;
-import com.example.jingbin.cloudreader.databinding.ActivityDoubanTopBinding;
-
 import rx.Observer;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
+import xyz.zimuju.cloudreader.R;
 import xyz.zimuju.cloudreader.adapter.DouBanTopAdapter;
 import xyz.zimuju.cloudreader.base.BaseActivity;
 import xyz.zimuju.cloudreader.bean.HotMovieBean;
+import xyz.zimuju.cloudreader.databinding.ActivityDoubanTopBinding;
 import xyz.zimuju.cloudreader.http.HttpClient;
 import xyz.zimuju.xrecyclerview.XRecyclerView;
 

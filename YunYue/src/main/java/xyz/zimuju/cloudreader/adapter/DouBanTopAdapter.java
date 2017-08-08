@@ -7,12 +7,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.jingbin.cloudreader.R;
-import com.example.jingbin.cloudreader.databinding.ItemDoubanTopBinding;
-
+import xyz.zimuju.cloudreader.R;
 import xyz.zimuju.cloudreader.base.baseadapter.BaseRecyclerViewAdapter;
 import xyz.zimuju.cloudreader.base.baseadapter.BaseRecyclerViewHolder;
 import xyz.zimuju.cloudreader.bean.moviechild.SubjectsBean;
+import xyz.zimuju.cloudreader.databinding.ItemDoubanTopBinding;
 import xyz.zimuju.cloudreader.surface.one.OneMovieDetailActivity;
 import xyz.zimuju.cloudreader.util.PerfectClickListener;
 

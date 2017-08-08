@@ -7,19 +7,18 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.example.jingbin.cloudreader.R;
-import com.example.jingbin.cloudreader.databinding.FragmentOneBinding;
-
 import rx.Observer;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 import xyz.zimuju.cloudreader.MainActivity;
+import xyz.zimuju.cloudreader.R;
 import xyz.zimuju.cloudreader.adapter.OneAdapter;
 import xyz.zimuju.cloudreader.app.Constants;
 import xyz.zimuju.cloudreader.app.ConstantsImageUrl;
 import xyz.zimuju.cloudreader.base.BaseFragment;
 import xyz.zimuju.cloudreader.bean.HotMovieBean;
+import xyz.zimuju.cloudreader.databinding.FragmentOneBinding;
 import xyz.zimuju.cloudreader.http.HttpClient;
 import xyz.zimuju.cloudreader.http.cache.ACache;
 import xyz.zimuju.cloudreader.util.DebugUtil;

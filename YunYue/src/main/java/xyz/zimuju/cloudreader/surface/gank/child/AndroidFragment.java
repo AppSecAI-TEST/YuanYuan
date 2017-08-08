@@ -4,14 +4,13 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 
-import com.example.jingbin.cloudreader.R;
-import com.example.jingbin.cloudreader.databinding.FragmentAndroidBinding;
-
 import rx.Subscription;
+import xyz.zimuju.cloudreader.R;
 import xyz.zimuju.cloudreader.adapter.AndroidAdapter;
 import xyz.zimuju.cloudreader.app.Constants;
 import xyz.zimuju.cloudreader.base.BaseFragment;
 import xyz.zimuju.cloudreader.bean.GankIoDataBean;
+import xyz.zimuju.cloudreader.databinding.FragmentAndroidBinding;
 import xyz.zimuju.cloudreader.http.RequestImpl;
 import xyz.zimuju.cloudreader.http.cache.ACache;
 import xyz.zimuju.cloudreader.model.GankOtherModel;

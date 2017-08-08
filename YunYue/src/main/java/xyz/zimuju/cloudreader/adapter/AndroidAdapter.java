@@ -4,12 +4,12 @@ import android.text.TextUtils;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.jingbin.cloudreader.R;
-import com.example.jingbin.cloudreader.databinding.ItemAndroidBinding;
 
+import xyz.zimuju.cloudreader.R;
 import xyz.zimuju.cloudreader.base.baseadapter.BaseRecyclerViewAdapter;
 import xyz.zimuju.cloudreader.base.baseadapter.BaseRecyclerViewHolder;
 import xyz.zimuju.cloudreader.bean.GankIoDataBean;
+import xyz.zimuju.cloudreader.databinding.ItemAndroidBinding;
 import xyz.zimuju.cloudreader.util.ImgLoadUtil;
 import xyz.zimuju.cloudreader.widget.webview.WebViewActivity;
 

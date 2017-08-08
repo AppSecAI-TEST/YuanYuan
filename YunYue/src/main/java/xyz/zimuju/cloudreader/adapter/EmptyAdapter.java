@@ -2,11 +2,11 @@ package xyz.zimuju.cloudreader.adapter;
 
 import android.view.ViewGroup;
 
-import com.example.jingbin.cloudreader.R;
-import com.example.jingbin.cloudreader.databinding.ItemEmptyBinding;
 
+import xyz.zimuju.cloudreader.R;
 import xyz.zimuju.cloudreader.base.baseadapter.BaseRecyclerViewAdapter;
 import xyz.zimuju.cloudreader.base.baseadapter.BaseRecyclerViewHolder;
+import xyz.zimuju.cloudreader.databinding.ItemEmptyBinding;
 
 /**
  * Created by jingbin on 2016/12/24.
