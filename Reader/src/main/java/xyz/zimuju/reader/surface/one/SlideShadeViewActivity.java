@@ -26,10 +26,9 @@ import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 
 import jp.wasabeef.glide.transformations.BlurTransformation;
-
-import null.databinding.ActivitySlideShadeViewBinding;
 import xyz.zimuju.reader.R;
 import xyz.zimuju.reader.bean.movie.SubjectsBean;
+import xyz.zimuju.reader.databinding.ActivitySlideShadeViewBinding;
 import xyz.zimuju.reader.util.CommonUtils;
 import xyz.zimuju.reader.util.DebugUtil;
 import xyz.zimuju.reader.util.StringFormatUtil;
@@ -62,9 +61,7 @@ public class SlideShadeViewActivity extends AppCompatActivity {
     public static void start(Activity context, SubjectsBean positionData, ImageView imageView) {
         Intent intent = new Intent(context, SlideShadeViewActivity.class);
         intent.putExtra("bean", positionData);
-        ActivityOptionsCompat options =
-                ActivityOptionsCompat.makeSceneTransitionAnimation(context,
-                        imageView, CommonUtils.getString(R.string.transition_movie_img));//与xml文件对应
+        ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation(context, imageView, CommonUtils.getString(R.string.transition_movie_img));//与xml文件对应
         ActivityCompat.startActivity(context, intent, options.toBundle());
     }
 
@@ -94,12 +91,12 @@ public class SlideShadeViewActivity extends AppCompatActivity {
         StatusBarUtils.setTranslucentImageHeader(this, 0, binding.titleToolBar);
 
         // 上移背景图片，使空白状态栏消失
-        if (binding.include.imgItemBg != null) {
-            ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) binding.include.imgItemBg.getLayoutParams();
+        if (binding.headerSlide.imgItemBg != null) {
+            ViewGroup.MarginLayoutParams layoutParams = (ViewGroup.MarginLayoutParams) binding.headerSlide.imgItemBg.getLayoutParams();
             layoutParams.setMargins(0, -StatusBarUtil.getStatusBarHeight(this), 0, 0);
         }
 
-        ViewGroup.LayoutParams imgItemBgparams = binding.include.imgItemBg.getLayoutParams();
+        ViewGroup.LayoutParams imgItemBgparams = binding.headerSlide.imgItemBg.getLayoutParams();
         // 获得高斯图背景的高度
         imageBgHeight = imgItemBgparams.height;
 
@@ -141,7 +138,7 @@ public class SlideShadeViewActivity extends AppCompatActivity {
     }
 
     private void setHeaderData(SubjectsBean positionData) {
-        binding.include.setSubjectsBean(positionData);
+        binding.headerSlide.setSubjectsBean(positionData);
     }
 
     private void setTitleBar() {
