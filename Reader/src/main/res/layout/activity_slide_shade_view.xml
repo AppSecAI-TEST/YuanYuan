@@ -70,21 +70,16 @@
                         android:layout_height="wrap_content"
                         android:paddingBottom="190dp"
                         android:text="有头的activity"/>
-
                 </LinearLayout>
-
-
             </LinearLayout>
-
-
         </xyz.zimuju.reader.widget.custom.MyNestedScrollView>
 
-
-        <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
-                        android:id="@+id/rl_title_head"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:background="@android:color/transparent">
+        <RelativeLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/rl_title_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent">
 
             <!--android:layout_height="@dimen/new_home_header_size"-->
 
@@ -130,11 +125,7 @@
                         android:textSize="9sp"/>
 
                 </LinearLayout>
-
             </android.support.v7.widget.Toolbar>
-
         </RelativeLayout>
-
     </FrameLayout>
-
 </layout>

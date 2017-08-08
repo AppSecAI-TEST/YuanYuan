@@ -25,7 +25,6 @@ import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.FutureTarget;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
-import com.example.jingbin.cloudreader.R;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -36,6 +35,7 @@ import java.util.concurrent.ExecutionException;
 
 import uk.co.senab.photoview.PhotoView;
 import uk.co.senab.photoview.PhotoViewAttacher;
+import xyz.zimuju.reader.R;
 import xyz.zimuju.reader.util.ToastUtil;
 
 

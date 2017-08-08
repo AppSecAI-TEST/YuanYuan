@@ -10,7 +10,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.xrecyclerview.R;
+import xyz.zimuju.reader.R;
+
 
 public class LoadingMoreFooter extends LinearLayout {
 
@@ -36,9 +37,9 @@ public class LoadingMoreFooter extends LinearLayout {
     }
 
     public void initView(Context context) {
-        LayoutInflater.from(context).inflate(xyz.zimuju.xrecyclerview.R.layout.yun_refresh_footer, this);
-        mText = (TextView) findViewById(xyz.zimuju.xrecyclerview.R.id.msg);
-        mIvProgress = (ImageView) findViewById(xyz.zimuju.xrecyclerview.R.id.iv_progress);
+        LayoutInflater.from(context).inflate(R.layout.yun_refresh_footer, this);
+        mText = (TextView) findViewById(R.id.msg);
+        mIvProgress = (ImageView) findViewById(R.id.iv_progress);
         mAnimationDrawable = (AnimationDrawable) mIvProgress.getDrawable();
         if (!mAnimationDrawable.isRunning()) {
             mAnimationDrawable.start();
@@ -53,21 +54,21 @@ public class LoadingMoreFooter extends LinearLayout {
                     mAnimationDrawable.start();
                 }
                 mIvProgress.setVisibility(View.VISIBLE);
-                mText.setText(getContext().getText(xyz.zimuju.xrecyclerview.R.string.listview_loading));
+                mText.setText(getContext().getText(R.string.listview_loading));
                 this.setVisibility(View.VISIBLE);
                 break;
             case STATE_COMPLETE:
                 if (mAnimationDrawable.isRunning()) {
                     mAnimationDrawable.stop();
                 }
-                mText.setText(getContext().getText(xyz.zimuju.xrecyclerview.R.string.listview_loading));
+                mText.setText(getContext().getText(R.string.listview_loading));
                 this.setVisibility(View.GONE);
                 break;
             case STATE_NOMORE:
                 if (mAnimationDrawable.isRunning()) {
                     mAnimationDrawable.stop();
                 }
-                mText.setText(getContext().getText(xyz.zimuju.xrecyclerview.R.string.nomore_loading));
+                mText.setText(getContext().getText(R.string.nomore_loading));
                 mIvProgress.setVisibility(View.GONE);
                 this.setVisibility(View.VISIBLE);
                 break;

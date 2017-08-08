@@ -2,11 +2,10 @@ package xyz.zimuju.reader.adapter;
 
 import android.view.ViewGroup;
 
-import com.example.jingbin.cloudreader.databinding.ItemEmptyBinding;
-
 import xyz.zimuju.reader.R;
 import xyz.zimuju.reader.base.BaseRecyclerViewAdapter;
 import xyz.zimuju.reader.base.BaseRecyclerViewHolder;
+import xyz.zimuju.reader.databinding.ItemEmptyBinding;
 
 
 public class EmptyAdapter extends BaseRecyclerViewAdapter<String> {

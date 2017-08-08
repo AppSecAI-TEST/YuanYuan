@@ -30,14 +30,14 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
-import com.example.jingbin.cloudreader.R;
-import com.example.jingbin.cloudreader.databinding.BaseHeaderTitleBarBinding;
 
 import java.lang.reflect.Method;
 
 import jp.wasabeef.glide.transformations.BlurTransformation;
 import rx.Subscription;
 import rx.subscriptions.CompositeSubscription;
+import xyz.zimuju.reader.R;
+import xyz.zimuju.reader.databinding.BaseHeaderTitleBarBinding;
 import xyz.zimuju.reader.util.CommonUtils;
 import xyz.zimuju.reader.util.PerfectClickListener;
 import xyz.zimuju.reader.widget.custom.CustomChangeBounds;

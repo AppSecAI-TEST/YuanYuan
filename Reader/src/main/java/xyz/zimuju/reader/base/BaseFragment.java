@@ -13,10 +13,9 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-import com.example.jingbin.cloudreader.R;
-
 import rx.Subscription;
 import rx.subscriptions.CompositeSubscription;
+import xyz.zimuju.reader.R;
 import xyz.zimuju.reader.util.PerfectClickListener;
 
 /**

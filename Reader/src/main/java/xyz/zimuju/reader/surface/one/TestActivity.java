@@ -20,15 +20,15 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
-import com.example.jingbin.cloudreader.R;
-import com.example.jingbin.cloudreader.databinding.ActivityTestBinding;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import jp.wasabeef.glide.transformations.BlurTransformation;
+import xyz.zimuju.reader.R;
 import xyz.zimuju.reader.adapter.MovieDetailPersonAdapter;
 import xyz.zimuju.reader.bean.movie.SubjectsBean;
+import xyz.zimuju.reader.databinding.ActivityTestBinding;
 import xyz.zimuju.reader.widget.test.StatusBarUtils;
 
 /**

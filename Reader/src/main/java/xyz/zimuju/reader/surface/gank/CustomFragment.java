@@ -8,17 +8,17 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.cocosw.bottomsheet.BottomSheet;
-import com.example.jingbin.cloudreader.databinding.FragmentCustomBinding;
 
 import rx.Subscription;
-import xyz.zimuju.reader.http.common.HttpUtils;
 import xyz.zimuju.reader.R;
 import xyz.zimuju.reader.adapter.AndroidAdapter;
 import xyz.zimuju.reader.application.Constants;
 import xyz.zimuju.reader.base.BaseFragment;
 import xyz.zimuju.reader.bean.GankIoDataBean;
+import xyz.zimuju.reader.databinding.FragmentCustomBinding;
 import xyz.zimuju.reader.http.RequestImpl;
 import xyz.zimuju.reader.http.cache.ACache;
+import xyz.zimuju.reader.http.common.HttpUtils;
 import xyz.zimuju.reader.model.GankOtherModel;
 import xyz.zimuju.reader.util.DebugUtil;
 import xyz.zimuju.reader.util.SPUtils;

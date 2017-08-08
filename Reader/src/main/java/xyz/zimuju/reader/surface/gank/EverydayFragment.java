@@ -12,9 +12,6 @@ import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 
 import com.bumptech.glide.Glide;
-import com.example.jingbin.cloudreader.databinding.FooterItemEverydayBinding;
-import com.example.jingbin.cloudreader.databinding.FragmentEverydayBinding;
-import com.example.jingbin.cloudreader.databinding.HeaderItemEverydayBinding;
 import com.youth.banner.listener.OnBannerClickListener;
 
 import java.util.ArrayList;
@@ -28,6 +25,9 @@ import xyz.zimuju.reader.application.Constants;
 import xyz.zimuju.reader.base.BaseFragment;
 import xyz.zimuju.reader.bean.AndroidBean;
 import xyz.zimuju.reader.bean.FrontpageBean;
+import xyz.zimuju.reader.databinding.FooterItemEverydayBinding;
+import xyz.zimuju.reader.databinding.FragmentEverydayBinding;
+import xyz.zimuju.reader.databinding.HeaderItemEverydayBinding;
 import xyz.zimuju.reader.http.RequestImpl;
 import xyz.zimuju.reader.http.cache.ACache;
 import xyz.zimuju.reader.http.rx.RxBus;

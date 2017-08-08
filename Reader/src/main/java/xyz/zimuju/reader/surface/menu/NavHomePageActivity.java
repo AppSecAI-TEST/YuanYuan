@@ -7,9 +7,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-import com.example.jingbin.cloudreader.databinding.ActivityNavHomePageBinding;
-
 import xyz.zimuju.reader.R;
+import xyz.zimuju.reader.databinding.ActivityNavHomePageBinding;
 import xyz.zimuju.reader.util.ShareUtils;
 import xyz.zimuju.reader.widget.statusbar.StatusBarUtil;
 

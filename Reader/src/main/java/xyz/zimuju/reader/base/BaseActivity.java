@@ -14,18 +14,14 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
-import com.example.jingbin.cloudreader.R;
-import com.example.jingbin.cloudreader.databinding.ActivityBaseBinding;
-
 import rx.Subscription;
 import rx.subscriptions.CompositeSubscription;
+import xyz.zimuju.reader.R;
+import xyz.zimuju.reader.databinding.ActivityBaseBinding;
 import xyz.zimuju.reader.util.CommonUtils;
 import xyz.zimuju.reader.util.PerfectClickListener;
 import xyz.zimuju.reader.widget.statusbar.StatusBarUtil;
 
-/**
- * Created by jingbin on 16/12/10.
- */
 public class BaseActivity<SV extends ViewDataBinding> extends AppCompatActivity {
 
     // 布局view

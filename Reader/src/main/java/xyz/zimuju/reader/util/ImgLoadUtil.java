@@ -5,13 +5,9 @@ import android.databinding.BindingAdapter;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.example.jingbin.cloudreader.R;
 
 import jp.wasabeef.glide.transformations.BlurTransformation;
-
-/**
- * Created by jingbin on 2016/11/26.
- */
+import xyz.zimuju.reader.R;
 
 public class ImgLoadUtil {
 

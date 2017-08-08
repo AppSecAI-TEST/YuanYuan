@@ -19,8 +19,7 @@ import android.webkit.WebView;
 import android.widget.FrameLayout;
 import android.widget.ProgressBar;
 
-import com.example.jingbin.cloudreader.R;
-
+import xyz.zimuju.reader.R;
 import xyz.zimuju.reader.util.BaseTools;
 import xyz.zimuju.reader.util.CommonUtils;
 import xyz.zimuju.reader.util.ShareUtils;

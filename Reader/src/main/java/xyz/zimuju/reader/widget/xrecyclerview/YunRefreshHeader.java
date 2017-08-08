@@ -12,11 +12,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.xrecyclerview.R;
+import xyz.zimuju.reader.R;
 
-/**
- * Created by yangcai on 2016/1/27.
- */
 public class YunRefreshHeader extends LinearLayout implements BaseRefreshHeader {
     private Context mContext;
     private AnimationDrawable animationDrawable;
@@ -40,18 +37,18 @@ public class YunRefreshHeader extends LinearLayout implements BaseRefreshHeader 
     }
 
     private void initView() {
-        LayoutInflater.from(mContext).inflate(xyz.zimuju.xrecyclerview.R.layout.kaws_refresh_header, this);
-        ImageView img = (ImageView) findViewById(xyz.zimuju.xrecyclerview.R.id.img);
+        LayoutInflater.from(mContext).inflate(R.layout.kaws_refresh_header, this);
+        ImageView img = (ImageView) findViewById(R.id.img);
 
         animationDrawable = (AnimationDrawable) img.getDrawable();
         if (animationDrawable.isRunning()) {
             animationDrawable.stop();
         }
-        msg = (TextView) findViewById(xyz.zimuju.xrecyclerview.R.id.msg);
+        msg = (TextView) findViewById(R.id.msg);
         measure(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         mMeasuredHeight = getMeasuredHeight();
         setGravity(Gravity.CENTER_HORIZONTAL);
-        mContainer = (LinearLayout) findViewById(xyz.zimuju.xrecyclerview.R.id.container);
+        mContainer = (LinearLayout) findViewById(R.id.container);
         mContainer.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, 0));
         this.setLayoutParams(new LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
     }
@@ -148,21 +145,21 @@ public class YunRefreshHeader extends LinearLayout implements BaseRefreshHeader 
                 if (animationDrawable.isRunning()) {
                     animationDrawable.stop();
                 }
-                msg.setText(xyz.zimuju.xrecyclerview.R.string.listview_header_hint_normal);
+                msg.setText(R.string.listview_header_hint_normal);
                 break;
             case STATE_RELEASE_TO_REFRESH:
                 if (mState != STATE_RELEASE_TO_REFRESH) {
                     if (!animationDrawable.isRunning()) {
                         animationDrawable.start();
                     }
-                    msg.setText(xyz.zimuju.xrecyclerview.R.string.listview_header_hint_release);
+                    msg.setText(R.string.listview_header_hint_release);
                 }
                 break;
             case STATE_REFRESHING:
-                msg.setText(xyz.zimuju.xrecyclerview.R.string.refreshing);
+                msg.setText(R.string.refreshing);
                 break;
             case STATE_DONE:
-                msg.setText(xyz.zimuju.xrecyclerview.R.string.refresh_done);
+                msg.setText(R.string.refresh_done);
                 break;
             default:
         }

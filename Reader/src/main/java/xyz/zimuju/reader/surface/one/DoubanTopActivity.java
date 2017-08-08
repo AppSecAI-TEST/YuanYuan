@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.View;
 
-import com.example.jingbin.cloudreader.databinding.ActivityDoubanTopBinding;
-
 import rx.Observer;
 import rx.Subscription;
 import rx.android.schedulers.AndroidSchedulers;
@@ -16,6 +14,7 @@ import xyz.zimuju.reader.R;
 import xyz.zimuju.reader.adapter.DouBanTopAdapter;
 import xyz.zimuju.reader.base.BaseActivity;
 import xyz.zimuju.reader.bean.HotMovieBean;
+import xyz.zimuju.reader.databinding.ActivityDoubanTopBinding;
 import xyz.zimuju.reader.http.HttpClient;
 import xyz.zimuju.reader.widget.xrecyclerview.XRecyclerView;
 

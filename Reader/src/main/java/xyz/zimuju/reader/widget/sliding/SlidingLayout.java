@@ -12,7 +12,8 @@ import android.view.ViewConfiguration;
 import android.widget.AbsListView;
 import android.widget.FrameLayout;
 
-import com.example.jingbin.cloudreader.R;
+import xyz.zimuju.reader.R;
+
 
 /**
  * Created by Linhh on 16/4/12.

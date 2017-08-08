@@ -6,10 +6,9 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.jingbin.cloudreader.databinding.ActivityNavDeedBackBinding;
-
 import xyz.zimuju.reader.R;
 import xyz.zimuju.reader.base.BaseActivity;
+import xyz.zimuju.reader.databinding.ActivityNavDeedBackBinding;
 import xyz.zimuju.reader.util.CommonUtils;
 import xyz.zimuju.reader.util.PerfectClickListener;
 import xyz.zimuju.reader.widget.webview.WebViewActivity;

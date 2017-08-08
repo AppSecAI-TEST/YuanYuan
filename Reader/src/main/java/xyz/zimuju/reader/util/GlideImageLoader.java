@@ -4,11 +4,11 @@ import android.content.Context;
 import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
-import com.example.jingbin.cloudreader.R;
 import com.youth.banner.loader.ImageLoader;
 
+import xyz.zimuju.reader.R;
+
 /**
- * Created by jingbin on 2016/11/30.
  * 首页轮播图
  */
 

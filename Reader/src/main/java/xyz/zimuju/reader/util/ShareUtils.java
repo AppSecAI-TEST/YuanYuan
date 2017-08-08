@@ -4,11 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 
-import com.example.jingbin.cloudreader.R;
-
-/**
- * Created by jingbin on 2016/12/28.
- */
+import xyz.zimuju.reader.R;
 
 public class ShareUtils {
 

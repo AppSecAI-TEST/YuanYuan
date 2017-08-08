@@ -1,10 +1,12 @@
 package xyz.zimuju.reader.surface.one;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
@@ -22,10 +24,11 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
-import com.example.jingbin.cloudreader.R;
-import com.example.jingbin.cloudreader.databinding.ActivitySlideShadeViewBinding;
 
 import jp.wasabeef.glide.transformations.BlurTransformation;
+
+import null.databinding.ActivitySlideShadeViewBinding;
+import xyz.zimuju.reader.R;
 import xyz.zimuju.reader.bean.movie.SubjectsBean;
 import xyz.zimuju.reader.util.CommonUtils;
 import xyz.zimuju.reader.util.DebugUtil;
@@ -34,7 +37,6 @@ import xyz.zimuju.reader.widget.custom.MyNestedScrollView;
 import xyz.zimuju.reader.widget.statusbar.StatusBarUtil;
 import xyz.zimuju.reader.widget.test.StatusBarUtils;
 
-import static xyz.zimuju.reader.widget.statusbar.StatusBarUtil.getStatusBarHeight;
 
 /**
  * 思路：
@@ -66,6 +68,7 @@ public class SlideShadeViewActivity extends AppCompatActivity {
         ActivityCompat.startActivity(context, intent, options.toBundle());
     }
 
+    @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -78,7 +81,7 @@ public class SlideShadeViewActivity extends AppCompatActivity {
         // toolbar 的高
         int toolbarHeight = binding.titleToolBar.getLayoutParams().height;
         Log.i(TAG, "toolbar height:" + toolbarHeight);
-        final int headerBgHeight = toolbarHeight + getStatusBarHeight(this);
+        final int headerBgHeight = toolbarHeight + StatusBarUtil.getStatusBarHeight(this);
         Log.i(TAG, "headerBgHeight:" + headerBgHeight);
 
         // 使背景图向上移动到图片的最低端，保留（titlebar+statusbar）的高度
@@ -125,6 +128,7 @@ public class SlideShadeViewActivity extends AppCompatActivity {
                     return false;
                 }
 
+                @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
                 @Override
                 public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
                     binding.titleToolBar.setBackgroundColor(Color.TRANSPARENT);
@@ -175,7 +179,7 @@ public class SlideShadeViewActivity extends AppCompatActivity {
     }
 
     private void initNewSlidingParams() {
-        int titleBarAndStatusHeight = (int) (CommonUtils.getDimens(R.dimen.nav_bar_height) + getStatusBarHeight(this));
+        int titleBarAndStatusHeight = (int) (CommonUtils.getDimens(R.dimen.nav_bar_height) + StatusBarUtil.getStatusBarHeight(this));
         slidingDistance = imageBgHeight - titleBarAndStatusHeight - (int) (CommonUtils.getDimens(R.dimen.nav_bar_height_more));
     }
 

@@ -9,12 +9,12 @@ import android.view.View;
 import android.view.animation.Animation;
 
 import com.bumptech.glide.Glide;
-import com.example.jingbin.cloudreader.R;
-import com.example.jingbin.cloudreader.databinding.ActivityTransitionBinding;
 
 import java.util.Random;
 
+import xyz.zimuju.reader.R;
 import xyz.zimuju.reader.application.ConstantsImageUrl;
+import xyz.zimuju.reader.databinding.ActivityTransitionBinding;
 import xyz.zimuju.reader.util.CommonUtils;
 import xyz.zimuju.reader.util.PerfectClickListener;
 

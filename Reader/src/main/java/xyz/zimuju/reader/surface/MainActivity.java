@@ -19,14 +19,13 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
-import com.example.jingbin.cloudreader.databinding.ActivityMainBinding;
-import com.example.jingbin.cloudreader.databinding.NavHeaderMainBinding;
-
 import java.util.ArrayList;
 
 import rx.functions.Action1;
 import xyz.zimuju.reader.R;
 import xyz.zimuju.reader.application.ConstantsImageUrl;
+import xyz.zimuju.reader.databinding.ActivityMainBinding;
+import xyz.zimuju.reader.databinding.NavHeaderMainBinding;
 import xyz.zimuju.reader.http.rx.RxBus;
 import xyz.zimuju.reader.http.rx.RxBusBaseMessage;
 import xyz.zimuju.reader.http.rx.RxCodeConstants;
@@ -46,11 +45,6 @@ import xyz.zimuju.reader.widget.statusbar.StatusBarUtil;
 import xyz.zimuju.reader.widget.webview.WebViewActivity;
 
 
-/**
- * Created by jingbin on 16/11/21.
- * Link to:https://github.com/youlookwhat/CloudReader
- * Contact me:http://www.jianshu.com/u/e43c6e979831
- */
 public class MainActivity extends AppCompatActivity implements View.OnClickListener, ViewPager.OnPageChangeListener {
 
     NavHeaderMainBinding bind;

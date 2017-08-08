@@ -7,10 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.jingbin.cloudreader.R;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import xyz.zimuju.reader.R;
 
 /**
  * @author linxiao
@@ -49,7 +49,7 @@ public class RCVListAdapter extends RecyclerView.Adapter<RCVListAdapter.ItemHold
         if (viewType == TYPE_HEADER) {
             return new ItemHolder(header);
         }
-        View itemView = LayoutInflater.from(context).inflate(R.layout.item_list, parent, false);
+        View itemView = LayoutInflater.from(context).inflate(R.layout.item_list_content, parent, false);
         return new ItemHolder(itemView);
     }
 

@@ -5,14 +5,13 @@ import android.support.annotation.Nullable;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 
-import com.example.jingbin.cloudreader.databinding.FragmentGankBinding;
-
 import java.util.ArrayList;
 
 import rx.Subscription;
 import rx.functions.Action1;
 import xyz.zimuju.reader.R;
 import xyz.zimuju.reader.base.BaseFragment;
+import xyz.zimuju.reader.databinding.FragmentGankBinding;
 import xyz.zimuju.reader.http.rx.RxBus;
 import xyz.zimuju.reader.http.rx.RxCodeConstants;
 import xyz.zimuju.reader.widget.custom.MyFragmentPagerAdapter;
