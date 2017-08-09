@@ -89,6 +89,7 @@ public class LoginActivity extends BasalActivity<LoginPresenter> implements View
 
             case R.id.login_register_tv:
                 startActivity(new Intent(getContext(), RegisterActivity.class));
+                finish();
                 break;
 
             case R.id.login_forgot_tv:

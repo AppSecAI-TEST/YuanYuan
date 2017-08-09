@@ -1,16 +1,8 @@
 package xyz.zimuju.sample.surface.user;
 
-import android.util.Log;
-
-import com.avos.avoscloud.AVException;
-import com.avos.avoscloud.AVMobilePhoneVerifyCallback;
-import com.avos.avoscloud.AVSMS;
-import com.avos.avoscloud.AVSMSOption;
-import com.avos.avoscloud.AVUser;
-import com.avos.avoscloud.RequestMobileCodeCallback;
-import com.avos.avoscloud.SignUpCallback;
-
-import xyz.zimuju.common.rx.RxContract;
+import cn.bmob.v3.BmobUser;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.SaveListener;
 
 /*
  * @description RegisterContract
@@ -19,41 +11,25 @@ import xyz.zimuju.common.rx.RxContract;
  * @time 2017/8/6 - 12:05
  * @version 1.0.0
  */
-public class RegisterContract extends RxContract<RegisterView> implements RegisterPresenter {
+public class RegisterContract extends SmsContract implements RegisterPresenter {
 
-    @Override
-    public void obtain(String phone) {
-        AVSMSOption option = new AVSMSOption();
-        option.setTtl(10);                     // 验证码有效时间为 10 分钟
-        option.setApplicationName("应用名称");
-        option.setOperation("某种操作");
-        AVSMS.requestSMSCodeInBackground(phone, option, new RequestMobileCodeCallback() {
-            @Override
-            public void done(AVException e) {
-                if (null == e) {
-                    basalView.showToast("验证码发送成功，请注意查收");
-                    basalView.obtainResult();
-                } else {
-                    basalView.showToast("验证码发送失败，原因：" + e.getMessage());
-                }
-            }
-        });
-    }
 
     @Override
     public void register(final String... parameters) {
-        AVUser user = new AVUser();
-        user.setUsername(parameters[0]);
-        user.setPassword(parameters[1]);
-        user.setMobilePhoneNumber(parameters[3]);
-        user.signUpInBackground(new SignUpCallback() {
+        BmobUser bmobUser = new BmobUser();
+        bmobUser.setUsername(parameters[0]);
+        bmobUser.setPassword(parameters[1]);
+        bmobUser.setMobilePhoneNumber(parameters[2]);
+        bmobUser.setMobilePhoneNumberVerified(true);
+        bmobUser.signUp(new SaveListener<BmobUser>() {
+
             @Override
-            public void done(AVException e) {
+            public void done(BmobUser user, BmobException e) {
                 if (e == null) {
                     basalView.showToast("注册成功");
                     basalView.registerResult(parameters);
                 } else {
-                    basalView.showToast("注册失败：原因：" + e.getMessage());
+                    basalView.showToast("注册失败，原因：" + e.getMessage());
                 }
             }
         });
@@ -61,19 +37,18 @@ public class RegisterContract extends RxContract<RegisterView> implements Regist
 
     @Override
     public void login(String... parameters) {
-        
-    }
+        BmobUser bu2 = new BmobUser();
+        bu2.setUsername("lucky");
+        bu2.setPassword("123456");
+        bu2.login(new SaveListener<BmobUser>() {
 
-    @Override
-    public void querySmsState(String phone, String code) {
-        AVSMS.verifySMSCodeInBackground(code, phone, new AVMobilePhoneVerifyCallback() {
             @Override
-            public void done(AVException e) {
+            public void done(BmobUser bmobUser, BmobException e) {
                 if (e == null) {
-                    basalView.verifyCodeResult(true);
+                    basalView.showToast("登陆成功");
+                    basalView.loginResult(bmobUser);
                 } else {
-                    basalView.showToast("验证码失效");
-                    Log.d("Nathaniel", "验证失败：code =" + e.getCode() + ",msg = " + e.getLocalizedMessage());
+                    basalView.showToast("登录失败，原因：" + e.getMessage());
                 }
             }
         });

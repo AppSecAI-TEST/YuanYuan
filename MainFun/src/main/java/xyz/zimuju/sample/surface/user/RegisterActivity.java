@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import cn.bmob.v3.BmobUser;
 import xyz.zimuju.common.basal.BasalActivity;
 import xyz.zimuju.common.util.TimeCountUtil;
 import xyz.zimuju.common.widget.ClearEditText;
@@ -123,17 +124,14 @@ public class RegisterActivity extends BasalActivity<RegisterPresenter> implement
                 }
                 String phoneText = phone.getText().toString().trim();
                 String codeText = code.getText().toString().trim();
-                presenter.querySmsState(phoneText, codeText);
+                presenter.verifySmsCode(phoneText, codeText);
                 break;
         }
     }
 
     @Override
-    public void obtainResult() {
-        // 查询发送验证码状态
-        String phoneText = phone.getText().toString().trim();
-        String codeText = code.getText().toString().trim();
-        presenter.querySmsState(phoneText, codeText);
+    public void obtainResult(Integer smsId) {
+        presenter.querySmsState(smsId);
     }
 
     @Override
@@ -149,6 +147,12 @@ public class RegisterActivity extends BasalActivity<RegisterPresenter> implement
     @Override
     public void registerResult(String... parameters) {
         presenter.login(parameters);
+    }
+
+    @Override
+    public void loginResult(BmobUser bmobUser) {
+        // 保存用户信息
+        finish();
     }
 
     private class MTextWatcher implements TextWatcher {

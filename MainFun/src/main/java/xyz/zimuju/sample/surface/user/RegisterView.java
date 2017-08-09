@@ -1,5 +1,6 @@
 package xyz.zimuju.sample.surface.user;
 
+import cn.bmob.v3.BmobUser;
 import xyz.zimuju.common.basal.BasalView;
 
 /*
@@ -10,9 +11,11 @@ import xyz.zimuju.common.basal.BasalView;
  * @version 1.0.0
  */
 public interface RegisterView extends BasalView {
-    void obtainResult();
+    void obtainResult(Integer smsId);
 
     void verifyCodeResult(boolean verified);
 
     void registerResult(String... parameters);
+
+    void loginResult(BmobUser bmobUser);
 }

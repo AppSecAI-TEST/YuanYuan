@@ -52,6 +52,7 @@ android {
         exclude 'META-INF/notice.txt'
         exclude 'META-INF/license.txt'
         exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/rxjava.properties'
     }
 
     signingConfigs {
@@ -160,17 +161,22 @@ dependencies {
 
     compile libraries.googleMaterialTypeface
     compile libraries.materialDialogsCore
+    compile libraries.okhttp
     compile libraries.glide
     compile libraries.photoView
     compile libraries.circleImageView
 
     //RxAndroid
+    compile libraries.rxAndroid
     compile libraries.rxJava
+    compile libraries.okio
     compile libraries.rxPermissions
     compile libraries.rxBinding
     compile libraries.rxLifecycleComponents
 
     //Retrofit
+    compile libraries.retrofit
+    compile libraries.converterGson
     compile libraries.adapterRxJava2
 
     compile libraries.umengAnalytics
@@ -185,6 +191,10 @@ dependencies {
 
     //support package
     compile libraries.v7recyclerView
+    compile libraries.design
+    compile libraries.v4support
+    compile libraries.v7appcompat
+    compile libraries.v7cardview
 
     // green dao
     compile libraries.greendao
