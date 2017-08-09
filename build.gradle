@@ -4,6 +4,7 @@ buildscript {
     repositories {
         mavenCentral()
         jcenter()
+        maven { url "http://mvn.leancloud.cn/nexus/content/repositories/public" }
         //Bmob的maven仓库地址
         maven { url "https://raw.github.com/bmob/bmob-android-sdk/master" }
     }
@@ -24,6 +25,7 @@ allprojects {
         mavenCentral()
         jcenter()
         maven { url "https://jitpack.io" }
+        maven { url "http://mvn.leancloud.cn/nexus/content/repositories/public" }
         maven { url "https://raw.github.com/bmob/bmob-android-sdk/master" }
     }
 }
