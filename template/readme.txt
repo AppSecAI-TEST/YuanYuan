@@ -10,3 +10,5 @@ View view
 
 XRecyclerView
 compile 'com.jcodecraeer:xrecyclerview:1.3.2'
+
+test
