@@ -131,7 +131,6 @@ dependencies {
 
     compile libraries.constraintLayout
     compile libraries.multidex
-    compile libraries.gson
 
     // project
     compile project(':Common')
@@ -155,7 +154,6 @@ dependencies {
     //bmob-sms ：Bmob单独为短信服务提供的包
     compile 'cn.bmob.android:bmob-sms:1.0.1'
     //compile 'cn.bmob.android:http-legacy:1.0' //如果你想应用能够兼容Android6.0，请添加此依赖(org.apache.http.legacy.jar)
-
 
     //butterknife
     compile libraries.butterKnife
@@ -202,18 +200,5 @@ dependencies {
     compile libraries.greendao
     compile libraries.greendaoGenerator
 
-    // LeanCloud 基础包
-    compile libraries.avoscloudSdk
-    // 推送与实时聊天需要的包
-    compile libraries.avoscloudPush
-    // LeanCloud 统计包
-    compile libraries.avoscloudStatistics
-    // LeanCloud 用户反馈包
-    compile libraries.avoscloudFeedback
-    // avoscloud-sns：LeanCloud 第三方登录包
-    compile libraries.avoscloudSns
-    // LeanCloud 应用内搜索包
-    compile libraries.avoscloudSearch
-
-    compile group: 'com.google.code.findbugs', name: 'jsr305', version: '3.0.2'
+    compile 'com.google.code.findbugs:jsr305:3.0.2'
 }

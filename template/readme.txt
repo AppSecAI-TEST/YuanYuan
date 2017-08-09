@@ -13,3 +13,6 @@ compile 'com.jcodecraeer:xrecyclerview:1.3.2'
 
 查看项目缺少的依赖库
 gradlew MainFun:dependencies
+
+列出所有依赖包
+gradlew -q MainFun:dependencies
