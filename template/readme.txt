@@ -11,4 +11,5 @@ View view
 XRecyclerView
 compile 'com.jcodecraeer:xrecyclerview:1.3.2'
 
-test
+查看项目缺少的依赖库
+gradlew MainFun:dependencies

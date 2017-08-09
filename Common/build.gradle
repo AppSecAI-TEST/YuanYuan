@@ -19,6 +19,7 @@ android {
 }
 
 dependencies {
+
     //butterknife
     compile libraries.butterKnife
     annotationProcessor libraries.butterKnifeCompiler

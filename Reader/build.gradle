@@ -28,9 +28,6 @@ android {
 }
 
 dependencies {
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
     testCompile libraries.junit
 
     compile project(':ZoomLib')
@@ -40,7 +37,7 @@ dependencies {
     compile libraries.v4support
     compile libraries.v7cardview
 
-    compile 'com.google.zxing:core:3.2.1'
+    compile libraries.zxingCore
 
     compile libraries.rxAndroid
     compile libraries.nineOldAndroidsLibrary
@@ -55,10 +52,6 @@ dependencies {
 
     // 网络请求
     compile libraries.gson
-//    compile('com.squareup.retrofit2:retrofit:2.1.0') {
-//        exclude module: 'com.squareup.okhttp3:okhttp:3.4.1'
-//        exclude module: 'com.squareup.okio:okio:1.9.0'
-//    }
     compile libraries.retrofit
     compile libraries.okhttp
     compile libraries.okio
