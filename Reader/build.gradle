@@ -28,31 +28,6 @@ android {
 }
 
 dependencies {
-    testCompile libraries.junit
-
     compile project(':ZoomLib')
-
-    compile libraries.v7appcompat
-    compile libraries.design
-    compile libraries.v4support
-    compile libraries.v7cardview
-
-    compile libraries.zxingCore
-
-    compile libraries.rxAndroid
-    compile libraries.nineOldAndroidsLibrary
-
-    compile 'jp.wasabeef:glide-transformations:2.0.1'
-    compile 'com.youth.banner:banner:1.4.2'
-    compile 'com.daimajia.slider:library:1.1.5@aar'
-    compile 'com.cocosw:bottomsheet:1.3.0@aar'
-
-    // 网络请求
-    compile libraries.gson
-    compile libraries.retrofit
-    compile libraries.okhttp
-    compile libraries.okio
-    compile libraries.converterGson
-    compile libraries.loggingInterceptor
-    compile 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
+    compile project(':Common')
 }

@@ -18,8 +18,13 @@ android {
     }
 }
 
-dependencies {
+/**
+ * 这里放所有的依赖包
+ * 以后供其他的module依赖
+ * 防止重复依赖
+ */
 
+dependencies {
     //butterknife
     compile libraries.butterKnife
     annotationProcessor libraries.butterKnifeCompiler
@@ -33,18 +38,61 @@ dependencies {
     compile libraries.rxJava
     compile libraries.rxAndroid
     compile libraries.rxPermissions
+    compile libraries.okio
+    compile libraries.rxBinding
+    compile libraries.rxLifecycleComponents
+    compile libraries.adapterRxJava2
+
     compile libraries.zip4j
 
-    // image
-    compile libraries.picasso
-    compile libraries.glide
-    compile libraries.v7recyclerView
-    compile libraries.v7appcompat
     compile libraries.nohttp
+
+    compile libraries.gson
     compile libraries.fastJson
     compile libraries.fastJsonAndroid
-    compile libraries.okio
+
+    compile libraries.picasso
     compile libraries.universalImageLoader
+    compile libraries.googleMaterialTypeface
+    compile libraries.materialDialogsCore
+    compile libraries.glide
+    compile libraries.photoView
+    compile libraries.circleImageView
+    compile libraries.nineOldAndroidsLibrary
+    compile libraries.roundedImageView
+
+    compile libraries.multidex
+
+    compile libraries.butterKnife
+    annotationProcessor libraries.butterKnifeCompiler
+
+    compile libraries.umengAnalytics
+
+    //RecyclerView Adapter
+    compile libraries.multitype
+    compile libraries.statusViewLayout
+    compile libraries.jsoup
+    compile libraries.recyclerviewFlexibleDivider
+
+    //support package
+    compile libraries.v7recyclerView
+    compile libraries.v7appcompat
     compile libraries.design
     compile libraries.v4support
+    compile libraries.constraintLayout
+    compile libraries.v4support
+    compile libraries.v7cardview
+
+    compile libraries.v7appcompat
+    compile libraries.design
+    compile libraries.v4support
+    compile libraries.v7cardview
+
+    compile libraries.zxingCore
+
+    compile libraries.glideTransformations
+    compile libraries.banner
+    compile libraries.sliderLibrary
+    compile libraries.bottomsheet
+    compile libraries.adapterRxJava
 }

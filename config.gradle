@@ -102,17 +102,22 @@ ext {
             avoscloudPush              : 'cn.leancloud.android:avoscloud-push:v4.4.4@aar',
 
             // LeanCloud 统计包
-            avoscloudStatistics        : 'cn.leancloud.android:avoscloud-statistics:v4.4.4',
+            avoscloudStatistics : 'cn.leancloud.android:avoscloud-statistics:v4.4.4',
 
             // LeanCloud 用户反馈包
-            avoscloudFeedback          : 'cn.leancloud.android:avoscloud-feedback:v4.4.4@aar',
+            avoscloudFeedback   : 'cn.leancloud.android:avoscloud-feedback:v4.4.4@aar',
 
             // avoscloud-sns：LeanCloud 第三方登录包
-            avoscloudSns               : 'cn.leancloud.android:avoscloud-sns:v4.4.4@aar',
+            avoscloudSns        : 'cn.leancloud.android:avoscloud-sns:v4.4.4@aar',
             // LeanCloud 应用内搜索包
-            avoscloudSearch            : 'cn.leancloud.android:avoscloud-search:v4.4.4@aar',
+            avoscloudSearch     : 'cn.leancloud.android:avoscloud-search:v4.4.4@aar',
 
-            zxingCore                  : 'com.google.zxing:core:3.2.1'
+            zxingCore           : 'com.google.zxing:core:3.2.1',
+            glideTransformations: 'jp.wasabeef:glide-transformations:2.0.1',
+            banner              : 'com.youth.banner:banner:1.4.2',
+            sliderLibrary       : 'com.daimajia.slider:library:1.1.5@aar',
+            bottomsheet         : 'com.cocosw:bottomsheet:1.3.0@aar',
+            adapterRxJava       : 'com.squareup.retrofit2:adapter-rxjava:2.1.0'
 
     ]
 
