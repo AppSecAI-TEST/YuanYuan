@@ -64,9 +64,9 @@ ext {
             okhttp                     : "com.squareup.okhttp3:okhttp:3.4.1",
             loggingInterceptor         : "com.squareup.okhttp3:logging-interceptor:3.4.0",
             rxPermissions              : "com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar",
-            rxJava                     : "io.reactivex:rxjava:1.2.1", // 2.x "io.reactivex.rxjava2:rxjava:2.0.0"
-            rxAndroid                  : "io.reactivex:rxandroid:1.2.1", // 2.x "io.reactivex.rxjava2:rxandroid:2.0.0"
-            okio                       : 'com.squareup.okio:okio:1.12.0', // 1.13.0
+            rxJava                     : "io.reactivex.rxjava2:rxjava:2.0.1",
+            rxAndroid                  : "io.reactivex.rxjava2:rxandroid:2.0.1",
+            okio                       : 'com.squareup.okio:okio:1.13.0', // 1.13.0
             rxBinding                  : 'com.jakewharton.rxbinding2:rxbinding:2.0.0',
             rxLifecycleComponents      : 'com.trello.rxlifecycle2:rxlifecycle-components:2.0.1',
 
