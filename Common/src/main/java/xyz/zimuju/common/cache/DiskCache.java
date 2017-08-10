@@ -8,9 +8,6 @@ import android.graphics.BitmapFactory;
 import android.os.Environment;
 import android.util.Log;
 
-import com.master.common.util.CloseUtil;
-import com.master.common.util.EmptyUtil;
-
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
@@ -21,6 +18,9 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+
+import xyz.zimuju.common.util.CloseUtils;
+import xyz.zimuju.common.util.EmptyUtil;
 
 /**
  * Disk磁盘缓存类
@@ -148,8 +148,8 @@ public class DiskCache implements Cache {
                 urlConnection.disconnect();
             }
 
-            CloseUtil.close(out);
-            CloseUtil.close(in);
+            CloseUtils.close(out);
+            CloseUtils.close(in);
         }
         return false;
     }

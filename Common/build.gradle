@@ -45,8 +45,6 @@ dependencies {
 
     compile libraries.zip4j
 
-    compile libraries.nohttp
-
     compile libraries.gson
     compile libraries.fastJson
     compile libraries.fastJsonAndroid

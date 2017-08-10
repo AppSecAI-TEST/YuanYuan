@@ -1,11 +1,11 @@
 package xyz.zimuju.common.rx;
 
-import com.master.common.model.ResData;
-import com.master.common.util.EmptyUtil;
-import com.master.common.util.GsonUtil;
-import com.master.common.util.ZipUtil;
 
 import io.reactivex.functions.Function;
+import xyz.zimuju.common.model.ResData;
+import xyz.zimuju.common.util.EmptyUtil;
+import xyz.zimuju.common.util.GsonUtil;
+import xyz.zimuju.common.util.ZipUtils;
 
 /**
  * Created by 8000m on 2017/5/2.
@@ -44,7 +44,7 @@ public class RxResponse<T> implements Function<ResData<T>, T> {
         if (EmptyUtil.isNotEmpty(json)) {
             long timeStart = System.currentTimeMillis();
             long size1 = json.length();
-            String decompressed = ZipUtil.gunzip(json);
+            String decompressed = ZipUtils.gunzip(json);
             if (EmptyUtil.isNotEmpty(decompressed)) {
                 long size2 = decompressed.length();
                 data = GsonUtil.processJson(decompressed, clazz);

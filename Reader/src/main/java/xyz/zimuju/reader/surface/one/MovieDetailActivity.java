@@ -30,7 +30,6 @@ import com.bumptech.glide.request.target.Target;
 import jp.wasabeef.glide.transformations.BlurTransformation;
 import rx.Observer;
 import rx.Subscription;
-import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 import xyz.zimuju.reader.R;
 import xyz.zimuju.reader.adapter.MovieDetailAdapter;
@@ -106,7 +105,8 @@ public class MovieDetailActivity extends AppCompatActivity {
 //        binding.tvOneTitle.setText("");
         Subscription get = HttpClient.Builder.getDouBanService().getMovieDetail(subjectsBean.getId())
                 .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
+                //.observeOn(AndroidSchedulers.mainThread())
+                .observeOn(Schedulers.newThread())
                 .subscribe(new Observer<MovieDetailBean>() {
                     @Override
                     public void onCompleted() {
@@ -285,6 +285,7 @@ public class MovieDetailActivity extends AppCompatActivity {
                     return false;
                 }
 
+                @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
                 @Override
                 public boolean onResourceReady(GlideDrawable resource, String model, Target<GlideDrawable> target, boolean isFromMemoryCache, boolean isFirstResource) {
                     binding.titleToolBar.setBackgroundColor(Color.TRANSPARENT);

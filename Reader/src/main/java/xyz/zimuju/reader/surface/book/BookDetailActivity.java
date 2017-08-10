@@ -9,7 +9,6 @@ import android.widget.ImageView;
 
 import rx.Observer;
 import rx.Subscription;
-import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 import xyz.zimuju.reader.R;
 import xyz.zimuju.reader.base.BaseHeaderActivity;
@@ -73,7 +72,8 @@ public class BookDetailActivity extends BaseHeaderActivity<HeaderBookDetailBindi
         Subscription get = HttpClient.Builder.getDouBanService().getBookDetail(booksBean.getId())
 //        Subscription get = HttpUtils.getInstance().getDouBanServer().getBookDetail(booksBean.getId())
                 .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
+                //.observeOn(AndroidSchedulers.mainThread())
+                .observeOn(Schedulers.newThread())
                 .subscribe(new Observer<BookDetailBean>() {
                     @Override
                     public void onCompleted() {

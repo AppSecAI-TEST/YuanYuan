@@ -9,7 +9,6 @@ import android.widget.ImageView;
 
 import rx.Observer;
 import rx.Subscription;
-import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 import xyz.zimuju.reader.R;
 import xyz.zimuju.reader.adapter.OneAdapter;
@@ -112,7 +111,9 @@ public class OneFragment extends BaseFragment<FragmentOneBinding> {
 
     private void loadHotMovie() {
         Subscription subscription = HttpClient.Builder.getDouBanService().getHotMovie().subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread()).subscribe(new Observer<HotMovieBean>() {
+                //.observeOn(AndroidSchedulers.mainThread())
+                .observeOn(Schedulers.newThread())
+                .subscribe(new Observer<HotMovieBean>() {
                     @Override
                     public void onCompleted() {
                         showContentView();

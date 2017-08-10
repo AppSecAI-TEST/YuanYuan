@@ -10,15 +10,14 @@ import android.support.v7.widget.RecyclerView;
 
 import rx.Observer;
 import rx.Subscription;
-import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
-import xyz.zimuju.reader.surface.MainActivity;
 import xyz.zimuju.reader.R;
 import xyz.zimuju.reader.adapter.BookAdapter;
 import xyz.zimuju.reader.base.BaseFragment;
 import xyz.zimuju.reader.bean.book.BookBean;
 import xyz.zimuju.reader.databinding.FragmentBookCustomBinding;
 import xyz.zimuju.reader.http.HttpClient;
+import xyz.zimuju.reader.surface.MainActivity;
 import xyz.zimuju.reader.util.CommonUtils;
 import xyz.zimuju.reader.util.DebugUtil;
 
@@ -128,7 +127,8 @@ public class BookCustomFragment extends BaseFragment<FragmentBookCustomBinding> 
 
         Subscription get = HttpClient.Builder.getDouBanService().getBook(mType, mStart, mCount)
                 .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
+                //.observeOn(AndroidSchedulers.mainThread())
+                .observeOn(Schedulers.newThread())
                 .subscribe(new Observer<BookBean>() {
                     @Override
                     public void onCompleted() {

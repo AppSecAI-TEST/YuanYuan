@@ -8,7 +8,6 @@ import android.view.View;
 
 import rx.Observer;
 import rx.Subscription;
-import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 import xyz.zimuju.reader.R;
 import xyz.zimuju.reader.adapter.DouBanTopAdapter;
@@ -53,7 +52,8 @@ public class DoubanTopActivity extends BaseActivity<ActivityDoubanTopBinding> {
     private void loadDouBanTop250() {
         Subscription get = HttpClient.Builder.getDouBanService().getMovieTop250(mStart, mCount)
                 .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
+                //.observeOn(AndroidSchedulers.mainThread())
+                .observeOn(Schedulers.newThread())
                 .subscribe(new Observer<HotMovieBean>() {
                     @Override
                     public void onCompleted() {

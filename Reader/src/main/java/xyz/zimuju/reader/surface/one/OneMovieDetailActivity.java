@@ -11,7 +11,6 @@ import android.widget.ImageView;
 
 import rx.Observer;
 import rx.Subscription;
-import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 import xyz.zimuju.reader.R;
 import xyz.zimuju.reader.adapter.MovieDetailAdapter;
@@ -93,7 +92,8 @@ public class OneMovieDetailActivity extends BaseHeaderActivity<HeaderSlideShapeB
     private void loadMovieDetail() {
         Subscription get = HttpClient.Builder.getDouBanService().getMovieDetail(subjectsBean.getId())
                 .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
+                //.observeOn(AndroidSchedulers.mainThread())
+                .observeOn(Schedulers.newThread())
                 .subscribe(new Observer<MovieDetailBean>() {
                     @Override
                     public void onCompleted() {
