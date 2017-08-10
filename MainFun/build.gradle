@@ -5,7 +5,7 @@ apply plugin: 'org.greenrobot.greendao'
 def configurations = rootProject.ext.configurations
 def libraries = rootProject.ext.dependencies
 
-def buildTime() {
+static def buildTime() {
     return new Date().format("yyyy-MM-dd-HH-mm")
 }
 
@@ -52,6 +52,7 @@ android {
         exclude 'META-INF/notice.txt'
         exclude 'META-INF/license.txt'
         exclude 'META-INF/dependencies.txt'
+        exclude 'META-INF/rxjava.properties'
     }
 
     signingConfigs {
@@ -136,7 +137,7 @@ dependencies {
     compile project(':Guide')
     compile project(':Dialog')
     compile project(':QRCode')
-    compile project(':Reader')
+    // compile project(':Reader')
 
     // jar file
     compile files('libs/alipaySingle-20170510.jar')
@@ -160,17 +161,22 @@ dependencies {
 
     compile libraries.googleMaterialTypeface
     compile libraries.materialDialogsCore
+    compile libraries.okhttp
     compile libraries.glide
     compile libraries.photoView
     compile libraries.circleImageView
 
     //RxAndroid
+    compile libraries.rxAndroid
     compile libraries.rxJava
+    compile libraries.okio
     compile libraries.rxPermissions
     compile libraries.rxBinding
     compile libraries.rxLifecycleComponents
 
     //Retrofit
+    compile libraries.retrofit
+    compile libraries.converterGson
     compile libraries.adapterRxJava2
 
     compile libraries.umengAnalytics
@@ -185,24 +191,15 @@ dependencies {
 
     //support package
     compile libraries.v7recyclerView
+    compile libraries.design
+    compile libraries.v4support
+    compile libraries.v7appcompat
+    compile libraries.v7cardview
 
     // green dao
     compile libraries.greendao
     compile libraries.greendaoGenerator
 
     compile 'com.google.code.findbugs:jsr305:3.0.2'
-
-    // LeanCloud 基础包
-    compile libraries.avoscloudSdk
-    // 推送与实时聊天需要的包
-    compile libraries.avoscloudPush
-    // LeanCloud 统计包
-    compile libraries.avoscloudStatistics
-    // LeanCloud 用户反馈包
-    compile libraries.avoscloudFeedback
-    // avoscloud-sns：LeanCloud 第三方登录包
-    compile libraries.avoscloudSns
-    // LeanCloud 应用内搜索包
-    compile libraries.avoscloudSearch
 
 }

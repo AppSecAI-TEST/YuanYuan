@@ -7,15 +7,12 @@ import android.view.View;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
-import com.avos.avoscloud.AVException;
-import com.avos.avoscloud.feedback.Comment;
-import com.avos.avoscloud.feedback.FeedbackAgent;
-import com.avos.avoscloud.feedback.FeedbackThread;
 
-import java.util.List;
-
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.SaveListener;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.component.SettingCenter;
+import xyz.zimuju.sample.entity.bomb.FeedBack;
 
 /*
  * @description AppUtils : App 相关的工具类
@@ -47,32 +44,30 @@ public class AppUtils {
                 .title(R.string.feedback_dialog_title)
                 .inputType(InputType.TYPE_CLASS_TEXT)
                 .input(R.string.feedback_input_hint, R.string.feedback_input_prefill, new MaterialDialog.InputCallback() {
+                    @SuppressWarnings("unchecked")
                     @Override
                     public void onInput(MaterialDialog dialog, CharSequence input) {
 
                         if (TextUtils.isEmpty(input)) {
                             return;
                         }
-                        FeedbackAgent agent = new FeedbackAgent(context);
-                        agent.startDefaultThreadActivity();
-                        // 如果你需要在用户打开 App 时，通知用户新的反馈回复，只需要在你的入口 Activity 的 OnCreate 方法中添加:
-                        agent.sync();
-                        agent.getDefaultThread().sync(new FeedbackThread.SyncCallback() {
+
+                        FeedBack feedBack = new FeedBack();
+                        feedBack.setContent(input.toString());
+                        feedBack.setAppVersion(SystemUtils.getAppVersion(context));
+                        feedBack.setDeviceName(SystemUtils.getDeviceName());
+                        feedBack.setSystemVersion(SystemUtils.getSystemVersion());
+                        feedBack.setUsername(AuthorityUtils.getUserName());
+                        feedBack.save(new SaveListener() {
                             @Override
-                            public void onCommentsSend(List<Comment> list, AVException e) {
+                            public void done(Object o, BmobException e) {
                                 if (e == null) {
                                     SnackBarUtils.makeShort(view, context.getResources().getString(R.string.feedback_success)).success();
                                 } else {
                                     SnackBarUtils.makeShort(view, context.getResources().getString(R.string.feedback_failed)).danger();
                                 }
                             }
-
-                            @Override
-                            public void onCommentsFetch(List<Comment> list, AVException e) {
-
-                            }
                         });
-
 
                     }
                 }).show();

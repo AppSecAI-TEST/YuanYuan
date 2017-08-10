@@ -1,8 +1,8 @@
 package xyz.zimuju.sample.entity.bomb;
 
-import com.avos.avoscloud.AVObject;
+import cn.bmob.v3.BmobObject;
 
-public class RxOperator extends AVObject {
+public class RxOperator extends BmobObject {
 
     private String name;
     private String desc;

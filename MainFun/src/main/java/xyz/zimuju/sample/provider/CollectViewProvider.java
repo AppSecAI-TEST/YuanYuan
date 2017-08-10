@@ -7,10 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.avos.avoscloud.AVException;
-import com.avos.avoscloud.AVObject;
-import com.avos.avoscloud.GetCallback;
-
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.UpdateListener;
 import me.drakeet.multitype.ItemViewProvider;
 import me.drakeet.multitype.MultiTypeAdapter;
 import xyz.zimuju.sample.R;
@@ -51,10 +49,11 @@ public class CollectViewProvider extends ItemViewProvider<CollectTable, CollectV
             public boolean onLongClick(View v) {
                 CollectTable deleteBean = new CollectTable();
                 deleteBean.setObjectId(collect.getObjectId());
-                DialogUtils.showUnDoCollectDialog(v, deleteBean, new GetCallback<AVObject>() {
+                DialogUtils.showUnDoCollectDialog(v, deleteBean, new UpdateListener() {
+
 
                     @Override
-                    public void done(AVObject avObject, AVException e) {
+                    public void done(BmobException e) {
                         if (e == null) {
                             int position = getPosition(holder);
                             MultiTypeAdapter adapter = (MultiTypeAdapter) getAdapter();

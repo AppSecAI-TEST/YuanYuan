@@ -1,6 +1,6 @@
 package xyz.zimuju.sample.entity.bomb;
 
-import com.avos.avoscloud.AVUser;
+import cn.bmob.v3.BmobUser;
 
 /*
  * @description BombUser
@@ -15,7 +15,7 @@ import com.avos.avoscloud.AVUser;
  * mobilePhoneNumber：手机号码（可选）。
  * mobilePhoneNumberVerified：手机号码的认证状态（可选）。
  */
-public class BombUser extends AVUser {
+public class BombUser extends BmobUser {
     private Integer gander;
     private String nickname;
     private Integer age;

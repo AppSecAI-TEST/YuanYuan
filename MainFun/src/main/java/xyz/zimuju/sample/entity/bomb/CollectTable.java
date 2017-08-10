@@ -1,8 +1,8 @@
 package xyz.zimuju.sample.entity.bomb;
 
-import com.avos.avoscloud.AVObject;
+import cn.bmob.v3.BmobObject;
 
-public class CollectTable extends AVObject {
+public class CollectTable extends BmobObject {
 
     private String desc;
     private String source;

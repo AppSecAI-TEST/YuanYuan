@@ -202,17 +202,4 @@ dependencies {
 
     compile 'com.google.code.findbugs:jsr305:3.0.2'
 
-    // LeanCloud 基础包
-    compile libraries.avoscloudSdk
-    // 推送与实时聊天需要的包
-    compile libraries.avoscloudPush
-    // LeanCloud 统计包
-    compile libraries.avoscloudStatistics
-    // LeanCloud 用户反馈包
-    compile libraries.avoscloudFeedback
-    // avoscloud-sns：LeanCloud 第三方登录包
-    compile libraries.avoscloudSns
-    // LeanCloud 应用内搜索包
-    compile libraries.avoscloudSearch
-
 }

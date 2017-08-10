@@ -4,13 +4,13 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 
-import com.avos.avoscloud.AVException;
-import com.avos.avoscloud.AVQuery;
-import com.avos.avoscloud.FindCallback;
 import com.yqritc.recyclerviewflexibledivider.HorizontalDividerItemDecoration;
 
 import java.util.List;
 
+import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.FindListener;
 import me.drakeet.multitype.MultiTypeAdapter;
 import xyz.zimuju.sample.R;
 import xyz.zimuju.sample.entity.bomb.CollectTable;
@@ -18,6 +18,12 @@ import xyz.zimuju.sample.provider.CollectViewProvider;
 import xyz.zimuju.sample.surface.gank.AbsListFragment;
 import xyz.zimuju.sample.util.AuthorityUtils;
 
+
+/**
+ * Created by _SOLID
+ * Date:2016/5/18
+ * Time:14:23
+ */
 public class CollectListFragment extends AbsListFragment {
 
     public static CollectListFragment newInstance() {
@@ -43,19 +49,19 @@ public class CollectListFragment extends AbsListFragment {
     @Override
     public void loadData(final int pageIndex) {
         mPageSize = 10;
-        AVQuery<CollectTable> query = new AVQuery<>("Todo");
-        query.whereEqualTo("username", AuthorityUtils.getUserName());
+        BmobQuery<CollectTable> query = new BmobQuery<>();
+        query.addWhereEqualTo("username", AuthorityUtils.getUserName());
         query.setLimit(mPageSize);
         query.setSkip(mPageSize * (pageIndex - 1));
         query.order("-createdAt");
         if (AuthorityUtils.isLogin()) {
-            query.findInBackground(new FindCallback<CollectTable>() {
+            query.findObjects(new FindListener<CollectTable>() {
                 @Override
-                public void done(List<CollectTable> list, AVException e) {
-                    if (e == null) {
+                public void done(List<CollectTable> list, BmobException e) {
+                    if (e != null) {
                         onDataSuccessReceived(pageIndex, list);
                     } else {
-                        showError(e);
+                        showError(new Exception(e));
                     }
                 }
             });

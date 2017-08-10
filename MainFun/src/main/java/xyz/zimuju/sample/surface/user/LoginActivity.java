@@ -5,10 +5,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.avos.avoscloud.AVUser;
 
 import butterknife.BindView;
 import butterknife.OnClick;
+import cn.bmob.v3.BmobUser;
 import xyz.zimuju.common.basal.BasalActivity;
 import xyz.zimuju.common.util.EmptyUtil;
 import xyz.zimuju.common.widget.ClearEditText;
@@ -99,8 +99,8 @@ public class LoginActivity extends BasalActivity<LoginPresenter> implements View
     }
 
     @Override
-    public void loginResult(AVUser avUser) {
-        if (EmptyUtil.isEmpty(avUser)) {
+    public void loginResult(BmobUser bmobUser) {
+        if (EmptyUtil.isEmpty(bmobUser)) {
             return;
         }
     }

@@ -1,7 +1,6 @@
 package xyz.zimuju.sample.surface.user;
 
-import com.avos.avoscloud.AVUser;
-
+import cn.bmob.v3.BmobUser;
 import xyz.zimuju.common.basal.BasalView;
 
 /*
@@ -12,5 +11,5 @@ import xyz.zimuju.common.basal.BasalView;
  * @version 1.0.0
  */
 public interface LoginView extends BasalView {
-    void loginResult(AVUser avUser);
+    void loginResult(BmobUser bmobUser);
 }
