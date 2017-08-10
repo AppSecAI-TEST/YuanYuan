@@ -1,21 +1,26 @@
 package xyz.zimuju.common.rx;
 
+import com.master.common.model.ResData;
+import com.master.common.util.EmptyUtil;
+import com.master.common.util.GsonUtil;
+import com.master.common.util.ZipUtil;
+
 import io.reactivex.functions.Function;
-import xyz.zimuju.common.entity.BasalResult;
-import xyz.zimuju.common.util.EmptyUtil;
-import xyz.zimuju.common.util.GsonUtil;
-import xyz.zimuju.common.util.ZipUtils;
 
-public class RxResponse<T> implements Function<BasalResult<T>, T> {
+/**
+ * Created by 8000m on 2017/5/2.
+ */
 
-    private Class<T> clazz;
+public class RxResponse<T> implements Function<ResData<T>, T> {
+
+    Class<T> clazz;
 
     public RxResponse(Class<T> clazz) {
         this.clazz = clazz;
     }
 
-    public static <T> T parseBasicResult(BasalResult<T> res, Class<T> clazz) {
-        T data;
+    public static <T> T parseResData(ResData<T> res, Class<T> clazz) {
+        T data = null;
 
         if ("gzip".equals(res.getCompress())) {
             data = zipJsonToData(res.getJson(), clazz);
@@ -26,13 +31,20 @@ public class RxResponse<T> implements Function<BasalResult<T>, T> {
         return data;
     }
 
-    // json字符串先base64解密，再zip解压，再转换成对象T输出
+    /**
+     * json字符串先base64解密，再zip解压，再转换成对象T输出
+     *
+     * @param json
+     * @param clazz
+     * @param <T>
+     * @return
+     */
     public static <T> T zipJsonToData(String json, Class<T> clazz) {
         T data = null;
         if (EmptyUtil.isNotEmpty(json)) {
             long timeStart = System.currentTimeMillis();
             long size1 = json.length();
-            String decompressed = ZipUtils.gunzip(json);
+            String decompressed = ZipUtil.gunzip(json);
             if (EmptyUtil.isNotEmpty(decompressed)) {
                 long size2 = decompressed.length();
                 data = GsonUtil.processJson(decompressed, clazz);
@@ -44,12 +56,13 @@ public class RxResponse<T> implements Function<BasalResult<T>, T> {
     }
 
     @Override
-    public T apply(BasalResult<T> tBasicResult) throws Exception {
-
-        if (tBasicResult.getCode() != 0) {
-            throw new RxResponseException(tBasicResult.getCode());
+    public T apply(ResData<T> tResData) throws Exception {
+//        Intent intent=new Intent(CommonConstants.KEY_LOGIN_LOUT);
+//        CommonApplication.getInstance().getContext().sendBroadcast(intent);
+        if (tResData.getCode() != 0) {
+            throw new RxResponseException(tResData.getCode());
         }
-        T objRes = parseBasicResult(tBasicResult, clazz);
+        T objRes = parseResData(tResData, clazz);
         if (EmptyUtil.isEmpty(objRes)) {
             throw new RxResponseException(999);
         }

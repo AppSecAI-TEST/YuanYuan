@@ -1132,7 +1132,7 @@ public class ImageUtil {
      * @return {@code true}: 成功<br>{@code false}: 失败
      */
     public static boolean save(Bitmap src, String filePath, Bitmap.CompressFormat format) {
-        return save(src, FileUtil.getFileByPath(filePath), format, false);
+        return save(src, FileUtils.getFileByPath(filePath), format, false);
     }
 
     /**
@@ -1157,7 +1157,7 @@ public class ImageUtil {
      * @return {@code true}: 成功<br>{@code false}: 失败
      */
     public static boolean save(Bitmap src, String filePath, Bitmap.CompressFormat format, boolean recycle) {
-        return save(src, FileUtil.getFileByPath(filePath), format, recycle);
+        return save(src, FileUtils.getFileByPath(filePath), format, recycle);
     }
 
     /**
@@ -1170,7 +1170,7 @@ public class ImageUtil {
      * @return {@code true}: 成功<br>{@code false}: 失败
      */
     public static boolean save(Bitmap src, File file, Bitmap.CompressFormat format, boolean recycle) {
-        if (isEmptyBitmap(src) || !FileUtil.createOrExistsFile(file)) return false;
+        if (isEmptyBitmap(src) || !FileUtils.createOrExistsFile(file)) return false;
         System.out.println(src.getWidth() + ", " + src.getHeight());
         OutputStream os = null;
         boolean ret = false;
@@ -1216,7 +1216,7 @@ public class ImageUtil {
      * @return 图片类型
      */
     public static String getImageType(String filePath) {
-        return getImageType(FileUtil.getFileByPath(filePath));
+        return getImageType(FileUtils.getFileByPath(filePath));
     }
 
     /**

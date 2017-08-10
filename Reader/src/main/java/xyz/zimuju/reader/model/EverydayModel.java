@@ -9,7 +9,6 @@ import java.util.Random;
 import rx.Observable;
 import rx.Observer;
 import rx.Subscription;
-import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Func1;
 import rx.schedulers.Schedulers;
 import xyz.zimuju.reader.application.ConstantsImageUrl;
@@ -44,7 +43,8 @@ public class EverydayModel {
      */
     public void showBanncerPage(final RequestImpl listener) {
         Subscription subscription = HttpClient.Builder.getTingServer().getFrontpage()
-                .observeOn(AndroidSchedulers.mainThread()).subscribeOn(Schedulers.io())
+                .subscribeOn(Schedulers.io())
+                .observeOn(Schedulers.newThread()) //  .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(new Observer<FrontpageBean>() {
                     @Override
                     public void onCompleted() {
@@ -126,7 +126,9 @@ public class EverydayModel {
         };
 
         Subscription subscription = HttpClient.Builder.getGankIOServer().getGankIoDay(year, month, day)
-                .subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                //.observeOn(AndroidSchedulers.mainThread())
+                .observeOn(Schedulers.newThread())
                 .flatMap(func1)
                 .subscribe(observer);
         listener.addSubscription(subscription);

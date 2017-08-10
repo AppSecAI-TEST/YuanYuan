@@ -2,7 +2,6 @@ package xyz.zimuju.reader.model;
 
 import rx.Observer;
 import rx.Subscription;
-import rx.android.schedulers.AndroidSchedulers;
 import rx.schedulers.Schedulers;
 import xyz.zimuju.reader.bean.GankIoDataBean;
 import xyz.zimuju.reader.http.HttpClient;
@@ -28,7 +27,9 @@ public class GankOtherModel {
 
     public void getGankIoData(final RequestImpl listener) {
         Subscription subscription = HttpClient.Builder.getGankIOServer().getGankIoData(id, page, per_page)
-                .subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                //.observeOn(AndroidSchedulers.mainThread())
+                .observeOn(Schedulers.newThread())
                 .subscribe(new Observer<GankIoDataBean>() {
                     @Override
                     public void onCompleted() {

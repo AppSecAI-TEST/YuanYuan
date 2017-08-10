@@ -28,7 +28,7 @@ import java.util.List;
 /**
  * 文件工具类
  */
-public class FileUtil {
+public class FileUtils {
     public static final String IMAGE_OCR = "image_ocr";
     public static final String IMAGE_HEAD = "head";
     public static final String IMAGE_OCR_HISTORY = "image_ocr_history";
@@ -1290,25 +1290,25 @@ public class FileUtil {
 //	}
 
     public static String getImgOcrPath() {
-        String path = FileUtil.getRootPath() + File.separator + IMAGE_OCR;
+        String path = FileUtils.getRootPath() + File.separator + IMAGE_OCR;
         createPath(path);
         return path;
     }
 
     public static String getImgOcrHistoryPath() {
-        String path = FileUtil.getRootPath() + File.separator + IMAGE_OCR_HISTORY;
+        String path = FileUtils.getRootPath() + File.separator + IMAGE_OCR_HISTORY;
         createPath(path);
         return path;
 	}
 
 	public static String getCachePath() {
-		String path = FileUtil.getRootPath() + File.separator + CACHE;
-		createPath(path);
+        String path = FileUtils.getRootPath() + File.separator + CACHE;
+        createPath(path);
 		return path;
 	}
 
 	public static String getImgPath () {
-		String path = FileUtil.getRootPath() + File.separator + IMAGE_HEAD;
+        String path = FileUtils.getRootPath() + File.separator + IMAGE_HEAD;
         createPath(path);
 		return path;
 	}

@@ -300,7 +300,7 @@ public class ZipUtils {
      */
     public static boolean zipFiles(Collection<File> resFiles, String zipFilePath, String comment)
             throws IOException {
-        return zipFiles(resFiles, FileUtil.getFileByPath(zipFilePath), comment);
+        return zipFiles(resFiles, FileUtils.getFileByPath(zipFilePath), comment);
     }
 
     /**
@@ -367,7 +367,7 @@ public class ZipUtils {
      */
     public static boolean zipFile(String resFilePath, String zipFilePath, String comment)
             throws IOException {
-        return zipFile(FileUtil.getFileByPath(resFilePath), FileUtil.getFileByPath(zipFilePath), comment);
+        return zipFile(FileUtils.getFileByPath(resFilePath), FileUtils.getFileByPath(zipFilePath), comment);
     }
 
     /**
@@ -463,7 +463,7 @@ public class ZipUtils {
      */
     public static boolean unzipFiles(Collection<File> zipFiles, String destDirPath)
             throws IOException {
-        return unzipFiles(zipFiles, FileUtil.getFileByPath(destDirPath));
+        return unzipFiles(zipFiles, FileUtils.getFileByPath(destDirPath));
     }
 
     /**
@@ -493,7 +493,7 @@ public class ZipUtils {
      */
     public static boolean unzipFile(String zipFilePath, String destDirPath)
             throws IOException {
-        return unzipFile(FileUtil.getFileByPath(zipFilePath), FileUtil.getFileByPath(destDirPath));
+        return unzipFile(FileUtils.getFileByPath(zipFilePath), FileUtils.getFileByPath(destDirPath));
     }
 
     /**
@@ -520,8 +520,8 @@ public class ZipUtils {
      */
     public static List<File> unzipFileByKeyword(String zipFilePath, String destDirPath, String keyword)
             throws IOException {
-        return unzipFileByKeyword(FileUtil.getFileByPath(zipFilePath),
-                FileUtil.getFileByPath(destDirPath), keyword);
+        return unzipFileByKeyword(FileUtils.getFileByPath(zipFilePath),
+                FileUtils.getFileByPath(destDirPath), keyword);
     }
 
     /**
@@ -542,14 +542,14 @@ public class ZipUtils {
         while (entries.hasMoreElements()) {
             ZipEntry entry = ((ZipEntry) entries.nextElement());
             String entryName = entry.getName();
-            if (StringUtils.isEmpty(keyword) || FileUtil.getFileName(entryName).toLowerCase().contains(keyword.toLowerCase())) {
+            if (StringUtils.isEmpty(keyword) || FileUtils.getFileName(entryName).toLowerCase().contains(keyword.toLowerCase())) {
                 String filePath = destDir + File.separator + entryName;
                 File file = new File(filePath);
                 files.add(file);
                 if (entry.isDirectory()) {
-                    if (!FileUtil.createOrExistsDir(file)) return null;
+                    if (!FileUtils.createOrExistsDir(file)) return null;
                 } else {
-                    if (!FileUtil.createOrExistsFile(file)) return null;
+                    if (!FileUtils.createOrExistsFile(file)) return null;
                     InputStream in = null;
                     OutputStream out = null;
                     try {
@@ -578,7 +578,7 @@ public class ZipUtils {
      */
     public static List<String> getFilesPath(String zipFilePath)
             throws IOException {
-        return getFilesPath(FileUtil.getFileByPath(zipFilePath));
+        return getFilesPath(FileUtils.getFileByPath(zipFilePath));
     }
 
     /**
@@ -608,7 +608,7 @@ public class ZipUtils {
      */
     public static List<String> getComments(String zipFilePath)
             throws IOException {
-        return getComments(FileUtil.getFileByPath(zipFilePath));
+        return getComments(FileUtils.getFileByPath(zipFilePath));
     }
 
     /**
@@ -639,7 +639,7 @@ public class ZipUtils {
      */
     public static Enumeration<?> getEntries(String zipFilePath)
             throws IOException {
-        return getEntries(FileUtil.getFileByPath(zipFilePath));
+        return getEntries(FileUtils.getFileByPath(zipFilePath));
     }
 
     /**

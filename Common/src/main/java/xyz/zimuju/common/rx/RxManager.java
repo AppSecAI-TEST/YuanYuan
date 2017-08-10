@@ -7,8 +7,8 @@ public class RxManager {
 
     private CompositeDisposable compositeDisposable = new CompositeDisposable();
 
-    public void add(Disposable disposable) {
-        compositeDisposable.add(disposable);
+    public void add(Disposable m) {
+        compositeDisposable.add(m);
     }
 
     public void clear() {
