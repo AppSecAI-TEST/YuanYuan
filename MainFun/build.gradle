@@ -58,7 +58,7 @@ android {
     signingConfigs {
         release {
             storeFile file('../document/keyStore.jks')
-            keyAlias 'Nathaniel'
+            keyAlias 'nathaniel'
             keyPassword 'Nathan@126.com'
             storePassword 'Nathan@126.com'
             v2SigningEnabled false

@@ -2,9 +2,7 @@
 KeyStore
 keyStore.jks
 Password:Nathan@126.com
-
-Alias		
-Nathaniel
+Alias：nathaniel
 Password:Nathan@126.com
 
 Fristname & Lastname: Wen Tao
