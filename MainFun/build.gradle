@@ -58,17 +58,14 @@ android {
     signingConfigs {
         release {
             storeFile file('../document/keyStore.jks')
-            keyAlias 'nathaniel'
+            keyAlias 'Nathaniel'
             keyPassword 'Nathan@126.com'
             storePassword 'Nathan@126.com'
-            v2SigningEnabled false
         }
     }
 
     buildTypes {
         release {
-            applicationIdSuffix '.release'
-            versionNameSuffix '-release'
             minifyEnabled false
             zipAlignEnabled false
             shrinkResources false
@@ -81,7 +78,6 @@ android {
             applicationIdSuffix '.beta'
             versionNameSuffix '-beta'
             debuggable true
-            signingConfig signingConfigs.release
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -132,6 +128,10 @@ dependencies {
     // green dao
     compile libraries.greendao
     compile libraries.greendaoGenerator
+
+    //butter knife
+    compile libraries.butterKnife
+    annotationProcessor libraries.butterKnifeCompiler
 
     // project
     compile project(':Guide')

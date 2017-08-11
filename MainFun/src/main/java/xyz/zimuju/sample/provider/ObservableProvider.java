@@ -2,7 +2,7 @@ package xyz.zimuju.sample.provider;
 
 import io.reactivex.Single;
 import okhttp3.ResponseBody;
-import xyz.zimuju.sample.engine.service.CommonService;
+import xyz.zimuju.sample.engine.CommonService;
 import xyz.zimuju.sample.entity.HttpResult;
 import xyz.zimuju.sample.factory.ServiceFactory;
 import xyz.zimuju.sample.http.function.ResultFunction;

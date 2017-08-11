@@ -125,7 +125,7 @@ public class HttpUtils {
     private Gson getGson() {
         if (gson == null) {
             GsonBuilder builder = new GsonBuilder();
-            builder.setLenient();
+            // builder.setLenient();
             builder.setFieldNamingStrategy(new AnnotateNaming());
             builder.serializeNulls();
             gson = builder.create();

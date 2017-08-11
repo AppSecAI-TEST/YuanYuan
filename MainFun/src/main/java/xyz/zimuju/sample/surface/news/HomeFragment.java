@@ -9,7 +9,7 @@ import java.util.List;
 
 import me.drakeet.multitype.MultiTypeAdapter;
 import xyz.zimuju.sample.constant.CategoryConstants;
-import xyz.zimuju.sample.engine.api.GankService;
+import xyz.zimuju.sample.engine.GankService;
 import xyz.zimuju.sample.entity.HttpResult;
 import xyz.zimuju.sample.entity.content.CategoryList;
 import xyz.zimuju.sample.entity.content.Daily;
@@ -47,13 +47,13 @@ public class HomeFragment extends AbsListFragment {
                 .compose(RxUtils.<HttpResult<List<Daily>>>defaultSchedulersSingle())
                 .subscribe(new HttpResultSubscriber<List<Daily>>() {
                     @Override
-                    public void _onSuccess(List<Daily> dailies) {
+                    public void onSuccessful(List<Daily> dailies) {
                         data.addAll(dailies);
                         onDataSuccessReceived(pageIndex, data);
                     }
 
                     @Override
-                    public void _onError(Throwable e) {
+                    public void onFailed(Throwable e) {
                         showError(new Exception(e));
                     }
                 });

@@ -17,10 +17,11 @@ public abstract class HttpResultSubscriber<T> implements SingleObserver<HttpResu
 
     @Override
     public void onSuccess(@NonNull HttpResult<T> result) {
-        if (!result.error)
-            _onSuccess(result.results);
-        else
-            _onError(new Throwable("error=true"));
+        if (!result.error) {
+            onSuccessful(result.results);
+        } else {
+            onFailed(new Throwable("error=true"));
+        }
     }
 
     @Override
@@ -31,17 +32,17 @@ public abstract class HttpResultSubscriber<T> implements SingleObserver<HttpResu
             if (!(e instanceof CancellationException)) {
                 e.printStackTrace();
                 if (e.getMessage() == null) {
-                    _onError(new Throwable(e.toString()));
+                    onFailed(new Throwable(e.toString()));
                 } else {
-                    _onError(new Throwable(e.getMessage()));
+                    onFailed(new Throwable(e.getMessage()));
                 }
             }
         } else {
-            _onError(new Exception("null message"));
+            onFailed(new Exception("null message"));
         }
     }
 
-    public abstract void _onSuccess(T t);
+    public abstract void onSuccessful(T t);
 
-    public abstract void _onError(Throwable e);
+    public abstract void onFailed(Throwable e);
 }

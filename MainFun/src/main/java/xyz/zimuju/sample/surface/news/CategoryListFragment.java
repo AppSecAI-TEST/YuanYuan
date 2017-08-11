@@ -12,7 +12,7 @@ import java.util.List;
 
 import me.drakeet.multitype.MultiTypeAdapter;
 import xyz.zimuju.sample.R;
-import xyz.zimuju.sample.engine.api.GankService;
+import xyz.zimuju.sample.engine.GankService;
 import xyz.zimuju.sample.entity.HttpResult;
 import xyz.zimuju.sample.entity.content.GanHuoData;
 import xyz.zimuju.sample.factory.ServiceFactory;
@@ -63,12 +63,12 @@ public class CategoryListFragment extends AbsListFragment {
                 .compose(RxUtils.<HttpResult<List<GanHuoData>>>defaultSchedulersSingle())
                 .subscribe(new HttpResultSubscriber<List<GanHuoData>>() {
                     @Override
-                    public void _onSuccess(List<GanHuoData> list) {
+                    public void onSuccessful(List<GanHuoData> list) {
                         onDataSuccessReceived(pageIndex, list);
                     }
 
                     @Override
-                    public void _onError(Throwable e) {
+                    public void onFailed(Throwable e) {
                         showError(new Exception(e));
                     }
 

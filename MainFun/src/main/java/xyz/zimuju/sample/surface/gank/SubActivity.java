@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.Fragment;
 
-import xyz.zimuju.sample.surface.news.MeiZhiFragment;
+import xyz.zimuju.sample.surface.news.GirlyGirlFragment;
 import xyz.zimuju.sample.surface.user.CollectListFragment;
 
 public class SubActivity extends ToolbarActivity {
@@ -28,7 +28,7 @@ public class SubActivity extends ToolbarActivity {
         int type = getIntent().getExtras().getInt("type");
         Fragment fragment = null;
         if (type == TYPE_MEIZHI) {
-            fragment = MeiZhiFragment.newInstance();
+            fragment = GirlyGirlFragment.newInstance();
         } else if (type == TYPE_COLLECT) {
             fragment = CollectListFragment.newInstance();
         }

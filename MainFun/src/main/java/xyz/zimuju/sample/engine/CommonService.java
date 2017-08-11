@@ -1,4 +1,4 @@
-package xyz.zimuju.sample.engine.service;
+package xyz.zimuju.sample.engine;
 
 import io.reactivex.Single;
 import okhttp3.ResponseBody;

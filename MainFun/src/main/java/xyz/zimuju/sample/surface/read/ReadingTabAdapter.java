@@ -8,10 +8,10 @@ import java.util.List;
 
 import xyz.zimuju.sample.entity.content.XianDuCategory;
 
-public class XianDuTabAdapter extends FragmentStatePagerAdapter {
+public class ReadingTabAdapter extends FragmentStatePagerAdapter {
     private List<XianDuCategory> list;
 
-    public XianDuTabAdapter(FragmentManager fm, List<XianDuCategory> list) {
+    public ReadingTabAdapter(FragmentManager fm, List<XianDuCategory> list) {
         super(fm);
         this.list = list;
     }

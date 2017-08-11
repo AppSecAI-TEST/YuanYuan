@@ -1,4 +1,4 @@
-package xyz.zimuju.sample.engine.api;
+package xyz.zimuju.sample.engine;
 
 import io.reactivex.Single;
 import retrofit2.http.GET;

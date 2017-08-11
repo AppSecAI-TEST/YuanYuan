@@ -55,15 +55,15 @@ public class CommonActivity extends AppCompatActivity {
                 break;
             case 2:
                 ft.add(R.id.container_framelayout, mAgentWebFragment = AgentWebFragment.getInstance(mBundle = new Bundle()), AgentWebFragment.class.getName());
-                mBundle.putString(AgentWebFragment.URL_KEY, "file:///android_asset/upload_file/uploadfile.html");
+                mBundle.putString(AgentWebFragment.URL_KEY, "file:///android_asset/uploadFile/uploadfile.html");
                 break;
             case 3:
                 ft.add(R.id.container_framelayout, mAgentWebFragment = AgentWebFragment.getInstance(mBundle = new Bundle()), AgentWebFragment.class.getName());
-                mBundle.putString(AgentWebFragment.URL_KEY, "file:///android_asset/upload_file/jsuploadfile.html");
+                mBundle.putString(AgentWebFragment.URL_KEY, "file:///android_asset/uploadFile/jsuploadfile.html");
                 break;
             case 4:
                 ft.add(R.id.container_framelayout, mAgentWebFragment = JsAgentWebFragment.getInstance(mBundle = new Bundle()), AgentWebFragment.class.getName());
-                mBundle.putString(AgentWebFragment.URL_KEY, "file:///android_asset/js_interaction/hello.html");
+                mBundle.putString(AgentWebFragment.URL_KEY, "file:///android_asset/jsInteraction/hello.html");
                 break;
 
             case 5:

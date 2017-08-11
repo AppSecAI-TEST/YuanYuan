@@ -32,11 +32,13 @@ public abstract class BasalFragment<T extends BasalPresenter> extends Fragment i
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(getLayoutId(), container, false);
         presenter = initPresenter();
-        initData();
         ButterKnife.bind(this, rootView);
+        initData();
+
         if (presenter != null) {
             presenter.attachView(this);
         }
+
         viewOption();
         return rootView;
     }

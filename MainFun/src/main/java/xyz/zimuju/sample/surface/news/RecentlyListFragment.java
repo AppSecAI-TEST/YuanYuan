@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import me.drakeet.multitype.MultiTypeAdapter;
-import xyz.zimuju.sample.engine.api.GankService;
+import xyz.zimuju.sample.engine.GankService;
 import xyz.zimuju.sample.entity.HttpResult;
 import xyz.zimuju.sample.entity.content.DailyList;
 import xyz.zimuju.sample.entity.content.DailyTitle;
@@ -81,12 +81,12 @@ public class RecentlyListFragment extends AbsListFragment {
                 .subscribe(new HttpResultSubscriber<DailyList>() {
 
                     @Override
-                    public void _onError(Throwable e) {
+                    public void onFailed(Throwable e) {
                         showError(new Exception(e));
                     }
 
                     @Override
-                    public void _onSuccess(DailyList recentlyBean) {
+                    public void onSuccessful(DailyList recentlyBean) {
                         List list = new ArrayList<>();
 
                         if (recentlyBean != null) {

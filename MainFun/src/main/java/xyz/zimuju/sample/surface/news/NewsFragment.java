@@ -1,12 +1,12 @@
 package xyz.zimuju.sample.surface.news;
 
 import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 
 import butterknife.BindView;
 import xyz.zimuju.common.basal.BasalFragment;
-import xyz.zimuju.common.basal.BasalPresenter;
 import xyz.zimuju.common.basal.MRecyclerViewAdapter;
 import xyz.zimuju.common.widget.custom.CustomRecyclerView;
 import xyz.zimuju.sample.R;
@@ -16,7 +16,7 @@ import xyz.zimuju.sample.util.GankCategoryUtils;
 
 public class NewsFragment extends BasalFragment implements MRecyclerViewAdapter.OnItemClickListener {
     @BindView(R.id.news_category_recyclerview)
-    CustomRecyclerView categoryRecyclerView;
+    RecyclerView categoryRecyclerView;
 
     @BindView(R.id.news_container_recyclerview)
     CustomRecyclerView containerRecyclerView;
@@ -29,8 +29,8 @@ public class NewsFragment extends BasalFragment implements MRecyclerViewAdapter.
     }
 
     @Override
-    protected BasalPresenter initPresenter() {
-        return null;
+    protected NewsPresenter initPresenter() {
+        return new NewsContract();
     }
 
     @Override

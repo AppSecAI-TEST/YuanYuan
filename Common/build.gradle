@@ -25,13 +25,15 @@ android {
  */
 
 dependencies {
-    //butterknife
+    //butter knife
     compile libraries.butterKnife
     annotationProcessor libraries.butterKnifeCompiler
 
     //rx
     compile libraries.retrofit
-    compile libraries.converterGson
+    compile (libraries.converterGson) {
+        exclude group: 'com.google.code.gson'
+    }
     compile libraries.rxJava2Adapter
     compile libraries.okhttp
     compile libraries.loggingInterceptor

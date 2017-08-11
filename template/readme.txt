@@ -16,3 +16,6 @@ gradlew MainFun:dependencies
 
 列出所有依赖包
 gradlew -q MainFun:dependencies
+
+破解签名文件
+http://blog.csdn.net/u013278099/article/details/52231170

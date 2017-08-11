@@ -18,14 +18,12 @@ public class RxUtils {
             @Override
             public Publisher<T> apply(@NonNull Flowable<T> upstream) {
                 return upstream.observeOn(AndroidSchedulers.mainThread()).subscribeOn(Schedulers.io());
-
             }
         };
     }
 
     public static <T> SingleTransformer<T, T> defaultSchedulersSingle() {
         return new SingleTransformer<T, T>() {
-
             @Override
             public SingleSource<T> apply(@NonNull Single<T> upstream) {
                 return upstream.observeOn(AndroidSchedulers.mainThread()).subscribeOn(Schedulers.io());

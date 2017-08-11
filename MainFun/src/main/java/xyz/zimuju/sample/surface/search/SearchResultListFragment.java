@@ -5,7 +5,7 @@ import android.support.v7.widget.RecyclerView;
 import java.util.List;
 
 import me.drakeet.multitype.MultiTypeAdapter;
-import xyz.zimuju.sample.engine.api.GankService;
+import xyz.zimuju.sample.engine.GankService;
 import xyz.zimuju.sample.entity.HttpResult;
 import xyz.zimuju.sample.entity.content.SearchResult;
 import xyz.zimuju.sample.factory.ServiceFactory;
@@ -51,12 +51,12 @@ public class SearchResultListFragment extends AbsListFragment {
                 .compose(RxUtils.<HttpResult<List<SearchResult>>>defaultSchedulersSingle())
                 .subscribe(new HttpResultSubscriber<List<SearchResult>>() {
                     @Override
-                    public void _onError(Throwable e) {
+                    public void onFailed(Throwable e) {
                         showError(new Exception(e));
                     }
 
                     @Override
-                    public void _onSuccess(List<SearchResult> searchResults) {
+                    public void onSuccessful(List<SearchResult> searchResults) {
                         onDataSuccessReceived(pageIndex, searchResults);
                     }
 

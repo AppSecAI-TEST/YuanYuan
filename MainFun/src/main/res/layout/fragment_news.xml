@@ -6,13 +6,13 @@
               android:background="#CCCCCC"
               android:orientation="vertical">
 
-    <xyz.zimuju.common.widget.custom.CustomRecyclerView
+    <android.support.v7.widget.RecyclerView
         android:id="@+id/news_category_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:background="@android:color/white"/>
 
-    <xyz.zimuju.common.widget.custom.CustomRecyclerView
+    <android.support.v7.widget.RecyclerView
         android:id="@+id/news_container_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -10,7 +10,7 @@ ext {
             supportLibVersion: "25.3.1",
             testRunnerVersion: "0.5",
             espressoVersion  : "2.2.2",
-            applicationId    : "xyz.zimuju.sample"
+            applicationId    : "xyz.zimuju.yuanyuan"
     ]
 
 
@@ -41,7 +41,7 @@ ext {
 
             // util
             zip4j                      : "net.lingala.zip4j:zip4j:1.3.2",
-            gson                       : "com.google.code.gson:gson:2.2.4",
+            gson                       : "com.google.code.gson:gson:2.8.1",
             fastJson                   : "com.alibaba:fastjson:1.2.33",
             fastJsonAndroid            : "com.alibaba:fastjson:1.1.58.android",
 

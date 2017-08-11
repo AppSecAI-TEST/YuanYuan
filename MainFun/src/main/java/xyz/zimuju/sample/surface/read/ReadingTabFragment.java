@@ -13,7 +13,7 @@ import io.reactivex.SingleObserver;
 import io.reactivex.disposables.Disposable;
 import me.solidev.statusviewlayout.StatusViewLayout;
 import xyz.zimuju.sample.R;
-import xyz.zimuju.sample.engine.service.XianDuService;
+import xyz.zimuju.sample.engine.XianDuService;
 import xyz.zimuju.sample.entity.content.XianDuCategory;
 import xyz.zimuju.sample.rx.RxUtils;
 import xyz.zimuju.sample.surface.gank.BaseFragment;
@@ -24,7 +24,7 @@ public class ReadingTabFragment extends BaseFragment {
     private TabLayout tab_layout;
     private ViewPager view_pager;
     private StatusViewLayout status_view_layout;
-    private XianDuTabAdapter mAdapter;
+    private ReadingTabAdapter mAdapter;
 
     @Override
     protected int getLayoutId() {
@@ -45,7 +45,7 @@ public class ReadingTabFragment extends BaseFragment {
                     @Override
                     public void onSuccess(@NonNull List<XianDuCategory> xianDuCategories) {
                         status_view_layout.showContent();
-                        mAdapter = new XianDuTabAdapter(getChildFragmentManager(), xianDuCategories);
+                        mAdapter = new ReadingTabAdapter(getChildFragmentManager(), xianDuCategories);
                         view_pager.setAdapter(mAdapter);
                         tab_layout.setupWithViewPager(view_pager);
                     }
